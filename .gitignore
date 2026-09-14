@@ -17,7 +17,3 @@ dist-ssr
 # Editor / OS
 .DS_Store
 .claude/settings.local.json
-
-# TEMP: workflow files need a one-time "workflow" permission on GitHub;
-# re-enabled in Step 3 (automated safety checks). Kept on disk meanwhile.
-.github/workflows/
