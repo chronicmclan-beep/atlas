@@ -1,0 +1,31 @@
+{
+  "note": "Physical supply relationships (who supplies whom). Direction is supplier -> customer. Magnitudes mostly undisclosed; where a figure would be estimated it is left null and flagged. Curated set, not yet exhaustive.",
+  "edges": [
+    { "from": "ASML", "to": "TSMC", "type": "equipment", "product": "EUV lithography machines", "magnitude": null, "tier": "estimated" },
+    { "from": "AMAT", "to": "TSMC", "type": "equipment", "product": "fabrication equipment", "magnitude": null, "tier": "estimated" },
+    { "from": "TSMC", "to": "NVDA", "type": "foundry", "product": "wafer fabrication + CoWoS packaging", "magnitude": null, "tier": "reported", "note": "relationship reported; NVIDIA is fabless. $ not disclosed." },
+    { "from": "TSMC", "to": "AMD", "type": "foundry", "product": "wafer fabrication", "magnitude": null, "tier": "reported" },
+    { "from": "TSMC", "to": "AVGO", "type": "foundry", "product": "wafer fabrication (custom ASICs)", "magnitude": null, "tier": "reported" },
+    { "from": "Hynix", "to": "NVDA", "type": "memory", "product": "HBM3E; primary supplier (~90% of NVIDIA HBM, est.)", "magnitude": null, "tier": "estimated" },
+    { "from": "Hynix", "to": "AMD", "type": "memory", "product": "HBM3E", "magnitude": null, "tier": "estimated" },
+    { "from": "Micron", "to": "NVDA", "type": "memory", "product": "HBM3E; secondary (H200/B200 wins)", "magnitude": null, "tier": "estimated" },
+    { "from": "Samsung", "to": "NVDA", "type": "memory", "product": "HBM3E; tertiary (qualification issues)", "magnitude": null, "tier": "disclosed" },
+    { "from": "NVDA", "to": "Dell", "type": "systems", "product": "GPUs for server integration", "magnitude": null, "tier": "reported" },
+    { "from": "NVDA", "to": "SMCI", "type": "systems", "product": "GPUs for server integration", "magnitude": null, "tier": "reported" },
+    { "from": "AMD", "to": "SMCI", "type": "systems", "product": "GPUs for server integration", "magnitude": null, "tier": "reported" },
+    { "from": "AVGO", "to": "ANET", "type": "systems", "product": "networking silicon", "magnitude": null, "tier": "reported" },
+    { "from": "NVDA", "to": "CRWV", "type": "compute", "product": "GPU supply to neocloud", "magnitude": null, "tier": "reported" },
+    { "from": "NVDA", "to": "MSFT", "type": "compute", "product": "GPU purchases (Customer A, ~22% of FY26 rev)", "magnitude": "~$47.5B", "tier": "reported", "note": "aggregate % reported (anonymized); MSFT name is inferred." },
+    { "from": "AVGO", "to": "GOOGL", "type": "compute", "product": "custom TPU silicon", "magnitude": null, "tier": "reported" },
+    { "from": "Dell", "to": "MSFT", "type": "compute", "product": "AI servers", "magnitude": null, "tier": "estimated" },
+    { "from": "SMCI", "to": "CRWV", "type": "compute", "product": "AI servers", "magnitude": null, "tier": "estimated" },
+    { "from": "SMCI", "to": "AMZN", "type": "compute", "product": "AI servers", "magnitude": null, "tier": "estimated" },
+    { "from": "ANET", "to": "MSFT", "type": "compute", "product": "networking switches", "magnitude": null, "tier": "estimated" },
+    { "from": "SMCI", "to": "xAI", "type": "compute", "product": "Colossus cluster servers", "magnitude": null, "tier": "disclosed" },
+    { "from": "Dell", "to": "xAI", "type": "compute", "product": "Colossus cluster servers", "magnitude": null, "tier": "disclosed" },
+    { "from": "MSFT", "to": "OpenAI", "type": "cloud", "product": "compute (Azure)", "magnitude": null, "tier": "reported" },
+    { "from": "AMZN", "to": "Anthropic", "type": "cloud", "product": "compute (AWS)", "magnitude": null, "tier": "reported" },
+    { "from": "GOOGL", "to": "Anthropic", "type": "cloud", "product": "compute + TPUs", "magnitude": null, "tier": "reported" },
+    { "from": "CRWV", "to": "OpenAI", "type": "cloud", "product": "GPU compute", "magnitude": null, "tier": "reported" }
+  ]
+}

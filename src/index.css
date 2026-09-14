@@ -1,0 +1,50 @@
+@import './styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    /* Two weights only across the app */
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    background: var(--surface);
+    color: var(--ink);
+    /* Default copy pulls from the type scale */
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+
+  /* Medium is the only heavier weight we use */
+  h1, h2, h3, h4, h5, h6, strong, b {
+    font-weight: 500;
+  }
+}
+
+@layer components {
+  /* Source-tier chip — the shared visual language for confidence.
+     A full <SourceTag> component comes in Phase 2; this base class
+     lets any early markup render a consistent chip. */
+  .tier-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.0625rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+  .tier-chip[data-tier='reported']  { color: var(--tier-reported);  background: var(--tier-reported-soft); }
+  .tier-chip[data-tier='disclosed'] { color: var(--tier-disclosed); background: var(--tier-disclosed-soft); }
+  .tier-chip[data-tier='estimated'] { color: var(--tier-estimated); background: var(--tier-estimated-soft); }
+  .tier-chip[data-tier='inferred']  { color: var(--tier-inferred);  background: var(--tier-inferred-soft); }
+}

@@ -1,0 +1,31 @@
+{
+  "sourceTiers": [
+    { "id": "reported", "label": "Reported", "note": "Straight from an SEC filing." },
+    { "id": "disclosed", "label": "Disclosed", "note": "Official but via an unofficial channel (press, earnings call)." },
+    { "id": "estimated", "label": "Estimated", "note": "Third-party or calculated; no primary figure exists." },
+    { "id": "inferred", "label": "Inferred", "note": "Deduced, not stated." }
+  ],
+  "realizedStates": [
+    { "id": true, "label": "Realized", "note": "Closed / booked." },
+    { "id": false, "label": "Committed", "note": "Announced ceiling or LOI; not yet realized." }
+  ],
+  "layers": [
+    "materials", "equipment", "chip-design", "foundry", "memory",
+    "packaging", "systems", "compute", "labs"
+  ],
+  "timelineCategories": [
+    { "id": "model", "label": "Models & products", "color": "#7F77DD" },
+    { "id": "demand", "label": "Demand signals", "color": "#639922" },
+    { "id": "deal", "label": "Deals & investments", "color": "#D85A30" },
+    { "id": "stake", "label": "Acquisitions & stakes", "color": "#378ADD" },
+    { "id": "build", "label": "Infrastructure", "color": "#BA7517" },
+    { "id": "policy", "label": "Policy & geopolitics", "color": "#0E9AA7" }
+  ],
+  "eras": {
+    "2022": { "name": "The Spark", "headline": "One consumer product turns AI from research into a global demand shock." },
+    "2023": { "name": "The Proof", "headline": "The demand shows up in hard numbers, and every lab pairs off with a hyperscaler." },
+    "2024": { "name": "The Arms Race", "headline": "Next-gen hardware and reasoning models raise the stakes — and the compute bill." },
+    "2025": { "name": "The Land Grab", "headline": "Capital floods in, sovereigns enter, and the money starts flowing in circles." },
+    "2026": { "name": "The Money Question", "headline": "Debt, SPVs, and circular deals fund a buildout too big for any balance sheet — and the doubts get louder." }
+  }
+}

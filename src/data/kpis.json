@@ -1,0 +1,115 @@
+[
+  {
+    "ticker": "NVDA",
+    "fiscalYear": "FY2026",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Jan 25 2026 · 10-K filed Feb 25 2026",
+    "source": "NVIDIA FY2026 10-K; Q2 FY2027 8-K (Aug 26 2026)",
+    "metrics": [
+      { "label": "Revenue", "value": "$215.9B", "sub": "+114% YoY", "tier": "reported" },
+      { "label": "Net income", "value": "$120.1B", "sub": "55.6% net margin", "tier": "reported" },
+      { "label": "Gross margin", "value": "71.1%", "sub": "GAAP full year", "tier": "reported" },
+      { "label": "Operating margin", "value": "60.4%", "sub": "GAAP full year", "tier": "reported" },
+      { "label": "Free cash flow", "value": "$96.6B", "sub": "OCF $102.7B - capex $6.0B", "tier": "reported" },
+      { "label": "Diluted EPS", "value": "$4.90", "sub": "GAAP; $4.77 non-GAAP", "tier": "reported" },
+      { "label": "Data center revenue", "value": "$193.7B", "sub": "89.7% of revenue", "tier": "reported" },
+      { "label": "Shares (diluted)", "value": "~24.4B", "sub": "weighted avg", "tier": "reported" },
+      { "label": "R&D spend", "value": "$18.5B", "sub": "8.6% of revenue", "tier": "reported" },
+      { "label": "Latest quarter", "value": "$96.2B", "sub": "Q2 FY2027; +106% YoY", "tier": "reported" },
+      { "label": "Market cap", "value": null, "sub": "needs live price feed", "tier": "live" },
+      { "label": "P/E ratio", "value": null, "sub": "needs live price feed", "tier": "live" }
+    ]
+  },
+  {
+    "ticker": "AMD",
+    "fiscalYear": "FY2025",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Dec 27 2025 · Q4/FY release Feb 3 2026",
+    "source": "AMD Q4/FY2025 press release (8-K)",
+    "metrics": [
+      { "label": "Revenue", "value": "$34.6B", "sub": "+34% YoY; record", "tier": "reported" },
+      { "label": "Net income", "value": "$4.3B", "sub": "12.4% net margin", "tier": "reported" },
+      { "label": "Gross margin", "value": "50%", "sub": "GAAP; 52% non-GAAP", "tier": "reported" },
+      { "label": "Operating margin", "value": "10.7%", "sub": "op income $3.7B GAAP", "tier": "reported" },
+      { "label": "Free cash flow", "value": "~$6.7B", "sub": "FY calc; Q4 $2.1B reported by AMD", "tier": "estimated" },
+      { "label": "Diluted EPS", "value": "$2.65", "sub": "GAAP full year", "tier": "reported" },
+      { "label": "Data center revenue", "value": "$16.6B", "sub": "+32% YoY; record", "tier": "reported" },
+      { "label": "Non-GAAP EPS", "value": "$4.17", "sub": "record", "tier": "disclosed" },
+      { "label": "Latest quarter", "value": "$10.3B", "sub": "Q4 2025; +34% YoY", "tier": "reported" },
+      { "label": "Market cap", "value": null, "sub": "needs live price feed", "tier": "live" }
+    ]
+  },
+  {
+    "ticker": "INTC",
+    "fiscalYear": "FY2025",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Dec 27 2025 · Q4/FY 8-K Jan 22 2026",
+    "source": "Intel Q4/FY2025 earnings release (8-K EX-99.1)",
+    "metrics": [
+      { "label": "Revenue", "value": "$52.9B", "sub": "flat YoY", "tier": "reported" },
+      { "label": "Net income", "value": "-$0.3B", "sub": "-$267M attributable to Intel; net loss", "tier": "reported", "negative": true },
+      { "label": "Gross margin", "value": "34.8%", "sub": "GAAP full year", "tier": "reported" },
+      { "label": "Operating margin", "value": "-4.2%", "sub": "op loss -$2.2B GAAP", "tier": "reported", "negative": true },
+      { "label": "Operating cash flow", "value": "$9.7B", "sub": "FY2025 reported", "tier": "reported" },
+      { "label": "Free cash flow", "value": "-$1.6B", "sub": "Intel adjusted FCF; OCF was +$9.7B", "tier": "reported", "negative": true },
+      { "label": "Diluted EPS", "value": "-$0.06", "sub": "GAAP; $0.42 non-GAAP", "tier": "reported", "negative": true },
+      { "label": "DCAI revenue", "value": "$16.9B", "sub": "+5% YoY", "tier": "reported" },
+      { "label": "Foundry revenue", "value": "$17.8B", "sub": "mostly internal transfer", "tier": "reported" },
+      { "label": "Latest quarter", "value": "$13.7B", "sub": "Q4 2025; -4% YoY", "tier": "reported" },
+      { "label": "Note", "value": "US owns ~10%", "sub": "plus NVIDIA $5B, SoftBank $2B stakes", "tier": "reported" }
+    ]
+  },
+  {
+    "ticker": "AVGO",
+    "fiscalYear": "FY2025",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Nov 2 2025 · Q4/FY 8-K Dec 11 2025",
+    "source": "Broadcom Q4/FY2025 earnings release (8-K EX-99.1)",
+    "metrics": [
+      { "label": "Revenue", "value": "$63.9B", "sub": "+24% YoY", "tier": "reported" },
+      { "label": "Net income", "value": "$23.1B", "sub": "+292% YoY; 36.2% margin", "tier": "reported" },
+      { "label": "Gross margin", "value": "67.8%", "sub": "GAAP; gross profit $43.3B", "tier": "reported" },
+      { "label": "Operating margin", "value": "39.9%", "sub": "op income $25.5B GAAP", "tier": "reported" },
+      { "label": "Free cash flow", "value": "$26.9B", "sub": "OCF $27.5B - capex $0.6B", "tier": "reported" },
+      { "label": "Diluted EPS", "value": "$4.77", "sub": "GAAP; $6.82 non-GAAP", "tier": "reported" },
+      { "label": "Adjusted EBITDA", "value": "$43.0B", "sub": "67% of revenue", "tier": "reported" },
+      { "label": "AI semi revenue (Q4)", "value": "$5.2B", "sub": "Q4; +74% YoY", "tier": "reported" },
+      { "label": "Latest quarter", "value": "$18.0B", "sub": "Q4 FY2025; +28% YoY", "tier": "reported" },
+      { "label": "Q1 FY26 guide", "value": "~$19.1B", "sub": "+28%; not realized", "tier": "disclosed", "realized": false }
+    ]
+  },
+  {
+    "ticker": "MRVL",
+    "fiscalYear": "FY2026",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Jan 31 2026 · reported Mar 5 2026",
+    "source": "Marvell FY2026 results; Q1 FY2027 results",
+    "metrics": [
+      { "label": "Revenue", "value": "$8.20B", "sub": "record full year", "tier": "reported" },
+      { "label": "Data center revenue", "value": "~$6.1B", "sub": "~75% of revenue", "tier": "estimated" },
+      { "label": "Gross margin", "value": "~60%", "sub": "non-GAAP; custom-silicon mix", "tier": "disclosed" },
+      { "label": "Operating margin", "value": "~33%", "sub": "non-GAAP; Q1 FY27 ~35%", "tier": "disclosed" },
+      { "label": "Latest quarter", "value": "$2.42B", "sub": "Q1 FY2027; +28% YoY", "tier": "reported" },
+      { "label": "Op cash flow", "value": "$1.68B", "sub": "FY2025 reported", "tier": "reported" },
+      { "label": "FY2028 guide", "value": "$15-20B", "sub": "management target; not realized", "tier": "disclosed", "realized": false },
+      { "label": "Note", "value": "GAAP profit thin", "sub": "heavy acquisition amortization", "tier": "reported" }
+    ]
+  },
+  {
+    "ticker": "ARM",
+    "fiscalYear": "FY2025",
+    "calendarYearBasis": 2024,
+    "asOf": "ended Mar 31 2025 · reported May 7 2025",
+    "source": "Arm Holdings FY2025 annual report / shareholder letter",
+    "metrics": [
+      { "label": "Revenue", "value": "$4.01B", "sub": "record; +21% YoY", "tier": "reported" },
+      { "label": "Net income", "value": "$792M", "sub": "+158% YoY; GAAP", "tier": "reported" },
+      { "label": "Gross margin", "value": "~97%", "sub": "IP-licensing model", "tier": "reported" },
+      { "label": "Royalty revenue", "value": ">$2B", "sub": "first time; Armv9 ramp", "tier": "reported" },
+      { "label": "Licensing revenue", "value": "~$1.4B", "sub": "record", "tier": "reported" },
+      { "label": "Net margin", "value": "~20%", "sub": "GAAP full year", "tier": "reported" },
+      { "label": "Latest quarter", "value": "$1.14B", "sub": "Q2 FY2026; +34% YoY", "tier": "reported" },
+      { "label": "Chips shipped", "value": "310B+", "sub": "cumulative, all-time", "tier": "reported" }
+    ]
+  }
+]

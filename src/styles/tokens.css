@@ -1,0 +1,70 @@
+/*
+  Design tokens for the AI Infrastructure Atlas.
+  Flat and minimal: two font weights (400 / 500), sentence case, no heavy
+  shadows or gradients. Company colors are data-driven (companies.json);
+  these tokens cover the source-tier confidence system and base surfaces.
+*/
+
+:root {
+  /* Typography — two weights only */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  /* Base surfaces & ink */
+  --surface: #ffffff;
+  --surface-raised: #f7f7f6;
+  --line: #e5e4e1;
+  --ink: #1a1a18;
+  --ink-soft: #55534e;
+  --ink-faint: #8a8882;
+  --accent: #378add;
+
+  /*
+    Source-tier confidence colors.
+    reported = green · disclosed = blue/accent · estimated = amber · inferred = gray
+  */
+  --tier-reported: #2f9e44;
+  --tier-disclosed: #378add;
+  --tier-estimated: #ba7517;
+  --tier-inferred: #888780;
+
+  /* Soft fills for tier chips */
+  --tier-reported-soft: #e9f6ec;
+  --tier-disclosed-soft: #e8f1fb;
+  --tier-estimated-soft: #f8f0e2;
+  --tier-inferred-soft: #f0efed;
+
+  /* ---------- Spacing scale ----------
+     The only spacing steps the app uses. Exposed to Tailwind as
+     p-md, gap-lg, mt-xl, etc. Pick the nearest step; never a one-off value. */
+  --space-2xs: 0.25rem; /*  4px */
+  --space-xs: 0.5rem;   /*  8px */
+  --space-sm: 0.75rem;  /* 12px */
+  --space-md: 1rem;     /* 16px */
+  --space-lg: 1.5rem;   /* 24px */
+  --space-xl: 2rem;     /* 32px */
+  --space-2xl: 3rem;    /* 48px */
+
+  /* ---------- Type scale (size + line-height) ----------
+     Exposed to Tailwind as text-eyebrow, text-title, etc. Weight stays 400/500
+     via the base layer; these tokens set size, leading, and tracking only. */
+  --fs-eyebrow: 0.75rem;   --lh-eyebrow: 1.4;  --ls-eyebrow: 0.12em; /* uppercase kickers */
+  --fs-caption: 0.8125rem; --lh-caption: 1.5;                        /* small print, tier text */
+  --fs-label: 0.875rem;    --lh-label: 1.45;                         /* labels, secondary text */
+  --fs-body: 1rem;         --lh-body: 1.55;                          /* default body copy */
+  --fs-heading: 1.25rem;   --lh-heading: 1.3;                        /* section / card headings */
+  --fs-title: 2rem;        --lh-title: 1.15;                         /* page (section) titles */
+  --fs-data: 2.25rem;      --lh-data: 1.05;                          /* data / figure readouts */
+
+  /* ---------- Radius ---------- */
+  --radius-control: 0.375rem; /* buttons, toggles, chips-in-tables */
+  --radius-card: 0.625rem;    /* cards, panels, graph frames */
+
+  /*
+    Line semantics for graph edges:
+    realized = solid, committed = dashed.
+    Consumed by SVG stroke-dasharray in the supply-chain and financing views.
+  */
+  --edge-realized: 0;      /* solid */
+  --edge-committed: 6 5;   /* dashed: dash gap */
+}
