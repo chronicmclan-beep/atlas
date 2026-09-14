@@ -17,8 +17,8 @@ export { config, layers, companies, kpis, revenue, supplyEdges, financing, timel
 
 /* ---------- Companies ---------- */
 
-// ticker -> company record
-export const companiesByTicker = Object.fromEntries(
+// ticker -> company record (internal; access via getCompany)
+const companiesByTicker = Object.fromEntries(
   companies.map((c) => [c.ticker, c]),
 )
 
@@ -52,7 +52,7 @@ export function companyColor(ticker) {
 // id -> { id, label, note }. Includes a synthesized 'live' tier because
 // kpis.json uses tier:'live' for figures that need a market-data feed,
 // which the spec's four canonical tiers don't cover.
-export const sourceTiers = (() => {
+const sourceTiers = (() => {
   const map = Object.fromEntries(config.sourceTiers.map((t) => [t.id, t]))
   if (!map.live) {
     map.live = { id: 'live', label: 'Live', note: 'Needs a live market-data feed; not yet wired up.' }
@@ -67,7 +67,7 @@ export function getTier(id) {
 /* ---------- Realized / committed ---------- */
 
 // realizedStates from config keyed by boolean; true = realized, false = committed.
-export const realizedStates = Object.fromEntries(
+const realizedStates = Object.fromEntries(
   config.realizedStates.map((s) => [String(s.id), s]),
 )
 
@@ -82,10 +82,6 @@ export function getDefinition(label) {
   return glossary.terms[label] ?? null
 }
 
-export function hasDefinition(label) {
-  return Boolean(getDefinition(label))
-}
-
 /* ---------- Graph participation (for cross-links) ---------- */
 
 // Tickers that appear as a node in each graph, used to decide whether a
@@ -97,10 +93,6 @@ export const financingParticipants = new Set(financing.edges.flatMap((e) => [e.f
 
 // ticker -> kpi record
 export const kpisByTicker = Object.fromEntries(kpis.map((k) => [k.ticker, k]))
-
-export function getKpis(ticker) {
-  return kpisByTicker[ticker] ?? null
-}
 
 /* ---------- Timeline config ---------- */
 
