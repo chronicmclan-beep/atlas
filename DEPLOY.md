@@ -4,13 +4,20 @@ The app is a fully static site — `vite build` emits `dist/` (HTML, CSS, JS, an
 JSON data baked in). No backend, no environment secrets. Host `dist/` anywhere that
 serves static files.
 
+> **See also:** [MAINTENANCE.md](MAINTENANCE.md) (how to add data, save a version,
+> roll back, and read a failed check) and [CHANGELOG.md](CHANGELOG.md) (what's built).
+
 ## Build locally
 
 ```bash
 npm install
-npm run build      # outputs dist/
+npm run build      # validates the data, then outputs dist/ (stops on bad data)
 npm run preview    # serve the built dist/ at http://localhost:4173 to check it
 ```
+
+`npm run build` runs the data check first (`npm run validate`), so a broken data
+file stops the build with a plain-English message instead of shipping. Every push
+to GitHub also runs these checks automatically (see the repo's **Actions** tab).
 
 ## Option A — Vercel (simplest)
 
