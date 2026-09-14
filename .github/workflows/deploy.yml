@@ -1,11 +1,11 @@
 name: Deploy to GitHub Pages
 
-# Builds the Vite site and publishes dist/ to GitHub Pages on every push to main.
+# Builds the Vite site and publishes dist/ to GitHub Pages.
+# Manual-only for now (run it from the Actions tab) — it will fail until GitHub
+# Pages is enabled for this repo. Change to a push trigger when ready to go live.
 # Assumes this repository's root is the atlas/ project (package.json at root).
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
