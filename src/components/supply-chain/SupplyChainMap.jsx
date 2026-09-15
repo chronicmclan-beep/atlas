@@ -21,12 +21,14 @@ import CrossLinks from '../common/CrossLinks.jsx'
 const edges = supplyEdges.edges
 
 // --- Layout constants ---
-const NODE_W = 96
-const NODE_H = 32
-const COL_GAP = 140
-const ROW_GAP = 44
+// Sized so the seven columns fill the content width next to the sidebar and the
+// graph stands tall enough to use the vertical space (rather than a short strip).
+const NODE_W = 128
+const NODE_H = 48
+const COL_GAP = 34
+const ROW_GAP = 88
 const PAD = 20
-const HEADER_H = 30
+const HEADER_H = 36
 
 // Guided-walk script: one step per flow type, in supply order.
 const WALK_DEFS = [
@@ -105,7 +107,7 @@ export default function SupplyChainMap({ section }) {
       <div className="flex flex-col gap-lg lg:flex-row">
         {/* Graph */}
         <div className="min-w-0 flex-1">
-          <div className="overflow-x-auto rounded-card border border-line bg-surface p-sm">
+          <div className="scroll-x overflow-x-auto rounded-card border border-line bg-surface p-md">
             <svg
               width={width}
               height={height}
@@ -129,8 +131,8 @@ export default function SupplyChainMap({ section }) {
                 <text
                   key={col.layer.id}
                   x={colX(i)}
-                  y={PAD + 12}
-                  fontSize="11"
+                  y={PAD + 16}
+                  fontSize="13"
                   fill="var(--ink-faint)"
                   style={{ textTransform: 'uppercase', letterSpacing: '0.08em' }}
                 >
@@ -153,8 +155,8 @@ export default function SupplyChainMap({ section }) {
                     d={edgePath(a, b)}
                     fill="none"
                     stroke={isActive ? companyColor(e.from) : 'var(--ink-faint)'}
-                    strokeWidth={isActive ? 2 : 1}
-                    strokeDasharray={dashed ? '5 4' : undefined}
+                    strokeWidth={isActive ? 2.5 : 1.5}
+                    strokeDasharray={dashed ? '6 5' : undefined}
                     strokeOpacity={dimmed ? 0.1 : isActive ? 0.9 : 0.4}
                     markerEnd={isActive ? 'url(#sc-arrow-active)' : 'url(#sc-arrow)'}
                   />
@@ -181,13 +183,13 @@ export default function SupplyChainMap({ section }) {
                       <rect
                         width={NODE_W}
                         height={NODE_H}
-                        rx="6"
+                        rx="8"
                         fill="var(--surface)"
                         stroke={isSelected ? company?.color ?? 'var(--ink)' : 'var(--line)'}
                         strokeWidth={isSelected ? 2 : 1}
                       />
-                      <circle cx="13" cy={NODE_H / 2} r="4" fill={company?.color ?? 'var(--ink-faint)'} />
-                      <text x="24" y={NODE_H / 2 + 4} fontSize="13" fill="var(--ink)">
+                      <circle cx="18" cy={NODE_H / 2} r="5" fill={company?.color ?? 'var(--ink-faint)'} />
+                      <text x="36" y={NODE_H / 2 + 5} fontSize="16" fontWeight="500" fill="var(--ink)">
                         {t}
                       </text>
                     </g>

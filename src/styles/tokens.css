@@ -10,14 +10,28 @@
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
 
-  /* Base surfaces & ink */
+  /* Base surfaces & ink — a cool, neutral foundation (the ~90% of the UI).
+     Precise and calm rather than warm/editorial; white cards lift off a faintly
+     cool page. Theme-aware: the dark equivalents live in the @media block below.
+       --bg       = the page
+       --surface  = cards / panels (lift above the page)
+       --surface-raised = faint fill for tracks, active nav, small chips
+       --surface-hover  = barely-there tint for hovering a card */
+  color-scheme: light;
+  --bg: #f5f6f8;
   --surface: #ffffff;
-  --surface-raised: #f7f7f6;
-  --line: #e5e4e1;
-  --ink: #1a1a18;
-  --ink-soft: #55534e;
-  --ink-faint: #8a8882;
-  --accent: #378add;
+  --surface-raised: #eceef1;
+  --surface-hover: #f8f9fb;
+  --line: #e3e6ea;
+  --line-strong: #ced4db;
+  --ink: #1a1e24;
+  --ink-soft: #4a525b;
+  --ink-faint: #838b95;
+  --accent: #2f6fd0;
+
+  /* Restrained depth — hairline soft shadows, never heavy. */
+  --shadow-sm: 0 1px 2px rgba(16, 20, 28, 0.06), 0 1px 1px rgba(16, 20, 28, 0.04);
+  --shadow-md: 0 4px 14px rgba(16, 20, 28, 0.09), 0 1px 3px rgba(16, 20, 28, 0.05);
 
   /*
     Source-tier confidence colors.
@@ -33,6 +47,11 @@
   --tier-disclosed-soft: #e8f1fb;
   --tier-estimated-soft: #f8f0e2;
   --tier-inferred-soft: #f0efed;
+
+  /* Circular-financing "loop" accent (Financing web) — a data-meaning color,
+     so it gets its own token pair and a dark variant, like the tiers. */
+  --loop: #d85a30;
+  --loop-soft: #f7ede8;
 
   /* ---------- Spacing scale ----------
      The only spacing steps the app uses. Exposed to Tailwind as
@@ -67,4 +86,40 @@
   */
   --edge-realized: 0;      /* solid */
   --edge-committed: 6 5;   /* dashed: dash gap */
+}
+
+/* ---------- Dark mode ----------
+   Auto-follows the viewer's operating system. Same design language, inverted
+   surfaces. Data-meaning colors (source tiers) keep their identity — green /
+   blue / amber / gray — but are tuned brighter so they stay legible and
+   distinguishable on dark. Spacing, type, and radius are theme-independent. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #0f1319;
+    --surface: #161b22;
+    --surface-raised: #232a33;
+    --surface-hover: #1b212a;
+    --line: #2a313b;
+    --line-strong: #3c454f;
+    --ink: #e7eaee;
+    --ink-soft: #a6aeb8;
+    --ink-faint: #6b747e;
+    --accent: #5b9bf2;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.45), 0 1px 1px rgba(0, 0, 0, 0.30);
+    --shadow-md: 0 6px 22px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.40);
+
+    --tier-reported: #4ab86a;
+    --tier-disclosed: #5a9bf0;
+    --tier-estimated: #d99a3c;
+    --tier-inferred: #9aa0a6;
+    --tier-reported-soft: #16311f;
+    --tier-disclosed-soft: #15293f;
+    --tier-estimated-soft: #322610;
+    --tier-inferred-soft: #262a2f;
+
+    --loop: #e8794f;
+    --loop-soft: #33221a;
+  }
 }

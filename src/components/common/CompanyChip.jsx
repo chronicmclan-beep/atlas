@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react'
 import { findCompany } from '../../lib/data.js'
 import { companyDestinations } from '../../lib/crosslinks.js'
 import { useAppState } from '../../lib/appState.jsx'
+import CompanyBadge from './CompanyBadge.jsx'
 
 /*
   CompanyChip — renders a company reference. If the string resolves to a known
@@ -38,21 +39,15 @@ export default function CompanyChip({ name }) {
     }
   }, [open])
 
-  const dot = (
-    <span
-      aria-hidden="true"
-      className="inline-block h-2 w-2 shrink-0 rounded-full"
-      style={{ background: company ? company.color : 'var(--line)' }}
-    />
-  )
+  const badge = <CompanyBadge name={name} size={16} />
   const chipClass =
-    'inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-[0.75rem] text-ink-soft'
+    'inline-flex items-center gap-xs rounded-full border border-line py-1 pl-1 pr-sm text-caption text-ink-soft'
 
   // Plain, non-interactive chip.
   if (!company || dests.length === 0) {
     return (
       <span className={chipClass} title={company?.role ?? undefined}>
-        {dot}
+        {badge}
         {name}
       </span>
     )
@@ -66,9 +61,9 @@ export default function CompanyChip({ name }) {
         aria-expanded={open}
         aria-controls={open ? panelId : undefined}
         title={company.role ?? undefined}
-        className={chipClass + ' transition-colors hover:border-ink/25 hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40'}
+        className={chipClass + ' transition-colors hover:border-line-strong hover:bg-surface-hover hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40'}
       >
-        {dot}
+        {badge}
         {name}
       </button>
       {open && (

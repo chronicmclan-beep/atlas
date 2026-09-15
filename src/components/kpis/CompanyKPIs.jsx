@@ -8,6 +8,7 @@ import Filters from '../common/Filters.jsx'
 import SourceTag from '../common/SourceTag.jsx'
 import GlossaryTerm from '../common/GlossaryTerm.jsx'
 import CrossLinks from '../common/CrossLinks.jsx'
+import CompanyBadge from '../common/CompanyBadge.jsx'
 
 /*
   Section 02 — Company KPIs.
@@ -43,7 +44,7 @@ export default function CompanyKPIs({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} />
+      <SectionHeader section={section} accent={section.color} />
 
       <div className="mb-lg flex flex-wrap items-center gap-md">
         <CompareToggle
@@ -77,7 +78,7 @@ export default function CompanyKPIs({ section }) {
       {mode === 'single' ? (
         <SingleView record={kpiByTicker[single]} />
       ) : (
-        <CompareView records={compare.map((t) => kpiByTicker[t]).filter(Boolean)} />
+        <CompareView records={compare.map((t) => kpiByTicker[t]).filter(Boolean)} accent={section.color} />
       )}
     </section>
   )
@@ -86,7 +87,8 @@ export default function CompanyKPIs({ section }) {
 function CompanyMeta({ record }) {
   const company = getCompany(record.ticker)
   return (
-    <div className="flex flex-wrap items-baseline gap-x-sm gap-y-2xs">
+    <div className="flex flex-wrap items-center gap-x-sm gap-y-2xs">
+      <CompanyBadge name={record.ticker} size={26} />
       <span className="text-heading font-medium" style={{ color: company?.color }}>
         {company?.name ?? record.ticker}
       </span>
@@ -112,7 +114,7 @@ function SingleView({ record }) {
   )
 }
 
-function CompareView({ records }) {
+function CompareView({ records, accent }) {
   // Union of metric labels, preserving first-seen order across companies.
   const rows = useMemo(() => {
     const order = []
@@ -136,14 +138,20 @@ function CompareView({ records }) {
     <div className="overflow-x-auto">
       <table className="w-full border-collapse text-label">
         <thead>
-          <tr className="border-b border-line text-left">
+          <tr
+            className="border-b-2 text-left"
+            style={{ borderBottomColor: accent ?? 'var(--line)' }}
+          >
             <th className="py-sm pr-md font-medium text-ink-faint">Metric</th>
             {records.map((r) => {
               const company = getCompany(r.ticker)
               return (
                 <th key={r.ticker} className="px-md py-sm font-medium">
-                  <span style={{ color: company?.color }}>{company?.name ?? r.ticker}</span>
-                  <span className="ml-xs text-caption font-normal text-ink-faint">{r.fiscalYear}</span>
+                  <span className="flex items-center gap-xs">
+                    <CompanyBadge name={r.ticker} size={18} />
+                    <span style={{ color: company?.color }}>{company?.name ?? r.ticker}</span>
+                    <span className="text-caption font-normal text-ink-faint">{r.fiscalYear}</span>
+                  </span>
                 </th>
               )
             })}

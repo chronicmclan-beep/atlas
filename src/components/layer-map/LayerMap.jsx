@@ -16,7 +16,7 @@ export default function LayerMap({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} />
+      <SectionHeader section={section} accent={section.color} />
 
       <div className="grid grid-cols-1 gap-md sm:grid-cols-2 lg:grid-cols-3">
         {layers.map((layer) => (
@@ -41,8 +41,8 @@ function LayerCard({ layer, active, onSelect }) {
       onClick={onSelect}
       aria-pressed={active}
       className={
-        'flex h-full flex-col rounded-card border bg-surface p-lg text-left transition-colors ' +
-        (active ? 'border-transparent' : 'border-line hover:bg-surface-raised')
+        'flex h-full flex-col rounded-card border bg-surface p-lg text-left shadow-card transition-all ' +
+        (active ? 'border-transparent' : 'border-line hover:border-line-strong hover:shadow-raised')
       }
       style={active ? { boxShadow: `inset 0 0 0 2px ${layer.color}` } : undefined}
     >
@@ -75,7 +75,7 @@ function ActiveLayerPanel({ layer }) {
   return (
     <div
       className="mt-xl rounded-card border border-line bg-surface p-lg"
-      style={{ boxShadow: `inset 3px 0 0 ${layer.color}` }}
+      style={{ boxShadow: `inset 3px 0 0 ${layer.color}, var(--shadow-sm)` }}
     >
       <div className="text-eyebrow uppercase text-ink-faint">Active company set</div>
       <h2 className="mt-2xs text-heading font-medium">{layer.name}</h2>

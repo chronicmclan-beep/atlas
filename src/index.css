@@ -15,7 +15,7 @@
 
   body {
     margin: 0;
-    background: var(--surface);
+    background: var(--bg);
     color: var(--ink);
     /* Default copy pulls from the type scale */
     font-size: var(--fs-body);
@@ -29,6 +29,30 @@
 }
 
 @layer components {
+  /* Visible, themed horizontal scrollbar for wide content (graphs, timeline)
+     so it's obvious more can be scrolled into view. */
+  .scroll-x {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+    scroll-behavior: smooth;
+  }
+  .scroll-x::-webkit-scrollbar {
+    height: 10px;
+  }
+  .scroll-x::-webkit-scrollbar-thumb {
+    background: var(--line-strong);
+    border-radius: 9999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  .scroll-x::-webkit-scrollbar-thumb:hover {
+    background: var(--ink-faint);
+    background-clip: content-box;
+  }
+  .scroll-x::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
   /* Source-tier chip — the shared visual language for confidence.
      A full <SourceTag> component comes in Phase 2; this base class
      lets any early markup render a consistent chip. */

@@ -19,8 +19,9 @@ import CrossLinks from '../common/CrossLinks.jsx'
 
 const edges = financing.edges
 
-// Loop-view accent (the circular-financing theme color).
-const LOOP_COLOR = '#D85A30'
+// Loop-view accent (the circular-financing theme color). Theme-aware token so
+// it brightens on dark and its soft fill adapts (see src/styles/tokens.css).
+const LOOP_COLOR = 'var(--loop)'
 
 const CENTER = { x: 340, y: 250 }
 const RADIUS = 180
@@ -279,7 +280,7 @@ function FlowList({ title, items, nameKey, empty }) {
                   <span className="inline-block h-2 w-2 rounded-full" style={{ background: other?.color ?? 'var(--ink-faint)' }} />
                   <span className="font-medium">{other?.name ?? e[nameKey]}</span>
                   {e.loop && (
-                    <span className="rounded-control px-1 text-[0.625rem] font-medium uppercase" style={{ color: LOOP_COLOR, background: '#f7ede8' }}>
+                    <span className="rounded-control px-1 text-[0.625rem] font-medium uppercase" style={{ color: LOOP_COLOR, background: 'var(--loop-soft)' }}>
                       loop
                     </span>
                   )}

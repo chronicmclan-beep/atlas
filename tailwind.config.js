@@ -14,10 +14,17 @@ export default {
         ink: 'var(--ink)',
         'ink-soft': 'var(--ink-soft)',
         'ink-faint': 'var(--ink-faint)',
+        bg: 'var(--bg)',
         surface: 'var(--surface)',
         'surface-raised': 'var(--surface-raised)',
+        'surface-hover': 'var(--surface-hover)',
         line: 'var(--line)',
+        'line-strong': 'var(--line-strong)',
         accent: 'var(--accent)',
+      },
+      boxShadow: {
+        card: 'var(--shadow-sm)',
+        raised: 'var(--shadow-md)',
       },
       fontFamily: {
         sans: ['var(--font-sans)'],

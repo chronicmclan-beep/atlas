@@ -29,22 +29,43 @@ export default function App() {
   )
 }
 
+/*
+  Product mark: a monochrome "strata" glyph — stacked layers fading downward,
+  echoing the nine-layer supply chain the Atlas maps. Restrained on purpose.
+*/
+function BrandMark() {
+  return (
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" className="shrink-0">
+      {/* Tile uses --ink and lines use --surface so the mark inverts cleanly
+          in dark mode (dark tile + light lines → light tile + dark lines). */}
+      <rect width="34" height="34" rx="9" fill="var(--ink)" />
+      <rect x="9" y="10" width="16" height="2.4" rx="1.2" fill="var(--surface)" opacity="0.92" />
+      <rect x="9" y="15.8" width="16" height="2.4" rx="1.2" fill="var(--surface)" opacity="0.6" />
+      <rect x="9" y="21.6" width="16" height="2.4" rx="1.2" fill="var(--surface)" opacity="0.34" />
+    </svg>
+  )
+}
+
 function AppShell() {
   const { activeSection, navigateSection } = useAppState()
   const section = SECTIONS.find((s) => s.id === activeSection) ?? SECTIONS[0]
   const SectionComponent = SECTION_COMPONENTS[section.id]
 
   return (
-    <div className="min-h-screen bg-surface text-ink">
+    <div className="min-h-screen bg-bg text-ink">
       <div className="mx-auto flex max-w-[1840px] flex-col gap-0 md:flex-row">
         {/* Sidebar navigation */}
-        <aside className="border-b border-line md:min-h-screen md:w-52 md:shrink-0 md:border-b-0 md:border-r">
-          <div className="px-md pb-sm pt-md md:pb-md">
-            <div className="text-eyebrow uppercase text-ink-faint">AI infrastructure</div>
-            <div className="mt-2xs text-heading font-medium">Atlas</div>
+        <aside className="border-b border-line md:min-h-screen md:w-56 md:shrink-0 md:border-b-0 md:border-r">
+          {/* Product mark */}
+          <div className="flex items-center gap-sm border-b border-line px-md py-md">
+            <BrandMark />
+            <div className="leading-tight">
+              <div className="text-eyebrow uppercase text-ink-faint">AI infrastructure</div>
+              <div className="text-heading font-medium tracking-tight text-ink">Atlas</div>
+            </div>
           </div>
 
-          <nav className="px-xs pb-sm md:pb-md">
+          <nav className="px-xs py-sm">
             <ul className="flex flex-row flex-nowrap gap-2xs overflow-x-auto md:flex-col md:overflow-visible">
               {SECTIONS.map((s) => {
                 const isActive = s.id === activeSection
@@ -55,13 +76,19 @@ function AppShell() {
                       onClick={() => navigateSection(s.id)}
                       aria-current={isActive ? 'page' : undefined}
                       className={
-                        'flex w-full items-baseline gap-2 whitespace-nowrap rounded-control px-sm py-xs text-label transition-colors ' +
+                        'flex w-full items-center gap-sm whitespace-nowrap rounded-control px-sm py-2 text-label transition-colors ' +
                         (isActive
-                          ? 'bg-surface-raised font-medium text-ink'
+                          ? 'bg-surface font-medium text-ink shadow-card'
                           : 'text-ink-soft hover:bg-surface-raised hover:text-ink')
                       }
+                      style={{ borderLeft: `3px solid ${isActive ? s.color : 'transparent'}` }}
                     >
-                      <span className="text-caption tabular-nums text-ink-faint">{s.num}</span>
+                      <span
+                        className="text-caption tabular-nums"
+                        style={{ color: isActive ? s.color : 'var(--ink-faint)' }}
+                      >
+                        {s.num}
+                      </span>
                       <span>{s.label}</span>
                     </button>
                   </li>

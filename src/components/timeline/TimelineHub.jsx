@@ -82,20 +82,20 @@ export default function TimelineHub({ section }) {
       )}
 
       {/* Horizontal scrollable timeline */}
-      <div className="overflow-x-auto pb-md">
+      <div className="scroll-x overflow-x-auto pb-md">
         <div className="flex min-w-min gap-xl">
           {eraKeys
             .filter((era) => byEra[era]?.length)
             .map((era) => (
               <div key={era} className="shrink-0">
-                <div className="mb-md border-t-2 border-ink pt-xs">
+                <div className="mb-md border-t-2 border-ink-soft pt-sm">
                   <div className="text-eyebrow uppercase text-ink-faint">{era}</div>
-                  <div className="text-body font-medium">{eras[era].name}</div>
-                  <p className="mt-2xs max-w-[280px] text-caption text-ink-faint">
+                  <div className="text-heading font-medium">{eras[era].name}</div>
+                  <p className="mt-2xs max-w-[280px] text-label text-ink-faint">
                     {eras[era].headline}
                   </p>
                 </div>
-                <div className="flex items-stretch gap-sm">
+                <div className="flex items-stretch gap-md">
                   {byEra[era].map((e) => {
                     const id = e.date + e.title
                     return (
@@ -127,28 +127,28 @@ function EventCard({ event, active, onSelect }) {
       onClick={onSelect}
       aria-pressed={active}
       className={
-        'flex w-44 shrink-0 flex-col rounded-card border bg-surface p-md text-left transition-colors ' +
-        (active ? 'border-transparent' : 'border-line hover:bg-surface-raised')
+        'flex w-56 min-h-40 shrink-0 flex-col rounded-card border bg-surface p-lg text-left shadow-card transition-colors ' +
+        (active ? 'border-transparent' : 'border-line hover:bg-surface-hover')
       }
       style={active ? { boxShadow: `inset 0 0 0 2px ${cat?.color ?? 'var(--ink)'}` } : undefined}
     >
       <div className="flex items-center gap-xs">
         <span
           aria-hidden="true"
-          className="inline-block h-2 w-2 rounded-full"
+          className="inline-block h-2.5 w-2.5 rounded-full"
           style={{ background: cat?.color }}
         />
-        <span className="text-caption text-ink-faint">{event.displayDate}</span>
+        <span className="text-label text-ink-faint">{event.displayDate}</span>
       </div>
       <div
         className={
-          'mt-xs text-label ' + (isMajor ? 'font-medium text-ink' : 'text-ink-soft')
+          'mt-sm text-body ' + (isMajor ? 'font-medium text-ink' : 'text-ink-soft')
         }
       >
         {event.title}
       </div>
       {event.figure && (
-        <div className="mt-auto pt-sm">
+        <div className="mt-auto pt-md">
           <span className="inline-block rounded-control bg-surface-raised px-xs py-0.5 text-caption font-medium text-ink-soft">
             {event.figure}
           </span>
