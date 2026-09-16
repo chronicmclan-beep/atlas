@@ -190,7 +190,7 @@ function yAxisProps(indexed) {
 function RevenueTooltip({ active, payload, label, indexed }) {
   if (!active || !payload || payload.length === 0) return null
   return (
-    <div className="rounded-control border border-line bg-surface p-sm text-caption shadow-sm">
+    <div className="rounded-control border border-line bg-surface p-sm text-caption shadow-raised">
       <div className="mb-2xs font-medium text-ink">{label}</div>
       {payload.map((p) => {
         const company = getCompany(p.dataKey)
