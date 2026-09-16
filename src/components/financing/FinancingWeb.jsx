@@ -286,7 +286,7 @@ function FlowList({ title, items, nameKey, empty }) {
                   )}
                   <SourceTag tier={e.tier} showLabel={false} />
                 </div>
-                <div className="ml-3.5 mt-2xs flex flex-wrap items-center gap-x-sm text-caption text-ink-soft">
+                <div className="ml-md mt-2xs flex flex-wrap items-center gap-x-sm text-caption text-ink-soft">
                   <span className="font-medium text-ink">{e.amount}</span>
                   <span className="text-ink-faint">{e.type}</span>
                   <span
@@ -302,7 +302,7 @@ function FlowList({ title, items, nameKey, empty }) {
                   </span>
                   <span className="text-ink-faint">{e.asOf}</span>
                 </div>
-                {e.note && <div className="ml-3.5 mt-2xs text-caption text-ink-faint">{e.note}</div>}
+                {e.note && <div className="ml-md mt-2xs text-caption text-ink-faint">{e.note}</div>}
               </li>
             )
           })}

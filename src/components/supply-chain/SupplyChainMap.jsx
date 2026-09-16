@@ -108,14 +108,17 @@ export default function SupplyChainMap({ section }) {
         {/* Graph */}
         <div className="min-w-0 flex-1">
           <div className="scroll-x overflow-x-auto rounded-card border border-line bg-surface p-md">
+            {/* Fill the available width (scaling up on wide screens); keep a
+                readable minimum so it scrolls rather than shrinking on narrow ones. */}
             <svg
               width={width}
               height={height}
               viewBox={`0 0 ${width} ${height}`}
+              preserveAspectRatio="xMidYMid meet"
               role="img"
               aria-label="Supply chain food-web"
               onClick={() => setSelected(null)}
-              style={{ maxWidth: 'none' }}
+              style={{ width: '100%', height: 'auto', minWidth: width }}
             >
               <defs>
                 <marker id="sc-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
@@ -287,7 +290,7 @@ function EdgeList({ title, items, nameKey, empty }) {
                   <SourceTag tier={e.tier} showLabel={false} />
                   {e.magnitude && <span className="text-caption text-ink-soft">{e.magnitude}</span>}
                 </div>
-                <div className="ml-3.5 text-caption text-ink-faint">{e.product}</div>
+                <div className="ml-md text-caption text-ink-faint">{e.product}</div>
               </li>
             )
           })}

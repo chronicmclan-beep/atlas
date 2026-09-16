@@ -104,7 +104,7 @@ function SingleView({ record }) {
     <div>
       <CompanyMeta record={record} />
       <CrossLinks ticker={record.ticker} exclude="kpis" className="mt-xs" />
-      <div className="mt-lg grid grid-cols-1 gap-lg sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="mt-lg grid grid-cols-1 gap-md sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {record.metrics.map((m, i) => (
           <MetricCard key={`${m.label}-${i}`} metric={m} />
         ))}

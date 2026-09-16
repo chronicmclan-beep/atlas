@@ -24,7 +24,7 @@ export default function MetricCard({ metric }) {
   return (
     <div
       className={
-        'flex flex-col gap-sm rounded-card border bg-surface p-xl shadow-card ' +
+        'flex flex-col gap-sm rounded-card border bg-surface p-lg shadow-card ' +
         (isCommitted ? 'border-dashed border-line' : 'border-solid border-line')
       }
     >
