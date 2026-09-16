@@ -5,6 +5,7 @@ import SectionHeader from '../common/SectionHeader.jsx'
 import GuidedWalk from '../common/GuidedWalk.jsx'
 import SourceTag from '../common/SourceTag.jsx'
 import CrossLinks from '../common/CrossLinks.jsx'
+import SupplyChainIcon from '../common/icons/SupplyChainIcon.jsx'
 
 /*
   Section 04 — Supply Chain Map.
@@ -102,7 +103,7 @@ export default function SupplyChainMap({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} accent={section.color} />
+      <SectionHeader section={section} accent={section.color} icon={SupplyChainIcon} />
 
       <div className="flex flex-col gap-lg lg:flex-row">
         {/* Graph */}

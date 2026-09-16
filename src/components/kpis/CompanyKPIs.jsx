@@ -9,6 +9,7 @@ import SourceTag from '../common/SourceTag.jsx'
 import GlossaryTerm from '../common/GlossaryTerm.jsx'
 import CrossLinks from '../common/CrossLinks.jsx'
 import CompanyBadge from '../common/CompanyBadge.jsx'
+import KPIsIcon from '../common/icons/KPIsIcon.jsx'
 
 /*
   Section 02 — Company KPIs.
@@ -44,7 +45,7 @@ export default function CompanyKPIs({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} accent={section.color} />
+      <SectionHeader section={section} accent={section.color} icon={KPIsIcon} />
 
       <div className="mb-lg flex flex-wrap items-center gap-md">
         <CompareToggle

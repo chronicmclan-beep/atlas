@@ -15,6 +15,7 @@ import SectionHeader from '../common/SectionHeader.jsx'
 import CompareToggle from '../common/CompareToggle.jsx'
 import Filters from '../common/Filters.jsx'
 import SourceTag from '../common/SourceTag.jsx'
+import RevenueIcon from '../common/icons/RevenueIcon.jsx'
 
 /*
   Section 03 — Revenue & Segments.
@@ -67,7 +68,7 @@ export default function RevenueSegments({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} accent={section.color} />
+      <SectionHeader section={section} accent={section.color} icon={RevenueIcon} />
 
       <div className="mb-lg flex flex-wrap items-center gap-md">
         <CompareToggle

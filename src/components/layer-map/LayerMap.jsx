@@ -2,6 +2,7 @@ import { layers } from '../../lib/data.js'
 import { useAppState } from '../../lib/appState.jsx'
 import SectionHeader from '../common/SectionHeader.jsx'
 import CompanyChip from '../common/CompanyChip.jsx'
+import LayerMapIcon from '../common/icons/LayerMapIcon.jsx'
 
 /*
   Section 01 — Layer Map.
@@ -16,7 +17,7 @@ export default function LayerMap({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} accent={section.color} />
+      <SectionHeader section={section} accent={section.color} icon={LayerMapIcon} />
 
       <div className="grid grid-cols-1 gap-md sm:grid-cols-2 lg:grid-cols-3">
         {layers.map((layer) => (

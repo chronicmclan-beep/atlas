@@ -5,6 +5,7 @@ import SectionHeader from '../common/SectionHeader.jsx'
 import CompareToggle from '../common/CompareToggle.jsx'
 import SourceTag from '../common/SourceTag.jsx'
 import CrossLinks from '../common/CrossLinks.jsx'
+import FinancingIcon from '../common/icons/FinancingIcon.jsx'
 
 /*
   Section 06 — Financing Web.
@@ -89,7 +90,7 @@ export default function FinancingWeb({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} accent={section.color} />
+      <SectionHeader section={section} accent={section.color} icon={FinancingIcon} />
 
       <div className="mb-lg flex flex-wrap items-center gap-md">
         <CompareToggle

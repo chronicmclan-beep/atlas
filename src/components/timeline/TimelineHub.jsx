@@ -4,6 +4,7 @@ import SectionHeader from '../common/SectionHeader.jsx'
 import Filters from '../common/Filters.jsx'
 import CompareToggle from '../common/CompareToggle.jsx'
 import CompanyChip from '../common/CompanyChip.jsx'
+import TimelineIcon from '../common/icons/TimelineIcon.jsx'
 
 /*
   Section 05 — Master Timeline.
@@ -53,7 +54,7 @@ export default function TimelineHub({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} accent={section.color} />
+      <SectionHeader section={section} accent={section.color} icon={TimelineIcon} />
 
       <div className="mb-lg flex flex-wrap items-center justify-between gap-md">
         <Filters

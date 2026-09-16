@@ -32,7 +32,17 @@ export default function SectionHeader({ section, accent, icon: Icon, children })
 }
 
 function SectionIcon({ accent, Icon }) {
-  // Two-tone: a soft tint of the accent behind a mark in the accent color.
+  // Real icon: a self-contained circular badge that paints in the accent color
+  // via currentColor. It fills the slot, so no tint box is needed. These icon
+  // components take a `size` prop (not className), so size them explicitly.
+  if (Icon) {
+    return (
+      <span aria-hidden="true" className="inline-flex h-11 w-11 shrink-0" style={{ color: accent }}>
+        <Icon size={44} />
+      </span>
+    )
+  }
+  // Placeholder until real icon art is wired in: two-tone tint box + solid dot.
   const tint = `color-mix(in srgb, ${accent} 16%, transparent)`
   return (
     <span
@@ -40,11 +50,7 @@ function SectionIcon({ accent, Icon }) {
       className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-card"
       style={{ background: tint, color: accent }}
     >
-      {Icon ? (
-        <Icon className="h-5 w-5" />
-      ) : (
-        <span className="h-3.5 w-3.5 rounded-full" style={{ background: accent }} />
-      )}
+      <span className="h-3.5 w-3.5 rounded-full" style={{ background: accent }} />
     </span>
   )
 }
