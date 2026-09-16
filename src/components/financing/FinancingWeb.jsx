@@ -109,15 +109,19 @@ export default function FinancingWeb({ section }) {
 
       <div className="flex flex-col gap-lg lg:flex-row">
         <div className="min-w-0 flex-1">
-          <div className="overflow-x-auto rounded-card border border-line bg-surface p-sm">
+          <div className="scroll-x overflow-x-auto rounded-card border border-line bg-surface p-sm">
+            {/* Fill the available width (scaling the radial graph up on wide
+                screens); keep a min-width floor so it scrolls rather than
+                shrinking on narrow ones. */}
             <svg
               width={WIDTH}
               height={HEIGHT}
               viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
+              preserveAspectRatio="xMidYMid meet"
               role="img"
               aria-label={`Financing ${view === 'loops' ? 'circular loops' : 'full web'}`}
               onClick={() => setSelected(null)}
-              style={{ maxWidth: 'none' }}
+              style={{ width: '100%', height: 'auto', minWidth: WIDTH }}
             >
               <defs>
                 <marker id="fin-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">

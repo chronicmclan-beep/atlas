@@ -55,7 +55,7 @@ function AppShell() {
     <div className="min-h-screen bg-bg text-ink">
       <div className="mx-auto flex max-w-[1840px] flex-col gap-0 md:flex-row">
         {/* Sidebar navigation */}
-        <aside className="border-b border-line md:min-h-screen md:w-56 md:shrink-0 md:border-b-0 md:border-r">
+        <aside className="border-b border-line md:min-h-screen md:w-64 md:shrink-0 md:border-b-0 md:border-r">
           {/* Product mark */}
           <div className="flex items-center gap-sm border-b border-line px-md py-md">
             <BrandMark />
@@ -76,7 +76,7 @@ function AppShell() {
                       onClick={() => navigateSection(s.id)}
                       aria-current={isActive ? 'page' : undefined}
                       className={
-                        'flex w-full items-center gap-sm whitespace-nowrap rounded-control px-sm py-2 text-label transition-colors ' +
+                        'flex w-full items-center gap-sm whitespace-nowrap rounded-control px-sm py-sm text-body transition-colors ' +
                         (isActive
                           ? 'bg-surface font-medium text-ink shadow-card'
                           : 'text-ink-soft hover:bg-surface-raised hover:text-ink')
@@ -84,7 +84,7 @@ function AppShell() {
                       style={{ borderLeft: `3px solid ${isActive ? s.color : 'transparent'}` }}
                     >
                       <span
-                        className="text-caption tabular-nums"
+                        className="text-label tabular-nums"
                         style={{ color: isActive ? s.color : 'var(--ink-faint)' }}
                       >
                         {s.num}
