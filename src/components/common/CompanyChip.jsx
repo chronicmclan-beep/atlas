@@ -70,9 +70,9 @@ export default function CompanyChip({ name }) {
         <span
           id={panelId}
           role="menu"
-          className="absolute left-0 top-full z-20 mt-1.5 block w-52 rounded-md border border-line bg-surface p-2 text-sm"
+          className="absolute left-0 top-full z-20 mt-1.5 block w-52 rounded-control border border-line bg-surface p-xs text-label"
         >
-          <span className="mb-1 block px-1 text-xs font-medium text-ink">{company.name}</span>
+          <span className="mb-1 block px-1 text-caption font-medium text-ink">{company.name}</span>
           {dests.map((d) => (
             <button
               key={d.sectionId}
@@ -82,7 +82,7 @@ export default function CompanyChip({ name }) {
                 setOpen(false)
                 navigateToCompany(company.ticker, d.sectionId)
               }}
-              className="block w-full rounded px-1 py-1 text-left text-xs text-accent hover:bg-surface-raised"
+              className="block w-full rounded-control px-1 py-1 text-left text-caption text-accent hover:bg-surface-raised"
             >
               View in {d.label} ›
             </button>

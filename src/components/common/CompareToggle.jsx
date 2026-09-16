@@ -14,7 +14,7 @@ export default function CompareToggle({ options, value, onChange, ariaLabel = 'V
     <div
       role="tablist"
       aria-label={ariaLabel}
-      className="inline-flex rounded-md border border-line bg-surface-raised p-0.5"
+      className="inline-flex rounded-control border border-line bg-surface-raised p-0.5"
     >
       {options.map((opt) => {
         const isActive = opt.id === value
@@ -26,7 +26,7 @@ export default function CompareToggle({ options, value, onChange, ariaLabel = 'V
             aria-selected={isActive}
             onClick={() => onChange(opt.id)}
             className={
-              'rounded px-3 py-1 text-[0.8125rem] transition-colors ' +
+              'rounded-control px-sm py-2xs text-label transition-colors ' +
               (isActive
                 ? 'bg-surface font-medium text-ink shadow-[0_0_0_1px_var(--line)]'
                 : 'text-ink-soft hover:text-ink')

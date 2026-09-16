@@ -19,7 +19,7 @@ export default function CrossLinks({ ticker, exclude, className = '' }) {
           key={d.sectionId}
           type="button"
           onClick={() => navigateToCompany(ticker, d.sectionId)}
-          className="text-xs text-accent hover:underline"
+          className="text-caption text-accent hover:underline"
         >
           View in {d.label} ›
         </button>

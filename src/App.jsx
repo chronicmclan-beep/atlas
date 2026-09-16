@@ -114,18 +114,14 @@ function AppShell() {
 function SectionPlaceholder({ section }) {
   return (
     <section aria-labelledby="section-title" className="max-w-2xl">
-      <div className="text-[0.7rem] uppercase tracking-[0.14em] text-ink-faint">
-        Section {section.num}
-      </div>
-      <h1 id="section-title" className="mt-1 text-2xl font-medium leading-tight">
+      <div className="text-eyebrow uppercase text-ink-faint">Section {section.num}</div>
+      <h1 id="section-title" className="mt-2xs text-title font-medium">
         {section.label}
       </h1>
-      <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-soft">
-        {section.blurb}
-      </p>
+      <p className="mt-sm text-body text-ink-soft">{section.blurb}</p>
 
-      <div className="mt-8 rounded-lg border border-dashed border-line px-6 py-16 text-center">
-        <p className="text-sm text-ink-faint">
+      <div className="mt-xl rounded-card border border-dashed border-line px-lg py-2xl text-center">
+        <p className="text-body text-ink-faint">
           This section is not built yet — coming in a later phase.
         </p>
       </div>

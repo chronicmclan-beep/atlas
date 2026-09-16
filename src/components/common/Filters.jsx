@@ -20,7 +20,7 @@ export default function Filters({ options, selected, onChange, multi = true, ari
   }
 
   return (
-    <div role="group" aria-label={ariaLabel} className="flex flex-wrap gap-1.5">
+    <div role="group" aria-label={ariaLabel} className="flex flex-wrap gap-xs">
       {options.map((opt) => {
         const isActive = selected.includes(opt.id)
         return (
@@ -30,9 +30,9 @@ export default function Filters({ options, selected, onChange, multi = true, ari
             aria-pressed={isActive}
             onClick={() => toggle(opt.id)}
             className={
-              'inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[0.75rem] transition-colors ' +
+              'inline-flex items-center gap-xs rounded-pill border px-sm py-2xs text-caption transition-colors ' +
               (isActive
-                ? 'border-ink/15 bg-surface-raised font-medium text-ink'
+                ? 'border-line-strong bg-surface-raised font-medium text-ink'
                 : 'border-line text-ink-soft hover:text-ink')
             }
           >

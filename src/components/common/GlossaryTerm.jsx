@@ -53,7 +53,7 @@ export default function GlossaryTerm({ term, children }) {
         <span
           id={panelId}
           role="tooltip"
-          className="absolute left-0 top-full z-20 mt-1.5 block w-64 rounded-md border border-line bg-surface p-3 text-[0.8125rem] leading-relaxed text-ink-soft"
+          className="absolute left-0 top-full z-20 mt-1.5 block w-64 rounded-control border border-line bg-surface p-sm text-label text-ink-soft"
         >
           <span className="mb-1 block font-medium text-ink">{label}</span>
           {definition}

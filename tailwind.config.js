@@ -21,6 +21,9 @@ export default {
         line: 'var(--line)',
         'line-strong': 'var(--line-strong)',
         accent: 'var(--accent)',
+        // Circular-financing "loop" data color (Financing web).
+        loop: 'var(--loop)',
+        'loop-soft': 'var(--loop-soft)',
       },
       boxShadow: {
         card: 'var(--shadow-sm)',
