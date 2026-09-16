@@ -102,7 +102,7 @@ export default function SupplyChainMap({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} />
+      <SectionHeader section={section} accent={section.color} />
 
       <div className="flex flex-col gap-lg lg:flex-row">
         {/* Graph */}

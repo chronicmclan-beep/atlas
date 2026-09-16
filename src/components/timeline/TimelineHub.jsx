@@ -53,7 +53,7 @@ export default function TimelineHub({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} />
+      <SectionHeader section={section} accent={section.color} />
 
       <div className="mb-lg flex flex-wrap items-center justify-between gap-md">
         <Filters

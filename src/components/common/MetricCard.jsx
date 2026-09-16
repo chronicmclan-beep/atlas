@@ -33,7 +33,7 @@ export default function MetricCard({ metric }) {
           <GlossaryTerm term={label}>{label}</GlossaryTerm>
         </div>
         {isCommitted && (
-          <span className="shrink-0 rounded-control border border-dashed border-ink-faint px-1.5 py-0.5 text-[0.625rem] uppercase tracking-wide text-ink-faint">
+          <span className="shrink-0 rounded-control border border-dashed border-ink-faint px-1.5 py-0.5 text-eyebrow uppercase text-ink-faint">
             Committed
           </span>
         )}

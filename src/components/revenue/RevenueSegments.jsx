@@ -67,7 +67,7 @@ export default function RevenueSegments({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} />
+      <SectionHeader section={section} accent={section.color} />
 
       <div className="mb-lg flex flex-wrap items-center gap-md">
         <CompareToggle

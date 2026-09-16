@@ -89,7 +89,7 @@ export default function FinancingWeb({ section }) {
 
   return (
     <section>
-      <SectionHeader section={section} />
+      <SectionHeader section={section} accent={section.color} />
 
       <div className="mb-lg flex flex-wrap items-center gap-md">
         <CompareToggle
@@ -153,7 +153,7 @@ export default function FinancingWeb({ section }) {
                       markerEnd={isActive ? 'url(#fin-arrow-active)' : 'url(#fin-arrow)'}
                     />
                     {isActive && e.amount && (
-                      <text {...edgeLabelPos(a, b)} fontSize="11" fill="var(--ink)" textAnchor="middle">
+                      <text {...edgeLabelPos(a, b)} fontSize="12" fill="var(--ink)" textAnchor="middle">
                         {e.amount}
                       </text>
                     )}
@@ -280,7 +280,7 @@ function FlowList({ title, items, nameKey, empty }) {
                   <span className="inline-block h-2 w-2 rounded-full" style={{ background: other?.color ?? 'var(--ink-faint)' }} />
                   <span className="font-medium">{other?.name ?? e[nameKey]}</span>
                   {e.loop && (
-                    <span className="rounded-control px-1 text-[0.625rem] font-medium uppercase" style={{ color: LOOP_COLOR, background: 'var(--loop-soft)' }}>
+                    <span className="rounded-control px-1 text-eyebrow font-medium uppercase" style={{ color: LOOP_COLOR, background: 'var(--loop-soft)' }}>
                       loop
                     </span>
                   )}
@@ -291,7 +291,7 @@ function FlowList({ title, items, nameKey, empty }) {
                   <span className="text-ink-faint">{e.type}</span>
                   <span
                     className={
-                      'rounded-control px-1.5 py-0.5 text-[0.625rem] uppercase ' +
+                      'rounded-control px-1.5 py-0.5 text-eyebrow uppercase ' +
                       (committed
                         ? 'border border-dashed border-ink-faint text-ink-faint'
                         : 'bg-surface-raised text-ink-soft')
