@@ -49,6 +49,13 @@ export const SECTIONS = [
     color: '#D4537E',
     blurb: 'Capital flows on top of the supply chain. Circular-loops view and full-web view.',
   },
+  {
+    id: 'glossary',
+    num: '07',
+    label: 'Glossary',
+    color: '#7F77DD',
+    blurb: 'A reference library of every term, player, product and market moment in the Atlas — searchable and grouped by type.',
+  },
 ]
 
 export const DEFAULT_SECTION = SECTIONS[0].id

@@ -12,8 +12,9 @@ import supplyEdges from '../data/supply-edges.json'
 import financing from '../data/financing.json'
 import timeline from '../data/timeline.json'
 import glossary from '../data/glossary.json'
+import glossaryFull from '../data/glossary-full.json'
 
-export { config, layers, companies, kpis, revenue, supplyEdges, financing, timeline, glossary }
+export { config, layers, companies, kpis, revenue, supplyEdges, financing, timeline, glossary, glossaryFull }
 
 /* ---------- Companies ---------- */
 
@@ -77,9 +78,32 @@ export function getRealizedState(realized) {
 
 /* ---------- Glossary ---------- */
 
+// The master reference library. Entries keyed by id, and a term/alias lookup
+// (case-insensitive) so tap-to-learn links resolve to their glossary entry.
+export const glossaryEntries = glossaryFull.entries
+export const glossaryTypes = glossaryFull.types
+
+const glossaryById = Object.fromEntries(glossaryEntries.map((e) => [e.id, e]))
+const glossaryByTerm = (() => {
+  const map = new Map()
+  for (const e of glossaryEntries) {
+    map.set(e.term.toLowerCase(), e)
+    for (const a of e.aliases ?? []) map.set(String(a).toLowerCase(), e)
+  }
+  return map
+})()
+
+// Resolve a term/id/alias to a full glossary entry.
+export function getGlossaryEntry(termOrId) {
+  if (!termOrId) return null
+  const key = String(termOrId)
+  return glossaryById[key] ?? glossaryByTerm.get(key.toLowerCase()) ?? null
+}
+
 export function getDefinition(label) {
   if (!label) return null
-  return glossary.terms[label] ?? null
+  // Prefer the master library; fall back to the legacy glossary.json map.
+  return getGlossaryEntry(label)?.definition ?? glossary.terms[label] ?? null
 }
 
 /* ---------- Graph participation (for cross-links) ---------- */

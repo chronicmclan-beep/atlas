@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import { getDefinition } from '../../lib/data.js'
+import { getDefinition, getGlossaryEntry } from '../../lib/data.js'
+import { useAppState } from '../../lib/appState.jsx'
 
 /*
   GlossaryTerm — powers tap-to-learn. Wraps a label; if that label has a
@@ -21,6 +22,8 @@ const POPOVER_W = 256 // matches the former w-64
 export default function GlossaryTerm({ term, children }) {
   const label = term ?? (typeof children === 'string' ? children : '')
   const definition = getDefinition(label)
+  const { navigateToGlossary } = useAppState()
+  const hasEntry = Boolean(getGlossaryEntry(label))
   const [open, setOpen] = useState(false)
   const [pos, setPos] = useState(null)
   const wrapRef = useRef(null)
@@ -85,6 +88,18 @@ export default function GlossaryTerm({ term, children }) {
         >
           <span className="mb-1 block font-medium text-ink">{label}</span>
           {definition}
+          {hasEntry && (
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false)
+                navigateToGlossary(label)
+              }}
+              className="mt-sm block text-caption text-accent hover:underline"
+            >
+              View in glossary ›
+            </button>
+          )}
         </span>
       )}
     </span>

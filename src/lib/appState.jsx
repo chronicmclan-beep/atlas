@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
-import { layers, findCompany } from './data.js'
+import { layers, findCompany, getGlossaryEntry } from './data.js'
 import { companyDestinations } from './crosslinks.js'
 import { DEFAULT_SECTION } from './sections.js'
 
@@ -18,6 +18,7 @@ export function AppStateProvider({ children }) {
   const [activeSection, setActiveSection] = useState(DEFAULT_SECTION)
   const [activeLayerId, setActiveLayerId] = useState(null)
   const [focus, setFocus] = useState(null) // { ticker, at, id }
+  const [glossaryFocus, setGlossaryFocus] = useState(null) // { entryId, id }
 
   const activeCompanies = useMemo(() => {
     const layer = layers.find((l) => l.id === activeLayerId)
@@ -45,6 +46,15 @@ export function AppStateProvider({ children }) {
 
   const clearFocus = useCallback(() => setFocus(null), [])
 
+  // Deep-link a term/concept/event to the Glossary section and focus its entry.
+  const navigateToGlossary = useCallback((termOrId) => {
+    const entry = getGlossaryEntry(termOrId)
+    if (!entry) return
+    setActiveSection('glossary')
+    setGlossaryFocus((f) => ({ entryId: entry.id, id: (f?.id ?? 0) + 1 }))
+  }, [])
+  const clearGlossaryFocus = useCallback(() => setGlossaryFocus(null), [])
+
   const value = useMemo(
     () => ({
       activeSection,
@@ -56,8 +66,11 @@ export function AppStateProvider({ children }) {
       focus,
       navigateToCompany,
       clearFocus,
+      glossaryFocus,
+      navigateToGlossary,
+      clearGlossaryFocus,
     }),
-    [activeSection, navigateSection, activeLayerId, activeCompanies, selectLayer, clearSelection, focus, navigateToCompany, clearFocus],
+    [activeSection, navigateSection, activeLayerId, activeCompanies, selectLayer, clearSelection, focus, navigateToCompany, clearFocus, glossaryFocus, navigateToGlossary, clearGlossaryFocus],
   )
 
   return <AppStateContext.Provider value={value}>{children}</AppStateContext.Provider>
@@ -84,4 +97,19 @@ export function useCompanyFocus(sectionId, onFocus) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focus?.id])
+}
+
+/*
+  The Glossary section calls this to consume a pending deep-link. When
+  navigateToGlossary() fires, onFocus(entryId) runs once and the token clears.
+*/
+export function useGlossaryFocus(onFocus) {
+  const { glossaryFocus, clearGlossaryFocus } = useAppState()
+  useEffect(() => {
+    if (glossaryFocus) {
+      onFocus(glossaryFocus.entryId)
+      clearGlossaryFocus()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [glossaryFocus?.id])
 }

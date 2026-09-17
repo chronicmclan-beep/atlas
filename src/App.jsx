@@ -6,6 +6,7 @@ import RevenueSegments from './components/revenue/RevenueSegments.jsx'
 import SupplyChainMap from './components/supply-chain/SupplyChainMap.jsx'
 import TimelineHub from './components/timeline/TimelineHub.jsx'
 import FinancingWeb from './components/financing/FinancingWeb.jsx'
+import GlossarySection from './components/glossary/GlossarySection.jsx'
 
 /*
   App shell: navigation across the six sections. Sections are wired in one at a
@@ -19,6 +20,7 @@ const SECTION_COMPONENTS = {
   'supply-chain': SupplyChainMap,
   timeline: TimelineHub,
   financing: FinancingWeb,
+  glossary: GlossarySection,
 }
 
 export default function App() {
