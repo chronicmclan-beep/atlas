@@ -111,5 +111,95 @@
       { "label": "Latest quarter", "value": "$1.14B", "sub": "Q2 FY2026; +34% YoY", "tier": "reported" },
       { "label": "Chips shipped", "value": "310B+", "sub": "cumulative, all-time", "tier": "reported" }
     ]
+  },
+  {
+    "ticker": "MSFT",
+    "fiscalYear": null,
+    "asOf": "Financials not yet sourced",
+    "source": "Not yet sourced in this build",
+    "unsourced": true,
+    "metrics": [
+      { "label": "Revenue", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Net income", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Gross margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Operating margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Free cash flow", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Diluted EPS", "value": null, "sub": "Not yet sourced", "tier": "unsourced" }
+    ]
+  },
+  {
+    "ticker": "AMZN",
+    "fiscalYear": null,
+    "asOf": "Financials not yet sourced",
+    "source": "Not yet sourced in this build",
+    "unsourced": true,
+    "metrics": [
+      { "label": "Revenue", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Net income", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Gross margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Operating margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Free cash flow", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Diluted EPS", "value": null, "sub": "Not yet sourced", "tier": "unsourced" }
+    ]
+  },
+  {
+    "ticker": "GOOGL",
+    "fiscalYear": null,
+    "asOf": "Financials not yet sourced",
+    "source": "Not yet sourced in this build",
+    "unsourced": true,
+    "metrics": [
+      { "label": "Revenue", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Net income", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Gross margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Operating margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Free cash flow", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Diluted EPS", "value": null, "sub": "Not yet sourced", "tier": "unsourced" }
+    ]
+  },
+  {
+    "ticker": "Meta",
+    "fiscalYear": null,
+    "asOf": "Financials not yet sourced",
+    "source": "Not yet sourced in this build",
+    "unsourced": true,
+    "metrics": [
+      { "label": "Revenue", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Net income", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Gross margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Operating margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Free cash flow", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Diluted EPS", "value": null, "sub": "Not yet sourced", "tier": "unsourced" }
+    ]
+  },
+  {
+    "ticker": "Oracle",
+    "fiscalYear": null,
+    "asOf": "Financials not yet sourced",
+    "source": "Not yet sourced in this build",
+    "unsourced": true,
+    "metrics": [
+      { "label": "Revenue", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Net income", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Gross margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Operating margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Free cash flow", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Diluted EPS", "value": null, "sub": "Not yet sourced", "tier": "unsourced" }
+    ]
+  },
+  {
+    "ticker": "CRWV",
+    "fiscalYear": null,
+    "asOf": "Financials not yet sourced",
+    "source": "Not yet sourced in this build",
+    "unsourced": true,
+    "metrics": [
+      { "label": "Revenue", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Net income", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Gross margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Operating margin", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Free cash flow", "value": null, "sub": "Not yet sourced", "tier": "unsourced" },
+      { "label": "Diluted EPS", "value": null, "sub": "Not yet sourced", "tier": "unsourced" }
+    ]
   }
 ]

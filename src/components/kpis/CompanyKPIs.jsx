@@ -101,16 +101,34 @@ function CompanyMeta({ record }) {
 
 function SingleView({ record }) {
   if (!record) return <p className="text-body text-ink-faint">No data for this company.</p>
+  const company = getCompany(record.ticker)
   return (
     <div>
       <CompanyMeta record={record} />
       <CrossLinks ticker={record.ticker} exclude="kpis" className="mt-xs" />
-      <div className="mt-lg grid grid-cols-1 gap-md sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {record.metrics.map((m, i) => (
-          <MetricCard key={`${m.label}-${i}`} metric={m} />
-        ))}
-      </div>
-      <p className="mt-lg text-caption text-ink-faint">Source: {record.source}</p>
+      {record.unsourced ? (
+        <div className="mt-lg max-w-2xl rounded-card border border-dashed border-line bg-surface p-lg">
+          <div className="flex items-center gap-xs">
+            <SourceTag tier="unsourced" />
+            <span className="text-label font-medium text-ink">Financials not yet sourced</span>
+          </div>
+          {company?.role && <p className="mt-sm text-body text-ink-soft">{company.role}</p>}
+          <p className="mt-sm text-caption text-ink-faint">
+            {company?.name ?? record.ticker} is in the roster, but its quarterly financials
+            aren&rsquo;t sourced in this build yet — figures are left blank rather than estimated,
+            and will populate here when added to kpis.json.
+          </p>
+        </div>
+      ) : (
+        <>
+          <div className="mt-lg grid grid-cols-1 gap-md sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {record.metrics.map((m, i) => (
+              <MetricCard key={`${m.label}-${i}`} metric={m} />
+            ))}
+          </div>
+          <p className="mt-lg text-caption text-ink-faint">Source: {record.source}</p>
+        </>
+      )}
     </div>
   )
 }

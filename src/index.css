@@ -71,4 +71,7 @@
   .tier-chip[data-tier='disclosed'] { color: var(--tier-disclosed); background: var(--tier-disclosed-soft); }
   .tier-chip[data-tier='estimated'] { color: var(--tier-estimated); background: var(--tier-estimated-soft); }
   .tier-chip[data-tier='inferred']  { color: var(--tier-inferred);  background: var(--tier-inferred-soft); }
+  /* Non-confidence provenance states render neutral/gray. */
+  .tier-chip[data-tier='live'],
+  .tier-chip[data-tier='unsourced'] { color: var(--tier-inferred); background: var(--tier-inferred-soft); }
 }

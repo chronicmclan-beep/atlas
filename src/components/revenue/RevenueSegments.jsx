@@ -45,12 +45,18 @@ export default function RevenueSegments({ section }) {
   const [selected, setSelected] = useState([series[0].ticker])
   const [basis, setBasis] = useState('absolute')
   const indexed = basis === 'indexed'
-  const isCompare = selected.length > 1
+
+  const selectedSeries = selected.map((t) => seriesByTicker[t]).filter(Boolean)
+  // Only sourced series are plotted; rostered companies without data yet are
+  // surfaced as a note rather than drawn as an empty line.
+  const plotted = selectedSeries.filter((s) => !s.unsourced).map((s) => s.ticker)
+  const unsourcedSel = selectedSeries.filter((s) => s.unsourced)
+  const isCompare = plotted.length > 1
 
   const data = useMemo(() => {
     return quarters.map((q, i) => {
       const row = { quarter: q }
-      for (const t of selected) {
+      for (const t of plotted) {
         const s = seriesByTicker[t]
         let v = s?.revenue[i] ?? null
         if (indexed && v !== null && v !== undefined) {
@@ -61,9 +67,9 @@ export default function RevenueSegments({ section }) {
       }
       return row
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selected, indexed])
 
-  const selectedSeries = selected.map((t) => seriesByTicker[t]).filter(Boolean)
   const showAvgoFlag = selectedSeries.some((s) => s.reviewFlag)
 
   return (
@@ -107,51 +113,73 @@ export default function RevenueSegments({ section }) {
         })}
       </div>
 
-      <div className="overflow-x-auto rounded-card border border-line bg-surface p-lg">
-        <div style={{ width: '100%', minWidth: 680, height: 400 }}>
-          <ResponsiveContainer>
-            {isCompare ? (
-              <LineChart data={data} margin={{ top: 8, right: 16, bottom: 8, left: 0 }}>
-                <CartesianGrid vertical={false} stroke="var(--line)" />
-                <XAxis dataKey="quarter" {...X_AXIS_PROPS} />
-                <YAxis {...yAxisProps(indexed)} />
-                <Tooltip content={<RevenueTooltip indexed={indexed} />} cursor={{ stroke: 'var(--line)' }} />
-                {selected.map((t) => (
-                  <Line
-                    key={t}
-                    type="monotone"
-                    dataKey={t}
-                    stroke={companyColor(t)}
-                    strokeWidth={2}
-                    dot={false}
-                    connectNulls={false}
-                    isAnimationActive={false}
-                  />
-                ))}
-              </LineChart>
-            ) : (
-              <BarChart data={data} margin={{ top: 8, right: 16, bottom: 8, left: 0 }}>
-                <CartesianGrid vertical={false} stroke="var(--line)" />
-                <XAxis dataKey="quarter" {...X_AXIS_PROPS} />
-                <YAxis {...yAxisProps(indexed)} />
-                <Tooltip content={<RevenueTooltip indexed={indexed} />} cursor={{ fill: 'var(--surface-raised)' }} />
-                <Bar
-                  dataKey={selected[0]}
-                  fill={companyColor(selected[0])}
-                  isAnimationActive={false}
-                  radius={[2, 2, 0, 0]}
-                />
-              </BarChart>
-            )}
-          </ResponsiveContainer>
+      {plotted.length === 0 ? (
+        <div className="max-w-2xl rounded-card border border-dashed border-line bg-surface p-lg">
+          <div className="flex items-center gap-xs">
+            <SourceTag tier="unsourced" />
+            <span className="text-label font-medium text-ink">Quarterly revenue not yet sourced</span>
+          </div>
+          <p className="mt-sm text-caption text-ink-faint">
+            {unsourcedSel.map((s) => getCompany(s.ticker)?.name ?? s.ticker).join(', ')}{' '}
+            {unsourcedSel.length === 1 ? 'is' : 'are'} in the roster, but quarterly revenue
+            isn&rsquo;t sourced in this build yet — left blank rather than estimated. Pick a chip
+            designer to see charted data.
+          </p>
         </div>
-      </div>
+      ) : (
+        <div className="overflow-x-auto rounded-card border border-line bg-surface p-lg">
+          <div style={{ width: '100%', minWidth: 680, height: 400 }}>
+            <ResponsiveContainer>
+              {isCompare ? (
+                <LineChart data={data} margin={{ top: 8, right: 16, bottom: 8, left: 0 }}>
+                  <CartesianGrid vertical={false} stroke="var(--line)" />
+                  <XAxis dataKey="quarter" {...X_AXIS_PROPS} />
+                  <YAxis {...yAxisProps(indexed)} />
+                  <Tooltip content={<RevenueTooltip indexed={indexed} />} cursor={{ stroke: 'var(--line)' }} />
+                  {plotted.map((t) => (
+                    <Line
+                      key={t}
+                      type="monotone"
+                      dataKey={t}
+                      stroke={companyColor(t)}
+                      strokeWidth={2}
+                      dot={false}
+                      connectNulls={false}
+                      isAnimationActive={false}
+                    />
+                  ))}
+                </LineChart>
+              ) : (
+                <BarChart data={data} margin={{ top: 8, right: 16, bottom: 8, left: 0 }}>
+                  <CartesianGrid vertical={false} stroke="var(--line)" />
+                  <XAxis dataKey="quarter" {...X_AXIS_PROPS} />
+                  <YAxis {...yAxisProps(indexed)} />
+                  <Tooltip content={<RevenueTooltip indexed={indexed} />} cursor={{ fill: 'var(--surface-raised)' }} />
+                  <Bar
+                    dataKey={plotted[0]}
+                    fill={companyColor(plotted[0])}
+                    isAnimationActive={false}
+                    radius={[2, 2, 0, 0]}
+                  />
+                </BarChart>
+              )}
+            </ResponsiveContainer>
+          </div>
+        </div>
+      )}
 
       {/* Single-company AI inflection caption */}
-      {!isCompare && selectedSeries[0]?.aiInflection && (
+      {!isCompare && plotted.length === 1 && seriesByTicker[plotted[0]]?.aiInflection && (
         <p className="mt-md text-caption text-ink-faint">
-          AI inflection — named {selectedSeries[0].aiInflection.named}, accelerated{' '}
-          {selectedSeries[0].aiInflection.accelerated}: {selectedSeries[0].aiInflection.note}
+          AI inflection — named {seriesByTicker[plotted[0]].aiInflection.named}, accelerated{' '}
+          {seriesByTicker[plotted[0]].aiInflection.accelerated}: {seriesByTicker[plotted[0]].aiInflection.note}
+        </p>
+      )}
+
+      {plotted.length > 0 && unsourcedSel.length > 0 && (
+        <p className="mt-md text-caption text-ink-faint">
+          No quarterly data yet for{' '}
+          {unsourcedSel.map((s) => getCompany(s.ticker)?.name ?? s.ticker).join(', ')}.
         </p>
       )}
 

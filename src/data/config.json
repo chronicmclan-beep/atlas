@@ -3,7 +3,8 @@
     { "id": "reported", "label": "Reported", "note": "Straight from an SEC filing." },
     { "id": "disclosed", "label": "Disclosed", "note": "Official but via an unofficial channel (press, earnings call)." },
     { "id": "estimated", "label": "Estimated", "note": "Third-party or calculated; no primary figure exists." },
-    { "id": "inferred", "label": "Inferred", "note": "Deduced, not stated." }
+    { "id": "inferred", "label": "Inferred", "note": "Deduced, not stated." },
+    { "id": "unsourced", "label": "Not sourced", "note": "No figure yet — not sourced in this build. Never invented." }
   ],
   "realizedStates": [
     { "id": true, "label": "Realized", "note": "Closed / booked." },
