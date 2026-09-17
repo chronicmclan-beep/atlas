@@ -41,7 +41,7 @@ export default function MetricCard({ metric }) {
 
       <div
         className={
-          'text-data font-medium ' +
+          'text-data font-medium break-words ' +
           (hasValue ? (negative ? 'text-tier-estimated' : 'text-ink') : 'text-ink-faint')
         }
       >

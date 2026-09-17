@@ -108,7 +108,7 @@ export default function RevenueSegments({ section }) {
       </div>
 
       <div className="overflow-x-auto rounded-card border border-line bg-surface p-lg">
-        <div style={{ width: '100%', minWidth: 520, height: 400 }}>
+        <div style={{ width: '100%', minWidth: 680, height: 400 }}>
           <ResponsiveContainer>
             {isCompare ? (
               <LineChart data={data} margin={{ top: 8, right: 16, bottom: 8, left: 0 }}>

@@ -8,19 +8,43 @@ import { getDefinition } from '../../lib/data.js'
   it renders the text plainly (no affordance), so callers can wrap any label
   unconditionally.
 
+  The popover is position:fixed, anchored to the trigger and clamped to the
+  viewport, so it never overflows the screen and is never clipped by an
+  ancestor scroll container (e.g. the KPIs compare table's overflow-x-auto).
+
   Props:
     term  — the glossary key to look up (defaults to the text child)
     children — the visible text (defaults to `term`)
 */
+const POPOVER_W = 256 // matches the former w-64
+
 export default function GlossaryTerm({ term, children }) {
   const label = term ?? (typeof children === 'string' ? children : '')
   const definition = getDefinition(label)
   const [open, setOpen] = useState(false)
+  const [pos, setPos] = useState(null)
   const wrapRef = useRef(null)
   const panelId = useId()
 
   useEffect(() => {
-    if (!open) return
+    if (!open) {
+      setPos(null)
+      return
+    }
+    const place = () => {
+      const el = wrapRef.current
+      if (!el) return
+      const r = el.getBoundingClientRect()
+      const EST_H = 160 // reserve enough height to keep the popover on-screen
+      const left = Math.max(8, Math.min(r.left, window.innerWidth - POPOVER_W - 8))
+      // Flip above the trigger when there isn't room below.
+      const top =
+        r.bottom + 6 + EST_H > window.innerHeight - 8
+          ? Math.max(8, r.top - EST_H - 6)
+          : r.bottom + 6
+      setPos({ top, left })
+    }
+    place()
     function onDocClick(e) {
       if (wrapRef.current && !wrapRef.current.contains(e.target)) setOpen(false)
     }
@@ -29,9 +53,12 @@ export default function GlossaryTerm({ term, children }) {
     }
     document.addEventListener('mousedown', onDocClick)
     document.addEventListener('keydown', onKey)
+    window.addEventListener('resize', place)
+    window.addEventListener('scroll', () => setOpen(false), { once: true, capture: true })
     return () => {
       document.removeEventListener('mousedown', onDocClick)
       document.removeEventListener('keydown', onKey)
+      window.removeEventListener('resize', place)
     }
   }, [open])
 
@@ -49,11 +76,12 @@ export default function GlossaryTerm({ term, children }) {
       >
         {children ?? label}
       </button>
-      {open && (
+      {open && pos && (
         <span
           id={panelId}
           role="tooltip"
-          className="absolute left-0 top-full z-20 mt-1.5 block w-64 rounded-control border border-line bg-surface p-sm text-label text-ink-soft"
+          style={{ position: 'fixed', top: pos.top, left: pos.left, width: POPOVER_W, zIndex: 50 }}
+          className="block rounded-control border border-line bg-surface p-sm text-label text-ink-soft shadow-raised"
         >
           <span className="mb-1 block font-medium text-ink">{label}</span>
           {definition}

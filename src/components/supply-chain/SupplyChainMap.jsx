@@ -130,7 +130,8 @@ export default function SupplyChainMap({ section }) {
                 </marker>
               </defs>
 
-              {/* Column headers */}
+              {/* Column headers — short labels so they never overrun the next
+                  column; the full layer name stays in the hover title. */}
               {columns.map((col, i) => (
                 <text
                   key={col.layer.id}
@@ -138,10 +139,10 @@ export default function SupplyChainMap({ section }) {
                   y={PAD + 16}
                   fontSize="13"
                   fill="var(--ink-faint)"
-                  style={{ textTransform: 'uppercase', letterSpacing: '0.08em' }}
+                  style={{ textTransform: 'uppercase', letterSpacing: '0.06em' }}
                 >
                   <title>{col.layer.name}</title>
-                  {col.layer.num} {shortLayer(col.layer.name)}
+                  {col.layer.num} {shortLayer(col.layer)}
                 </text>
               ))}
 
@@ -311,8 +312,22 @@ function colHeight(n) {
   return n * NODE_H + (n - 1) * ROW_GAP
 }
 
-function shortLayer(name) {
-  return name.split(/[,&]/)[0].trim()
+// Compact per-layer header labels — guaranteed short so headers never overrun
+// their column. The full layer name is shown in the header's hover title.
+const LAYER_SHORT = {
+  materials: 'Materials',
+  equipment: 'Equipment',
+  'chip-design': 'Chip design',
+  foundry: 'Foundry',
+  memory: 'Memory',
+  packaging: 'Packaging',
+  systems: 'Systems',
+  compute: 'Compute',
+  labs: 'Labs',
+}
+
+function shortLayer(layer) {
+  return LAYER_SHORT[layer.id] ?? layer.name.split(/[,&]/)[0].trim()
 }
 
 function computeLayout() {

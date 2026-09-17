@@ -92,7 +92,7 @@ export default function TimelineHub({ section }) {
                 <div className="mb-md border-t-2 border-ink-soft pt-sm">
                   <div className="text-eyebrow uppercase text-ink-faint">{era}</div>
                   <div className="text-heading font-medium">{eras[era].name}</div>
-                  <p className="mt-2xs max-w-[280px] text-label text-ink-faint">
+                  <p className="mt-2xs max-w-[14rem] text-label text-ink-faint">
                     {eras[era].headline}
                   </p>
                 </div>

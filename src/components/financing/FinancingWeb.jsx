@@ -63,10 +63,13 @@ export default function FinancingWeb({ section }) {
     }
     const map = {}
     const n = present.length
+    // Grow the ring with node count so adjacent boxes never overlap at the
+    // corners (the full-web view has ~12 nodes). Stays within the fixed viewBox.
+    const radius = n > 1 ? Math.max(RADIUS, (NODE_W + 16) / (2 * Math.sin(Math.PI / n))) : RADIUS
     present.forEach((t, i) => {
       const angle = -Math.PI / 2 + (i * 2 * Math.PI) / n
-      const cx = CENTER.x + RADIUS * Math.cos(angle)
-      const cy = CENTER.y + RADIUS * Math.sin(angle)
+      const cx = CENTER.x + radius * Math.cos(angle)
+      const cy = CENTER.y + radius * Math.sin(angle)
       map[t] = { cx, cy }
     })
     return map
@@ -158,8 +161,21 @@ export default function FinancingWeb({ section }) {
                       markerEnd={isActive ? 'url(#fin-arrow-active)' : 'url(#fin-arrow)'}
                     />
                     {isActive && e.amount && (
-                      <text {...edgeLabelPos(a, b)} fontSize="12" fill="var(--ink)" textAnchor="middle">
-                        {e.amount}
+                      <text
+                        {...edgeLabelPos(a, b)}
+                        fontSize="12"
+                        fill="var(--ink)"
+                        textAnchor="middle"
+                        stroke="var(--surface)"
+                        strokeWidth="3.5"
+                        strokeLinejoin="round"
+                        paintOrder="stroke"
+                      >
+                        {/* Compact on-graph label; full amount stays in the hover
+                            title and in the inspector panel. Keeps wide amount
+                            strings from colliding with reciprocal labels/nodes. */}
+                        <title>{e.amount}</title>
+                        {shortAmount(e.amount)}
                       </text>
                     )}
                   </g>
@@ -317,6 +333,12 @@ function FlowList({ title, items, nameKey, empty }) {
   )
 }
 
+// Compact form of an edge amount for the on-graph label so wide strings don't
+// collide; the full text remains in the node inspector and the hover title.
+function shortAmount(amount) {
+  return amount.length > 12 ? amount.slice(0, 11) + '…' : amount
+}
+
 // --- Geometry ---
 
 function trimmed(a, b) {
@@ -325,7 +347,9 @@ function trimmed(a, b) {
   const len = Math.hypot(dx, dy) || 1
   const ux = dx / len
   const uy = dy / len
-  const r = 50
+  // Clamp the end-trim so short edges don't invert — keeps the label between
+  // the two trimmed endpoints and clear of the node boxes.
+  const r = Math.min(50, len * 0.4)
   return {
     sx: a.cx + ux * r,
     sy: a.cy + uy * r,
@@ -347,8 +371,12 @@ function edgePath(a, b) {
 function edgeLabelPos(a, b) {
   const { sx, sy, ex, ey, px, py } = trimmed(a, b)
   const off = 26
-  // point on the quadratic at t=0.5
-  const mx = (sx + ex) / 2 + px * off * 0.5
-  const my = (sy + ey) / 2 + py * off * 0.5
+  // Bias toward the SOURCE end (t≈0.32) and offset perpendicular. Because the
+  // perpendicular (px,py) flips sign between a reciprocal pair's two directions,
+  // their labels ride to opposite sides and don't collide at the midpoint. The
+  // surface halo on the <text> keeps any short-edge label readable over a node.
+  const t = 0.32
+  const mx = sx + (ex - sx) * t + px * off * 1.35
+  const my = sy + (ey - sy) * t + py * off * 1.35
   return { x: mx, y: my - 3 }
 }
