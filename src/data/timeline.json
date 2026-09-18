@@ -1,56 +1,817 @@
 {
   "note": "The living record of the AI buildout. 'date' drives placement; 'tier' is major (always shown) or minor (unlockable). Append new events here. Sourced from filings, company announcements, and press.",
-  "updated": "2026-08-30",
+  "updated": "2026-09-18",
   "events": [
-    { "date": "2022-10-07", "displayDate": "Oct 7 2022", "year": 2022, "era": "2022", "category": "policy", "tier": "minor", "title": "US restricts AI chips to China", "figure": "chip war", "description": "BIS blocks NVIDIA's A100 and H100 to China without a license.", "whyItMatters": "Export controls become a permanent force shaping where demand can legally flow.", "source": "US BIS", "companies": ["NVDA", "US"] },
-    { "date": "2022-11-30", "displayDate": "Nov 30 2022", "year": 2022, "era": "2022", "category": "model", "tier": "major", "short": "ChatGPT", "title": "ChatGPT launches", "figure": "100M in 2 mo", "description": "OpenAI's chatbot reaches ~100M users in two months.", "whyItMatters": "The consumer moment that turned AI into a demand shock the whole chain now serves.", "source": "OpenAI", "companies": ["OpenAI"] },
-    { "date": "2023-01-23", "displayDate": "Jan 23 2023", "year": 2023, "era": "2023", "category": "deal", "tier": "major", "short": "MSFT-OpenAI", "title": "Microsoft's ~$10B OpenAI bet", "figure": "$10B", "description": "Microsoft deepens its OpenAI stake and makes Azure its cloud.", "whyItMatters": "The first mega-deal wiring a lab to a hyperscaler; a template everyone copied.", "source": "Microsoft / press", "companies": ["MSFT", "OpenAI"] },
-    { "date": "2023-03-15", "displayDate": "Mar 2023", "year": 2023, "era": "2023", "category": "model", "tier": "minor", "title": "Anthropic launches Claude", "description": "A second serious frontier lab enters the race.", "source": "Anthropic", "companies": ["Anthropic"] },
-    { "date": "2023-03-14", "displayDate": "Mar 14 2023", "year": 2023, "era": "2023", "category": "model", "tier": "major", "short": "GPT-4", "title": "GPT-4 released", "description": "A capability jump that accelerates enterprise adoption.", "whyItMatters": "Raised the compute bar for training and inference industry-wide.", "source": "OpenAI", "companies": ["OpenAI"] },
-    { "date": "2023-05-24", "displayDate": "May 24 2023", "year": 2023, "era": "2023", "category": "demand", "tier": "major", "short": "NVDA blowout", "title": "NVIDIA's demand-signal quarter", "figure": "~$11B guide", "description": "NVIDIA guides revenue far above expectations; shares jump ~24%.", "whyItMatters": "The first hard proof in the financials that AI demand was real.", "source": "NVIDIA 8-K", "companies": ["NVDA"] },
-    { "date": "2023-05-30", "displayDate": "May 30 2023", "year": 2023, "era": "2023", "category": "demand", "tier": "major", "short": "$1T", "title": "NVIDIA nears $1T value", "figure": "$1T", "description": "Briefly joins the trillion-dollar club on AI optimism.", "whyItMatters": "Markets start pricing the buildout as a durable multi-year cycle.", "source": "press", "companies": ["NVDA"] },
-    { "date": "2023-07-12", "displayDate": "Jul 12 2023", "year": 2023, "era": "2023", "category": "model", "tier": "minor", "title": "xAI founded", "description": "Elon Musk launches a new lab that becomes a major GPU buyer.", "source": "xAI", "companies": ["xAI"] },
-    { "date": "2023-07-18", "displayDate": "Jul 18 2023", "year": 2023, "era": "2023", "category": "model", "tier": "minor", "title": "Meta releases Llama 2", "description": "Open weights let anyone build on a strong base, expanding demand.", "source": "Meta", "companies": ["Meta"] },
-    { "date": "2023-09-25", "displayDate": "Sep 25 2023", "year": 2023, "era": "2023", "category": "deal", "tier": "major", "short": "AMZN-Anthropic", "title": "Amazon backs Anthropic", "figure": "up to $4B", "description": "Amazon commits up to $4B to Anthropic, making AWS a core partner.", "whyItMatters": "A second lab-hyperscaler axis forms, splitting the field.", "source": "Amazon / press", "companies": ["AMZN", "Anthropic"] },
-    { "date": "2023-10-17", "displayDate": "Oct 17 2023", "year": 2023, "era": "2023", "category": "policy", "tier": "minor", "title": "China chip controls tightened", "description": "BIS closes the H800/A800 loophole NVIDIA used to keep selling into China.", "source": "US BIS", "companies": ["NVDA", "US"] },
-    { "date": "2023-11-22", "displayDate": "Nov 22 2023", "year": 2023, "era": "2023", "category": "stake", "tier": "major", "short": "AVGO-VMware", "title": "Broadcom closes VMware", "figure": "$69B", "description": "Broadcom completes its ~$69B VMware acquisition.", "whyItMatters": "Reshapes Broadcom into a software-plus-AI-silicon giant.", "source": "Broadcom", "companies": ["AVGO"] },
-    { "date": "2023-12-04", "displayDate": "Dec 6 2023", "year": 2023, "era": "2023", "category": "model", "tier": "minor", "title": "Google launches Gemini", "description": "Google's flagship family arrives, backed by its own TPUs.", "source": "Google", "companies": ["GOOGL"] },
-    { "date": "2023-12-08", "displayDate": "Dec 6 2023", "year": 2023, "era": "2023", "category": "model", "tier": "minor", "title": "AMD launches MI300X", "description": "AMD's first credible data-center GPU challenger ships.", "source": "AMD", "companies": ["AMD"] },
-    { "date": "2024-03-04", "displayDate": "Mar 4 2024", "year": 2024, "era": "2024", "category": "model", "tier": "minor", "title": "Anthropic releases Claude 3", "description": "A capability leap that intensifies frontier competition.", "source": "Anthropic", "companies": ["Anthropic"] },
-    { "date": "2024-03-18", "displayDate": "Mar 18 2024", "year": 2024, "era": "2024", "category": "model", "tier": "major", "short": "Blackwell", "title": "NVIDIA unveils Blackwell", "description": "Next-gen GPU architecture announced at GTC.", "whyItMatters": "Sets the hardware roadmap the whole chain races to build.", "source": "NVIDIA", "companies": ["NVDA", "TSMC", "Hynix"] },
-    { "date": "2024-04-16", "displayDate": "Apr 16 2024", "year": 2024, "era": "2024", "category": "deal", "tier": "minor", "title": "Microsoft invests $1.5B in G42", "figure": "$1.5B", "description": "An early bet linking a US hyperscaler to a Gulf AI champion.", "source": "Microsoft / press", "companies": ["MSFT", "G42"] },
-    { "date": "2024-04-18", "displayDate": "Apr 18 2024", "year": 2024, "era": "2024", "category": "model", "tier": "minor", "title": "Meta releases Llama 3", "description": "Meta pushes open weights further, backed by huge capex.", "source": "Meta", "companies": ["Meta"] },
-    { "date": "2024-06-18", "displayDate": "Jun 18 2024", "year": 2024, "era": "2024", "category": "demand", "tier": "major", "short": "NVDA $3T", "title": "NVIDIA hits $3T, briefly the world's most valuable", "figure": "~$3T", "description": "NVIDIA overtakes Microsoft and Apple to top global market cap.", "whyItMatters": "The clearest sign yet that the market had reorganized itself around AI hardware.", "source": "press", "companies": ["NVDA"] },
-    { "date": "2024-09-10", "displayDate": "Sep 2024", "year": 2024, "era": "2024", "category": "build", "tier": "minor", "title": "xAI's Colossus comes online", "figure": "~100k GPUs", "description": "A ~100,000-GPU cluster stood up in Memphis in months.", "whyItMatters": "Proof a new entrant can assemble world-class compute at speed.", "source": "xAI / press", "companies": ["xAI"] },
-    { "date": "2024-09-19", "displayDate": "Sep 12 2024", "year": 2024, "era": "2024", "category": "model", "tier": "minor", "title": "OpenAI releases o1", "description": "A reasoning model that spends far more compute at inference.", "whyItMatters": "Shifts demand toward inference; a structural change.", "source": "OpenAI", "companies": ["OpenAI"] },
-    { "date": "2024-10-15", "displayDate": "Oct 2024", "year": 2024, "era": "2024", "category": "deal", "tier": "minor", "title": "OpenAI raises $6.6B at $157B", "figure": "$157B val", "description": "A giant round cements OpenAI as the most valuable AI startup.", "source": "press", "companies": ["OpenAI"] },
-    { "date": "2024-11-15", "displayDate": "Nov 2024", "year": 2024, "era": "2024", "category": "deal", "tier": "minor", "title": "Amazon-Anthropic reaches $8B", "figure": "$8B", "description": "Amazon doubles its Anthropic commitment to $8B total.", "source": "Amazon", "companies": ["AMZN", "Anthropic"] },
-    { "date": "2024-12-15", "displayDate": "Dec 2024", "year": 2024, "era": "2024", "category": "deal", "tier": "minor", "title": "xAI raises $6B", "figure": "$6B", "description": "A mega-round funds xAI's rapid compute expansion.", "source": "xAI / press", "companies": ["xAI"] },
-    { "date": "2025-01-21", "displayDate": "Jan 21 2025", "year": 2025, "era": "2025", "category": "build", "tier": "major", "short": "Stargate", "title": "Stargate announced", "figure": "$500B", "description": "$500B over four years from OpenAI, SoftBank, Oracle, and MGX.", "whyItMatters": "The largest single AI-infrastructure commitment yet; announced at the White House.", "source": "OpenAI", "companies": ["OpenAI", "Oracle", "SoftBank"] },
-    { "date": "2025-01-27", "displayDate": "Jan 27 2025", "year": 2025, "era": "2025", "category": "model", "tier": "major", "short": "DeepSeek", "title": "DeepSeek shock", "figure": "~$600B drop", "description": "A low-cost Chinese model triggers NVIDIA's ~$600B single-day drop, the largest in market history.", "whyItMatters": "The first serious 'what if AI needs less compute?' scare.", "source": "press", "companies": ["NVDA"] },
-    { "date": "2025-03-28", "displayDate": "Mar 28 2025", "year": 2025, "era": "2025", "category": "build", "tier": "major", "short": "CRWV IPO", "title": "CoreWeave IPO", "figure": "$40/share", "description": "The first big neocloud goes public on Nasdaq; NVIDIA holds ~7%.", "whyItMatters": "Public markets validate the neocloud model and its ties to NVIDIA.", "source": "CoreWeave", "companies": ["CRWV", "NVDA"] },
-    { "date": "2025-04-15", "displayDate": "Apr 2025", "year": 2025, "era": "2025", "category": "policy", "tier": "minor", "title": "NVIDIA's H20 blocked from China", "figure": "~$4.5B hit", "description": "A license requirement wipes out an estimated $4.5B in China revenue.", "source": "NVIDIA / press", "companies": ["NVDA", "US"] },
-    { "date": "2025-05-13", "displayDate": "May 13 2025", "year": 2025, "era": "2025", "category": "policy", "tier": "minor", "title": "HUMAIN launches — sovereign AI", "figure": "500 MW", "description": "Saudi Arabia's PIF unveils HUMAIN with NVIDIA; the US rescinds the AI Diffusion Rule the same day.", "whyItMatters": "Nation-states enter as buyers, treating compute like a strategic asset.", "source": "HUMAIN / NVIDIA", "companies": ["HUMAIN", "NVDA"] },
-    { "date": "2025-07-07", "displayDate": "Jul 7 2025", "year": 2025, "era": "2025", "category": "stake", "tier": "minor", "title": "CoreWeave to buy Core Scientific", "figure": "~$9B", "description": "A ~$9B all-stock deal adding ~1.3 GW of power capacity.", "source": "CoreWeave / press", "companies": ["CRWV"] },
-    { "date": "2025-07-11", "displayDate": "Jul 9 2025", "year": 2025, "era": "2025", "category": "demand", "tier": "major", "short": "$4T", "title": "NVIDIA hits $4T", "figure": "$4T", "description": "First company ever to reach a $4 trillion valuation.", "whyItMatters": "Markets treat NVIDIA as the keystone of the AI economy.", "source": "press", "companies": ["NVDA"] },
-    { "date": "2025-07-18", "displayDate": "Jul 2025", "year": 2025, "era": "2025", "category": "build", "tier": "minor", "title": "Meta commits to gigawatt superclusters", "description": "Meta unveils multi-gigawatt projects (Prometheus, Hyperion).", "source": "Meta", "companies": ["Meta"] },
-    { "date": "2025-08-10", "displayDate": "Aug 2025", "year": 2025, "era": "2025", "category": "model", "tier": "minor", "title": "OpenAI releases GPT-5", "description": "OpenAI's next flagship keeps compute demand climbing.", "source": "OpenAI", "companies": ["OpenAI"] },
-    { "date": "2025-08-18", "displayDate": "Aug 18 2025", "year": 2025, "era": "2025", "category": "deal", "tier": "minor", "title": "SoftBank puts $2B in Intel", "figure": "$2B", "description": "A ~2% stake, days before the US government's larger move.", "source": "press", "companies": ["SoftBank", "INTC"] },
-    { "date": "2025-08-26", "displayDate": "Aug 22 2025", "year": 2025, "era": "2025", "category": "stake", "tier": "major", "short": "US-Intel", "title": "US takes ~10% of Intel", "figure": "~$8.9B", "description": "Washington acquires a ~$8.9B stake in the chipmaker.", "whyItMatters": "Government treats domestic chip capacity as national infrastructure.", "source": "press", "companies": ["INTC", "US"] },
-    { "date": "2025-09-18", "displayDate": "Sep 18 2025", "year": 2025, "era": "2025", "category": "deal", "tier": "major", "short": "NVDA-Intel", "title": "NVIDIA invests $5B in Intel", "figure": "$5B", "description": "A stake plus a chip partnership with its onetime rival, at $23.28/share.", "whyItMatters": "Even rivals now lean on NVIDIA's capital and roadmap.", "source": "NVIDIA / Intel 8-K", "companies": ["NVDA", "INTC"] },
-    { "date": "2025-09-24", "displayDate": "Sep 22 2025", "year": 2025, "era": "2025", "category": "deal", "tier": "major", "short": "NVDA-OpenAI", "title": "NVIDIA: up to $100B into OpenAI", "figure": "up to $100B", "description": "A 10 GW letter of intent; NVIDIA invests in its biggest customer.", "whyItMatters": "The clearest circular-financing signal yet.", "source": "NVIDIA", "companies": ["NVDA", "OpenAI"] },
-    { "date": "2025-10-10", "displayDate": "Oct 2025", "year": 2025, "era": "2025", "category": "deal", "tier": "major", "short": "AMD-OpenAI", "title": "AMD-OpenAI, 6 GW", "figure": "6 GW", "description": "OpenAI agrees to deploy 6 GW of AMD GPUs over time.", "whyItMatters": "OpenAI diversifies beyond NVIDIA; AMD lands a huge anchor.", "source": "AMD / press", "companies": ["AMD", "OpenAI"] },
-    { "date": "2025-10-24", "displayDate": "Oct 22 2025", "year": 2025, "era": "2025", "category": "build", "tier": "minor", "title": "Stargate adds five US sites", "figure": "~7 GW", "description": "Expansion brings planned US capacity to nearly 7 GW.", "source": "OpenAI", "companies": ["OpenAI"] },
-    { "date": "2025-11-20", "displayDate": "Nov 20 2025", "year": 2025, "era": "2025", "category": "policy", "tier": "minor", "title": "US clears advanced chips for the Gulf", "figure": "~70k GPUs", "description": "Commerce approves up to ~70,000 Blackwell GPUs for HUMAIN and G42.", "whyItMatters": "Chip diplomacy becomes explicit foreign policy.", "source": "US Commerce", "companies": ["HUMAIN", "G42", "US"] },
-    { "date": "2025-12-12", "displayDate": "Dec 2025", "year": 2025, "era": "2025", "category": "deal", "tier": "minor", "title": "SoftBank completes $41B into OpenAI", "figure": "$41B", "description": "One of the largest private rounds ever, for ~11% of OpenAI.", "source": "press", "companies": ["SoftBank", "OpenAI"] },
-    { "date": "2025-12-26", "displayDate": "Dec 26 2025", "year": 2025, "era": "2025", "category": "stake", "tier": "minor", "title": "NVIDIA completes $5B Intel buy", "description": "The September agreement closes after clearance.", "source": "Intel 8-K", "companies": ["NVDA", "INTC"] },
-    { "date": "2026-02-15", "displayDate": "Q1 2026", "year": 2026, "era": "2026", "category": "build", "tier": "minor", "title": "Stargate's Abilene campus goes live", "figure": "1.2 GW", "description": "The flagship Texas site reaches 1.2 GW of GB200 GPUs.", "source": "Oracle / press", "companies": ["OpenAI", "Oracle"] },
-    { "date": "2026-04-15", "displayDate": "Apr 2026", "year": 2026, "era": "2026", "category": "deal", "tier": "major", "short": "OpenAI $122B", "title": "OpenAI raises $122B", "figure": "$122B", "description": "One of the largest funding rounds in history, plus a separate ~$110B strategic round with Amazon and NVIDIA.", "whyItMatters": "The capital feeding the buildout now dwarfs anything venture ever did.", "source": "press", "companies": ["OpenAI", "AMZN", "NVDA"] },
-    { "date": "2026-06-15", "displayDate": "Jun 2026", "year": 2026, "era": "2026", "category": "deal", "tier": "minor", "title": "Broadcom, Apollo & Blackstone: $35B for Anthropic", "figure": "$35B", "description": "An SPV finances Broadcom custom chips and leases them to Anthropic — debt, not equity.", "whyItMatters": "The buildout starts being financed like industrial infrastructure.", "source": "press", "companies": ["AVGO", "Anthropic"] },
-    { "date": "2026-07-15", "displayDate": "Jul 2026", "year": 2026, "era": "2026", "category": "build", "tier": "minor", "title": "TSMC lifts 2026 capex to ~$64B", "figure": "$64B capex", "description": "The foundry's record capital budget signals confidence the demand is durable.", "source": "TSMC / press", "companies": ["TSMC"] },
-    { "date": "2026-08-05", "displayDate": "Aug 5 2026", "year": 2026, "era": "2026", "category": "model", "tier": "minor", "title": "Anthropic builds an in-house chip team", "figure": "own silicon", "description": "Anthropic hires chip engineers to co-design its own inference silicon.", "whyItMatters": "Even the labs move to design their own chips, chasing independence from NVIDIA.", "source": "press", "companies": ["Anthropic"] },
-    { "date": "2026-08-17", "displayDate": "Aug 17 2026", "year": 2026, "era": "2026", "category": "deal", "tier": "major", "short": "NVDA $105B Ohio", "title": "NVIDIA backs $105B for OpenAI's Ohio data center", "figure": "up to $105B", "description": "An SEC filing reveals NVIDIA financing up to $105B for a 4.25 GW (eventually up to 8 GW) OpenAI campus.", "whyItMatters": "The circular-financing loop at its most extreme — NVIDIA underwriting demand for its own chips.", "source": "SEC filing / CNBC", "companies": ["NVDA", "OpenAI", "SoftBank"] },
-    { "date": "2026-08-24", "displayDate": "Aug 2026", "year": 2026, "era": "2026", "category": "deal", "tier": "minor", "title": "NVIDIA lines up $500B financing platform", "figure": "$500B", "description": "NVIDIA teams with BlackRock, Goldman Sachs and others to deploy $500B+ into data centers.", "source": "press", "companies": ["NVDA"] },
-    { "date": "2026-08-28", "displayDate": "Aug 2026", "year": 2026, "era": "2026", "category": "demand", "tier": "minor", "title": "Circular-financing scrutiny intensifies", "figure": "$145B gap", "description": "Analysts warn mutual investments may inflate 'artificial demand'; one OpenAI-NVIDIA figure comes in $145B lower than billed.", "whyItMatters": "The bear case matures from a one-day scare into a structural question.", "source": "Fortune / press", "companies": ["NVDA", "OpenAI", "AVGO"] }
+    {
+      "date": "2022-10-07",
+      "displayDate": "Oct 7 2022",
+      "year": 2022,
+      "era": "2022",
+      "category": "policy",
+      "tier": "minor",
+      "title": "US restricts AI chips to China",
+      "figure": "chip war",
+      "description": "BIS blocks NVIDIA's A100 and H100 to China without a license.",
+      "whyItMatters": "Export controls become a permanent force shaping where demand can legally flow.",
+      "source": "US BIS",
+      "companies": [
+        "NVDA",
+        "US"
+      ]
+    },
+    {
+      "date": "2022-11-30",
+      "displayDate": "Nov 30 2022",
+      "year": 2022,
+      "era": "2022",
+      "category": "model",
+      "tier": "major",
+      "short": "ChatGPT",
+      "title": "ChatGPT launches",
+      "figure": "100M in 2 mo",
+      "description": "OpenAI's chatbot reaches ~100M users in two months.",
+      "whyItMatters": "The consumer moment that turned AI into a demand shock the whole chain now serves.",
+      "source": "UBS estimate",
+      "companies": [
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2023-01-23",
+      "displayDate": "Jan 23 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "deal",
+      "tier": "major",
+      "short": "MSFT-OpenAI",
+      "title": "Microsoft's ~$10B OpenAI bet",
+      "figure": "$10B",
+      "description": "Microsoft deepens its OpenAI stake and makes Azure its cloud.",
+      "whyItMatters": "The first mega-deal wiring a lab to a hyperscaler; a template everyone copied.",
+      "source": "Microsoft / press",
+      "companies": [
+        "MSFT",
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2023-03-14",
+      "displayDate": "Mar 14 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "model",
+      "tier": "minor",
+      "title": "Anthropic launches Claude",
+      "description": "A second serious frontier lab enters the race.",
+      "source": "Anthropic",
+      "companies": [
+        "Anthropic"
+      ]
+    },
+    {
+      "date": "2023-03-14",
+      "displayDate": "Mar 14 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "model",
+      "tier": "major",
+      "short": "GPT-4",
+      "title": "GPT-4 released",
+      "description": "A capability jump that accelerates enterprise adoption.",
+      "whyItMatters": "Raised the compute bar for training and inference industry-wide.",
+      "source": "OpenAI",
+      "companies": [
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2023-05-24",
+      "displayDate": "May 24 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "demand",
+      "tier": "major",
+      "short": "NVDA blowout",
+      "title": "NVIDIA's demand-signal quarter",
+      "figure": "~$11B guide",
+      "description": "NVIDIA guides revenue far above expectations; shares jump ~24%.",
+      "whyItMatters": "The first hard proof in the financials that AI demand was real.",
+      "source": "NVIDIA 8-K",
+      "companies": [
+        "NVDA"
+      ]
+    },
+    {
+      "date": "2023-05-30",
+      "displayDate": "May 30 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "demand",
+      "tier": "major",
+      "short": "$1T",
+      "title": "NVIDIA nears $1T value",
+      "figure": "$1T",
+      "description": "Briefly joins the trillion-dollar club on AI optimism.",
+      "whyItMatters": "Markets start pricing the buildout as a durable multi-year cycle.",
+      "source": "press",
+      "companies": [
+        "NVDA"
+      ]
+    },
+    {
+      "date": "2023-07-12",
+      "displayDate": "Jul 12 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "model",
+      "tier": "minor",
+      "title": "xAI founded",
+      "description": "Elon Musk launches a new lab that becomes a major GPU buyer.",
+      "source": "xAI",
+      "companies": [
+        "xAI"
+      ]
+    },
+    {
+      "date": "2023-07-18",
+      "displayDate": "Jul 18 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "model",
+      "tier": "minor",
+      "title": "Meta releases Llama 2",
+      "description": "Open weights let anyone build on a strong base, expanding demand.",
+      "source": "Meta",
+      "companies": [
+        "Meta"
+      ]
+    },
+    {
+      "date": "2023-09-25",
+      "displayDate": "Sep 25 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "deal",
+      "tier": "major",
+      "short": "AMZN-Anthropic",
+      "title": "Amazon backs Anthropic",
+      "figure": "up to $4B",
+      "description": "Amazon commits up to $4B to Anthropic, making AWS a core partner.",
+      "whyItMatters": "A second lab-hyperscaler axis forms, splitting the field.",
+      "source": "Amazon / press",
+      "companies": [
+        "AMZN",
+        "Anthropic"
+      ]
+    },
+    {
+      "date": "2023-10-17",
+      "displayDate": "Oct 17 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "policy",
+      "tier": "minor",
+      "title": "China chip controls tightened",
+      "description": "BIS closes the H800/A800 loophole NVIDIA used to keep selling into China.",
+      "source": "US BIS",
+      "companies": [
+        "NVDA",
+        "US"
+      ]
+    },
+    {
+      "date": "2023-11-22",
+      "displayDate": "Nov 22 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "stake",
+      "tier": "major",
+      "short": "AVGO-VMware",
+      "title": "Broadcom closes VMware",
+      "figure": "$69B",
+      "description": "Broadcom completes its ~$69B VMware acquisition.",
+      "whyItMatters": "Reshapes Broadcom into a software-plus-AI-silicon giant.",
+      "source": "Broadcom",
+      "companies": [
+        "AVGO"
+      ]
+    },
+    {
+      "date": "2023-12-06",
+      "displayDate": "Dec 6 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "model",
+      "tier": "minor",
+      "title": "Google launches Gemini",
+      "description": "Google's flagship family arrives, backed by its own TPUs.",
+      "source": "Google",
+      "companies": [
+        "GOOGL"
+      ]
+    },
+    {
+      "date": "2023-12-06",
+      "displayDate": "Dec 6 2023",
+      "year": 2023,
+      "era": "2023",
+      "category": "model",
+      "tier": "minor",
+      "title": "AMD launches MI300X",
+      "description": "AMD's first credible data-center GPU challenger ships.",
+      "source": "AMD",
+      "companies": [
+        "AMD"
+      ]
+    },
+    {
+      "date": "2024-03-04",
+      "displayDate": "Mar 4 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "model",
+      "tier": "minor",
+      "title": "Anthropic releases Claude 3",
+      "description": "A capability leap that intensifies frontier competition.",
+      "source": "Anthropic",
+      "companies": [
+        "Anthropic"
+      ]
+    },
+    {
+      "date": "2024-03-18",
+      "displayDate": "Mar 18 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "model",
+      "tier": "major",
+      "short": "Blackwell",
+      "title": "NVIDIA unveils Blackwell",
+      "description": "Next-gen GPU architecture announced at GTC.",
+      "whyItMatters": "Sets the hardware roadmap the whole chain races to build.",
+      "source": "NVIDIA",
+      "companies": [
+        "NVDA",
+        "TSMC",
+        "Hynix"
+      ]
+    },
+    {
+      "date": "2024-04-16",
+      "displayDate": "Apr 16 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "deal",
+      "tier": "minor",
+      "title": "Microsoft invests $1.5B in G42",
+      "figure": "$1.5B",
+      "description": "An early bet linking a US hyperscaler to a Gulf AI champion.",
+      "source": "Microsoft / press",
+      "companies": [
+        "MSFT",
+        "G42"
+      ]
+    },
+    {
+      "date": "2024-04-18",
+      "displayDate": "Apr 18 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "model",
+      "tier": "minor",
+      "title": "Meta releases Llama 3",
+      "description": "Meta pushes open weights further, backed by huge capex.",
+      "source": "Meta",
+      "companies": [
+        "Meta"
+      ]
+    },
+    {
+      "date": "2024-06-18",
+      "displayDate": "Jun 18 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "demand",
+      "tier": "major",
+      "short": "NVDA $3T",
+      "title": "NVIDIA hits $3T, briefly the world's most valuable",
+      "figure": "~$3.34T",
+      "description": "NVIDIA overtakes Microsoft and Apple to top global market cap. First crossed $3T ~Jun 5, 2024.",
+      "whyItMatters": "The clearest sign yet that the market had reorganized itself around AI hardware.",
+      "source": "press",
+      "companies": [
+        "NVDA"
+      ]
+    },
+    {
+      "date": "2024-09-02",
+      "displayDate": "Sep 2 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "build",
+      "tier": "minor",
+      "title": "xAI's Colossus comes online",
+      "figure": "~100k GPUs",
+      "description": "A ~100,000-GPU cluster stood up in Memphis in months.",
+      "whyItMatters": "Proof a new entrant can assemble world-class compute at speed.",
+      "source": "xAI / press",
+      "companies": [
+        "xAI"
+      ]
+    },
+    {
+      "date": "2024-09-12",
+      "displayDate": "Sep 12 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "model",
+      "tier": "minor",
+      "title": "OpenAI releases o1",
+      "description": "A reasoning model that spends far more compute at inference.",
+      "whyItMatters": "Shifts demand toward inference; a structural change.",
+      "source": "OpenAI",
+      "companies": [
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2024-10-02",
+      "displayDate": "Oct 2 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "deal",
+      "tier": "minor",
+      "title": "OpenAI raises $6.6B at $157B",
+      "figure": "$157B val",
+      "description": "A giant round cements OpenAI as the most valuable AI startup.",
+      "source": "press",
+      "companies": [
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2024-11-22",
+      "displayDate": "Nov 22 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "deal",
+      "tier": "minor",
+      "title": "Amazon-Anthropic reaches $8B",
+      "figure": "$8B",
+      "description": "Amazon doubles its Anthropic commitment to $8B total.",
+      "source": "Amazon",
+      "companies": [
+        "AMZN",
+        "Anthropic"
+      ]
+    },
+    {
+      "date": "2024-12-23",
+      "displayDate": "Dec 23 2024",
+      "year": 2024,
+      "era": "2024",
+      "category": "deal",
+      "tier": "minor",
+      "title": "xAI raises $6B",
+      "figure": "$6B",
+      "description": "A mega-round funds xAI's rapid compute expansion.",
+      "source": "xAI / press",
+      "companies": [
+        "xAI"
+      ]
+    },
+    {
+      "date": "2025-01-21",
+      "displayDate": "Jan 21 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "build",
+      "tier": "major",
+      "short": "Stargate",
+      "title": "Stargate announced",
+      "figure": "$500B",
+      "description": "$500B over four years from OpenAI, SoftBank, Oracle, and MGX.",
+      "whyItMatters": "The largest single AI-infrastructure commitment yet; announced at the White House.",
+      "source": "OpenAI",
+      "companies": [
+        "OpenAI",
+        "Oracle",
+        "SoftBank"
+      ]
+    },
+    {
+      "date": "2025-01-27",
+      "displayDate": "Jan 27 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "model",
+      "tier": "major",
+      "short": "DeepSeek",
+      "title": "DeepSeek shock",
+      "figure": "~$600B drop",
+      "description": "A low-cost Chinese model triggers NVIDIA's ~$600B single-day drop, the largest in market history.",
+      "whyItMatters": "The first serious 'what if AI needs less compute?' scare.",
+      "source": "press",
+      "companies": [
+        "NVDA"
+      ]
+    },
+    {
+      "date": "2025-03-28",
+      "displayDate": "Mar 28 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "build",
+      "tier": "major",
+      "short": "CRWV IPO",
+      "title": "CoreWeave IPO",
+      "figure": "$40/share",
+      "description": "The first big neocloud goes public on Nasdaq; NVIDIA holds ~7%.",
+      "whyItMatters": "Public markets validate the neocloud model and its ties to NVIDIA.",
+      "source": "CoreWeave",
+      "companies": [
+        "CRWV",
+        "NVDA"
+      ]
+    },
+    {
+      "date": "2025-04-15",
+      "displayDate": "Apr 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "policy",
+      "tier": "minor",
+      "title": "NVIDIA's H20 blocked from China",
+      "figure": "up to $5.5B charge",
+      "description": "Apr 2025 licensing requirement; NVIDIA announced up to a $5.5B charge, with ~$4.5B booked in Q1 for excess H20 inventory.",
+      "source": "NVIDIA / press",
+      "companies": [
+        "NVDA",
+        "US"
+      ]
+    },
+    {
+      "date": "2025-05-13",
+      "displayDate": "May 13 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "policy",
+      "tier": "minor",
+      "title": "HUMAIN launches — sovereign AI",
+      "figure": "500 MW",
+      "description": "Saudi Arabia's PIF unveils HUMAIN with NVIDIA; the US rescinds the AI Diffusion Rule the same day.",
+      "whyItMatters": "Nation-states enter as buyers, treating compute like a strategic asset.",
+      "source": "HUMAIN / NVIDIA",
+      "companies": [
+        "HUMAIN",
+        "NVDA"
+      ]
+    },
+    {
+      "date": "2025-07-07",
+      "displayDate": "Jul 7 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "stake",
+      "tier": "minor",
+      "title": "CoreWeave–Core Scientific deal terminated",
+      "figure": "~$9B",
+      "description": "The ~$9B all-stock deal for ~1.3 GW of power capacity collapses Oct 30, 2025 after Core Scientific shareholders reject it.",
+      "source": "CoreWeave / press",
+      "companies": [
+        "CRWV"
+      ]
+    },
+    {
+      "date": "2025-07-09",
+      "displayDate": "Jul 9 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "demand",
+      "tier": "major",
+      "short": "$4T",
+      "title": "NVIDIA hits $4T",
+      "figure": "$4T",
+      "description": "First company ever to reach a $4 trillion valuation.",
+      "whyItMatters": "Markets treat NVIDIA as the keystone of the AI economy.",
+      "source": "press",
+      "companies": [
+        "NVDA"
+      ]
+    },
+    {
+      "date": "2025-07-14",
+      "displayDate": "Jul 14 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "build",
+      "tier": "minor",
+      "title": "Meta commits to gigawatt superclusters",
+      "description": "Meta unveils multi-gigawatt projects (Prometheus, Hyperion).",
+      "source": "Meta",
+      "companies": [
+        "Meta"
+      ]
+    },
+    {
+      "date": "2025-08-07",
+      "displayDate": "Aug 7 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "model",
+      "tier": "minor",
+      "title": "OpenAI releases GPT-5",
+      "description": "OpenAI's next flagship keeps compute demand climbing.",
+      "source": "OpenAI",
+      "companies": [
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2025-08-18",
+      "displayDate": "Aug 18 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "deal",
+      "tier": "minor",
+      "title": "SoftBank puts $2B in Intel",
+      "figure": "$2B",
+      "description": "A ~2% stake, days before the US government's larger move.",
+      "source": "press",
+      "companies": [
+        "SoftBank",
+        "INTC"
+      ]
+    },
+    {
+      "date": "2025-08-22",
+      "displayDate": "Aug 22 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "stake",
+      "tier": "major",
+      "short": "US-Intel",
+      "title": "US takes ~10% of Intel",
+      "figure": "~$8.9B",
+      "description": "Washington acquires a ~$8.9B stake in the chipmaker.",
+      "whyItMatters": "Government treats domestic chip capacity as national infrastructure.",
+      "source": "press",
+      "companies": [
+        "INTC",
+        "US"
+      ]
+    },
+    {
+      "date": "2025-09-18",
+      "displayDate": "Sep 18 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "deal",
+      "tier": "major",
+      "short": "NVDA-Intel",
+      "title": "NVIDIA invests $5B in Intel",
+      "figure": "$5B",
+      "description": "A stake plus a chip partnership with its onetime rival, at $23.28/share.",
+      "whyItMatters": "Even rivals now lean on NVIDIA's capital and roadmap.",
+      "source": "NVIDIA / Intel 8-K",
+      "companies": [
+        "NVDA",
+        "INTC"
+      ]
+    },
+    {
+      "date": "2025-09-22",
+      "displayDate": "Sep 22 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "deal",
+      "tier": "major",
+      "short": "NVDA-OpenAI",
+      "title": "NVIDIA: up to $100B into OpenAI",
+      "figure": "up to $100B",
+      "description": "A 10 GW letter of intent; NVIDIA invests in its biggest customer.",
+      "whyItMatters": "The clearest circular-financing signal yet.",
+      "source": "NVIDIA",
+      "companies": [
+        "NVDA",
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2025-09-23",
+      "displayDate": "Sep 23 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "build",
+      "tier": "minor",
+      "title": "Stargate adds five US sites",
+      "figure": "~7 GW",
+      "description": "Five new sites announced; with Abilene and CoreWeave, Stargate reaches nearly 7 GW of planned capacity.",
+      "source": "OpenAI",
+      "companies": [
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2025-10-06",
+      "displayDate": "Oct 6 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "deal",
+      "tier": "major",
+      "short": "AMD-OpenAI",
+      "title": "AMD-OpenAI, 6 GW",
+      "figure": "6 GW",
+      "description": "OpenAI agrees to deploy 6 GW of AMD GPUs over time.",
+      "whyItMatters": "OpenAI diversifies beyond NVIDIA; AMD lands a huge anchor.",
+      "source": "AMD / press",
+      "companies": [
+        "AMD",
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2025-11-19",
+      "displayDate": "Nov 19 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "policy",
+      "tier": "minor",
+      "title": "US clears advanced chips for the Gulf",
+      "figure": "~70k GPUs",
+      "description": "Commerce approves up to ~70,000 Blackwell GPUs for HUMAIN and G42.",
+      "whyItMatters": "Chip diplomacy becomes explicit foreign policy.",
+      "source": "US Commerce",
+      "companies": [
+        "HUMAIN",
+        "G42",
+        "US"
+      ]
+    },
+    {
+      "date": "2025-12-12",
+      "displayDate": "Dec 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "deal",
+      "tier": "minor",
+      "title": "SoftBank completes $41B into OpenAI",
+      "figure": "$41B",
+      "description": "Round announced Mar 31, 2025 ($40B); $30B SoftBank direct + $11B syndicated co-investment; second tranche completed Dec 2025 (Reuters Dec 30, 2025). ~11% stake per some reports — unverified.",
+      "source": "press",
+      "companies": [
+        "SoftBank",
+        "OpenAI"
+      ]
+    },
+    {
+      "date": "2025-12-29",
+      "displayDate": "Dec 29 2025",
+      "year": 2025,
+      "era": "2025",
+      "category": "stake",
+      "tier": "minor",
+      "title": "NVIDIA completes $5B Intel buy",
+      "description": "The September agreement closes after clearance.",
+      "source": "Intel 8-K",
+      "companies": [
+        "NVDA",
+        "INTC"
+      ]
+    },
+    {
+      "date": "2026-02-15",
+      "displayDate": "Q1 2026",
+      "year": 2026,
+      "era": "2026",
+      "category": "build",
+      "tier": "minor",
+      "title": "Stargate's Abilene campus scales toward 1.2 GW",
+      "figure": "1.2 GW planned",
+      "description": "Phase 1 energized H1 2025; full 1.2 GW of planned power capacity expected ~mid-2026.",
+      "source": "Oracle / press",
+      "companies": [
+        "OpenAI",
+        "Oracle"
+      ]
+    },
+    {
+      "date": "2026-03-31",
+      "displayDate": "Mar 31 2026",
+      "year": 2026,
+      "era": "2026",
+      "category": "deal",
+      "tier": "major",
+      "short": "OpenAI $122B",
+      "title": "OpenAI raises $122B",
+      "figure": "$122B",
+      "description": "One of the largest funding rounds in history; the reported ~$110B strategic component with Amazon and NVIDIA was part of the $122B, not separate.",
+      "whyItMatters": "The capital feeding the buildout now dwarfs anything venture ever did.",
+      "source": "press",
+      "companies": [
+        "OpenAI",
+        "AMZN",
+        "NVDA"
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "displayDate": "Jun 5 2026",
+      "year": 2026,
+      "era": "2026",
+      "category": "deal",
+      "tier": "minor",
+      "title": "Broadcom, Apollo & Blackstone: $35B for Anthropic",
+      "figure": "$35B",
+      "description": "An SPV financed by Apollo and Blackstone buys Broadcom custom chips (Broadcom backstops ~$30B of debt tranches) and leases them to Anthropic — debt, not equity. Deal closed Jun 5, 2026.",
+      "whyItMatters": "The buildout starts being financed like industrial infrastructure.",
+      "source": "press",
+      "companies": [
+        "AVGO",
+        "Anthropic"
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "displayDate": "Jul 16 2026",
+      "year": 2026,
+      "era": "2026",
+      "category": "build",
+      "tier": "minor",
+      "title": "TSMC lifts 2026 capex to ~$64B",
+      "figure": "$64B capex",
+      "description": "The foundry's record capital budget (guidance $60–$64B) signals confidence the demand is durable.",
+      "source": "TSMC / press",
+      "companies": [
+        "TSMC"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "displayDate": "Aug 5 2026",
+      "year": 2026,
+      "era": "2026",
+      "category": "model",
+      "tier": "minor",
+      "title": "Anthropic builds an in-house chip team",
+      "figure": "own silicon",
+      "description": "Anthropic hires chip engineers to co-design its own inference silicon.",
+      "whyItMatters": "Even the labs move to design their own chips, chasing independence from NVIDIA.",
+      "source": "press",
+      "companies": [
+        "Anthropic"
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "displayDate": "Aug 10 2026",
+      "year": 2026,
+      "era": "2026",
+      "category": "deal",
+      "tier": "minor",
+      "title": "NVIDIA lines up $500B financing platform",
+      "figure": "$500B",
+      "description": "Non-binding MOUs with BlackRock, Goldman Sachs and others to mobilize $500B+ of third-party capital — NVIDIA is not committing $500B itself.",
+      "source": "press",
+      "companies": [
+        "NVDA"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "displayDate": "Aug 17 2026",
+      "year": 2026,
+      "era": "2026",
+      "category": "deal",
+      "tier": "major",
+      "short": "NVDA $105B Ohio",
+      "title": "NVIDIA backs $105B for OpenAI's Ohio data center",
+      "figure": "up to $105B",
+      "description": "SEC filing (8-K Aug 17, 2026): NVIDIA provides capped residual-value guarantees up to $105B for the 4.25 GW (up to 8 GW) Ohio campus — conditional, effective ~2028, not direct financing.",
+      "whyItMatters": "The circular-financing loop at its most extreme — NVIDIA underwriting demand for its own chips.",
+      "source": "SEC filing / CNBC",
+      "companies": [
+        "NVDA",
+        "OpenAI",
+        "SoftBank"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "displayDate": "Aug 17 2026",
+      "year": 2026,
+      "era": "2026",
+      "category": "demand",
+      "tier": "minor",
+      "title": "Circular-financing scrutiny intensifies",
+      "description": "Analysts warn mutual investments may inflate 'artificial demand' as circular deals pile up.",
+      "whyItMatters": "The bear case matures from a one-day scare into a structural question.",
+      "source": "Fortune / press",
+      "companies": [
+        "NVDA",
+        "OpenAI",
+        "AVGO"
+      ]
+    }
   ]
 }

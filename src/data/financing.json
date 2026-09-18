@@ -1,24 +1,177 @@
 {
   "note": "Capital flows, separate from the physical supply chain. Direction is source -> recipient. 'loop: true' marks circular-financing relationships (a vendor invests in a customer that buys its chips). 'realized: false' = announced but not booked.",
   "context": {
-    "nvidiaEquityPortfolio": "Grew from ~$3.4B to ~$22.3B in FY2026, with ~$8.9B in gains on equity securities. Reported.",
+    "note": "NVIDIA FY2026 10-K equity-portfolio figures removed 2026-09-18 (audit: could not reproduce from the filing). Re-add only with citable 10-K line items.",
     "source": "NVIDIA FY2026 10-K"
   },
   "edges": [
-    { "from": "NVDA", "to": "OpenAI", "type": "investment", "amount": "up to $205B", "realized": false, "loop": true, "tier": "disclosed", "asOf": "2025-09 / 2026-08", "note": "$100B LOI (Sep 2025) + up to $105B Ohio financing (Aug 2026)" },
-    { "from": "OpenAI", "to": "NVDA", "type": "purchase", "amount": "GPU purchases", "realized": true, "loop": true, "tier": "reported", "asOf": "ongoing" },
-    { "from": "NVDA", "to": "CRWV", "type": "equity-stake", "amount": "~7%", "realized": true, "loop": true, "tier": "reported", "asOf": "2025" },
-    { "from": "CRWV", "to": "NVDA", "type": "purchase", "amount": "GPU purchases", "realized": true, "loop": true, "tier": "reported", "asOf": "ongoing" },
-    { "from": "AMD", "to": "OpenAI", "type": "warrants", "amount": "warrants ~10% of AMD", "realized": false, "loop": true, "tier": "disclosed", "asOf": "2025-10", "note": "tied to 6 GW GPU deployment" },
-    { "from": "OpenAI", "to": "AMD", "type": "purchase", "amount": "6 GW of GPUs", "realized": false, "loop": true, "tier": "disclosed", "asOf": "2025-10" },
-    { "from": "AVGO", "to": "Anthropic", "type": "chip-financing", "amount": "$35B SPV (debt)", "realized": false, "loop": true, "tier": "disclosed", "asOf": "2026-06", "note": "with Apollo and Blackstone; custom chips leased to Anthropic" },
-    { "from": "Anthropic", "to": "AVGO", "type": "purchase", "amount": "custom chips", "realized": false, "loop": true, "tier": "disclosed", "asOf": "2026" },
-    { "from": "MSFT", "to": "OpenAI", "type": "investment", "amount": "~$13B+", "realized": true, "loop": false, "tier": "disclosed", "asOf": "2023-01" },
-    { "from": "SoftBank", "to": "OpenAI", "type": "investment", "amount": "$41B", "realized": true, "loop": false, "tier": "disclosed", "asOf": "2025-12", "note": "~11% stake" },
-    { "from": "AMZN", "to": "Anthropic", "type": "investment", "amount": "$8B", "realized": true, "loop": false, "tier": "disclosed", "asOf": "2024-11" },
-    { "from": "GOOGL", "to": "Anthropic", "type": "investment", "amount": "investment + TPU deal", "realized": true, "loop": false, "tier": "disclosed", "asOf": "2023-2025" },
-    { "from": "NVDA", "to": "INTC", "type": "equity-stake", "amount": "$5B", "realized": true, "loop": false, "tier": "reported", "asOf": "2025-09", "note": "$23.28/share; closed Dec 26 2025" },
-    { "from": "US", "to": "INTC", "type": "equity-stake", "amount": "~10% / $8.9B", "realized": true, "loop": false, "tier": "disclosed", "asOf": "2025-08" },
-    { "from": "SoftBank", "to": "INTC", "type": "equity-stake", "amount": "$2B", "realized": true, "loop": false, "tier": "disclosed", "asOf": "2025-08" }
+    {
+      "from": "OpenAI",
+      "to": "NVDA",
+      "type": "purchase",
+      "amount": "GPU purchases",
+      "realized": true,
+      "loop": true,
+      "tier": "reported",
+      "asOf": "ongoing"
+    },
+    {
+      "from": "NVDA",
+      "to": "CRWV",
+      "type": "equity-stake",
+      "amount": "~7%",
+      "realized": true,
+      "loop": true,
+      "tier": "reported",
+      "asOf": "2025",
+      "note": "~7% as of 2025 IPO filings; ~12% after NVIDIA's $2B follow-on purchase (Jan 26, 2026)."
+    },
+    {
+      "from": "CRWV",
+      "to": "NVDA",
+      "type": "purchase",
+      "amount": "GPU purchases",
+      "realized": true,
+      "loop": true,
+      "tier": "reported",
+      "asOf": "ongoing"
+    },
+    {
+      "from": "AMD",
+      "to": "OpenAI",
+      "type": "warrants",
+      "amount": "warrants ~10% of AMD",
+      "realized": false,
+      "loop": true,
+      "tier": "disclosed",
+      "asOf": "2025-10",
+      "note": "tied to 6 GW GPU deployment"
+    },
+    {
+      "from": "OpenAI",
+      "to": "AMD",
+      "type": "purchase",
+      "amount": "6 GW of GPUs",
+      "realized": false,
+      "loop": true,
+      "tier": "disclosed",
+      "asOf": "2025-10"
+    },
+    {
+      "from": "AVGO",
+      "to": "Anthropic",
+      "type": "chip-financing",
+      "amount": "$35B SPV (debt)",
+      "realized": false,
+      "loop": true,
+      "tier": "disclosed",
+      "asOf": "2026-06-05",
+      "note": "Capital is Apollo/Blackstone's; Broadcom is backstop (~$30B of debt tranches). SPV buys Google TPUs (Broadcom co-develops them), leases to Anthropic. Deal closed Jun 5, 2026."
+    },
+    {
+      "from": "Anthropic",
+      "to": "AVGO",
+      "type": "purchase",
+      "amount": "custom chips",
+      "realized": false,
+      "loop": true,
+      "tier": "disclosed",
+      "asOf": "2026"
+    },
+    {
+      "from": "MSFT",
+      "to": "OpenAI",
+      "type": "investment",
+      "amount": "~$13B+",
+      "realized": true,
+      "loop": false,
+      "tier": "disclosed",
+      "asOf": "2023-01",
+      "note": "Cumulative total (~$13B+), incl. the Jan 2023 ~$10B tranche."
+    },
+    {
+      "from": "SoftBank",
+      "to": "OpenAI",
+      "type": "investment",
+      "amount": "$41B",
+      "realized": true,
+      "loop": false,
+      "tier": "disclosed",
+      "asOf": "2025-12",
+      "note": "$30B SoftBank direct + $11B syndicated co-investment (Reuters Dec 30, 2025); ~11% stake per some reports — unverified."
+    },
+    {
+      "from": "AMZN",
+      "to": "Anthropic",
+      "type": "investment",
+      "amount": "$8B",
+      "realized": true,
+      "loop": false,
+      "tier": "disclosed",
+      "asOf": "2024-11"
+    },
+    {
+      "from": "GOOGL",
+      "to": "Anthropic",
+      "type": "investment",
+      "amount": "investment + TPU deal",
+      "realized": true,
+      "loop": false,
+      "tier": "disclosed",
+      "asOf": "2023-2025"
+    },
+    {
+      "from": "NVDA",
+      "to": "INTC",
+      "type": "equity-stake",
+      "amount": "$5B",
+      "realized": true,
+      "loop": false,
+      "tier": "reported",
+      "asOf": "2025-09",
+      "note": "$23.28/share; closed Dec 26 2025"
+    },
+    {
+      "from": "US",
+      "to": "INTC",
+      "type": "equity-stake",
+      "amount": "~10% / $8.9B",
+      "realized": true,
+      "loop": false,
+      "tier": "disclosed",
+      "asOf": "2025-08"
+    },
+    {
+      "from": "SoftBank",
+      "to": "INTC",
+      "type": "equity-stake",
+      "amount": "$2B",
+      "realized": true,
+      "loop": false,
+      "tier": "disclosed",
+      "asOf": "2025-08"
+    },
+    {
+      "from": "NVDA",
+      "to": "OpenAI",
+      "type": "investment",
+      "amount": "up to $100B",
+      "realized": false,
+      "loop": true,
+      "tier": "disclosed",
+      "asOf": "2025-09-22",
+      "note": "Non-binding LOI for equity investment (announced Sep 22, 2025); not a definitive agreement as of Dec 2025."
+    },
+    {
+      "from": "NVDA",
+      "to": "OpenAI",
+      "type": "guarantee",
+      "amount": "up to $105B cap",
+      "realized": false,
+      "loop": true,
+      "tier": "disclosed",
+      "asOf": "2026-08-17",
+      "note": "Contingent residual-value guarantee for the Ohio (Pike County) campus, capped at $105B cumulative; payable only on default/insolvency, indemnified by OpenAI; obligations expected from ~2028. Per NVIDIA 8-K."
+    }
   ]
 }

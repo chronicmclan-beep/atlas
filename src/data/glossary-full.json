@@ -57,7 +57,7 @@
     { "id": "demand-signal-quarter", "term": "The demand-signal quarter", "type": "event", "definition": "NVIDIA's May 2023 earnings, when it guided revenue far above expectations (~$11B) and the stock jumped ~24% — the first hard proof in the financials that AI demand was real.", "source": "NVIDIA 8-K" },
     { "id": "chatgpt-launch", "term": "ChatGPT launches", "type": "event", "definition": "OpenAI's chatbot launched November 30, 2022 and reached ~100M users in two months — the consumer moment that turned AI into a global demand shock the whole chain now serves.", "source": "OpenAI" },
     { "id": "stargate", "term": "Stargate", "type": "event", "definition": "A $500B, four-year AI-infrastructure commitment announced January 2025 by OpenAI, SoftBank, Oracle and MGX — the largest single AI build-out plan yet, announced at the White House.", "source": "OpenAI" },
-    { "id": "coreweave-ipo", "term": "CoreWeave IPO", "type": "event", "definition": "The first big neocloud to go public (March 2025, Nasdaq) — validating the GPU-rental model and its tight ties to NVIDIA, which holds roughly a 7% stake.", "source": "CoreWeave" },
+    { "id": "coreweave-ipo", "term": "CoreWeave IPO", "type": "event", "definition": "The first big neocloud to go public (March 2025, Nasdaq) — validating the GPU-rental model and its tight ties to NVIDIA, which holds roughly a 12% stake (after a $2B follow-on purchase, Jan 2026).", "source": "CoreWeave" },
     { "id": "nvidia-4t", "term": "NVIDIA hits $4 trillion", "type": "event", "definition": "In July 2025 NVIDIA became the first company ever to reach a $4 trillion valuation — markets treating it as the keystone of the AI economy.", "source": "press" }
   ]
 }
