@@ -177,13 +177,93 @@ if (data.glossary) {
     err('glossary.json', `missing a "terms" object mapping labels to definitions.`)
 }
 
+/* ---------- Data Health (warnings — the accountability dashboard) ----------
+   These never fail the build; they are the visible dashboard for the
+   DATA_ACCOUNTABILITY.md system. A warning unaddressed across two updates
+   graduates to a hard error. */
+const warnings = []
+const warn = (file, msg) => warnings.push(`${rel(file)} — ${msg}`)
+
+const MONTHS = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 }
+
+/* 1. Timeline date/displayDate consistency — the audit's most common bug class. */
+if (data.timeline && Array.isArray(data.timeline.events)) {
+  data.timeline.events.forEach((ev) => {
+    const who = `event "${ev.title ?? ev.date ?? '?'}"`
+    if (!ev.source) warn('timeline.json', `${who} has no citable source.`)
+    if (!ev.date || !ev.displayDate) return
+    const iso = new Date(`${ev.date}T00:00:00Z`)
+    if (Number.isNaN(iso.getTime())) return
+    const dd = String(ev.displayDate)
+    const y = dd.match(/\b(19|20)\d{2}\b/)
+    if (y && parseInt(y[0], 10) !== iso.getUTCFullYear())
+      warn('timeline.json', `${who}: displayDate year ${y[0]} disagrees with date ${ev.date}.`)
+    const m = dd.match(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b/i)
+    if (m && MONTHS[m[1].toLowerCase()] !== iso.getUTCMonth())
+      warn('timeline.json', `${who}: displayDate month "${m[0]}" disagrees with date ${ev.date}.`)
+    let rest = y ? dd.replace(y[0], ' ') : dd
+    rest = rest.replace(/\b[QH][1-4]\b/gi, ' ') // strip "Q1"/"H2" so the quarter number isn't read as a day
+    const d = rest.match(/\b(\d{1,2})\b/)
+    if (d && parseInt(d[1], 10) !== iso.getUTCDate())
+      warn('timeline.json', `${who}: displayDate day ${d[1]} disagrees with date ${ev.date}.`)
+  })
+}
+
+/* 2. Provenance coverage — share of figures carrying source + tier. */
+const healthRows = []
+const pct = (n, d) => (d ? `${Math.round((100 * n) / d)}%` : 'n/a')
+if (Array.isArray(data.kpis)) {
+  const n = data.kpis.filter((r) => r.source && !/not yet sourced/i.test(r.source)).length
+  healthRows.push(['kpis.json', `${n}/${data.kpis.length} company records sourced`, pct(n, data.kpis.length)])
+}
+if (data.timeline && Array.isArray(data.timeline.events)) {
+  const n = data.timeline.events.filter((e) => e.source).length
+  healthRows.push(['timeline.json', `${n}/${data.timeline.events.length} events with source`, pct(n, data.timeline.events.length)])
+}
+if (data.financing && Array.isArray(data.financing.edges)) {
+  const n = data.financing.edges.filter((e) => e.asOf || e.note).length
+  healthRows.push(['financing.json', `${n}/${data.financing.edges.length} flows with asOf/note`, pct(n, data.financing.edges.length)])
+}
+if (data.supplyEdges && Array.isArray(data.supplyEdges.edges)) {
+  const n = data.supplyEdges.edges.filter((e) => e.note || e.tier === 'reported').length
+  healthRows.push(['supply-edges.json', `${n}/${data.supplyEdges.edges.length} edges with note/reported tier`, pct(n, data.supplyEdges.edges.length)])
+}
+if (data.revenue && Array.isArray(data.revenue.series)) {
+  const n = data.revenue.series.filter((s) => s.tier && s.tier !== 'unsourced').length
+  healthRows.push(['revenue.json', `${n}/${data.revenue.series.length} series sourced`, pct(n, data.revenue.series.length)])
+}
+
+/* 3. Staleness — the audit's biggest error class. */
+if (data.timeline && data.timeline.updated) {
+  const updated = new Date(`${data.timeline.updated}T00:00:00Z`)
+  if (!Number.isNaN(updated.getTime())) {
+    const days = Math.round((Date.now() - updated.getTime()) / 86400000)
+    if (days > 120)
+      warn('timeline.json', `data freeze is ${days} days old (${data.timeline.updated}) — "latest" figures may be stale.`)
+  }
+}
+
 /* ---------- Report ---------- */
+const printHealth = () => {
+  console.log('\n── Data Health (accountability dashboard) ──')
+  for (const [file, what, coverage] of healthRows) console.log(`  ${file}: ${what} (${coverage})`)
+  if (warnings.length === 0) {
+    console.log('  No warnings — provenance, dates, and freshness all clean.')
+  } else {
+    console.log(`\n  ${warnings.length} warning${warnings.length === 1 ? '' : 's'} (do not fail the build — address within two updates):`)
+    for (const w of warnings) console.log(`  • ${w}`)
+  }
+  console.log('')
+}
+
 if (errors.length === 0) {
   console.log('✓ Data check passed — all 9 JSON files are valid and consistent.')
+  printHealth()
   process.exit(0)
 } else {
   console.error(`\n✗ Data check FAILED — ${errors.length} problem${errors.length === 1 ? '' : 's'} found:\n`)
   for (const e of errors) console.error(`  • ${e}`)
   console.error('\nFix the item(s) above, then try again. The build was stopped so a broken change cannot go live.\n')
+  printHealth()
   process.exit(1)
 }
