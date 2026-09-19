@@ -8,6 +8,56 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v7 — "The Missing Words" — 2026-09-19
+
+Lexicon expansion: the glossary covered companies, products, and events
+well but was missing the foundational vocabulary a reader needs for the
+rest of the Atlas — the basic units of AI compute, money, and power.
+Ten new entries added to `glossary-full.json` (48 → 58), all
+figure-free per the file's standing rule (figures quoted in entries are
+drawn from the Atlas data files, never invented).
+
+### Added — Glossary (10)
+- **GPU** (term): graphics processing unit — the chip architecture behind
+  AI math; every AI accelerator in the Atlas is a GPU or a close cousin.
+- **Training vs inference** (term): the two phases of AI compute — one
+  giant power-hungry training run vs. per-query inference that scales
+  with every user, every day.
+- **Capex** (term): capital expenditure; hyperscaler capex framed as the
+  Atlas's demand signal.
+- **Gigawatt** (term): a billion watts — the unit the buildout is now
+  measured in; why power is the industry's binding constraint.
+- **Token** (term): the basic unit of LLM work (~a word fragment);
+  inference demand is token demand.
+- **Frontier model** (term): the most capable models at any moment; each
+  generation demands an order of magnitude more training compute.
+- **Data center** (term): the physical home of AI compute — who builds
+  them, who fills them with chips, who pays for the electricity.
+- **Advanced packaging** (term): fusing logic, memory, and interconnect
+  into one package; TSMC's CoWoS as the decisive bottleneck.
+- **TPU** (product): Google's Tensor Processing Unit — historically
+  Google-Cloud-only, but Alphabet's Q2 2026 earnings call confirmed TPU
+  systems delivered to external customer data centers for the first time.
+- **Custom AI silicon (ASICs)** (product): one-customer AI chips —
+  Google's TPUs, Meta's MTIA, Amazon's Trainium; the business Broadcom
+  and Marvell are built on.
+
+### Verification
+- Independent verifier checked all 10 entries against primary sources
+  (Google Cloud docs, Meta/AWS announcements, TSMC packaging reporting,
+  Alphabet Q2 2026 earnings call): **9 PASS, 1 FAIL**.
+- The FAIL was the draft TPU definition claiming TPUs were "deployed
+  only inside Google Cloud" — stale as of Q2 2026, when Alphabet began
+  recognizing revenue from TPU system sales delivered to customer data
+  centers (CFO Anat Ashkenazi, Alphabet Q2 2026 earnings call, Jul 22,
+  2026). Definition corrected before publishing; source field cites the
+  earnings call.
+- Style check: all 10 match the neighboring editorial voice; figure-free
+  check confirmed no invented numbers.
+- `npm run validate`, lint, tests, and production build all green.
+
+---
+
 ## Update v6 — "Broadcom Reverify" — 2026-09-19
 
 Reverification of recent Broadcom quarterly revenue, including the
