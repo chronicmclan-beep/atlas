@@ -3,7 +3,7 @@
     "ticker": "NVDA",
     "fiscalYear": "FY2026",
     "calendarYearBasis": 2025,
-    "asOf": "ended Jan 25 2026 · 10-K filed Feb 25 2026",
+    "asOf": "ended Jan 25 2026 \u00b7 10-K filed Feb 25 2026",
     "source": "NVIDIA FY2026 10-K; Q2 FY2027 8-K (Aug 26 2026)",
     "metrics": [
       {
@@ -84,7 +84,7 @@
     "ticker": "AMD",
     "fiscalYear": "FY2025",
     "calendarYearBasis": 2025,
-    "asOf": "ended Dec 27 2025 · Q4/FY release Feb 3 2026",
+    "asOf": "ended Dec 27 2025 \u00b7 Q4/FY release Feb 3 2026",
     "source": "AMD Q4/FY2025 press release (8-K)",
     "metrics": [
       {
@@ -153,7 +153,7 @@
     "ticker": "INTC",
     "fiscalYear": "FY2025",
     "calendarYearBasis": 2025,
-    "asOf": "ended Dec 27 2025 · Q4/FY 8-K Jan 22 2026",
+    "asOf": "ended Dec 27 2025 \u00b7 Q4/FY 8-K Jan 22 2026",
     "source": "Intel Q4/FY2025 earnings release (8-K EX-99.1)",
     "metrics": [
       {
@@ -232,7 +232,7 @@
     "ticker": "AVGO",
     "fiscalYear": "FY2025",
     "calendarYearBasis": 2025,
-    "asOf": "ended Nov 2 2025 · Q4/FY 8-K Dec 11 2025",
+    "asOf": "ended Nov 2 2025 \u00b7 Q4/FY 8-K Dec 11 2025",
     "source": "Broadcom Q4/FY2025 earnings release (8-K EX-99.1)",
     "metrics": [
       {
@@ -302,7 +302,7 @@
     "ticker": "MRVL",
     "fiscalYear": "FY2026",
     "calendarYearBasis": 2025,
-    "asOf": "ended Jan 31 2026 · reported Mar 5 2026",
+    "asOf": "ended Jan 31 2026 \u00b7 reported Mar 5 2026",
     "source": "Marvell FY2026 results; Q1 FY2027 results",
     "metrics": [
       {
@@ -360,7 +360,7 @@
     "ticker": "ARM",
     "fiscalYear": "FY2025",
     "calendarYearBasis": 2024,
-    "asOf": "ended Mar 31 2025 · reported May 7 2025",
+    "asOf": "ended Mar 31 2025 \u00b7 reported May 7 2025",
     "source": "Arm Holdings FY2025 annual report / shareholder letter",
     "metrics": [
       {
@@ -415,271 +415,349 @@
   },
   {
     "ticker": "MSFT",
-    "fiscalYear": null,
-    "asOf": "Financials not yet sourced",
-    "source": "Not yet sourced in this build",
-    "unsourced": true,
+    "fiscalYear": "FY2026",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Jun 30 2026 \u00b7 10-K filed Jul 29 2026",
+    "source": "Microsoft FY2026 10-K; Q4 FY2026 earnings release (Jul 29 2026)",
     "metrics": [
       {
         "label": "Revenue",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$331.8B",
+        "sub": "+18% YoY (+16% CC)",
+        "tier": "reported"
       },
       {
         "label": "Net income",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$133.7B",
+        "sub": "+31% YoY",
+        "tier": "reported"
       },
       {
         "label": "Gross margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "67.9%",
+        "sub": "GAAP; $225.5B gross profit (computed)",
+        "tier": "estimated"
       },
       {
         "label": "Operating margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "46.8%",
+        "sub": "op income $155.2B GAAP (computed)",
+        "tier": "estimated"
       },
       {
         "label": "Free cash flow",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "~$67.0B",
+        "sub": "OCF $182.9B - capex $115.9B (computed)",
+        "tier": "estimated"
       },
       {
         "label": "Diluted EPS",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$17.95",
+        "sub": "GAAP; +32% YoY",
+        "tier": "reported"
+      },
+      {
+        "label": "Azure revenue",
+        "value": ">$100B",
+        "sub": "FY2026; first time (Nadella)",
+        "tier": "reported"
+      },
+      {
+        "label": "Latest quarter",
+        "value": "$90.0B",
+        "sub": "Q4 FY2026; +18% YoY",
+        "tier": "reported"
       }
     ]
   },
   {
     "ticker": "AMZN",
-    "fiscalYear": null,
-    "asOf": "Financials not yet sourced",
-    "source": "Not yet sourced in this build",
-    "unsourced": true,
+    "fiscalYear": "FY2025",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Dec 31 2025 \u00b7 10-K filed Feb 6 2026",
+    "source": "Amazon Q4/FY2025 earnings release (Feb 5 2026)",
     "metrics": [
       {
         "label": "Revenue",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$716.9B",
+        "sub": "+12% YoY",
+        "tier": "reported"
       },
       {
         "label": "Net income",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$77.7B",
+        "sub": "+31% YoY",
+        "tier": "reported"
       },
       {
         "label": "Gross margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "50.3%",
+        "sub": "computed from reported sales/cost",
+        "tier": "estimated"
       },
       {
         "label": "Operating margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "11.2%",
+        "sub": "op income $80.0B (computed)",
+        "tier": "estimated"
       },
       {
         "label": "Free cash flow",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$11.2B",
+        "sub": "TTM; company definition",
+        "tier": "reported"
       },
       {
         "label": "Diluted EPS",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$7.17",
+        "sub": "GAAP",
+        "tier": "reported"
+      },
+      {
+        "label": "AWS revenue",
+        "value": "$128.7B",
+        "sub": "+20% YoY",
+        "tier": "reported"
+      },
+      {
+        "label": "Latest quarter",
+        "value": "$213.4B",
+        "sub": "Q4 2025; +14% YoY",
+        "tier": "reported"
       }
     ]
   },
   {
     "ticker": "GOOGL",
-    "fiscalYear": null,
-    "asOf": "Financials not yet sourced",
-    "source": "Not yet sourced in this build",
-    "unsourced": true,
+    "fiscalYear": "FY2025",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Dec 31 2025 \u00b7 10-K filed Feb 5 2026",
+    "source": "Alphabet Q4/FY2025 earnings release (Feb 4 2026)",
     "metrics": [
       {
         "label": "Revenue",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$402.8B",
+        "sub": "+15% YoY",
+        "tier": "reported"
       },
       {
         "label": "Net income",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$132.2B",
+        "sub": "+32% YoY",
+        "tier": "reported"
       },
       {
         "label": "Gross margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "59.7%",
+        "sub": "computed from reported revenue/cost",
+        "tier": "estimated"
       },
       {
         "label": "Operating margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "32%",
+        "sub": "op income $129.0B GAAP",
+        "tier": "reported"
       },
       {
         "label": "Free cash flow",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$73.3B",
+        "sub": "TTM; company definition",
+        "tier": "reported"
       },
       {
         "label": "Diluted EPS",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$10.81",
+        "sub": "GAAP",
+        "tier": "reported"
+      },
+      {
+        "label": "Google Cloud revenue",
+        "value": "$58.7B",
+        "sub": "+36% YoY",
+        "tier": "reported"
+      },
+      {
+        "label": "Latest quarter",
+        "value": "$113.8B",
+        "sub": "Q4 2025; +18% YoY",
+        "tier": "reported"
       }
     ]
   },
   {
     "ticker": "Meta",
-    "fiscalYear": null,
-    "asOf": "Financials not yet sourced",
-    "source": "Not yet sourced in this build",
-    "unsourced": true,
+    "fiscalYear": "FY2025",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Dec 31 2025 \u00b7 10-K filed Jan 29 2026",
+    "source": "Meta Q4/FY2025 earnings release (Jan 28 2026)",
     "metrics": [
       {
         "label": "Revenue",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$201.0B",
+        "sub": "+22% YoY",
+        "tier": "reported"
       },
       {
         "label": "Net income",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$60.5B",
+        "sub": "-3% YoY; one-time tax charge",
+        "tier": "reported"
       },
       {
         "label": "Gross margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "82.0%",
+        "sub": "computed from reported cost of revenue",
+        "tier": "estimated"
       },
       {
         "label": "Operating margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "41%",
+        "sub": "op income $83.3B GAAP",
+        "tier": "reported"
       },
       {
         "label": "Free cash flow",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$43.6B",
+        "sub": "company non-GAAP definition",
+        "tier": "reported"
       },
       {
         "label": "Diluted EPS",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$23.49",
+        "sub": "GAAP; -2% YoY",
+        "tier": "reported"
+      },
+      {
+        "label": "Reality Labs loss",
+        "value": "-$19.2B",
+        "sub": "op loss; revenue $2.2B",
+        "tier": "reported",
+        "negative": true
+      },
+      {
+        "label": "Latest quarter",
+        "value": "$59.9B",
+        "sub": "Q4 2025; +24% YoY",
+        "tier": "reported"
       }
     ]
   },
   {
     "ticker": "Oracle",
-    "fiscalYear": null,
-    "asOf": "Financials not yet sourced",
-    "source": "Not yet sourced in this build",
-    "unsourced": true,
+    "fiscalYear": "FY2026",
+    "calendarYearBasis": 2025,
+    "asOf": "ended May 31 2026 \u00b7 10-K filed Jun 22 2026",
+    "source": "Oracle Q4/FY2026 earnings release (Jun 10 2026); FY2026 10-K",
     "metrics": [
       {
         "label": "Revenue",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$67.4B",
+        "sub": "+17% YoY (+16% CC)",
+        "tier": "reported"
       },
       {
         "label": "Net income",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$17.0B",
+        "sub": "+36% YoY; to common shareholders",
+        "tier": "reported"
       },
       {
         "label": "Gross margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "65.8%",
+        "sub": "computed; no gross-profit line disclosed",
+        "tier": "estimated"
       },
       {
         "label": "Operating margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "31%",
+        "sub": "op income $20.6B GAAP",
+        "tier": "reported"
       },
       {
         "label": "Free cash flow",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "-$23.7B",
+        "sub": "as reported; AI datacenter buildout",
+        "tier": "reported",
+        "negative": true
       },
       {
         "label": "Diluted EPS",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$5.83",
+        "sub": "GAAP; +34% YoY",
+        "tier": "reported"
+      },
+      {
+        "label": "OCI revenue",
+        "value": "$18.1B",
+        "sub": "+77% YoY",
+        "tier": "reported"
+      },
+      {
+        "label": "Latest quarter",
+        "value": "$19.2B",
+        "sub": "Q4 FY2026; +21% YoY",
+        "tier": "reported"
       }
     ]
   },
   {
     "ticker": "CRWV",
-    "fiscalYear": null,
-    "asOf": "Financials not yet sourced",
-    "source": "Not yet sourced in this build",
-    "unsourced": true,
+    "fiscalYear": "FY2025",
+    "calendarYearBasis": 2025,
+    "asOf": "ended Dec 31 2025 \u00b7 10-K filed Mar 2 2026",
+    "source": "CoreWeave Q4/FY2025 earnings release (Feb 26 2026); FY2025 10-K",
     "metrics": [
       {
         "label": "Revenue",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "$5.13B",
+        "sub": "+168% YoY (computed)",
+        "tier": "reported"
       },
       {
         "label": "Net income",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "-$1.17B",
+        "sub": "net loss",
+        "tier": "reported",
+        "negative": true
       },
       {
         "label": "Gross margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "71.7%",
+        "sub": "computed; infra opex below line \u2014 not comparable",
+        "tier": "estimated"
       },
       {
         "label": "Operating margin",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "-1%",
+        "sub": "op loss -$46M",
+        "tier": "reported",
+        "negative": true
       },
       {
         "label": "Free cash flow",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "~-$7.3B",
+        "sub": "implied: OCF $3.06B - capex $10.3B",
+        "tier": "estimated",
+        "negative": true
       },
       {
         "label": "Diluted EPS",
-        "value": null,
-        "sub": "Not yet sourced",
-        "tier": "unsourced"
+        "value": "-$2.81",
+        "sub": "GAAP; net loss per share",
+        "tier": "reported",
+        "negative": true
+      },
+      {
+        "label": "Revenue backlog",
+        "value": "$66.8B",
+        "sub": "as of Dec 31 2025",
+        "tier": "reported"
+      },
+      {
+        "label": "Latest quarter",
+        "value": "$1.57B",
+        "sub": "Q4 2025; +110% YoY (computed)",
+        "tier": "reported"
       }
     ]
   }

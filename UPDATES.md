@@ -119,3 +119,62 @@ tests, and production build all green.
   came from the audit's cited primary sources.
 - Data Health dashboard: 0 warnings (was 7). Provenance coverage:
   timeline 100%, financing 100%, kpis 50%, supply 68%, revenue 40%.
+
+---
+
+## Update v3 — "Filling the Financials" — 2026-09-18
+
+Populates the six company KPI records that were null + unsourced since
+launch (the last big data gap: hyperscaler and neocloud financials).
+All figures come from the companies' own Q4/FY earnings releases and
+10-Ks on SEC EDGAR — no analyst estimates, no news-site numbers.
+Data Health: kpis.json provenance 50% → **100%** (12/12 records sourced);
+0 warnings.
+
+### Added — Company KPIs (6 records × 8 metrics)
+- **Microsoft (FY2026, ended Jun 30 2026):** revenue **$331.8B** (+18%);
+  net income **$133.7B** (+31%); gross margin **67.9%** (computed);
+  operating margin **46.8%** (computed); FCF **~$67.0B** (computed from
+  OCF $182.9B − capex $115.9B); diluted EPS **$17.95**; **Azure >$100B**
+  (first time, Nadella); Q4 **$90.0B** (+18%).
+- **Oracle (FY2026, ended May 31 2026):** revenue **$67.4B** (+17%);
+  net income **$17.0B** (+36%, to common shareholders); gross margin
+  **65.8%** (computed); op margin **31%** ($20.6B GAAP); FCF **−$23.7B**
+  (reported; AI datacenter buildout); EPS **$5.83**; OCI revenue
+  **$18.1B** (+77%); Q4 **$19.2B** (+21%).
+- **Amazon (FY2025):** revenue **$716.9B** (+12%); net income **$77.7B**
+  (+31%); gross margin **50.3%** (computed); op margin **11.2%**
+  (computed); FCF **$11.2B** TTM (company definition); EPS **$7.17**;
+  **AWS $128.7B** (+20%); Q4 **$213.4B** (+14%); FY capex $131.8B.
+- **Alphabet (FY2025):** revenue **$402.8B** (+15%); net income **$132.2B**
+  (+32%); gross margin **59.7%** (computed); op margin **32%** ($129.0B
+  GAAP); FCF **$73.3B** TTM; EPS **$10.81**; **Google Cloud $58.7B**
+  (+36%); Q4 **$113.8B** (+18%); FY capex $91.4B.
+- **Meta (FY2025):** revenue **$201.0B** (+22%); net income **$60.5B**
+  (−3%, one-time tax charge); gross margin **82.0%** (computed);
+  op margin **41%** ($83.3B GAAP); FCF **$43.6B**; EPS **$23.49**;
+  **Reality Labs op loss −$19.2B** (revenue $2.2B); Q4 **$59.9B** (+24%).
+- **CoreWeave (FY2025):** revenue **$5.13B** (+168%); net loss **−$1.17B**;
+  gross margin **71.7%** (computed; infra opex sits below the line, not
+  comparable to peers); op margin **−1%**; FCF **~−$7.3B** (implied);
+  EPS **−$2.81**; **revenue backlog $66.8B**; Q4 **$1.57B** (+110%).
+
+### Verification
+- **Triple-Check Protocol:** all 48 metrics sourced from primary documents
+  (earnings releases + 10-Ks); every computed margin/FCF recomputed by
+  hand from reported inputs; fiscal periods, filing dates, and ticker
+  labels cross-checked.
+- **Two-Person Rule (independent adversarial verification, 48/48 CLEAN,
+  0 discrepancies):** a second agent re-fetched every primary source and
+  rechecked every value, tier, sign flag, and date. Confirmed: every
+  "reported"-tier figure is stated verbatim; every "estimated"-tier figure
+  recomputed correctly (incl. AMZN 50.3%, GOOGL 59.7%, META 82.0%, ORCL
+  65.8%, CRWV 71.7% gross margins; MSFT ~$67.0B, CRWV ~−$7.3B FCF);
+  all negative flags correct and complete (Oracle FCF, CoreWeave
+  losses, Reality Labs). Known caveats recorded, no figure affected:
+  Oracle gross margin rests on a COGS-definition choice (arithmetically
+  correct as filed, honestly tiered); AMZN's EDGAR exhibit fetch failed
+  but was verified against the verbatim official release text with
+  EDGAR snippet confirmation.
+- `npm run validate` passes (0 warnings), lint clean, 2/2 tests pass,
+  production build succeeds.
