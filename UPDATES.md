@@ -122,6 +122,45 @@ tests, and production build all green.
 
 ---
 
+## Update v4 — "The Missing Series" — 2026-09-18
+
+Adds the Marvell and Arm quarterly revenue series to `revenue.json` —
+the last "still to be ported" gap flagged in the file note. All figures
+are GAAP totals from primary sources: company earnings releases and
+SEC filings. No estimates, no aggregators.
+
+### Added — Revenue series (2)
+- **Marvell (MRVL):** 18 quarters, Q1'22–Q2'26, GAAP net revenue from
+  **$1.447B** to **$2.739B**. Sources: investor.marvell.com quarterly
+  earnings releases; 2026 quarters also furnished as 8-K Ex. 99.1.
+  Fiscal mapping: FQn → Qn label (Jan year-end).
+- **Arm (ARM):** 17 of 18 quarters, Q2'22–Q2'26, GAAP total revenue
+  (license + royalty) from **$0.692B** to **$1.289B**. Sources: Arm
+  newsroom earnings releases; SEC 6-Ks and 20-Fs. Fiscal mapping:
+  FQ1 (Apr–Jun) → Q2 label (calendar-majority quarter).
+- **Arm Q1'22 left null:** no primary quarterly disclosure exists for
+  the Mar-2022 quarter (Arm was private). Not back-solved, not
+  estimated — the null-rule applies.
+
+### Corrected
+- File note rewritten: documents the fiscal-quarter mapping conventions
+  for Marvell and Arm (previously "still to be ported").
+
+### Verification
+- Triple-Check Protocol: every annual sum recomputed from the quarters —
+  Marvell FY23 $5.920B / FY24 $5.508B / FY25 $5.767B / FY26 $8.195B;
+  Arm FY23 $2.679B / FY24 $3.233B / FY25 $4.007B / FY26 $4.920B —
+  all match the filed annuals exactly.
+- Two-Person Rule: an independent verification pass re-checked all 35
+  figures against their primary sources. One pre-publish correction:
+  three Marvell FY25 quarter-end dates (amounts were already correct).
+- Arm FY23 pre-IPO vs SEC discrepancy resolved: the SEC-filed recast
+  series (post-September-2023 reorganization, retrospective adjustment)
+  is used — it reconciles exactly to the audited $2.679B annual.
+- `npm run validate`, lint, tests, production build all green.
+
+---
+
 ## Update v3 — "Filling the Financials" — 2026-09-18
 
 Populates the six company KPI records that were null + unsourced since
