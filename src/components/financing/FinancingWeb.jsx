@@ -104,7 +104,8 @@ function arcPath(a0, a1) {
 export default function FinancingWeb({ section }) {
   const [view, setView] = useState('all') // 'all' | 'loops' | 'straight'
   const [selected, setSelected] = useState(null) // { kind: 'flow', index } | { kind: 'node', ticker }
-  const [hovered, setHovered] = useState(null)
+  const [hovered, setHovered] = useState(null) // flow index | null
+  const [hoveredNode, setHoveredNode] = useState(null) // ticker | null
 
   // Cross-link: when navigated here for a company, show the full web and select it.
   const onFocus = useCallback((ticker) => {
@@ -167,6 +168,10 @@ export default function FinancingWeb({ section }) {
 
   const activeFlow = selected?.kind === 'flow' ? selected.index : hovered
 
+  // Node highlight: hovering or selecting a company lights up its connected
+  // flows and fades the rest — the company-level mirror of flow hover.
+  const activeNode = selected?.kind === 'node' ? selected.ticker : hoveredNode
+
   const clearSelection = useCallback(() => setSelected(null), [])
 
   return (
@@ -180,6 +185,7 @@ export default function FinancingWeb({ section }) {
             setView(v)
             setSelected(null)
             setHovered(null)
+            setHoveredNode(null)
           }}
           ariaLabel="Financing view"
           options={[
@@ -210,7 +216,8 @@ export default function FinancingWeb({ section }) {
                   const wTgt = Math.max(1, wSrc * 0.1)
                   const [sa, ta] = chord.alloc[i]
                   const committed = e.realized === false
-                  const dimmed = activeFlow != null && activeFlow !== i
+                  const connected = activeNode != null && (e.from === activeNode || e.to === activeNode)
+                  const dimmed = activeFlow != null ? activeFlow !== i : activeNode != null && !connected
                   const isActive = activeFlow === i
                   const color = companyColor(e.from)
                   const label = pillLabel(e.amount)
@@ -280,7 +287,8 @@ export default function FinancingWeb({ section }) {
                   const am = (a0 + a1) / 2
                   const color = companyColor(t)
                   const isSelected = selected?.kind === 'node' && selected.ticker === t
-                  const dimmed = selected?.kind === 'node' && !isSelected
+                  const isHovered = hoveredNode === t
+                  const dimmed = (selected?.kind === 'node' || hoveredNode != null) && !isSelected && !isHovered
                   const lx = CX + (R_OUT + 36) * Math.cos(am)
                   const ly = CY + (R_OUT + 36) * Math.sin(am)
                   const ca = Math.cos(am)
@@ -296,6 +304,8 @@ export default function FinancingWeb({ section }) {
                         ev.stopPropagation()
                         setSelected((prev) => (prev?.kind === 'node' && prev.ticker === t ? null : { kind: 'node', ticker: t }))
                       }}
+                      onMouseEnter={() => setHoveredNode(t)}
+                      onMouseLeave={() => setHoveredNode(null)}
                       style={{ cursor: 'pointer', opacity: dimmed ? 0.35 : 1 }}
                       tabIndex={0}
                       role="button"
@@ -312,8 +322,8 @@ export default function FinancingWeb({ section }) {
                         d={arcPath(a0, a1)}
                         fill={color}
                         opacity="0.92"
-                        stroke={isSelected ? 'var(--ink)' : 'none'}
-                        strokeWidth={isSelected ? 2 : 0}
+                        stroke={isSelected || isHovered ? 'var(--ink)' : 'none'}
+                        strokeWidth={isSelected || isHovered ? 2 : 0}
                       />
                       <text
                         x={lx.toFixed(1)}
@@ -349,11 +359,18 @@ export default function FinancingWeb({ section }) {
             <FinancingInspector ticker={selected.ticker} onClear={clearSelection} />
           ) : (
             <p className="text-label text-ink-faint">
-              Tap any flow for its terms, or any company for the capital flowing in and out. Bands taper in the
-              direction of flow — thick at the investor, thin at the recipient.
+              Hover or tap any flow — or any company — to isolate its capital; the rest fades. Bands taper in
+              the direction of flow — thick at the investor, thin at the recipient.
             </p>
           )}
-          <RankedBars />
+          <RankedBars
+            visibleEdges={visibleEdges}
+            activeFlow={activeFlow}
+            onHoverFlow={setHovered}
+            onSelectFlow={(i) =>
+              setSelected((prev) => (prev?.kind === 'flow' && prev.index === i ? null : { kind: 'flow', index: i }))
+            }
+          />
         </div>
       </div>
 
@@ -440,41 +457,53 @@ function KeyCard({ present }) {
   )
 }
 
-function RankedBars() {
+function RankedBars({ visibleEdges, activeFlow, onHoverFlow, onSelectFlow }) {
   const rows = useMemo(
     () =>
       edges
         .filter((e) => !e.loop)
-        .map((e) => ({ e, v: parseBillions(e.amount) }))
+        .map((e) => ({ e, v: parseBillions(e.amount), vi: visibleEdges.indexOf(e) }))
         .sort((a, b) => (b.v ?? -1) - (a.v ?? -1)),
-    [],
+    [visibleEdges],
   )
   const max = Math.max(0, ...rows.map((r) => r.v ?? 0))
   return (
     <div className="rounded-card border border-line bg-surface p-lg">
       <div className="text-label font-medium text-ink">Scale — ranked amounts</div>
-      <p className="mt-2xs text-caption text-ink-faint">Bars use the investor&apos;s company color</p>
+      <p className="mt-2xs text-caption text-ink-faint">Bars use the investor&apos;s company color · hover to find in the diagram</p>
       <ul className="mt-md space-y-md">
-        {rows.map(({ e, v }) => (
-          <li key={`${e.from}>${e.to}`}>
-            <div className="text-label text-ink-soft">
-              {e.from} → {e.to}
-            </div>
-            {v != null && max > 0 ? (
-              <div
-                className="mt-2xs h-[22px] rounded-[5px]"
-                style={{ width: `${Math.max(14, (v / max) * 100)}%`, background: companyColor(e.from), opacity: 0.85 }}
-                role="img"
-                aria-label={`${e.amount}`}
-              />
-            ) : (
-              <div className="mt-2xs text-caption text-ink-faint">terms undisclosed</div>
-            )}
-            <div className="mt-2xs text-caption font-medium text-ink">
-              {e.amount} · {e.type}
-            </div>
-          </li>
-        ))}
+        {rows.map(({ e, v, vi }) => {
+          const linked = vi >= 0
+          const isActive = linked && activeFlow === vi
+          return (
+            <li
+              key={`${e.from}>${e.to}`}
+              className={linked ? '-mx-2xs cursor-pointer rounded-control px-2xs py-2xs transition-colors hover:bg-surface-raised' : ''}
+              style={isActive ? { background: 'var(--surface-raised)' } : undefined}
+              onMouseEnter={() => linked && onHoverFlow(vi)}
+              onMouseLeave={() => onHoverFlow(null)}
+              onClick={() => linked && onSelectFlow(vi)}
+              title={linked ? 'Highlight this flow in the diagram' : undefined}
+            >
+              <div className="text-label text-ink-soft">
+                {e.from} → {e.to}
+              </div>
+              {v != null && max > 0 ? (
+                <div
+                  className="mt-2xs h-[22px] rounded-[5px]"
+                  style={{ width: `${Math.max(14, (v / max) * 100)}%`, background: companyColor(e.from), opacity: 0.85 }}
+                  role="img"
+                  aria-label={`${e.amount}`}
+                />
+              ) : (
+                <div className="mt-2xs text-caption text-ink-faint">terms undisclosed</div>
+              )}
+              <div className="mt-2xs text-caption font-medium text-ink">
+                {e.amount} · {e.type}
+              </div>
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

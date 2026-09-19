@@ -86,6 +86,7 @@
 }
 .fin-flow {
   animation: fin-flow-in 0.45s ease backwards;
+  transition: opacity 0.25s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .fin-flow { animation: none; }
