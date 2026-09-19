@@ -32,7 +32,7 @@ export default function SectionHeader({ section, accent, icon: Icon, children })
 }
 
 function SectionIcon({ accent, Icon }) {
-  // Real icon: a self-contained circular badge that paints in the accent color
+  // Real icon: a self-contained badge that paints its tile in the accent color
   // via currentColor. It fills the slot, so no tint box is needed. These icon
   // components take a `size` prop (not className), so size them explicitly.
   if (Icon) {
