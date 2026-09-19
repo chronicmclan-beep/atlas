@@ -8,6 +8,32 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v8 — "Ledger Reconciliation" — 2026-09-19
+
+Two stale `financing.json` edges corrected to match facts already
+verified in v5 and already present in `timeline.json` — the financing
+ledger and the timeline now agree on both events.
+
+### Corrected — Financing (2)
+- AVGO → Anthropic ($35B SPV): `asOf` 2026-06-05 → **2026-06-09**;
+  note "Deal closed Jun 5, 2026" → **"Deal announced Jun 9, 2026
+  (first reported Jun 5)."** Jun 5 was the first Bloomberg leak; the
+  official announcement was Jun 9 per Apollo's press release.
+- SoftBank → OpenAI ($41B): dropped the stale "~11% stake per some
+  reports — unverified" caveat → **"~11% aggregate stake confirmed by
+  SoftBank's announcement (second closing Dec 26, 2025)."**
+
+### Verification
+- Independent verifier re-checked both against primary sources:
+  Apollo's IR press release datelined June 9, 2026 ("AI XPV Platform...
+  initial tranche of $35 billion led by Apollo, in partnership with
+  Blackstone"); SoftBank Group's own announcement ("aggregate ownership
+  interest in OpenAI is now approximately 11%", second closing
+  Dec 26, 2025). **2/2 PASS**, no `timeline.json` mismatches.
+- `npm run validate`, lint, tests, and production build all green.
+
+---
+
 ## Update v7 — "The Missing Words" — 2026-09-19
 
 Lexicon expansion: the glossary covered companies, products, and events
