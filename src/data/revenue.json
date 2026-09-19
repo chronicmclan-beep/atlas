@@ -23,8 +23,7 @@
     {
       "ticker": "AVGO",
       "tier": "reported",
-      "reviewFlag": "Last two calendar quarters need re-alignment vs Broadcom's Nov fiscal year-end.",
-      "revenue": [8.103, 8.464, 8.930, 8.915, 8.733, 8.876, 9.295, 11.961, 12.487, 13.072, 14.054, 14.900, 15.004, 16.000, 18.015, 19.311, 22.187, null],
+      "revenue": [8.103, 8.464, 8.930, 8.915, 8.733, 8.876, 9.295, 11.961, 12.487, 13.072, 14.054, 14.900, 15.004, 16.000, 18.015, 19.311, 22.187, 29.591],
       "aiInflection": { "named": "Q3'22", "accelerated": "Q4'23", "note": "VMware close (Nov 22 2023) + AI silicon ramp" }
     },
     { "ticker": "MSFT", "tier": "unsourced", "unsourced": true, "revenue": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null] },

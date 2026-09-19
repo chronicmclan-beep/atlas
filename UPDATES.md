@@ -8,6 +8,43 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v6 — "Broadcom Reverify" — 2026-09-19
+
+Reverification of recent Broadcom quarterly revenue, including the
+fiscal/calendar alignment flagged during v2. Two independent researchers
+checked five fiscal quarters against primary sources (Broadcom IR release
+PDFs, SEC 8-K Exhibit 99.1 filings, FY2025 10-K); **5/5 confirmed, 0
+corrections to existing figures.**
+
+### Added — Revenue (1)
+- Broadcom Q2'26 label ← fiscal Q3 FY2026 (ended Aug 2, 2026, announced
+  Sep 2, 2026): **$29.591B** net revenue (semiconductor $20.839B +
+  infrastructure software $8.752B = $29.591B ✓). Fills the previously
+  empty slot.
+
+### Corrected — Revenue (0 value changes, 1 flag cleared)
+- The v2 `reviewFlag` ("last two calendar quarters need re-alignment")
+  is **resolved as a false alarm**: fiscal Q1'26 $19.311B → label Q4'25
+  and fiscal Q2'26 $22.187B → label Q1'26 were already correct under the
+  documented "fiscal Qn → label Q(n−1)'yy" convention. Flag removed.
+- Confirmations: fiscal Q3'25 $15.952B → Q2'25 (stored 16.0, rounding
+  ✓), fiscal Q4'25 $18.015B → Q3'25 ✓, fiscal Q1'26 $19.311B → Q4'25 ✓,
+  fiscal Q2'26 $22.187B → Q1'26 ✓. Segment arithmetic holds exactly for
+  all five quarters. 10-K confirms the fiscal year ends on the Sunday
+  closest to October 31.
+
+### Verification
+- Researcher 1 (primary sources only): Q3 FY2025–Q2 FY2026 sourced from
+  IR PDFs and EDGAR 8-Ks; also corrected two announcement dates vs
+  secondary coverage (Q1 FY2026 announced Mar 4, 2026, not Mar 5; Q2
+  FY2026 announced Jun 3, 2026, not Jun 4).
+- Researcher 2 (independent, from scratch): all five quarters
+  re-sourced; per-quarter verdicts CONFIRMED ×4, SOURCED ×1 (Q3 FY2026);
+  no mismatches; label mapping consistent across all five.
+- `npm run validate`, lint, tests, and production build all green.
+
+---
+
 ## Update v5 — "The Second Look" — 2026-09-18
 
 Second independent verification pass over the remaining v2 single-pass
