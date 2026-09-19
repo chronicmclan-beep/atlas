@@ -1,6 +1,7 @@
 import { SECTIONS } from './lib/sections.js'
 import { AppStateProvider, useAppState } from './lib/appState.jsx'
 import { SECTION_ICONS } from './components/common/icons/index.js'
+import BrandMark from './components/common/BrandMark.jsx'
 import LayerMap from './components/layer-map/LayerMap.jsx'
 import CompanyKPIs from './components/kpis/CompanyKPIs.jsx'
 import RevenueSegments from './components/revenue/RevenueSegments.jsx'
@@ -29,23 +30,6 @@ export default function App() {
     <AppStateProvider>
       <AppShell />
     </AppStateProvider>
-  )
-}
-
-/*
-  Product mark: a monochrome "strata" glyph — stacked layers fading downward,
-  echoing the nine-layer supply chain the Atlas maps. Restrained on purpose.
-*/
-function BrandMark() {
-  return (
-    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" className="shrink-0">
-      {/* Tile uses --ink and lines use --surface so the mark inverts cleanly
-          in dark mode (dark tile + light lines → light tile + dark lines). */}
-      <rect width="34" height="34" rx="9" fill="var(--ink)" />
-      <rect x="9" y="10" width="16" height="2.4" rx="1.2" fill="var(--surface)" opacity="0.92" />
-      <rect x="9" y="15.8" width="16" height="2.4" rx="1.2" fill="var(--surface)" opacity="0.6" />
-      <rect x="9" y="21.6" width="16" height="2.4" rx="1.2" fill="var(--surface)" opacity="0.34" />
-    </svg>
   )
 }
 
