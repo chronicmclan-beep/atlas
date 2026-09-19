@@ -49,9 +49,10 @@ corrections to existing figures.**
 
 Second independent verification pass over the remaining v2 single-pass
 corrections (timeline dates, Marvell KPIs, supply-edge retiering). Two
-independent verifiers checked 36 items against primary sources
+independent verifiers checked 38 items against primary sources
 (SEC filings, company releases, contemporaneous Reuters reporting):
-**33 confirmed, 5 refined.** Arm's latest quarter was already
+**33 confirmed, 5 refined.** *(Count corrected 2026-09-19: 27 timeline +
+9 Marvell-KPI + 2 supply-edge items = 38; "36" was a typo.)* Arm's latest quarter was already
 independently verified under v4.
 
 ### Corrected — Timeline (3)
@@ -65,8 +66,9 @@ independently verified under v4.
   placeholder under quarter-precision displayDate "Q1 2026"); "Phase 1
   energized H1 2025" → **first two buildings live Sep 2025 (H2 2025)**,
   remaining six expected by mid-2026.
-- Precision: OpenAI's Sep 12, 2024 release identified as **o1-preview**
-  (full o1 GA was Dec 5, 2024).
+- Precision (drive-by, outside the counted refinements — the Sep 12 date
+  itself was confirmed as-is): OpenAI's Sep 12, 2024 release identified as
+  **o1-preview** (full o1 GA was Dec 5, 2024).
 
 ### Corrected — Supply chain (2)
 - Samsung→AMD retiered **reported → disclosed**: AMD confirmed Samsung
@@ -119,7 +121,9 @@ The update system itself. No data figures changed in this update.
 
 Applies the 56-item correction set from the 2026-09-18 independent accuracy
 audit (report: `~/workspace/atlas-audit/VERIFICATION_REPORT.md`), with
-Basudev's amendments. First update applied under the Data Accountability
+Basudev's amendments. *(2026-09-19: one of the 56 — the Arm 350B+ chips
+figure — was withdrawn as an unconfirmed auditor overcall; the working
+total is 55. The data was never changed for that item.)* First update applied under the Data Accountability
 System: Triple-Check Protocol run on every edit; Data Health warnings
 reviewed (timeline date warnings went 7 → 0); `npm run validate`, lint,
 tests, and production build all green.
