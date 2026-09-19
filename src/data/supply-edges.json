@@ -206,6 +206,238 @@
       "magnitude": null,
       "tier": "disclosed",
       "note": "AMD confirmed Samsung 12-Hi HBM3E on MI350 at Advancing AI 2025 (Jun 12, 2025); replaces unverifiable Hynix→AMD edge."
+    },
+    {
+      "from": "Shin-Etsu",
+      "to": "INTC",
+      "type": "materials",
+      "product": "Silicon wafers, photoresists, photomask blanks",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "Shin-Etsu",
+      "to": "TSMC",
+      "type": "materials",
+      "product": "Silicon wafers",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "SUMCO",
+      "to": "INTC",
+      "type": "materials",
+      "product": "200mm and 300mm polished and epitaxial silicon wafers",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "SUMCO",
+      "to": "TSMC",
+      "type": "materials",
+      "product": "300mm silicon wafers",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "SUMCO",
+      "to": "Samsung",
+      "type": "materials",
+      "product": "300mm silicon wafers",
+      "magnitude": null,
+      "tier": "reported"
+    },
+    {
+      "from": "LIN",
+      "to": "Samsung",
+      "type": "materials",
+      "product": "Ultra-high-purity industrial gases (Pyeongtaek)",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "LIN",
+      "to": "TSMC",
+      "type": "materials",
+      "product": "Ultra-high-purity industrial gases (Phoenix, Taiwan)",
+      "magnitude": null,
+      "tier": "reported"
+    },
+    {
+      "from": "LRCX",
+      "to": "TSMC",
+      "type": "equipment",
+      "product": "Etch and deposition equipment",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "LRCX",
+      "to": "Samsung",
+      "type": "equipment",
+      "product": "Etch and deposition equipment",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "LRCX",
+      "to": "Hynix",
+      "type": "equipment",
+      "product": "Etch and deposition equipment",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "LRCX",
+      "to": "Micron",
+      "type": "equipment",
+      "product": "Etch and deposition equipment",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "LRCX",
+      "to": "INTC",
+      "type": "equipment",
+      "product": "Etch, deposition and cleans equipment",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "KLAC",
+      "to": "TSMC",
+      "type": "equipment",
+      "product": "Process-control and inspection systems",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "KLAC",
+      "to": "Samsung",
+      "type": "equipment",
+      "product": "Process-control and inspection systems",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "TEL",
+      "to": "TSMC",
+      "type": "equipment",
+      "product": "Coater/developers and etch systems",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "TEL",
+      "to": "INTC",
+      "type": "equipment",
+      "product": "Coater/developers, etch, deposition and test systems",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "TEL",
+      "to": "Samsung",
+      "type": "equipment",
+      "product": "Coater/developers and etch systems",
+      "magnitude": null,
+      "tier": "reported"
+    },
+    {
+      "from": "TEL",
+      "to": "Micron",
+      "type": "equipment",
+      "product": "Etch and deposition systems",
+      "magnitude": null,
+      "tier": "reported"
+    },
+    {
+      "from": "TEL",
+      "to": "Hynix",
+      "type": "equipment",
+      "product": "Etch and deposition systems",
+      "magnitude": null,
+      "tier": "reported"
+    },
+    {
+      "from": "ASX",
+      "to": "AMD",
+      "type": "packaging",
+      "product": "Advanced packaging, incl. 2.5D interposers",
+      "magnitude": null,
+      "tier": "reported"
+    },
+    {
+      "from": "ASX",
+      "to": "INTC",
+      "type": "packaging",
+      "product": "Semiconductor assembly, packaging and test",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "AMKR",
+      "to": "TSMC",
+      "type": "packaging",
+      "product": "Turnkey advanced packaging and test (Peoria, AZ)",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "AMKR",
+      "to": "NVDA",
+      "type": "packaging",
+      "product": "Advanced packaging (multi-year agreement)",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "VRT",
+      "to": "NVDA",
+      "type": "systems",
+      "product": "Power and cooling aligned to AI-factory designs",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "VRT",
+      "to": "INTC",
+      "type": "systems",
+      "product": "Liquid cooling for Gaudi3 AI accelerators",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "ETN",
+      "to": "MSFT",
+      "type": "systems",
+      "product": "Grid-interactive UPS (EnergyAware pilots)",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "NVDA",
+      "to": "NBIS",
+      "type": "compute",
+      "product": "GPUs for neocloud capacity",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "NBIS",
+      "to": "MSFT",
+      "type": "cloud",
+      "product": "Dedicated GPU capacity, Vineland NJ ($17.4B base)",
+      "magnitude": null,
+      "tier": "disclosed"
+    },
+    {
+      "from": "NBIS",
+      "to": "Meta",
+      "type": "cloud",
+      "product": "AI infrastructure (up to ~$27B incl. backstop)",
+      "magnitude": null,
+      "tier": "disclosed"
     }
   ]
 }

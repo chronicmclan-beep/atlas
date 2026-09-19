@@ -225,8 +225,8 @@ if (data.financing && Array.isArray(data.financing.edges)) {
   healthRows.push(['financing.json', `${n}/${data.financing.edges.length} flows with asOf/note`, pct(n, data.financing.edges.length)])
 }
 if (data.supplyEdges && Array.isArray(data.supplyEdges.edges)) {
-  const n = data.supplyEdges.edges.filter((e) => e.note || e.tier === 'reported').length
-  healthRows.push(['supply-edges.json', `${n}/${data.supplyEdges.edges.length} edges with note/reported tier`, pct(n, data.supplyEdges.edges.length)])
+  const n = data.supplyEdges.edges.filter((e) => e.note || e.tier === 'reported' || e.tier === 'disclosed').length
+  healthRows.push(['supply-edges.json', `${n}/${data.supplyEdges.edges.length} edges with note/reported/disclosed tier`, pct(n, data.supplyEdges.edges.length)])
 }
 if (data.revenue && Array.isArray(data.revenue.series)) {
   const n = data.revenue.series.filter((s) => s.tier && s.tier !== 'unsourced').length

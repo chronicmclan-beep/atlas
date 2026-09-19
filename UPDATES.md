@@ -8,6 +8,69 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v9 — "Filling the Chain" — 2026-09-19
+
+The ecosystem had two completely empty layers (materials, packaging) and
+five missing names from the canonical nine-layer roster. Eleven companies
+added to `companies.json` (28 → 39) and 29 supply relationships added to
+`supply-edges.json` (25 → 54), all independently verified before publishing.
+
+### Added — Companies (11)
+- **Materials** (was empty): Shin-Etsu (TYO:4063, world's largest
+  silicon-wafer maker), SUMCO (TYO:3436, pure-play wafer maker), Linde
+  (Nasdaq:LIN, industrial gases).
+- **Equipment**: Lam Research (LRCX, etch + deposition), KLA (KLAC,
+  process control), Tokyo Electron (TSE:8035, coater/developers + etch).
+- **Packaging** (was empty): ASE Technology (NYSE:ASX, world's largest
+  OSAT), Amkor (Nasdaq:AMKR, largest US-headquartered OSAT).
+- **Systems**: Vertiv (NYSE:VRT, data-center power + cooling), Eaton
+  (NYSE:ETN, power management).
+- **Compute**: Nebius (Nasdaq:NBIS, neocloud spun out of Yandex).
+
+### Added — Supply edges (29)
+- Materials → fabs: Shin-Etsu → Intel/TSMC; SUMCO → Intel/TSMC/Samsung;
+  Linde → Samsung (Pyeongtaek, disclosed)/TSMC (Phoenix + Taiwan, reported).
+- Equipment → fabs: Lam → TSMC/Samsung/Hynix/Micron/Intel; KLA →
+  TSMC/Samsung; Tokyo Electron → TSMC/Intel/Samsung/Micron/Hynix.
+- Packaging: ASE → AMD (reported)/Intel (disclosed); Amkor → TSMC/NVIDIA
+  (disclosed).
+- Systems: Vertiv → NVIDIA/Intel; Eaton → Microsoft (EnergyAware UPS pilots).
+- Compute/cloud: NVIDIA → Nebius (GPUs + $700M Dec 2024 round + $2B Mar
+  2026 8.3% stake); Nebius → Microsoft ($17.4B base / up to $19.4B);
+  Nebius → Meta ($12B committed + up to $15B backstop).
+- Omitted as below the bar: Linde → Intel Ohio (single wiki source);
+  ASE/Amkor → Apple (Apple is not in the Atlas company set).
+
+### Corrected — during verification
+- Linde → Samsung geography: Taylor, TX → **Pyeongtaek, South Korea**
+  (Linde's own Apr 2025 release).
+- Amkor Peoria capex: ~$2B (Nov 2023) → **~$12B planned** (phase 2,
+  Sep 2026).
+- SUMCO → Intel citation re-dated to Intel's own 2009/2019 disclosures.
+- Eaton → Microsoft trimmed to confirmed pilots; Vertiv → NVIDIA dropped
+  the unverified "COOLERCHIPS" phrase.
+- Nebius → Meta upgraded reported → **confirmed** (Nebius's own Mar 16,
+  2026 announcement); NVIDIA → Nebius stake upgraded to confirmed.
+
+### Also changed
+- Supply-chain guided walk: new `materials` and `packaging` steps in
+  supply order; equipment step now names all five tool vendors.
+- `validate-data.mjs`: Data Health now counts `disclosed`-tier edges as
+  sourced (previously only `reported`), since disclosed is the stronger
+  tier. Supply-edges health: 49/54 (91%).
+
+### Verification
+- Three parallel researchers gathered profiles + relationships from
+  primary sources (company IR, SEC 10-Ks, official press releases).
+- Two independent verifiers re-checked every claim: **39/39 verifiable**
+  (24 materials/equipment + 15 packaging/systems/compute), 8 confidence
+  upgrades to disclosed tier, 2 corrections, 1 omission, 2 bonus edges
+  found (Lam → Intel, ASE → Intel — both Intel-confirmed).
+- `npm run validate` (no warnings), lint, tests (2/2), production build
+  all green.
+
+---
+
 ## Update v8 — "Ledger Reconciliation" — 2026-09-19
 
 Two stale `financing.json` edges corrected to match facts already

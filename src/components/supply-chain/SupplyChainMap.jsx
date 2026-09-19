@@ -13,7 +13,7 @@ import SupplyChainIcon from '../common/icons/SupplyChainIcon.jsx'
   supply-edges.json (nodes resolved against companies.json). Companies are laid
   out in columns by layer (canonical layer order); edges are supplier -> customer
   curves with arrowheads. Two ways in:
-    - Guided walk: steps through the six flow types in order, highlighting each.
+    - Guided walk: steps through the eight flow types in order, highlighting each.
     - Free explore: tap any company to isolate its links and read its details.
   Every relationship shows its source tier; lower-confidence (estimated) links
   are drawn dashed.
@@ -33,9 +33,11 @@ const HEADER_H = 36
 
 // Guided-walk script: one step per flow type, in supply order.
 const WALK_DEFS = [
-  { type: 'equipment', title: 'Equipment makes the machines', body: 'ASML and Applied Materials build the tools fabs depend on — above all, EUV lithography.' },
+  { type: 'materials', title: 'Materials feed the fabs', body: 'Shin-Etsu, SUMCO and Linde supply the silicon wafers and ultra-pure gases every chip starts from.' },
+  { type: 'equipment', title: 'Equipment makes the machines', body: 'ASML, Applied Materials, Lam Research, KLA and Tokyo Electron build the tools fabs depend on — above all, lithography.' },
   { type: 'foundry', title: 'The foundry fabricates', body: 'TSMC turns fabless designs into physical wafers, and packages them.' },
   { type: 'memory', title: 'Memory is the bottleneck', body: 'SK Hynix, Micron and Samsung supply the HBM stacked beside each accelerator.' },
+  { type: 'packaging', title: 'Packaging finishes the chip', body: 'ASE and Amkor assemble, package and test finished silicon — including advanced packaging for AI accelerators.' },
   { type: 'systems', title: 'Chips become systems', body: 'Designers ship silicon to Dell, Supermicro and Arista to build servers, racks and networking.' },
   { type: 'compute', title: 'Systems deploy as compute', body: 'Hyperscalers and neoclouds buy the hardware and stand up data centers.' },
   { type: 'cloud', title: 'Compute serves the labs', body: 'Cloud providers deliver that compute to the model labs that consume it.' },
