@@ -5,7 +5,7 @@ import CompanyChip from '../common/CompanyChip.jsx'
 import LayerMapIcon from '../common/icons/LayerMapIcon.jsx'
 
 /*
-  Section 01 — Layer Map.
+  Section 01 — Industries and Sectors.
   The nine layers of the AI supply chain as cards, read from layers.json.
   Clicking a layer sets the active company set (shared app state); the selected
   card is highlighted in its layer color and its companies surface in a detail

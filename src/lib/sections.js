@@ -10,7 +10,7 @@ export const SECTIONS = [
   {
     id: 'layer-map',
     num: '01',
-    label: 'Layer map',
+    label: 'Industries and Sectors',
     color: '#639922',
     blurb: 'The nine layers of the AI supply chain, from raw materials to finished models.',
   },
