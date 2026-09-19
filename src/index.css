@@ -75,3 +75,18 @@
   .tier-chip[data-tier='live'],
   .tier-chip[data-tier='unsourced'] { color: var(--tier-inferred); background: var(--tier-inferred-soft); }
 }
+
+/* Financing chord: soft staggered fade-in for flow bands. `backwards` fill so
+   each band holds opacity 0 during its stagger delay, then releases to its
+   natural (possibly dimmed) inline opacity. The parent <g key={view}> remounts
+   per view, re-triggering the stagger without re-running on hover. */
+@keyframes fin-flow-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fin-flow {
+  animation: fin-flow-in 0.45s ease backwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fin-flow { animation: none; }
+}

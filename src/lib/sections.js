@@ -47,7 +47,7 @@ export const SECTIONS = [
     num: '06',
     label: 'Financing web',
     color: '#D4537E',
-    blurb: 'Capital flows on top of the supply chain. Circular-loops view and full-web view.',
+    blurb: 'Capital flows as a tapered chord — line color is the investor, taper is the direction.',
   },
   {
     id: 'glossary',
