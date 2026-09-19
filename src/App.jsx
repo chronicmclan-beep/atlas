@@ -1,5 +1,6 @@
 import { SECTIONS } from './lib/sections.js'
 import { AppStateProvider, useAppState } from './lib/appState.jsx'
+import { SECTION_ICONS } from './components/common/icons/index.js'
 import LayerMap from './components/layer-map/LayerMap.jsx'
 import CompanyKPIs from './components/kpis/CompanyKPIs.jsx'
 import RevenueSegments from './components/revenue/RevenueSegments.jsx'
@@ -9,7 +10,7 @@ import FinancingWeb from './components/financing/FinancingWeb.jsx'
 import GlossarySection from './components/glossary/GlossarySection.jsx'
 
 /*
-  App shell: navigation across the six sections. Sections are wired in one at a
+  App shell: navigation across the seven sections. Sections are wired in one at a
   time (Phase 3) via the SECTION_COMPONENTS registry; any section without a
   registered component still shows the placeholder.
 */
@@ -71,6 +72,7 @@ function AppShell() {
             <ul className="flex flex-row flex-nowrap gap-2xs overflow-x-auto md:flex-col md:overflow-visible">
               {SECTIONS.map((s) => {
                 const isActive = s.id === activeSection
+                const Icon = SECTION_ICONS[s.id]
                 return (
                   <li key={s.id} className="shrink-0">
                     <button
@@ -85,11 +87,16 @@ function AppShell() {
                       }
                       style={{ borderLeft: `3px solid ${isActive ? s.color : 'transparent'}` }}
                     >
+                      {/* Miniature section icon in place of the old 01–07
+                          numerals. SVG scales losslessly, so it stays crisp at
+                          26px; the tile paints in the section accent via
+                          currentColor, exactly like the section headers. */}
                       <span
-                        className="text-label tabular-nums"
-                        style={{ color: isActive ? s.color : 'var(--ink-faint)' }}
+                        aria-hidden="true"
+                        className="inline-flex h-[26px] w-[26px] shrink-0"
+                        style={{ color: s.color }}
                       >
-                        {s.num}
+                        {Icon ? <Icon size={26} /> : null}
                       </span>
                       <span>{s.label}</span>
                     </button>
