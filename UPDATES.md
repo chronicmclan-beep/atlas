@@ -8,6 +8,55 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v5 — "The Second Look" — 2026-09-18
+
+Second independent verification pass over the remaining v2 single-pass
+corrections (timeline dates, Marvell KPIs, supply-edge retiering). Two
+independent verifiers checked 36 items against primary sources
+(SEC filings, company releases, contemporaneous Reuters reporting):
+**33 confirmed, 5 refined.** Arm's latest quarter was already
+independently verified under v4.
+
+### Corrected — Timeline (3)
+- Broadcom/Apollo/Blackstone $35B for Anthropic: Jun 5, 2026 → **Jun 9,
+  2026** (Jun 5 was the first Bloomberg leak; official announcement was
+  Jun 9 per Apollo's press release).
+- SoftBank's $41B into OpenAI: dropped the stale "~11% stake per some
+  reports — unverified" caveat — **~11% aggregate ownership is confirmed
+  by SoftBank's own announcement** (second closing Dec 26, 2025).
+- Stargate Abilene: date 2026-02-15 → **2026-01-01** (mid-month
+  placeholder under quarter-precision displayDate "Q1 2026"); "Phase 1
+  energized H1 2025" → **first two buildings live Sep 2025 (H2 2025)**,
+  remaining six expected by mid-2026.
+- Precision: OpenAI's Sep 12, 2024 release identified as **o1-preview**
+  (full o1 GA was Dec 5, 2024).
+
+### Corrected — Supply chain (2)
+- Samsung→AMD retiered **reported → disclosed**: AMD confirmed Samsung
+  12-Hi HBM3E on MI350 at Advancing AI 2025 (company event, not a
+  filing) — the claim itself is accurate.
+- ANET→MSFT note softened: Arista's 10-K discloses the 26% revenue
+  figure **anonymously** ("one end customer"); the Microsoft identity is
+  BofA's analyst identification, not filing text.
+
+### Verification
+- Triple-Check Protocol: all 36 items re-checked against primary
+  sources; the five refinements above are the complete correction set.
+- 27 timeline items: 24 confirmed as-is (incl. Gemini/MI300X Dec 6 2023,
+  o1 Sep 12 2024, $4T Jul 9 2025, US-Intel Aug 22 2025, $100B LOI Sep 22
+  2025, Colossus Sep 2 2024, $6.6B Oct 2 2024, $8B Nov 22 2024, xAI $6B
+  Dec 23 2024, GPT-5 Aug 7 2025, AMD-OpenAI Oct 6 2025, $122B Mar 31
+  2026, TSMC $60–64B guidance Jul 16 2026, $500B MOU Aug 10 2026,
+  circular scrutiny Aug 17 2026); $3.34T/$500B-MOU/Ohio-guarantee/$122B
+  framings and ChatGPT-100M UBS sourcing all confirmed.
+- 9 Marvell/supply items: 9/9 confirmed — Marvell FY2026 OCF $1.75B,
+  GAAP net income $2.67B / $3.07 diluted EPS / $1.83B gain all match the
+  8-K and 10-K; Hynix→AMD and SMCI→AMZN deletions stand (no credible
+  counter-evidence); Dell→MSFT qualifier accurate; NVDA Customer A ~22%
+  confirmed anonymized in the FY2026 10-K.
+- `npm run validate`, lint, tests, and production build all green.
+
+---
 ## Update v1 — "Accountability System" — 2026-09-18
 The update system itself. No data figures changed in this update.
 

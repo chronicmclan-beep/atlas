@@ -148,7 +148,7 @@
       "product": "networking switches",
       "magnitude": null,
       "tier": "reported",
-      "note": "Microsoft = 26% of Arista 2025 revenue (Arista 10-K)."
+      "note": "Microsoft = 26% of Arista 2025 revenue: Arista 10-K discloses 26.0% from one end customer (anonymized); BofA identifies the customer as Microsoft."
     },
     {
       "from": "SMCI",
@@ -204,8 +204,8 @@
       "type": "memory",
       "product": "HBM3E (12-Hi, MI350)",
       "magnitude": null,
-      "tier": "reported",
-      "note": "AMD confirmed Samsung 12-Hi HBM3E on MI350; replaces unverifiable Hynix→AMD edge."
+      "tier": "disclosed",
+      "note": "AMD confirmed Samsung 12-Hi HBM3E on MI350 at Advancing AI 2025 (Jun 12, 2025); replaces unverifiable Hynix→AMD edge."
     }
   ]
 }

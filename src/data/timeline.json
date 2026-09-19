@@ -327,7 +327,7 @@
       "category": "model",
       "tier": "minor",
       "title": "OpenAI releases o1",
-      "description": "A reasoning model that spends far more compute at inference.",
+      "description": "o1-preview: a reasoning model that spends far more compute at inference.",
       "whyItMatters": "Shifts demand toward inference; a structural change.",
       "source": "OpenAI",
       "companies": [
@@ -657,7 +657,7 @@
       "tier": "minor",
       "title": "SoftBank completes $41B into OpenAI",
       "figure": "$41B",
-      "description": "Round announced Mar 31, 2025 ($40B); $30B SoftBank direct + $11B syndicated co-investment; second tranche completed Dec 2025 (Reuters Dec 30, 2025). ~11% stake per some reports — unverified.",
+      "description": "Round announced Mar 31, 2025 ($40B); $30B SoftBank direct + $11B syndicated co-investment; second closing Dec 26, 2025 (SoftBank). ~11% aggregate ownership confirmed by SoftBank.",
       "source": "press",
       "companies": [
         "SoftBank",
@@ -680,7 +680,7 @@
       ]
     },
     {
-      "date": "2026-02-15",
+      "date": "2026-01-01",
       "displayDate": "Q1 2026",
       "year": 2026,
       "era": "2026",
@@ -688,7 +688,7 @@
       "tier": "minor",
       "title": "Stargate's Abilene campus scales toward 1.2 GW",
       "figure": "1.2 GW planned",
-      "description": "Phase 1 energized H1 2025; full 1.2 GW of planned power capacity expected ~mid-2026.",
+      "description": "First two buildings live Sep 2025; full 1.2 GW of planned power capacity expected ~mid-2026.",
       "source": "Oracle / press",
       "companies": [
         "OpenAI",
@@ -715,15 +715,15 @@
       ]
     },
     {
-      "date": "2026-06-05",
-      "displayDate": "Jun 5 2026",
+      "date": "2026-06-09",
+      "displayDate": "Jun 9 2026",
       "year": 2026,
       "era": "2026",
       "category": "deal",
       "tier": "minor",
       "title": "Broadcom, Apollo & Blackstone: $35B for Anthropic",
       "figure": "$35B",
-      "description": "An SPV financed by Apollo and Blackstone buys Broadcom custom chips (Broadcom backstops ~$30B of debt tranches) and leases them to Anthropic — debt, not equity. Deal closed Jun 5, 2026.",
+      "description": "An SPV financed by Apollo and Blackstone buys Broadcom custom chips (Broadcom backstops ~$30B of debt tranches) and leases them to Anthropic — debt, not equity. Deal announced Jun 9, 2026 (first reported Jun 5).",
       "whyItMatters": "The buildout starts being financed like industrial infrastructure.",
       "source": "press",
       "companies": [
