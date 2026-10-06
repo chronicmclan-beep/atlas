@@ -8,6 +8,74 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v10 — "Head-to-Head" — 2026-10-06
+
+New Section 08: a visual NVDA vs AMD comparison — the first slice of the
+Market Intelligence Platform's comparison engine, built inside Atlas. 31
+metrics across all 8 metric families, each with the four-layer explanation
+(what it is / why it matters / what good looks like / what this result
+means); comparative revenue-segment bars; products, customers, and pricing
+tabs; every figure carrying source + tier + asOf. Known gaps stay
+null/unsourced, never invented.
+
+### Added
+- **`src/data/comparison.json`** — the head-to-head dataset: 31 metrics
+  (62 figures, 100% provenance coverage), revenue segments (NVDA: Compute &
+  Networking $193.5B / Graphics $22.5B; AMD: Data Center $16.6B / Client and
+  Gaming $14.6B / Embedded $3.5B), 15 product lines, 10 customer entries
+  (tiered by source quality: 10-K disclosure / company statement / press),
+  12 pricing rows (estimates labeled as estimates; official consumer MSRPs
+  as disclosed; data-center per-unit prices "not disclosed" where nothing
+  credible exists). NVDA figures tiered "reported" (FY2026 10-K); AMD figures
+  tiered "disclosed" (Q4/FY2025 earnings release); computed ratios tiered
+  "estimated" with the arithmetic shown; market data (Oct 6, 2026) tiered
+  "estimated".
+- **Section 08 "Head-to-head"** (`src/components/compare/Compare.jsx`) —
+  sticky NVDA/AMD company header, three takeaway cards, collapsible metric
+  families, tap-to-expand explanation panels, comparative segment bars,
+  products/customers/pricing tabs. Hover-highlight and tap-to-inspect
+  throughout; works at 390px with no horizontal scroll; light/dark themes.
+- **`src/components/common/icons/CompareIcon.jsx`** — Signal Marks formula:
+  two opposing column sets facing each other across a center line; registered
+  in the icon index.
+- **Validator coverage** — `scripts/validate-data.mjs` now checks
+  `comparison.json` (required fields, ticker references, tier validity,
+  stronger-value validity, unsourced-null rule) and reports its provenance
+  in the Data Health dashboard. Section color is provisional teal `#0E9AA7`
+  (from the timeline-category palette) — awaiting owner approval.
+
+### Removed
+- One customer-concentration entry ("Four direct customers — 22%, 15%, 13%,
+  11% (Q3 FY2027)") — the cited 10-Q cannot exist yet (Q3 FY2027 ended after
+  the sourcing date). Removed per the Two-Person Rule; no replacement figures
+  available, so it stays out rather than estimated.
+
+### Corrected
+- AMD segment shares recomputed from exact release figures: Data Center
+  **48.0%**, Client and Gaming **42.0%**, Embedded **10.0%** (was 47.9/42.1/10.1
+  from rounded inputs).
+- Net-debt metric notes now define the calculation explicitly: total debt
+  minus cash & cash equivalents (excludes marketable securities / short-term
+  investments) — the narrower definition is now stated, not assumed.
+
+### Verification
+- **Triple-Check Protocol:** all 15 derived figures recomputed from primary
+  statement lines (margins, ROE/ROA, P/S, P/FCF, FCF margin, segment shares —
+  all match); banned advice vocabulary scanned clean (only non-advisory
+  usages: "switch out of cheaply", "share repurchases"); provenance coverage
+  62/62 figures with source + tier.
+- **Two-Person Rule (independent verification, 11/12 PASS, 2 corrections
+  applied):** a fresh verifier re-checked 12 headline claims against primary
+  sources (NVIDIA FY2026 10-K on sec.gov; NVIDIA Q4/FY2026 earnings release;
+  AMD Q4/FY2025 earnings release). All numbers confirmed, including the
+  AMD 4-to-3 segment reorganization and NVDA's 10-for-1 split (June 2024).
+  The verifier caught the impossible Q3 FY2027 customer entry (removed) and
+  the unstated net-debt definition (now stated).
+- `npm run validate` passes (0 warnings), lint clean, production build
+  succeeds. Desktop and 390px-mobile screenshots reviewed: sticky header,
+  ▲ stronger-value marks, expanded explanation panels, segment bars, and
+  product tabs all render correctly in both themes.
+
 ## Update v9 — "Filling the Chain" — 2026-09-19
 
 The ecosystem had two completely empty layers (materials, packaging) and

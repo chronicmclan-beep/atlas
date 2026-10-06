@@ -1,5 +1,5 @@
 /*
-  Central data loader. The app is a renderer over these nine JSON files —
+  Central data loader. The app is a renderer over these ten JSON files —
   components never hardcode figures; they read from here. Vite imports JSON
   natively, so these are static imports resolved at build time.
 */
@@ -13,8 +13,9 @@ import financing from '../data/financing.json'
 import timeline from '../data/timeline.json'
 import glossary from '../data/glossary.json'
 import glossaryFull from '../data/glossary-full.json'
+import comparison from '../data/comparison.json'
 
-export { config, layers, companies, kpis, revenue, supplyEdges, financing, timeline, glossary, glossaryFull }
+export { config, layers, companies, kpis, revenue, supplyEdges, financing, timeline, glossary, glossaryFull, comparison }
 
 /* ---------- Companies ---------- */
 

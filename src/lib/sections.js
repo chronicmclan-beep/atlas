@@ -56,6 +56,16 @@ export const SECTIONS = [
     color: '#7F77DD',
     blurb: 'A reference library of every term, player, product and market moment in the Atlas — searchable and grouped by type.',
   },
+  {
+    id: 'compare',
+    num: '08',
+    label: 'Head-to-head',
+    // PROVISIONAL — owner to approve. Teal (#0E9AA7) drawn from the existing
+    // timeline-category palette (policy); harmonious with the seven section
+    // accents, distinct from all of them.
+    color: '#0E9AA7',
+    blurb: 'NVIDIA vs AMD, metric by metric — every figure explained in plain English, with its source.',
+  },
 ]
 
 export const DEFAULT_SECTION = SECTIONS[0].id

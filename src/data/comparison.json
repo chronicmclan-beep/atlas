@@ -1,0 +1,1158 @@
+{
+  "id": "nvda-vs-amd",
+  "title": "NVDA vs AMD",
+  "updated": "2026-10-06",
+  "asOf": "Fundamentals: NVDA FY2026 (ended Jan 25, 2026), AMD FY2025 (ended Dec 27, 2025). Market data: Oct 6, 2026.",
+  "companies": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "color": "#76B900",
+      "fiscalNote": "FY2026, ended Jan 25, 2026"
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "color": "#ED1C24",
+      "fiscalNote": "FY2025, ended Dec 27, 2025"
+    }
+  ],
+  "takeaways": [
+    "The single biggest difference is profitability: NVDA keeps 71c of every sales dollar as gross profit and 56c as net profit, versus AMD's 50c and 13c — a 43-point net-margin gap driven by NVDA's pricing power.",
+    "The market prices both for growth, but in different ways: NVDA trades at ~49x trailing earnings while AMD trades at ~245x GAAP (~156x non-GAAP) — yet on price-to-sales AMD (30.3x) is valued slightly richer than NVDA (26.4x).",
+    "The risk the numbers surface is concentration: ~90% of NVDA's revenue rides on Compute & Networking (AI data center). AMD is balanced — 48% data center, 42% client & gaming, 10% embedded."
+  ],
+  "families": [
+    {
+      "id": "size",
+      "label": "Size & scale",
+      "metrics": [
+        {
+          "label": "Market capitalization",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "~$5.7T (Oct 6, 2026)",
+            "source": "Finnhub + MarketBeat, Oct 6, 2026",
+            "asOf": "Oct 6, 2026",
+            "tier": "estimated"
+          },
+          "amd": {
+            "value": "~$1.05T (Oct 6, 2026)",
+            "source": "Finnhub + MarketBeat + ad-hoc-news.de, Oct 5-6, 2026",
+            "asOf": "Oct 5-6, 2026",
+            "tier": "estimated"
+          },
+          "reading": "NVDA is valued at roughly 5.4x AMD — the market's scoreboard on their AI-data-center positions.",
+          "explain": {
+            "what": "The total market value of all outstanding shares: share price times shares outstanding.",
+            "why": "It is the market's collective verdict on what the entire company is worth, and it sets the scale of expectations — a $3T company is priced for a very different future than a $300B one.",
+            "good": "There is no 'good' absolute value; the useful read is relative. NVDA's market cap runs several multiples of AMD's, which reflects the market's view of their current AI-data-center positions.",
+            "means": "The gap reflects NVDA's dominant AI-accelerator share and 65% revenue growth. Market caps move daily; the ratio matters more than the level. Watch whether AMD's data-center growth narrows it."
+          }
+        },
+        {
+          "label": "Enterprise value",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "~$5.7T",
+            "source": "Finnhub + MarketBeat, Oct 6, 2026",
+            "asOf": "Oct 6, 2026",
+            "tier": "estimated",
+            "note": "Market cap adjusted for net-cash position."
+          },
+          "amd": {
+            "value": "~$1.05T",
+            "source": "Finnhub + MarketBeat + ad-hoc-news.de, Oct 5-6, 2026",
+            "asOf": "Oct 5-6, 2026",
+            "tier": "estimated",
+            "note": "Market cap adjusted for net-cash position."
+          },
+          "reading": "Nearly identical to market cap — both carry almost no net debt.",
+          "explain": {
+            "what": "Market capitalization plus total debt minus cash — roughly what an acquirer would pay for the whole company, free of obligations.",
+            "why": "It puts companies with different debt and cash levels on equal footing, which market cap alone cannot do.",
+            "good": "Judge it against revenue or operating profit rather than on its own; the ratio tells you more than the number.",
+            "means": "With both companies in a net-cash position, enterprise value adds little beyond market cap here. The comparison stays clean."
+          }
+        },
+        {
+          "label": "Revenue (TTM)",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "$215.9B (FY2026, ended Jan 2026)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported"
+          },
+          "amd": {
+            "value": "$34.6B (FY2025, ended Dec 2025)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed"
+          },
+          "reading": "NVDA's sales are 6.2x AMD's — different weight classes.",
+          "explain": {
+            "what": "Total sales over the trailing twelve months.",
+            "why": "The top line. Every margin, return, and valuation multiple flows from this number, so its size and trajectory anchor the whole comparison.",
+            "good": "For large semiconductor companies, sustained double-digit growth is strong. Both NVDA and AMD have recently grown revenue above 30% year over year.",
+            "means": "Scale compounds NVDA's R&D advantage: its $18.5B R&D budget alone exceeds half of AMD's total revenue. Watch AMD's Data Center growth rate — it is the line that could change the scale story."
+          }
+        },
+        {
+          "label": "Employees",
+          "stronger": null,
+          "nvda": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "amd": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "reading": "—",
+          "explain": {
+            "what": "Reported headcount.",
+            "why": "Scale of the organization — and combined with revenue, it hints at business-model leverage. Chip designers run far leaner per revenue dollar than manufacturers.",
+            "good": "Revenue per employee above $1M marks an elite, highly leveraged model; both companies clear that bar by a wide margin.",
+            "means": "Headcount was not pulled for this mock. Revenue per employee will be added with SEC-sourced figures before user testing."
+          }
+        }
+      ]
+    },
+    {
+      "id": "valuation",
+      "label": "Valuation",
+      "metrics": [
+        {
+          "label": "P/E ratio (trailing)",
+          "stronger": null,
+          "nvda": {
+            "value": "48.8x ($239.24 ÷ $4.90 FY2026 GAAP EPS)",
+            "source": "Finnhub + MarketBeat, Oct 6, 2026",
+            "asOf": "Oct 6, 2026",
+            "tier": "estimated",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA: $239.24 / $4.90 FY2026 GAAP EPS. AMD: $649.42 / $2.65 GAAP; non-GAAP $4.17."
+          },
+          "amd": {
+            "value": "245x GAAP ($649.42 ÷ $2.65); 156x non-GAAP ($4.17)",
+            "source": "Finnhub + MarketBeat + ad-hoc-news.de, Oct 5-6, 2026",
+            "asOf": "Oct 5-6, 2026",
+            "tier": "estimated",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA: $239.24 / $4.90 FY2026 GAAP EPS. AMD: $649.42 / $2.65 GAAP; non-GAAP $4.17."
+          },
+          "reading": "AMD's GAAP multiple is ~5x NVDA's — the market prices far more growth per current dollar of AMD earnings.",
+          "explain": {
+            "what": "Share price divided by earnings per share over the last twelve months.",
+            "why": "It states what you pay for each dollar of current earnings — the market's price tag on today's profitability.",
+            "good": "Semiconductor leaders often trade at 20–40x earnings during growth phases. Above 50x, the price assumes a great deal of future growth.",
+            "means": "The gap is mostly accounting: AMD's GAAP earnings are depressed by amortization from the Xilinx acquisition, so the non-GAAP 156x is the cleaner read — still over 3x NVDA's. It implies the market expects AMD's earnings to grow much faster from a smaller base. Watch whether AMD's GAAP and non-GAAP earnings converge."
+          }
+        },
+        {
+          "label": "Forward P/E",
+          "stronger": null,
+          "nvda": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "amd": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "reading": "—",
+          "explain": {
+            "what": "Share price divided by analysts' estimated earnings for the next twelve months.",
+            "why": "It shows what you pay for expected rather than past earnings, so it bakes in the market's growth assumptions.",
+            "good": "It usually sits below trailing P/E when earnings are expected to grow. Estimates are opinions, not facts — treat the ratio as a sentiment gauge.",
+            "means": "Analyst earnings estimates were not pulled for this mock. Forward multiples will be added with dated estimate sources."
+          }
+        },
+        {
+          "label": "Price / sales",
+          "stronger": null,
+          "nvda": {
+            "value": "26.4x",
+            "source": "Finnhub + MarketBeat, Oct 6, 2026",
+            "asOf": "Oct 6, 2026",
+            "tier": "estimated",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "amd": {
+            "value": "30.3x",
+            "source": "Finnhub + MarketBeat + ad-hoc-news.de, Oct 5-6, 2026",
+            "asOf": "Oct 5-6, 2026",
+            "tier": "estimated",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "reading": "The market pays slightly more per dollar of AMD's sales than NVDA's — despite NVDA's far higher margins.",
+          "explain": {
+            "what": "Share price divided by sales per share.",
+            "why": "Useful when earnings swing sharply, as they do in chip cycles — it values the revenue stream directly.",
+            "good": "Semiconductor companies often trade at 5–15x sales; above 20x, the market is pricing in exceptional, sustained growth.",
+            "means": "This is the most interesting valuation row: NVDA converts sales to profit far better, yet AMD's revenue fetches the higher multiple. It implies expectations of AMD gaining data-center share. Watch AMD's Data Center segment growth against NVDA's Compute & Networking."
+          }
+        },
+        {
+          "label": "EV / EBITDA",
+          "stronger": null,
+          "nvda": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "amd": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "reading": "—",
+          "explain": {
+            "what": "Enterprise value divided by earnings before interest, tax, depreciation, and amortization.",
+            "why": "It compares operating value while ignoring financing and accounting choices, making it the standard yardstick in acquisitions.",
+            "good": "A range of 15–25x is typical for quality semiconductor businesses.",
+            "means": "EBITDA requires depreciation detail not pulled for this mock. It will be added from 10-K cash-flow statements."
+          }
+        },
+        {
+          "label": "PEG ratio",
+          "stronger": null,
+          "nvda": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "amd": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "reading": "—",
+          "explain": {
+            "what": "The P/E ratio divided by the earnings growth rate.",
+            "why": "It adjusts the price tag for how fast earnings are growing — a high P/E matters less if earnings are doubling.",
+            "good": "Around 1.0 is the classic 'fair' marker. Well below 1 alongside real growth stands out; well above 1 means growth is fully priced.",
+            "means": "PEG needs a reliable forward EPS growth rate, which was not gathered for this mock."
+          }
+        },
+        {
+          "label": "Price / free cash flow",
+          "stronger": null,
+          "nvda": {
+            "value": "59.0x",
+            "source": "Finnhub + MarketBeat, Oct 6, 2026",
+            "asOf": "Oct 6, 2026",
+            "tier": "estimated",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA FCF $96.6B (company-defined, Q4/FY2026 release). AMD FCF $5.5B (company-defined)."
+          },
+          "amd": {
+            "value": "190x",
+            "source": "Finnhub + MarketBeat + ad-hoc-news.de, Oct 5-6, 2026",
+            "asOf": "Oct 5-6, 2026",
+            "tier": "estimated",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA FCF $96.6B (company-defined, Q4/FY2026 release). AMD FCF $5.5B (company-defined)."
+          },
+          "reading": "AMD's price is ~3x richer per dollar of free cash flow.",
+          "explain": {
+            "what": "Share price divided by free cash flow per share.",
+            "why": "It values the actual cash the business generates rather than accounting earnings.",
+            "good": "Profitable semiconductor companies often trade at 20–35x free cash flow.",
+            "means": "Cash is the hardest metric to argue with, and here the market's growth bet on AMD is starkest. For the multiple to normalize, AMD's free cash flow must grow several-fold from $5.5B. Watch quarterly FCF conversion."
+          }
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "label": "Growth",
+      "metrics": [
+        {
+          "label": "Revenue growth (1Y)",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "+65.5% (FY2026)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "amd": {
+            "value": "+34% (FY2025)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "reading": "Both growing fast; NVDA nearly twice as fast off a 6x larger base.",
+          "explain": {
+            "what": "The year-over-year change in sales.",
+            "why": "The simplest momentum read — it shows whether demand for the company's products is expanding right now.",
+            "good": "Above 20% is strong for a large semiconductor company; both NVDA and AMD have recently exceeded 30%.",
+            "means": "65% growth on $216B of revenue is historically extraordinary — it added roughly $85B of new sales in one year, more than twice AMD's total revenue. Watch whether NVDA's growth decelerates as the base gets larger."
+          }
+        },
+        {
+          "label": "Revenue CAGR (5Y)",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "68% (4Y, FY2022–FY2026)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA covers FY2022-FY2026 (4Y); AMD covers 2021-2025 (5Y). Periods labeled, not mixed."
+          },
+          "amd": {
+            "value": "20.5% (5Y, 2021–2025)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA covers FY2022-FY2026 (4Y); AMD covers 2021-2025 (5Y). Periods labeled, not mixed."
+          },
+          "reading": "NVDA compounded at 68% — one of the fastest scalings in semiconductor history.",
+          "explain": {
+            "what": "The annualized growth rate of revenue over five years.",
+            "why": "It separates a one-year spike from a durable trend — sustained compounding is what builds long-term value.",
+            "good": "A 5-year CAGR above 15% is elite for a chip company; above 30% is historically rare.",
+            "means": "NVDA's trajectory reflects the AI buildout landing almost entirely on its products. AMD's 20% CAGR is itself strong — in line with the best large-cap chip compounders. The question for both is whether either rate survives the next cycle. (NVDA shown as 4Y: FY2022 is the earliest press-release-sourced year.)"
+          }
+        },
+        {
+          "label": "EPS growth (1Y)",
+          "stronger": null,
+          "nvda": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "amd": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "reading": "—",
+          "explain": {
+            "what": "The year-over-year change in earnings per share.",
+            "why": "It shows whether profit is growing as fast as sales. EPS outpacing revenue means margins are expanding — operating leverage at work.",
+            "good": "EPS growth above revenue growth is the healthy pattern; the reverse warns that growth is coming at the cost of profitability.",
+            "means": "Year-over-year EPS growth was not computed for this mock; it will use split-adjusted diluted EPS from 10-Ks."
+          }
+        }
+      ]
+    },
+    {
+      "id": "profitability",
+      "label": "Profitability",
+      "metrics": [
+        {
+          "label": "Gross margin",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "71.1% (GAAP, FY2026)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "amd": {
+            "value": "50.0% (GAAP, FY2025)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "reading": "A 21-point gap — the clearest measure of NVDA's pricing power.",
+          "explain": {
+            "what": "The share of each sales dollar left after paying to make the product.",
+            "why": "It is the clearest read on pricing power. A company that charges far above its production cost usually has something competitors cannot easily copy — a technology lead or a position customers cannot switch out of cheaply.",
+            "good": "For semiconductor designers, 45–60% is typical; above 65% signals unusual pricing power.",
+            "means": "NVDA keeps 71¢ of each sales dollar versus AMD's 50¢. It suggests buyers currently have few substitutes for NVDA's AI accelerators. Watch whether the gap narrows as AMD's Instinct line and custom-silicon alternatives ship in volume."
+          }
+        },
+        {
+          "label": "Operating margin",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "60.4% (GAAP, FY2026)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "amd": {
+            "value": "10.7% (GAAP, FY2025)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "reading": "A 50-point gap — NVDA's model scales; AMD's is still scaling.",
+          "explain": {
+            "what": "The share of sales left after operating costs such as R&D and sales.",
+            "why": "It shows whether the business model scales. R&D-heavy chip companies typically display operating leverage when the model works — profit growing faster than spending.",
+            "good": "A range of 25–40% is strong for semiconductor companies.",
+            "means": "NVDA converts revenue to operating profit at nearly 6x AMD's rate — extreme operating leverage. AMD's 11% is up from 2% in 2023, so the direction is right. Watch AMD's operating margin trend as data-center mix rises."
+          }
+        },
+        {
+          "label": "Net margin",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "55.6% (FY2026)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "amd": {
+            "value": "12.5% (FY2025)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "reading": "The bottom-line gap: 43 points — the single widest in this comparison.",
+          "explain": {
+            "what": "The share of sales that becomes bottom-line profit.",
+            "why": "The final scorecard of the whole business after every cost, tax, and interest payment.",
+            "good": "Above 20% is strong; sustained margins above 50% are historically rare in any industry.",
+            "means": "More than half of NVDA's revenue becomes profit, a rarity in any industry. AMD's 12.5% is its best in years but shows how far the mix must shift. Watch AMD's data-center share of revenue — it carries the highest margins."
+          }
+        },
+        {
+          "label": "EBITDA margin",
+          "stronger": null,
+          "nvda": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "amd": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "reading": "—",
+          "explain": {
+            "what": "Operating profitability before interest, tax, depreciation, and amortization, as a share of sales.",
+            "why": "It gives a cleaner peer comparison by removing financing and accounting choices.",
+            "good": "A range of 30–50% is typical for leading semiconductor companies.",
+            "means": "EBITDA margin was not computed for this mock; it will be added with depreciation detail from 10-Ks."
+          }
+        }
+      ]
+    },
+    {
+      "id": "returns",
+      "label": "Returns on capital",
+      "metrics": [
+        {
+          "label": "Return on equity (ROE)",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "76.3% ($120.1B ÷ $157.3B equity)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA: $120.1B net income / $157.3B equity. AMD: $4.3B / $63.0B."
+          },
+          "amd": {
+            "value": "6.9% ($4.3B ÷ $63.0B equity)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA: $120.1B net income / $157.3B equity. AMD: $4.3B / $63.0B."
+          },
+          "reading": "NVDA earns an extraordinary return on equity; AMD's is modest but recovering.",
+          "explain": {
+            "what": "Net income divided by shareholder equity — the return on the owners' money.",
+            "why": "It measures how well management compounds the capital entrusted to it.",
+            "good": "Above 15% is solid and above 30% is exceptional. Note that heavy share repurchases shrink equity and can flatter this ratio.",
+            "means": "76% ROE means NVDA's annual profit is three-quarters of its entire equity base — though share repurchases flatter it by shrinking equity. AMD's 6.9% reflects the Xilinx-inflated equity base. Watch AMD's ROE as acquisition amortization fades."
+          }
+        },
+        {
+          "label": "Return on assets (ROA)",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "58.1%",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "amd": {
+            "value": "5.6%",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "reading": "NVDA's asset base is extraordinarily productive; AMD's is weighed by acquisition goodwill.",
+          "explain": {
+            "what": "Net income divided by total assets.",
+            "why": "It shows how efficiently the asset base generates profit. Asset-light chip designers naturally score higher than manufacturers.",
+            "good": "Above 10% is good for a semiconductor company.",
+            "means": "AMD carries ~$25B of goodwill from Xilinx, which depresses ROA without affecting cash generation — the ratio understates its operating reality. Watch tangible-asset returns for the cleaner read."
+          }
+        },
+        {
+          "label": "Return on invested capital (ROIC)",
+          "stronger": null,
+          "nvda": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "amd": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "reading": "—",
+          "explain": {
+            "what": "After-tax operating profit divided by invested capital (equity plus interest-bearing debt).",
+            "why": "The purest value-creation test: when ROIC exceeds the cost of capital, growth creates value; below it, growth destroys value.",
+            "good": "Sustained ROIC above 15% marks a strong compounder.",
+            "means": "ROIC needs the effective tax rate to compute after-tax operating profit; it was not pulled for this mock."
+          }
+        }
+      ]
+    },
+    {
+      "id": "balance-sheet",
+      "label": "Balance sheet",
+      "metrics": [
+        {
+          "label": "Net debt",
+          "stronger": null,
+          "nvda": {
+            "value": "−$2.1B (net cash)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Negative = net cash position. Net debt = total debt minus cash & cash equivalents (excludes marketable securities / short-term investments)."
+          },
+          "amd": {
+            "value": "−$2.3B (net cash)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Negative = net cash position. Net debt = total debt minus cash & cash equivalents (excludes marketable securities / short-term investments)."
+          },
+          "reading": "Both are net cash — neither needs creditors.",
+          "explain": {
+            "what": "Total debt minus cash and equivalents. A negative number means net cash.",
+            "why": "It answers whether the company could survive a bad year without raising money.",
+            "good": "Net cash (a negative number) is fortress-like. Both NVDA and AMD carry modest debt relative to their cash generation.",
+            "means": "Neither company has a balance-sheet constraint on R&D or share repurchases. NVDA additionally holds ~$52B in marketable securities beyond cash. This row is a clean bill of health for both — nothing to watch here."
+          }
+        },
+        {
+          "label": "Debt / equity",
+          "stronger": null,
+          "nvda": {
+            "value": "0.05",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "amd": {
+            "value": "0.05",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "reading": "Identical and negligible — leverage is a non-issue for both.",
+          "explain": {
+            "what": "Total debt divided by shareholder equity.",
+            "why": "A leverage gauge — a high ratio means creditors carry more of the company's risk.",
+            "good": "Below 0.5 is comfortable for a semiconductor company.",
+            "means": "Both fund themselves overwhelmingly with equity. In a downturn, neither faces refinancing pressure."
+          }
+        },
+        {
+          "label": "Current ratio",
+          "stronger": null,
+          "nvda": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "amd": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "reading": "—",
+          "explain": {
+            "what": "Current assets divided by current liabilities.",
+            "why": "It tests whether the company can cover the bills coming due within a year.",
+            "good": "Above 1.5 is healthy; above 2 is strong.",
+            "means": "Current assets and liabilities were not pulled for this mock; the ratio will be added from 10-K balance sheets."
+          }
+        },
+        {
+          "label": "Cash & equivalents",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "$10.6B cash (+ $52B marketable securities)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Includes marketable securities / short-term investments as stated."
+          },
+          "amd": {
+            "value": "$5.5B cash (+ $5.0B short-term investments)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Includes marketable securities / short-term investments as stated."
+          },
+          "reading": "NVDA's liquid resources are ~6x AMD's.",
+          "explain": {
+            "what": "Cash on hand plus short-term liquid investments.",
+            "why": "Dry powder for R&D, share repurchases, acquisitions, and downturns — strategic flexibility in a cyclical industry.",
+            "good": "More is safer; the right context is revenue scale, not the absolute number.",
+            "means": "NVDA's $62.6B total liquidity funds years of R&D at the current pace alongside its $150B share repurchases authorization. AMD's $10.5B is ample for its scale. Watch cash conversion, not the stockpile."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cash",
+      "label": "Cash generation",
+      "metrics": [
+        {
+          "label": "Operating cash flow",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "$102.7B (FY2026)",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "AMD: continuing operations."
+          },
+          "amd": {
+            "value": "$6.5B (FY2025, continuing ops)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "AMD: continuing operations."
+          },
+          "reading": "NVDA generated nearly 16x AMD's operating cash.",
+          "explain": {
+            "what": "Cash generated from core business operations.",
+            "why": "It shows what the business actually collected in cash. Over time it usually tracks or exceeds net income; persistent divergence deserves a question, not an assumption.",
+            "good": "A healthy pattern is operating cash flow at or above net income across full cycles — cash backing the reported profit.",
+            "means": "Cash confirms the profit story — NVDA's earnings are real, collected dollars. AMD's $6.5B is a record and covers its needs several times over."
+          }
+        },
+        {
+          "label": "Free cash flow",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "$96.6B (FY2026, company-defined)",
+            "source": "NVIDIA Q4/FY2026 earnings press release, Feb 25, 2026",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "disclosed",
+            "note": "Company-defined free cash flow as reported by each company."
+          },
+          "amd": {
+            "value": "$5.5B (FY2025, company-defined)",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Company-defined free cash flow as reported by each company."
+          },
+          "reading": "A ~$91B gulf in truly available cash.",
+          "explain": {
+            "what": "Operating cash flow minus capital spending — the cash truly available after keeping the business running.",
+            "why": "It funds share repurchases, dividends, and acquisitions. For investors, it is the most tangible output of the business.",
+            "good": "Positive and growing is the baseline; the margin below says how efficient the conversion is.",
+            "means": "After keeping the business running, NVDA has $96.6B to deploy — share repurchases, R&D, or strategic moves. AMD's $5.5B is its own record. Watch how each allocates it: NVDA's $150B share repurchases authorization against AMD's reinvestment needs."
+          }
+        },
+        {
+          "label": "FCF margin",
+          "stronger": "NVDA",
+          "nvda": {
+            "value": "44.7%",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA: $96.6B / $215.9B = 44.7%. AMD: $5.5B / $34.6B = 15.9%."
+          },
+          "amd": {
+            "value": "15.9%",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release. NVDA: $96.6B / $215.9B = 44.7%. AMD: $5.5B / $34.6B = 15.9%."
+          },
+          "reading": "NVDA converts 45¢ of each sales dollar to free cash; AMD converts 16¢.",
+          "explain": {
+            "what": "Free cash flow as a share of revenue.",
+            "why": "It shows how much of each sales dollar becomes usable cash.",
+            "good": "A range of 20–30% or higher is strong for semiconductor companies.",
+            "means": "The fabless model at its extreme: NVDA spends just 2.8% of revenue on capex, so nearly half of sales becomes cash. AMD matches the capex discipline at 2.8% but lower margins compress conversion. Watch AMD's FCF margin as data-center mix grows."
+          }
+        },
+        {
+          "label": "Capex intensity",
+          "stronger": null,
+          "nvda": {
+            "value": "2.8%",
+            "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+            "asOf": "FY2026, ended Jan 25, 2026",
+            "tier": "reported",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "amd": {
+            "value": "2.8%",
+            "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+            "asOf": "FY2025, ended Dec 27, 2025",
+            "tier": "disclosed",
+            "note": "Computed from reported statement lines in our own arithmetic; inputs verified against the cited filing/release."
+          },
+          "reading": "Identical — the fabless model's signature.",
+          "explain": {
+            "what": "Capital spending as a share of revenue.",
+            "why": "Chip designers outsource manufacturing to foundries, so low capex intensity is the structural advantage of the fabless model.",
+            "good": "Below 5% is typical for fabless designers; far below the 20–30% that manufacturers must spend.",
+            "means": "Both outsource manufacturing to foundries such as TSMC, so neither must pour revenue into fabs. This is the structural reason their cash conversion can stay high through cycles."
+          }
+        }
+      ]
+    },
+    {
+      "id": "market",
+      "label": "Market behavior",
+      "metrics": [
+        {
+          "label": "1Y total return",
+          "stronger": null,
+          "nvda": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "amd": {
+            "value": null,
+            "source": null,
+            "asOf": null,
+            "tier": "unsourced"
+          },
+          "reading": "—",
+          "explain": {
+            "what": "Share price change plus dividends over the last year.",
+            "why": "How owning the stock actually felt — the lived experience behind the fundamentals.",
+            "good": "Judge it against the semiconductor index, not in isolation; a 40% gain means little if the sector gained 60%.",
+            "means": "Twelve-month price history was not pulled for this mock; it will be added with a dated price series."
+          }
+        },
+        {
+          "label": "Beta",
+          "stronger": null,
+          "nvda": {
+            "value": "2.26 (Oct 6, 2026)",
+            "source": "Finnhub + MarketBeat, Oct 6, 2026",
+            "asOf": "Oct 6, 2026",
+            "tier": "estimated",
+            "note": "Point-in-time market data; sources differ slightly."
+          },
+          "amd": {
+            "value": "2.54 (Oct 6, 2026)",
+            "source": "Finnhub + MarketBeat + ad-hoc-news.de, Oct 5-6, 2026",
+            "asOf": "Oct 5-6, 2026",
+            "tier": "estimated",
+            "note": "Point-in-time market data; sources differ slightly."
+          },
+          "reading": "Both swing more than twice as hard as the market.",
+          "explain": {
+            "what": "How much the stock tends to move relative to the overall market (1.0 moves with the market).",
+            "why": "A volatility gauge — it describes the ride, not the destination.",
+            "good": "There is no 'good' value. Above 1 means bigger swings in both directions; both NVDA and AMD run above 1.",
+            "means": "These are high-volatility names — large daily moves are normal. Beta describes the ride, not the destination; it informs position sizing, not timing."
+          }
+        },
+        {
+          "label": "52-week range position",
+          "stronger": null,
+          "nvda": {
+            "value": "At 52-week high (~$239, Oct 6, 2026; range $164–$240)",
+            "source": "Finnhub + MarketBeat, Oct 6, 2026",
+            "asOf": "Oct 6, 2026",
+            "tier": "estimated",
+            "note": "Point-in-time market data; sources differ slightly."
+          },
+          "amd": {
+            "value": "Near 52-week high (~$649, Oct 6, 2026; range $188–$659)",
+            "source": "Finnhub + MarketBeat + ad-hoc-news.de, Oct 5-6, 2026",
+            "asOf": "Oct 5-6, 2026",
+            "tier": "estimated",
+            "note": "Point-in-time market data; sources differ slightly."
+          },
+          "reading": "Both sit at the top of their yearly range — momentum is with them.",
+          "explain": {
+            "what": "Where the current price sits between the year's low and high.",
+            "why": "A quick sentiment snapshot — near the highs suggests momentum, near the lows suggests skepticism.",
+            "good": "The position alone does not say which interpretation is right; it frames the question the fundamentals must answer.",
+            "means": "Prices reflect optimism already. The position does not say whether the optimism is right — the fundamentals above are what must justify it. Watch earnings reactions from these levels. (Ranges differ slightly by data provider; see Sources & methodology.)"
+          }
+        }
+      ]
+    }
+  ],
+  "segments": {
+    "nvda": {
+      "period": "FY2026 (year ended Jan 25, 2026)",
+      "tier": "reported",
+      "source": "NVIDIA FY2026 10-K, filed Feb 25, 2026 (sec.gov)",
+      "segments": [
+        {
+          "name": "Compute & Networking",
+          "revenue": "$193.5B",
+          "share": "89.6%",
+          "yoy": "+66.5%",
+          "reading": "Nine of every ten revenue dollars — the AI data-center engine (GPUs + networking)."
+        },
+        {
+          "name": "Graphics",
+          "revenue": "$22.5B",
+          "share": "10.4%",
+          "yoy": "+57.0%",
+          "reading": "Gaming and workstation GPUs — still growing fast, now a tenth of the company."
+        }
+      ],
+      "takeaway": "NVDA is a one-engine company today: ~90% of revenue rides on Compute & Networking."
+    },
+    "amd": {
+      "period": "FY2025 (year ended Dec 27, 2025)",
+      "tier": "disclosed",
+      "source": "AMD Q4/FY2025 earnings release, Feb 3, 2026 (GlobeNewswire)",
+      "segments": [
+        {
+          "name": "Data Center",
+          "revenue": "$16.6B",
+          "share": "48.0%",
+          "yoy": "+32%",
+          "reading": "Record year — nearly half of AMD's revenue now (EPYC CPUs + Instinct GPUs)."
+        },
+        {
+          "name": "Client and Gaming",
+          "revenue": "$14.6B",
+          "share": "42.0%",
+          "yoy": "+51%",
+          "reading": "The surprise grower — Ryzen PCs and semi-custom console chips rebounded hard."
+        },
+        {
+          "name": "Embedded",
+          "revenue": "$3.5B",
+          "share": "10.0%",
+          "yoy": "−3%",
+          "reading": "The Xilinx business — soft industrial demand weighed on the year."
+        }
+      ],
+      "note": "Earnings-release segments; figures rounded.",
+      "takeaway": "AMD is balanced where NVDA is concentrated: data center under half of revenue."
+    }
+  },
+  "products": [
+    {
+      "company": "NVIDIA",
+      "line": "Data-center GPUs (Hopper H100/H200, Blackwell B100/B200)",
+      "desc": "Accelerators that run AI training and inference in data centers",
+      "source": "NVIDIA FY2026 10-K MD&A",
+      "tier": "reported"
+    },
+    {
+      "company": "NVIDIA",
+      "line": "GB200/GB300 NVL72 rack systems",
+      "desc": "A full rack of 72 Blackwell GPUs + 36 Grace CPUs linked in one NVLink domain, for frontier-scale AI clusters",
+      "source": "NVIDIA FY2026 10-K; press reports (TweakTown)",
+      "tier": "reported"
+    },
+    {
+      "company": "NVIDIA",
+      "line": "Data-center networking (InfiniBand, Spectrum-X Ethernet, NVLink)",
+      "desc": "High-speed links connecting GPUs into large AI clusters; DC networking revenue +142% in FY2026",
+      "source": "NVIDIA FY2026 10-K MD&A",
+      "tier": "reported"
+    },
+    {
+      "company": "NVIDIA",
+      "line": "GeForce RTX (RTX 5050–5090)",
+      "desc": "Consumer graphics cards for gaming and content creation",
+      "source": "NVIDIA launch announcements (CES 2025)",
+      "tier": "disclosed"
+    },
+    {
+      "company": "NVIDIA",
+      "line": "Professional visualization GPUs",
+      "desc": "Graphics cards for design and simulation workstations",
+      "source": "NVIDIA FY2026 10-K (Graphics segment)",
+      "tier": "reported"
+    },
+    {
+      "company": "NVIDIA",
+      "line": "Automotive (DRIVE Thor)",
+      "desc": "In-vehicle compute for driver assistance and autonomous driving; auto revenue +39% in FY2026",
+      "source": "NVIDIA FY2026 10-K",
+      "tier": "reported"
+    },
+    {
+      "company": "NVIDIA",
+      "line": "Software (CUDA, NIM)",
+      "desc": "CUDA: the programming platform NVIDIA GPUs run on. NIM: packaged AI models sold under paid licenses",
+      "source": "Company product materials",
+      "tier": "disclosed"
+    },
+    {
+      "company": "AMD",
+      "line": "EPYC server CPUs",
+      "desc": "Processors for data-center servers and cloud infrastructure",
+      "source": "AMD FY2025 10-K segment description",
+      "tier": "reported"
+    },
+    {
+      "company": "AMD",
+      "line": "Instinct AI accelerators (MI300X/MI325X, MI350, MI400/MI450)",
+      "desc": "Data-center AI accelerators; MI300X carries 192 GB of HBM3 memory",
+      "source": "AMD FY2025 10-Q; company announcements",
+      "tier": "estimated"
+    },
+    {
+      "company": "AMD",
+      "line": "Ryzen client CPUs (incl. Ryzen AI)",
+      "desc": "Desktop and notebook processors, including models with on-chip AI engines",
+      "source": "AMD FY2025 10-K segment description",
+      "tier": "reported"
+    },
+    {
+      "company": "AMD",
+      "line": "Radeon gaming GPUs (RX 9060–9070 series)",
+      "desc": "Consumer graphics cards for gaming",
+      "source": "AMD product announcements",
+      "tier": "disclosed"
+    },
+    {
+      "company": "AMD",
+      "line": "Semi-custom SoCs",
+      "desc": "Custom chips for Sony PlayStation 5 and Microsoft Xbox Series X/S consoles",
+      "source": "AMD annual report; FY2025 10-K",
+      "tier": "reported"
+    },
+    {
+      "company": "AMD",
+      "line": "Embedded (Xilinx: Versal, Zynq FPGAs)",
+      "desc": "Programmable chips for industrial, networking, automotive, and communications gear",
+      "source": "AMD FY2025 10-K segment description",
+      "tier": "reported"
+    },
+    {
+      "company": "AMD",
+      "line": "Data-center networking (Pensando DPUs, AI NICs)",
+      "desc": "Network processors for cloud and AI infrastructure",
+      "source": "AMD FY2025 10-Q",
+      "tier": "estimated"
+    },
+    {
+      "company": "AMD",
+      "line": "Software (ROCm)",
+      "desc": "AMD's open software stack for programming its AI accelerators",
+      "source": "Tech press (MLQ.ai)",
+      "tier": "estimated"
+    }
+  ],
+  "customers": [
+    {
+      "customer": "One direct customer — 22% of revenue; another — 14% (FY2026)",
+      "buysFrom": "NVIDIA",
+      "evidence": "10-K 'Concentration of Revenue'; both primarily Compute & Networking. (FY2025: 12%, 11%, 11%)",
+      "quality": "10-K disclosure",
+      "tier": "reported"
+    },
+    {
+      "customer": "Meta",
+      "buysFrom": "NVIDIA",
+      "evidence": "~350K H100 GPUs by end-2024 (~600K H100-equivalents incl. other GPUs), per Zuckerberg",
+      "quality": "Company statement (Jan 2024)",
+      "tier": "estimated"
+    },
+    {
+      "customer": "Microsoft Azure, AWS, Google Cloud, CoreWeave",
+      "buysFrom": "NVIDIA",
+      "evidence": "Cloud GPU instances built on H100/H200 (Azure ND H100 v5, AWS p5, GCP A3)",
+      "quality": "Reputable press report",
+      "tier": "estimated"
+    },
+    {
+      "customer": "Meta — up to 6 GW Instinct deployments from H2 2026",
+      "buysFrom": "AMD",
+      "evidence": "Joint announcement Feb 24, 2026; 160M-share performance warrant tied to milestones. Planned maximum, not booked revenue.",
+      "quality": "Company statement",
+      "tier": "disclosed"
+    },
+    {
+      "customer": "OpenAI — up to 6 GW AMD GPUs",
+      "buysFrom": "AMD",
+      "evidence": "Agreement announced Oct 2025; 160M-share warrant structure. Planned maximum, not booked revenue.",
+      "quality": "Company statement",
+      "tier": "disclosed"
+    },
+    {
+      "customer": "Anthropic — up to 2 GW Instinct MI450 (H1 2027)",
+      "buysFrom": "AMD",
+      "evidence": "Agreement ~Aug 2026; AMD strategic investment up to $5B tied to milestones. Planned maximum, not booked revenue.",
+      "quality": "Company statement",
+      "tier": "disclosed"
+    },
+    {
+      "customer": "Microsoft Azure — Helios platform (MI455X, EPYC Venice)",
+      "buysFrom": "AMD",
+      "evidence": "Azure AI-inference deployment; Citi (Jan 2024): Microsoft bought MI300X at ~$10K/unit",
+      "quality": "Press report / analyst estimate",
+      "tier": "estimated"
+    },
+    {
+      "customer": "Oracle — 50K MI450 cluster planned",
+      "buysFrom": "AMD",
+      "evidence": "Reported Sep 2026; planned deployment, not booked revenue",
+      "quality": "Reputable press report",
+      "tier": "estimated"
+    },
+    {
+      "customer": "AWS — EPYC EC2 instances; Sony/Microsoft consoles",
+      "buysFrom": "AMD",
+      "evidence": "AWS product pages (M6a/R6a/C6a instances); AMD: '#1 provider of game-console SoCs'",
+      "quality": "Company statement",
+      "tier": "disclosed"
+    },
+    {
+      "customer": "Sony + Microsoft (consoles)",
+      "buysFrom": "AMD",
+      "evidence": "Semi-custom SoC success tied to PlayStation/Xbox console cycles",
+      "quality": "10-K disclosure (risk factors)",
+      "tier": "estimated"
+    }
+  ],
+  "pricing": [
+    {
+      "product": "NVIDIA H100",
+      "price": "~ $25K–$35K per card (SXM variants up to $40K+)",
+      "label": "REPORTED ESTIMATE — NOT OFFICIAL",
+      "source": "Spheron H100 price guide (2026); TechPowerUp/Citi (Jan 2024)",
+      "tier": "estimated"
+    },
+    {
+      "product": "NVIDIA B200",
+      "price": "$30K–$40K per GPU",
+      "label": "REPORTED ESTIMATE — NOT OFFICIAL",
+      "source": "aitooldiscovery.com (2026, via Modal Labs data)",
+      "tier": "estimated"
+    },
+    {
+      "product": "NVIDIA GB200 Superchip (Grace + B200)",
+      "price": "$60K–$70K",
+      "label": "REPORTED ESTIMATE — NOT OFFICIAL",
+      "source": "TweakTown (Aug 2024, via Barron's)",
+      "tier": "estimated"
+    },
+    {
+      "product": "NVIDIA GB200 NVL72 full rack",
+      "price": "~ $3M",
+      "label": "REPORTED ESTIMATE — NOT OFFICIAL",
+      "source": "TweakTown (2024); Tom's Hardware (Aug 2025)",
+      "tier": "estimated"
+    },
+    {
+      "product": "NVIDIA 8-GPU H200 HGX system",
+      "price": "$320K–$420K (system-level)",
+      "label": "REPORTED ESTIMATE — NOT OFFICIAL",
+      "source": "millionminer.com (2026)",
+      "tier": "estimated"
+    },
+    {
+      "product": "AMD Instinct MI300X",
+      "price": "~ $10K/unit to Microsoft; $15K–$17K enterprise",
+      "label": "ANALYST / REPORTED ESTIMATE — NOT OFFICIAL",
+      "source": "Citi via TechPowerUp (Jan 2024); MangoBoost via Tom's Hardware (Apr 2025)",
+      "tier": "estimated"
+    },
+    {
+      "product": "AMD EPYC per-chip",
+      "price": null,
+      "label": "NOT DISCLOSED",
+      "source": "No credible reported estimate located",
+      "tier": "unsourced"
+    },
+    {
+      "product": "AMD MI325X / MI350 / MI400 series",
+      "price": null,
+      "label": "NOT DISCLOSED",
+      "source": "No credible reported estimate located",
+      "tier": "unsourced"
+    },
+    {
+      "product": "NVIDIA H200 single card",
+      "price": null,
+      "label": "NOT DISCLOSED",
+      "source": "No credible reported estimate located",
+      "tier": "unsourced"
+    },
+    {
+      "product": "GeForce RTX 5090 – 5050",
+      "price": "$1,999 – $249",
+      "label": "OFFICIAL MSRP (street prices often higher)",
+      "source": "NVIDIA CES 2025 launch MSRPs",
+      "tier": "disclosed"
+    },
+    {
+      "product": "Radeon RX 9070 XT – 9060",
+      "price": "$599 – $299",
+      "label": "OFFICIAL MSRP (street prices often higher)",
+      "source": "AMD launch MSRPs",
+      "tier": "disclosed"
+    },
+    {
+      "product": "Ryzen 9 9950X – Ryzen 5 9600X",
+      "price": "$649 – $279",
+      "label": "OFFICIAL MSRP",
+      "source": "AMD launch MSRPs (Aug 2024)",
+      "tier": "disclosed"
+    }
+  ],
+  "gaps": [
+    "Employees (both): headcount not pulled for this mock.",
+    "Forward P/E, PEG, EPS growth: analyst estimates not gathered.",
+    "EV/EBITDA, EBITDA margin: depreciation detail not pulled.",
+    "ROIC: effective tax rate not pulled.",
+    "Current ratio: current-asset/liability detail not pulled.",
+    "1Y total return, average volume: price history not pulled.",
+    "AMD FY2025 10-K (EDGAR): balance-sheet/cash-flow figures are from the earnings release; a final 10-K pull would tighten them.",
+    "Per-unit data-center pricing: not disclosed by either company; only reported estimates and official consumer MSRPs are shown."
+  ],
+  "policy": "This section explains figures; it does not advise on securities."
+}

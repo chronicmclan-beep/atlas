@@ -51,6 +51,7 @@ const data = {
   financing: load('financing.json'),
   timeline: load('timeline.json'),
   glossary: load('glossary.json'),
+  comparison: load('comparison.json'),
 }
 
 // Reference sets built from the source-of-truth files.
@@ -177,6 +178,53 @@ if (data.glossary) {
     err('glossary.json', `missing a "terms" object mapping labels to definitions.`)
 }
 
+/* ---------- comparison.json ---------- */
+if (data.comparison) {
+  const c = data.comparison
+  for (const f of ['id', 'title', 'updated', 'companies', 'families']) {
+    if (!has(c, f)) err('comparison.json', `missing required top-level field "${f}".`)
+  }
+  if (Array.isArray(c.companies)) {
+    for (const co of c.companies) {
+      if (!validTickers.has(co.ticker))
+        err('comparison.json', `references unknown company "${co.ticker}" (not in companies.json).`)
+    }
+  }
+  const checkFigure = (fig, where) => {
+    if (!fig || typeof fig !== 'object') return
+    if (!has(fig, 'tier')) err('comparison.json', `${where} is missing "tier".`)
+    else if (!allowedTiers.has(fig.tier))
+      err('comparison.json', `${where} has invalid source tier "${fig.tier}" (allowed: ${tierList}).`)
+    if (fig.tier !== 'unsourced' && !fig.source)
+      err('comparison.json', `${where} has tier "${fig.tier}" but no citable source.`)
+    if (fig.tier === 'unsourced' && fig.value != null)
+      err('comparison.json', `${where} is unsourced but carries a value — it must stay null.`)
+  }
+  if (Array.isArray(c.families)) {
+    for (const fam of c.families) {
+      if (!Array.isArray(fam.metrics)) {
+        err('comparison.json', `family "${fam.id ?? '?'}" is missing its "metrics" list.`)
+        continue
+      }
+      for (const m of fam.metrics) {
+        if (!has(m, 'label')) err('comparison.json', `a metric is missing "label".`)
+        checkFigure(m.nvda, `metric "${m.label ?? '?'}" (NVDA)`)
+        checkFigure(m.amd, `metric "${m.label ?? '?'}" (AMD)`)
+        if (m.stronger !== null && m.stronger !== undefined && m.stronger !== 'NVDA' && m.stronger !== 'AMD')
+          err('comparison.json', `metric "${m.label ?? '?'}" has invalid "stronger" value "${m.stronger}" (must be "NVDA", "AMD", or null).`)
+      }
+    }
+  }
+  for (const [key, label] of [['products', 'product'], ['pricing', 'price row']]) {
+    if (Array.isArray(c[key])) {
+      for (const p of c[key]) {
+        if (p.tier && !allowedTiers.has(p.tier))
+          err('comparison.json', `${label} "${p.line ?? p.product ?? '?'}" has invalid tier "${p.tier}".`)
+      }
+    }
+  }
+}
+
 /* ---------- Data Health (warnings — the accountability dashboard) ----------
    These never fail the build; they are the visible dashboard for the
    DATA_ACCOUNTABILITY.md system. A warning unaddressed across two updates
@@ -232,6 +280,19 @@ if (data.revenue && Array.isArray(data.revenue.series)) {
   const n = data.revenue.series.filter((s) => s.tier && s.tier !== 'unsourced').length
   healthRows.push(['revenue.json', `${n}/${data.revenue.series.length} series sourced`, pct(n, data.revenue.series.length)])
 }
+if (data.comparison && Array.isArray(data.comparison.families)) {
+  let n = 0, d = 0
+  for (const fam of data.comparison.families) {
+    for (const m of fam.metrics || []) {
+      for (const fig of [m.nvda, m.amd]) {
+        if (!fig) continue
+        d++
+        if ((fig.tier !== 'unsourced' && fig.source) || (fig.tier === 'unsourced' && fig.value == null)) n++
+      }
+    }
+  }
+  healthRows.push(['comparison.json', `${n}/${d} figures with source+tier`, pct(n, d)])
+}
 
 /* 3. Staleness — the audit's biggest error class. */
 if (data.timeline && data.timeline.updated) {
@@ -257,7 +318,7 @@ const printHealth = () => {
 }
 
 if (errors.length === 0) {
-  console.log('✓ Data check passed — all 9 JSON files are valid and consistent.')
+  console.log('✓ Data check passed — all 10 JSON files are valid and consistent.')
   printHealth()
   process.exit(0)
 } else {

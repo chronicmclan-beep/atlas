@@ -9,9 +9,10 @@ import SupplyChainMap from './components/supply-chain/SupplyChainMap.jsx'
 import TimelineHub from './components/timeline/TimelineHub.jsx'
 import FinancingWeb from './components/financing/FinancingWeb.jsx'
 import GlossarySection from './components/glossary/GlossarySection.jsx'
+import Compare from './components/compare/Compare.jsx'
 
 /*
-  App shell: navigation across the seven sections. Sections are wired in one at a
+  App shell: navigation across the eight sections. Sections are wired in one at a
   time (Phase 3) via the SECTION_COMPONENTS registry; any section without a
   registered component still shows the placeholder.
 */
@@ -23,6 +24,7 @@ const SECTION_COMPONENTS = {
   timeline: TimelineHub,
   financing: FinancingWeb,
   glossary: GlossarySection,
+  compare: Compare,
 }
 
 export default function App() {
