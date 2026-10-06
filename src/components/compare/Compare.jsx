@@ -100,7 +100,7 @@ function DivergeBars({ metric, nv, am, colors }) {
   return (
     <div className="mt-xs" role="img" aria-label={`${metric.label}: NVDA ${metric.nvda.value}, AMD ${metric.amd.value}`}>
       <div className="flex items-center">
-        <span className="w-20 shrink-0 pr-xs text-right text-caption leading-tight text-ink">
+        <span className="w-28 shrink-0 pr-xs text-right text-caption leading-tight text-ink">
           <span className="font-medium" style={{ color: colors.amd }}>AMD</span> {metric.amd.value}
           {metric.stronger === AMD && <span className="ml-2xs" aria-label="Stronger value">▲</span>}
         </span>
@@ -111,7 +111,7 @@ function DivergeBars({ metric, nv, am, colors }) {
         <div className="flex h-7 flex-1 items-center">
           <div className="h-3.5 rounded-r-pill transition-all duration-500" style={{ width: half(nv), background: colors.nvda }} />
         </div>
-        <span className="w-20 shrink-0 pl-xs text-caption leading-tight text-ink">
+        <span className="w-28 shrink-0 pl-xs text-caption leading-tight text-ink">
           <span className="font-medium" style={{ color: colors.nvda }}>NVDA</span> {metric.nvda.value}
           {metric.stronger === NVDA && <span className="ml-2xs" aria-label="Stronger value">▲</span>}
         </span>
@@ -128,8 +128,8 @@ function DotScale({ metric, nv, am, colors }) {
   const max = Math.max(nv, am) * 1.12
   const x = (v) => (v / max) * 100
   const dots = [
-    { v: nv, color: colors.nvda, label: `NVDA ${metric.nvda.value}`, tier: metric.nvda.tier, above: true, stronger: metric.stronger === NVDA },
-    { v: am, color: colors.amd, label: `AMD ${metric.amd.value}`, tier: metric.amd.tier, above: false, stronger: metric.stronger === AMD },
+    { v: nv, color: colors.nvda, label: `NVDA ${metric.nvda.value.split(' ')[0]}`, tier: metric.nvda.tier, above: true, stronger: metric.stronger === NVDA },
+    { v: am, color: colors.amd, label: `AMD ${metric.amd.value.split(' ')[0]}`, tier: metric.amd.tier, above: false, stronger: metric.stronger === AMD },
   ]
   return (
     <div className="mt-xs px-2xs" role="img" aria-label={`${metric.label}: NVDA ${metric.nvda.value}, AMD ${metric.amd.value}`}>
@@ -156,8 +156,10 @@ function DotScale({ metric, nv, am, colors }) {
       </div>
       <div className="mt-2xs flex items-center justify-between text-caption text-ink-faint">
         <span>0</span>
-        <SourceTag tier={metric.nvda.tier} showLabel={false} />
-        <SourceTag tier={metric.amd.tier} showLabel={false} />
+        <span className="flex items-center gap-xs">
+          <SourceTag tier={metric.nvda.tier} showLabel={false} />
+          <SourceTag tier={metric.amd.tier} showLabel={false} />
+        </span>
       </div>
     </div>
   )
@@ -338,11 +340,14 @@ function RevenueTrend() {
             </text>
           </g>
         ))}
-        {[0, Math.floor(n / 2), n - 1].map((i) => (
+        {[0, Math.floor(n / 2)].map((i) => (
           <text key={i} x={X(i)} y={H - 6} textAnchor="middle" className="fill-ink-faint" fontSize="11">
             {q[i]}
           </text>
         ))}
+        <text x={W - R} y={H - 6} textAnchor="end" className="fill-ink-faint" fontSize="11">
+          {q[n - 1]}
+        </text>
         <path d={path(am)} fill="none" stroke={FAMILY_COLORS.amd} strokeWidth="2.5" strokeLinejoin="round" />
         <path d={path(nv)} fill="none" stroke={FAMILY_COLORS.nvda} strokeWidth="2.5" strokeLinejoin="round" />
         <circle cx={X(n - 1)} cy={Y(lastNv)} r="4" fill={FAMILY_COLORS.nvda} stroke="var(--bg)" strokeWidth="1.5" />
@@ -476,7 +481,7 @@ function ProductsCustomersPricing() {
               >
                 <span
                   className="h-2.5 w-2.5 shrink-0 rounded-full"
-                  style={{ background: p.company === NVDA ? FAMILY_COLORS.nvda : FAMILY_COLORS.amd }}
+                  style={{ background: p.company === 'NVIDIA' ? FAMILY_COLORS.nvda : FAMILY_COLORS.amd }}
                 />
                 <span className="flex-1 text-label font-medium text-ink">{p.line}</span>
                 <SourceTag tier={p.tier} showLabel={false} />
