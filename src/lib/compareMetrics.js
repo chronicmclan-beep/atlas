@@ -481,6 +481,12 @@ function ratioText(vals) {
   return r >= 1.5 ? ` — a ${r >= 10 ? Math.round(r) : r.toFixed(1)}× spread` : ''
 }
 
+/** Valuation multiples read cheaper-first: lower is better (but they carry no
+    ▲ leader marking, so higherIsBetter stays null — see METRICS registry). */
+function isCheapFirst(def) {
+  return def.family === 'valuation' && def.higherIsBetter !== true
+}
+
 /** "What this result means" generated from the live selection. */
 export function describeGap(def, figs) {
   const withVal = figs.filter((f) => f && f.value != null)
@@ -491,14 +497,17 @@ export function describeGap(def, figs) {
   if (scored.length === 0) {
     return `${withVal.map((s) => `${s.ticker} ${s.value}`).join(' · ')}.`
   }
-  const desc = def.higherIsBetter === false
-  const sorted = [...scored].sort((a, b) => (desc ? a.n - b.n : b.n - a.n))
+  const asc = def.higherIsBetter === false || isCheapFirst(def)
+  const sorted = [...scored].sort((a, b) => (asc ? a.n - b.n : b.n - a.n))
   const lead = sorted[0]
   const tail = sorted[sorted.length - 1]
   if (sorted.length === 1) {
     return `${lead.f.ticker} reports ${lead.f.value}. No peer selected for comparison.`
   }
   const spread = ratioText(scored.map((s) => s.f.value))
+  if (isCheapFirst(def)) {
+    return `${lead.f.ticker} is cheapest at ${lead.f.value} vs ${tail.f.ticker} ${tail.f.value}${spread}.`
+  }
   return `${lead.f.ticker} leads at ${lead.f.value} vs ${tail.f.ticker} ${tail.f.value}${spread}.`
 }
 
