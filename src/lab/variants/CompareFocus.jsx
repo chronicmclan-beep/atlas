@@ -2,12 +2,14 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   FAMILIES,
   METRICS,
+  coverage,
   resolveFigure,
   availableMetrics,
   describeGap,
 } from '../../lib/compareMetrics.js'
 import { parseScalar, sparkPath } from '../../lib/compareVisual.js'
 import { getCompany, revenue as quarterlyRevenue } from '../../lib/data.js'
+import { effectiveTheme, setTheme } from '../../lib/theme.js'
 import CompanyBadge from '../../components/common/CompanyBadge.jsx'
 import SourceTag from '../../components/common/SourceTag.jsx'
 
@@ -270,11 +272,17 @@ function BigDonut({ entries, lead, ix, compact }) {
   let acc = 0
   const leader =
     lead >= 0 ? entries[lead] : scored.length > 0 ? scored.reduce((a, b) => (b.v > a.v ? b : a)).e : null
-  const size = compact ? 'h-56 w-56 sm:h-72 sm:w-72' : 'h-72 w-72 sm:h-96 sm:w-96'
+  const size = compact ? 'h-44 w-44' : 'h-72 w-72 sm:h-96 sm:w-96'
+  // In compact (4-up) quadrants the legend stacks below the donut in two
+  // columns — side-by-side at that width clipped the legend (2026-10-07).
+  const rowText = compact ? 'text-caption' : 'text-body'
   return (
     <div
       ref={ix.rootRef}
-      className="relative flex w-full flex-col items-center gap-lg sm:flex-row sm:gap-xl"
+      className={
+        'relative flex w-full flex-col items-center ' +
+        (compact ? 'gap-md' : 'gap-lg sm:flex-row sm:gap-xl')
+      }
       onClick={(e) => {
         if (e.target === e.currentTarget) ix.clearIsolate()
       }}
@@ -317,7 +325,7 @@ function BigDonut({ entries, lead, ix, compact }) {
           </span>
         </div>
       </div>
-      <ul className="grid w-full min-w-0 max-w-sm gap-sm">
+      <ul className={'grid w-full min-w-0 ' + (compact ? 'grid-cols-2 gap-xs' : 'max-w-sm gap-sm')}>
         {entries.map((e) => {
           const v = parseScalar(e.fig?.value)
           const ok = v != null && v > 0
@@ -332,11 +340,11 @@ function BigDonut({ entries, lead, ix, compact }) {
                     `${share} of selected companies`,
                   ])
                 : {})}
-              className={'flex items-center gap-sm text-body ' + (ok ? '' : 'opacity-60')}
+              className={'flex items-center gap-sm ' + rowText + (ok ? '' : ' opacity-60')}
             >
               <CompanyBadge name={e.ticker} size={26} />
               <span className="truncate font-medium" style={{ color: colorOf(e.ticker) }}>
-                {nameOf(e.ticker)}
+                {compact ? e.ticker : nameOf(e.ticker)}
               </span>
               <span className="truncate text-ink-soft">{e.fig ? e.fig.value : 'Not sourced'}</span>
               {share && <span className="ml-auto shrink-0 font-medium text-ink">{share}</span>}
@@ -499,6 +507,7 @@ function DotScale({ entries, ix, compact }) {
   const scored = entries
     .map((e) => ({ e, v: parseScalar(e.fig?.value) }))
     .filter((s) => s.v != null)
+    .sort((a, b) => a.v - b.v)
   const missing = entries.filter((e) => parseScalar(e.fig?.value) == null)
   if (scored.length < 2) {
     return (
@@ -512,57 +521,96 @@ function DotScale({ entries, ix, compact }) {
     )
   }
   const vals = scored.map((s) => s.v)
-  const lo0 = Math.min(...vals)
-  const hi0 = Math.max(...vals)
+  const lo0 = vals[0]
+  const hi0 = vals[vals.length - 1]
   const pad = (hi0 - lo0) * 0.18 || 1
   const lo = lo0 - pad
   const hi = hi0 + pad
   const pos = (v) => ((v - lo) / (hi - lo)) * 100
+
+  // Collision-aware dot lanes: dots within ~9% of the scale width of each
+  // other stagger above/below the axis with leader lines, so numbered dots
+  // never overlap at any dot count (2–4) or quadrant size.
+  const dots = scored.map((s, i) => ({ ...s, n: i + 1, left: pos(s.v), lane: 0 }))
+  const lanes = []
+  dots.forEach((d) => {
+    let lane = 0
+    while (lanes[lane]?.some((o) => Math.abs(o.left - d.left) < 9)) lane += 1
+    d.lane = lane
+    ;(lanes[lane] ??= []).push(d)
+  })
+  const laneDy = [0, -30, 30, -58] // px offset from the axis per lane
+
   return (
     <div
       ref={ix.rootRef}
-      className="relative w-full px-sm py-lg"
+      className="relative w-full px-sm py-md"
       onClick={(e) => {
         if (e.target === e.currentTarget) ix.clearIsolate()
       }}
     >
       <IsolateReset isolated={ix.isolated} onClear={ix.clearIsolate} />
-      <div className="relative h-36">
+      {/* the scale — numbered dots only; values live in the legend below */}
+      <div className="relative h-28">
         <div className="absolute left-0 right-0 top-1/2 h-1 -translate-y-1/2 rounded-pill bg-surface-raised" />
-        {scored.map((s, i) => {
-          const left = pos(s.v)
-          const above = i % 2 === 0
-          const seg = ix.segmentProps(s.e.ticker, [nameOf(s.e.ticker), s.e.fig.value])
+        {dots.map((d) => {
+          const dy = laneDy[Math.min(d.lane, laneDy.length - 1)]
+          const seg = ix.segmentProps(d.e.ticker, [nameOf(d.e.ticker), d.e.fig.value])
           return (
-            <div key={s.e.ticker} className="absolute top-0 h-full" style={{ left: `${left}%` }}>
+            <div
+              key={d.e.ticker}
+              className="absolute -translate-x-1/2 -translate-y-1/2"
+              style={{ left: `${d.left}%`, top: `calc(50% + ${dy}px)` }}
+            >
+              {dy !== 0 && (
+                <div
+                  aria-hidden="true"
+                  className="absolute left-1/2 w-px -translate-x-1/2 bg-line-strong"
+                  style={
+                    dy < 0
+                      ? { top: '15px', height: `${-dy - 15}px` }
+                      : { bottom: '15px', height: `${dy - 15}px` }
+                  }
+                />
+              )}
               <div
-                className="absolute top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-surface"
-                style={{ background: colorOf(s.e.ticker) }}
                 {...seg}
-              />
-              <div
-                className={
-                  'absolute w-28 -translate-x-1/2 text-center ' + (above ? 'bottom-[58%]' : 'top-[58%]')
-                }
-                {...seg}
-                title={s.e.fig.value}
+                title={`${nameOf(d.e.ticker)} — ${d.e.fig.value}`}
+                style={{ ...seg.style, background: colorOf(d.e.ticker) }}
+                className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-surface text-caption font-semibold text-white shadow-sm"
               >
-                <div className="truncate font-semibold text-ink text-body">{s.e.fig.value}</div>
-                <div className="flex items-center justify-center gap-2xs text-caption">
-                  <CompanyBadge name={s.e.ticker} size={14} />
-                  <span className="font-medium" style={{ color: colorOf(s.e.ticker) }}>
-                    {s.e.ticker}
-                  </span>
-                </div>
+                {d.n}
               </div>
             </div>
           )
         })}
       </div>
-      <div className="mt-xs flex justify-between text-caption text-ink-faint">
-        <span>{lo0 === hi0 ? '' : `Lower ← ${lo0}`}</span>
-        <span>{lo0 === hi0 ? '' : `→ Higher ${hi0}`}</span>
+      <div className="mt-2xs flex justify-between text-caption text-ink-faint">
+        <span>{`Lower ← ${lo0}`}</span>
+        <span>{`→ Higher ${hi0}`}</span>
       </div>
+      {/* tidy numbered legend — one row per dot, can never overlap */}
+      <ul className="mt-sm grid gap-xs">
+        {dots.map((d) => (
+          <li
+            key={d.e.ticker}
+            {...ix.segmentProps(d.e.ticker, [nameOf(d.e.ticker), d.e.fig.value])}
+            className="flex items-center gap-sm text-body"
+          >
+            <span
+              className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-caption font-semibold text-white"
+              style={{ background: colorOf(d.e.ticker) }}
+            >
+              {d.n}
+            </span>
+            <CompanyBadge name={d.e.ticker} size={20} />
+            <span className="truncate font-medium" style={{ color: colorOf(d.e.ticker) }}>
+              {nameOf(d.e.ticker)}
+            </span>
+            <span className="ml-auto shrink-0 font-semibold text-ink">{d.e.fig.value}</span>
+          </li>
+        ))}
+      </ul>
       {missing.length > 0 && (
         <p className="mt-sm text-center text-caption text-ink-faint">
           Not sourced:{' '}
@@ -594,17 +642,19 @@ const FLOW_STEPS = [
   { id: 'fcf', label: 'Free cash flow' },
 ]
 
-function CashFlow({ tickers, ix }) {
+function CashFlow({ tickers, ix, compact }) {
   const rows = tickers.map((ticker) => ({
     ticker,
     figs: FLOW_STEPS.map((s) => resolveFigure(s.id, ticker)),
   }))
   const allVals = rows.flatMap((r) => r.figs.map((f) => Math.abs(parseScalar(f?.value) ?? 0)))
   const max = Math.max(...allVals, 1e-9)
+  const stepW = compact ? 'w-28' : 'w-40'
+  const valW = compact ? 'w-20' : 'w-28'
   return (
     <div
       ref={ix.rootRef}
-      className="relative grid w-full gap-lg"
+      className={'relative grid w-full ' + (compact ? 'gap-md' : 'gap-lg')}
       onClick={(e) => {
         if (e.target === e.currentTarget) ix.clearIsolate()
       }}
@@ -619,7 +669,7 @@ function CashFlow({ tickers, ix }) {
             {...(interactive
               ? ix.segmentProps(ticker, [nameOf(ticker), `Free cash flow ${fcf.value}`])
               : {})}
-            className={'rounded-card bg-surface-raised p-md ' + (interactive ? '' : 'opacity-70')}
+            className={'rounded-card bg-surface-raised ' + (compact ? 'p-sm' : 'p-md') + (interactive ? '' : ' opacity-70')}
           >
             <div className="mb-sm flex items-center gap-xs">
               <CompanyBadge name={ticker} size={22} />
@@ -634,7 +684,7 @@ function CashFlow({ tickers, ix }) {
                 const isCapex = step.id === 'capex'
                 return (
                   <div key={step.id} className="flex items-center gap-sm">
-                    <span className="w-40 shrink-0 truncate text-caption text-ink-soft">{step.label}</span>
+                    <span className={stepW + ' shrink-0 truncate text-caption text-ink-soft'}>{step.label}</span>
                     {fig && v != null ? (
                       <>
                         <div className="h-5 min-w-6 flex-1 overflow-hidden rounded-pill bg-surface">
@@ -646,7 +696,7 @@ function CashFlow({ tickers, ix }) {
                             }}
                           />
                         </div>
-                        <span className="w-28 shrink-0 text-right text-body text-ink">{fig.value}</span>
+                        <span className={valW + ' shrink-0 text-right text-body text-ink'}>{fig.value}</span>
                         <SourceTag tier={fig.tier} showLabel={false} />
                       </>
                     ) : (
@@ -963,6 +1013,93 @@ function MenuPanel({ tickers, onToggleTicker, metricId, onSelectMetric, query, o
 }
 
 /* ------------------------------------------------------------------ */
+/* MetricPicker — compact dropdown per focal point. Tap the metric name  */
+/* → grouped list (by family, with live coverage counts) → one tap      */
+/* jumps to any metric. Closes on outside click / Escape.               */
+/* ------------------------------------------------------------------ */
+
+function MetricPicker({ tickers, currentId, onPick, onClose }) {
+  const ref = useRef(null)
+  useEffect(() => {
+    const onDoc = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) onClose()
+    }
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose()
+    }
+    document.addEventListener('mousedown', onDoc)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('mousedown', onDoc)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [onClose])
+  const avail = useMemo(() => availableMetrics(tickers), [tickers])
+  return (
+    <div
+      ref={ref}
+      role="listbox"
+      aria-label="Choose a metric"
+      className="absolute right-0 top-full z-40 mt-xs max-h-80 w-72 overflow-y-auto rounded-card border border-line bg-surface p-xs shadow-card"
+    >
+      {FAMILIES.map((f) => {
+        const ms = avail.filter((m) => m.family === f.id)
+        if (ms.length === 0) return null
+        return (
+          <div key={f.id}>
+            <div className="px-sm py-2xs text-eyebrow uppercase text-ink-faint">{f.label}</div>
+            {ms.map((m) => {
+              const c = coverage(m.id, tickers)
+              const active = m.id === currentId
+              return (
+                <button
+                  key={m.id}
+                  type="button"
+                  role="option"
+                  aria-selected={active}
+                  onClick={() => {
+                    onPick(m.id)
+                    onClose()
+                  }}
+                  className={
+                    'flex w-full items-center justify-between gap-sm rounded-control px-sm py-xs text-left text-label transition-colors ' +
+                    (active
+                      ? 'bg-accent/15 font-medium text-ink'
+                      : 'text-ink-soft hover:bg-surface-hover hover:text-ink')
+                  }
+                >
+                  <span className="truncate">{m.label}</span>
+                  <span className="shrink-0 text-caption text-ink-faint">
+                    {c}/{tickers.length}
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+function SunIcon() {
+  return (
+    <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
+      <circle cx="10" cy="10" r="4" />
+      <path d="M10 1.5v2M10 16.5v2M1.5 10h2M16.5 10h2M4 4l1.4 1.4M14.6 14.6L16 16M16 4l-1.4 1.4M5.4 14.6L4 16" />
+    </svg>
+  )
+}
+
+function MoonIcon() {
+  return (
+    <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M16.5 13.5A7.5 7.5 0 0 1 6.5 3.5a7.5 7.5 0 1 0 10 10z" />
+    </svg>
+  )
+}
+
+/* ------------------------------------------------------------------ */
 /* FocalPoint — one independent focal area: its own metric navigator,  */
 /* its own visual, its own info modal and interaction state. Company   */
 /* selection is shared across all focal points.                        */
@@ -971,6 +1108,7 @@ function MenuPanel({ tickers, onToggleTicker, metricId, onSelectMetric, query, o
 function FocalPoint({ tickers, metricId, onMetricId, onToggleTicker, compact }) {
   const ix = useFocalInteraction()
   const [infoOpen, setInfoOpen] = useState(false)
+  const [pickerOpen, setPickerOpen] = useState(false)
   const avail = useMemo(() => availableMetrics(tickers), [tickers])
   const def = avail.find((m) => m.id === metricId) ?? avail[0]
   const figs = useMemo(
@@ -988,26 +1126,34 @@ function FocalPoint({ tickers, metricId, onMetricId, onToggleTicker, compact }) 
   return (
     <section
       aria-label={`Focal point: ${def.label}`}
-      className="flex min-w-0 flex-col rounded-card border border-line/60 bg-surface"
+      className={
+        'flex min-w-0 flex-col rounded-card border border-line/60 bg-surface ' +
+        (compact ? 'h-full min-h-0' : '')
+      }
     >
       {/* per-quadrant navigator */}
       <div className="flex items-center gap-xs border-b border-line/60 px-sm py-xs">
-        <div className="flex min-w-0 flex-1 items-center gap-2xs overflow-x-auto">
-          {tickers.map((t) => (
-            <button
-              key={t}
-              type="button"
-              onClick={() => onToggleTicker(t)}
-              disabled={tickers.length === 1}
-              title={tickers.length === 1 ? 'At least one company is required' : `Remove ${nameOf(t)}`}
-              className="flex shrink-0 items-center gap-2xs rounded-pill border border-line px-2xs py-2xs text-caption text-ink-soft transition-colors hover:border-ink-faint"
-            >
-              <span className="h-2 w-2 rounded-full" style={{ background: colorOf(t) }} />
-              {t}
-            </button>
-          ))}
-        </div>
-        <div className="flex shrink-0 items-center gap-2xs">
+        {/* company chips: hidden in compact (4-up) quadrants — selection lives
+            in the side menu and the top bar; this keeps headers compact and
+            kills the mid-chip clipping seen in narrow quadrants (2026-10-07) */}
+        {!compact && (
+          <div className="flex min-w-0 flex-1 items-center gap-2xs overflow-x-auto">
+            {tickers.map((t) => (
+              <button
+                key={t}
+                type="button"
+                onClick={() => onToggleTicker(t)}
+                disabled={tickers.length === 1}
+                title={tickers.length === 1 ? 'At least one company is required' : `Remove ${nameOf(t)}`}
+                className="flex shrink-0 items-center gap-2xs rounded-pill border border-line px-2xs py-2xs text-caption text-ink-soft transition-colors hover:border-ink-faint"
+              >
+                <span className="h-2 w-2 rounded-full" style={{ background: colorOf(t) }} />
+                {t}
+              </button>
+            ))}
+          </div>
+        )}
+        <div className="ml-auto flex shrink-0 items-center gap-2xs">
           <button
             type="button"
             onClick={() => go(-1)}
@@ -1016,9 +1162,29 @@ function FocalPoint({ tickers, metricId, onMetricId, onToggleTicker, compact }) 
           >
             <span aria-hidden="true">‹</span>
           </button>
-          <span className="max-w-44 truncate text-center text-label font-medium text-ink sm:max-w-xs">
-            {def.label}
-          </span>
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setPickerOpen((o) => !o)}
+              aria-haspopup="listbox"
+              aria-expanded={pickerOpen}
+              title="Choose a metric"
+              className="flex max-w-44 items-center gap-2xs truncate rounded-control px-2xs py-2xs text-center text-label font-medium text-ink transition-colors hover:bg-surface-hover sm:max-w-xs"
+            >
+              <span className="truncate">{def.label}</span>
+              <span aria-hidden="true" className="text-caption text-ink-faint">
+                {pickerOpen ? '▴' : '▾'}
+              </span>
+            </button>
+            {pickerOpen && (
+              <MetricPicker
+                tickers={tickers}
+                currentId={def.id}
+                onPick={onMetricId}
+                onClose={() => setPickerOpen(false)}
+              />
+            )}
+          </div>
           <button
             type="button"
             onClick={() => go(1)}
@@ -1042,11 +1208,11 @@ function FocalPoint({ tickers, metricId, onMetricId, onToggleTicker, compact }) 
       {/* the big visual */}
       <div
         className={
-          'flex flex-1 items-center justify-center overflow-y-auto p-md sm:p-lg ' +
-          (compact ? 'min-h-[38vh]' : 'min-h-[52vh]')
+          'flex flex-1 items-center justify-center p-md sm:p-lg ' +
+          (compact ? 'min-h-0 overflow-y-auto' : 'min-h-[52vh] overflow-y-auto')
         }
       >
-        <div className="w-full max-w-4xl">
+        <div className="focus-fade w-full max-w-4xl">
           <FocusVisual def={def} tickers={tickers} ix={ix} compact={compact} />
         </div>
       </div>
@@ -1069,12 +1235,39 @@ export default function CompareFocus() {
     typeof window !== 'undefined' ? window.innerWidth >= 768 : true,
   )
   const [query, setQuery] = useState('')
+  const [dark, setDark] = useState(
+    () => typeof window !== 'undefined' && effectiveTheme() === 'dark',
+  )
+  const rootRef = useRef(null)
+
+  // In 4-up mode (desktop) the stage takes over the viewport: fixed,
+  // exactly 100dvh, body scroll locked — the four quadrants always fit
+  // with zero page scroll. Mobile keeps normal stacked flow.
+  useEffect(() => {
+    if (layout !== '4') return undefined
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const apply = () => {
+      document.body.style.overflow = mq.matches ? 'hidden' : ''
+    }
+    apply()
+    mq.addEventListener('change', apply)
+    return () => {
+      document.body.style.overflow = ''
+      mq.removeEventListener('change', apply)
+    }
+  }, [layout])
 
   const toggleTicker = (t) => {
     setTickers((prev) => {
       if (prev.includes(t)) return prev.length === 1 ? prev : prev.filter((x) => x !== t)
       return prev.length >= MAX_COMPANIES ? prev : [...prev, t]
     })
+  }
+
+  const toggleTheme = () => {
+    const next = !dark
+    setTheme(next ? 'dark' : 'light')
+    setDark(next)
   }
 
   const setQuadMetric = (i, id) => {
@@ -1091,9 +1284,15 @@ export default function CompareFocus() {
   }
 
   return (
-    <div className="flex min-h-[70vh]">
+    <div
+      ref={rootRef}
+      className={
+        'flex bg-bg ' +
+        (layout === '4' ? 'min-h-[70vh] lg:fixed lg:inset-0 lg:z-50' : 'min-h-[70vh]')
+      }
+    >
       {/* ---- Desktop: collapsible side menu (animated width) ---- */}
-      <div className="hidden shrink-0 md:flex">
+      <div className="hidden h-full shrink-0 md:flex">
         {/* icon rail — always visible */}
         <div className="flex w-12 shrink-0 flex-col items-center gap-sm border-r border-line/60 bg-surface py-sm">
           <button
@@ -1119,7 +1318,7 @@ export default function CompareFocus() {
         </div>
         {/* sliding panel */}
         <div
-          className={`overflow-hidden border-r border-line/60 bg-surface transition-[width] duration-300 ease-in-out ${
+          className={`h-full overflow-hidden border-r border-line/60 bg-surface transition-[width] duration-300 ease-in-out ${
             menuOpen ? 'w-64' : 'w-0 border-r-0'
           }`}
         >
@@ -1160,9 +1359,9 @@ export default function CompareFocus() {
       </div>
 
       {/* ---- Stage ---- */}
-      <main className="flex min-w-0 flex-1 flex-col">
-        {/* slim top bar: menu toggle + layout switcher */}
-        <div className="flex items-center gap-xs border-b border-line/60 px-sm py-xs">
+      <main className="flex min-h-0 min-w-0 flex-1 flex-col">
+        {/* slim top bar: menu toggle + theme + layout switcher */}
+        <div className="flex flex-wrap items-center gap-xs border-b border-line/60 px-sm py-xs">
           <button
             type="button"
             onClick={() => setMenuOpen(true)}
@@ -1175,6 +1374,16 @@ export default function CompareFocus() {
             {tickers.length} compan{tickers.length === 1 ? 'y' : 'ies'} selected
             {layout === '4' ? ' · 4 focal points' : ''}
           </span>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-pressed={dark}
+            title={dark ? 'Light mode' : 'Dark mode'}
+            className="flex shrink-0 items-center justify-center rounded-control border border-line p-2xs text-ink-soft transition-colors hover:border-ink-faint hover:text-ink"
+          >
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </button>
           <div
             role="group"
             aria-label="Focal points"
@@ -1203,8 +1412,16 @@ export default function CompareFocus() {
           </div>
         </div>
 
-        {/* focal area */}
-        <div className="flex-1 overflow-y-auto p-md sm:p-lg">
+        {/* focal area — in 4-up the grid is sized to the viewport so all four
+            quadrants fit with no page scroll (desktop); mobile stacks freely */}
+        <div
+          className={
+            'flex-1 p-md ' +
+            (layout === '4'
+              ? 'min-h-0 overflow-y-auto lg:overflow-hidden'
+              : 'overflow-y-auto sm:p-lg')
+          }
+        >
           {layout === '1' ? (
             <FocalPoint
               tickers={tickers}
@@ -1214,7 +1431,7 @@ export default function CompareFocus() {
               compact={false}
             />
           ) : (
-            <div className="grid gap-md lg:grid-cols-2">
+            <div className="grid h-full min-h-0 gap-md lg:grid-cols-2 lg:grid-rows-2">
               {quadMetrics.map((qm, i) => (
                 <FocalPoint
                   key={i}

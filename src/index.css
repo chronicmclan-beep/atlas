@@ -91,3 +91,12 @@
 @media (prefers-reduced-motion: reduce) {
   .fin-flow { animation: none; }
 }
+
+/* Subtle fade for focal-point metric switches (Lab Focus variant). */
+@keyframes focus-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+.focus-fade {
+  animation: focus-fade 220ms ease;
+}
