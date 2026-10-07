@@ -1,41 +1,1008 @@
 [
-  { "ticker": "NVDA", "name": "NVIDIA", "layer": "chip-design", "secondaryLayer": null, "color": "#76B900", "logo": null, "role": "Designs the dominant AI GPUs; the hub of the whole supply chain.", "aliases": ["Nvidia"] },
-  { "ticker": "AMD", "name": "AMD", "layer": "chip-design", "secondaryLayer": null, "color": "#ED1C24", "logo": null, "role": "Designs GPUs and CPUs; the main GPU alternative.", "aliases": ["Advanced Micro Devices"] },
-  { "ticker": "INTC", "name": "Intel", "layer": "chip-design", "secondaryLayer": "foundry", "color": "#0071C5", "logo": null, "role": "Designs CPUs and runs its own fabs; turnaround underway, now part-owned by the US government.", "aliases": ["Intel Corporation"] },
-  { "ticker": "AVGO", "name": "Broadcom", "layer": "chip-design", "secondaryLayer": null, "color": "#CC2027", "logo": null, "role": "Designs custom AI accelerators and networking silicon; builds Google's TPUs.", "aliases": ["Broadcom Inc"] },
-  { "ticker": "MRVL", "name": "Marvell Technology", "layer": "chip-design", "secondaryLayer": null, "color": "#0091D5", "logo": null, "role": "Custom AI silicon and interconnect; data center is ~75% of revenue.", "aliases": ["Marvell"] },
-  { "ticker": "ARM", "name": "Arm Holdings", "layer": "chip-design", "secondaryLayer": null, "color": "#11B3B0", "logo": null, "role": "Licenses the CPU IP most AI systems are built on; ~97% gross margin.", "aliases": ["Arm", "ARM Holdings plc"] },
-  { "ticker": "TSMC", "name": "TSMC", "layer": "foundry", "secondaryLayer": "packaging", "color": "#378ADD", "logo": null, "role": "Fabricates and packages nearly all leading-edge AI silicon.", "aliases": ["Taiwan Semiconductor"] },
-  { "ticker": "Samsung", "name": "Samsung", "layer": "memory", "secondaryLayer": "foundry", "color": "#534AB7", "logo": null, "role": "HBM memory (tertiary supplier) and a foundry competitor.", "aliases": ["Samsung Electronics"] },
-  { "ticker": "Hynix", "name": "SK Hynix", "layer": "memory", "secondaryLayer": null, "color": "#1D9E75", "logo": null, "role": "NVIDIA's primary HBM supplier; ~62% HBM share.", "aliases": ["SK Hynix"] },
-  { "ticker": "Micron", "name": "Micron", "layer": "memory", "secondaryLayer": null, "color": "#0F6E56", "logo": null, "role": "US-based HBM supplier; share growing off a small base.", "aliases": ["Micron Technology"] },
-  { "ticker": "ASML", "name": "ASML", "layer": "equipment", "secondaryLayer": null, "color": "#7F77DD", "logo": null, "role": "Sole maker of EUV lithography machines; the hardest chokepoint in the chain.", "aliases": [] },
-  { "ticker": "AMAT", "name": "Applied Materials", "layer": "equipment", "secondaryLayer": null, "color": "#534AB7", "logo": null, "role": "Wafer-fabrication and deposition equipment.", "aliases": ["Applied Materials"] },
-  { "ticker": "Dell", "name": "Dell", "layer": "systems", "secondaryLayer": null, "color": "#BA7517", "logo": null, "role": "Integrates chips into finished servers and racks.", "aliases": ["Dell Technologies"] },
-  { "ticker": "SMCI", "name": "Supermicro", "layer": "systems", "secondaryLayer": null, "color": "#854F0B", "logo": null, "role": "Server and rack integration for AI clusters.", "aliases": ["Super Micro Computer"] },
-  { "ticker": "ANET", "name": "Arista", "layer": "systems", "secondaryLayer": null, "color": "#EF9F27", "logo": null, "role": "Networking switches that connect racks; runs on Broadcom silicon.", "aliases": ["Arista Networks"] },
-  { "ticker": "MSFT", "name": "Microsoft", "layer": "compute", "secondaryLayer": null, "color": "#D85A30", "logo": null, "role": "Hyperscaler and OpenAI's original backer; building its own Maia chips.", "aliases": ["Microsoft"] },
-  { "ticker": "AMZN", "name": "Amazon", "layer": "compute", "secondaryLayer": null, "color": "#D85A30", "logo": null, "role": "Hyperscaler and Anthropic's core partner; building Trainium chips.", "aliases": ["Amazon", "AWS"] },
-  { "ticker": "GOOGL", "name": "Google", "layer": "compute", "secondaryLayer": null, "color": "#D85A30", "logo": null, "role": "Hyperscaler and model lab; designs its own TPUs via Broadcom.", "aliases": ["Alphabet", "Google"] },
-  { "ticker": "Oracle", "name": "Oracle", "layer": "compute", "secondaryLayer": null, "color": "#BA7517", "logo": null, "role": "Cloud provider anchoring Stargate.", "aliases": [] },
-  { "ticker": "Meta", "name": "Meta", "layer": "compute", "secondaryLayer": "labs", "color": "#D85A30", "logo": null, "role": "Hyperscaler and open-model leader; multi-gigawatt superclusters.", "aliases": ["Meta Platforms", "Facebook"] },
-  { "ticker": "CRWV", "name": "CoreWeave", "layer": "compute", "secondaryLayer": null, "color": "#D85A30", "logo": null, "role": "Neocloud; NVIDIA holds an equity stake and it buys NVIDIA GPUs.", "aliases": ["CoreWeave"] },
-  { "ticker": "OpenAI", "name": "OpenAI", "layer": "labs", "secondaryLayer": null, "color": "#D4537E", "logo": null, "role": "The largest single buyer of compute.", "aliases": [] },
-  { "ticker": "Anthropic", "name": "Anthropic", "layer": "labs", "secondaryLayer": null, "color": "#D4537E", "logo": null, "role": "Frontier lab with a multi-vendor chip strategy.", "aliases": [] },
-  { "ticker": "xAI", "name": "xAI", "layer": "labs", "secondaryLayer": null, "color": "#D4537E", "logo": null, "role": "Frontier lab; built the Colossus cluster fast.", "aliases": [] },
-  { "ticker": "SoftBank", "name": "SoftBank", "layer": "labs", "secondaryLayer": null, "color": "#888780", "logo": null, "role": "Mega-investor funding OpenAI, Stargate, and power buildout.", "aliases": ["SoftBank Group"] },
-  { "ticker": "HUMAIN", "name": "HUMAIN", "layer": "labs", "secondaryLayer": null, "color": "#0E9AA7", "logo": null, "role": "Saudi Arabia's PIF-backed national AI champion.", "aliases": [] },
-  { "ticker": "G42", "name": "G42", "layer": "labs", "secondaryLayer": null, "color": "#0E9AA7", "logo": null, "role": "UAE's state-linked AI firm.", "aliases": [] },
-  { "ticker": "US", "name": "US Government", "layer": "labs", "secondaryLayer": null, "color": "#0E9AA7", "logo": null, "role": "Sets chip export policy; now an Intel shareholder.", "aliases": ["United States Government", "BIS", "US Commerce"] },
-  { "ticker": "Shin-Etsu", "name": "Shin-Etsu", "layer": "materials", "secondaryLayer": null, "color": "#C19A6B", "logo": null, "role": "World's largest silicon-wafer maker; also photoresists and photomask blanks.", "aliases": ["Shin-Etsu Chemical Co., Ltd.", "Shin-Etsu Handotai"] },
-  { "ticker": "SUMCO", "name": "SUMCO", "layer": "materials", "secondaryLayer": null, "color": "#455A64", "logo": null, "role": "Pure-play silicon-wafer maker; polished and epitaxial 300mm wafers.", "aliases": ["SUMCO Corporation"] },
-  { "ticker": "LIN", "name": "Linde", "layer": "materials", "secondaryLayer": null, "color": "#283593", "logo": null, "role": "World's largest industrial-gases company; ultra-high-purity gases piped on-site into fabs.", "aliases": ["Linde plc"] },
-  { "ticker": "LRCX", "name": "Lam Research", "layer": "equipment", "secondaryLayer": null, "color": "#6A1B9A", "logo": null, "role": "Etch and deposition equipment; the memory makers' indispensable tool vendor.", "aliases": ["Lam Research Corporation"] },
-  { "ticker": "KLAC", "name": "KLA", "layer": "equipment", "secondaryLayer": null, "color": "#AD1457", "logo": null, "role": "Process-control and yield-management leader; inspection and metrology for every leading fab.", "aliases": ["KLA Corporation", "KLA-Tencor"] },
-  { "ticker": "TEL", "name": "Tokyo Electron", "layer": "equipment", "secondaryLayer": null, "color": "#1B5E20", "logo": null, "role": "Coater/developer leader, plus etch and deposition; a top-three tool vendor.", "aliases": ["Tokyo Electron Limited", "Tokyo Electron"] },
-  { "ticker": "ASX", "name": "ASE Technology", "layer": "packaging", "secondaryLayer": null, "color": "#795548", "logo": null, "role": "World's largest OSAT; advanced packaging and test for fabless chipmakers.", "aliases": ["ASE Technology Holding Co., Ltd.", "ASE Technology"] },
-  { "ticker": "AMKR", "name": "Amkor", "layer": "packaging", "secondaryLayer": null, "color": "#263238", "logo": null, "role": "Largest US-headquartered OSAT; ~$12B advanced-packaging campus rising in Peoria, Arizona.", "aliases": ["Amkor Technology, Inc."] },
-  { "ticker": "VRT", "name": "Vertiv", "layer": "systems", "secondaryLayer": null, "color": "#EF6C00", "logo": null, "role": "Data-center power and cooling infrastructure; partnered with NVIDIA on AI-factory designs.", "aliases": ["Vertiv Holdings Co"] },
-  { "ticker": "ETN", "name": "Eaton", "layer": "systems", "secondaryLayer": null, "color": "#4E342E", "logo": null, "role": "Intelligent power management; UPS and electrical distribution for data centers.", "aliases": ["Eaton Corporation plc"] },
-  { "ticker": "NBIS", "name": "Nebius", "layer": "compute", "secondaryLayer": null, "color": "#2E7D32", "logo": null, "role": "Neocloud GPU provider spun out of Yandex; $17.4B Microsoft capacity deal.", "aliases": ["Nebius Group N.V.", "Nebius Group"] }
+ {
+  "ticker": "NVDA",
+  "name": "NVIDIA",
+  "layer": "chip-design",
+  "secondaryLayer": null,
+  "color": "#76B900",
+  "logo": null,
+  "role": "Designs the dominant AI GPUs; the hub of the whole supply chain.",
+  "aliases": [
+   "Nvidia"
+  ]
+ },
+ {
+  "ticker": "AMD",
+  "name": "AMD",
+  "layer": "chip-design",
+  "secondaryLayer": null,
+  "color": "#ED1C24",
+  "logo": null,
+  "role": "Designs GPUs and CPUs; the main GPU alternative.",
+  "aliases": [
+   "Advanced Micro Devices"
+  ]
+ },
+ {
+  "ticker": "INTC",
+  "name": "Intel",
+  "layer": "chip-design",
+  "secondaryLayer": "foundry",
+  "color": "#0071C5",
+  "logo": null,
+  "role": "Designs CPUs and runs its own fabs; turnaround underway, now part-owned by the US government.",
+  "aliases": [
+   "Intel Corporation"
+  ]
+ },
+ {
+  "ticker": "AVGO",
+  "name": "Broadcom",
+  "layer": "chip-design",
+  "secondaryLayer": null,
+  "color": "#CC2027",
+  "logo": null,
+  "role": "Designs custom AI accelerators and networking silicon; builds Google's TPUs.",
+  "aliases": [
+   "Broadcom Inc"
+  ]
+ },
+ {
+  "ticker": "MRVL",
+  "name": "Marvell Technology",
+  "layer": "chip-design",
+  "secondaryLayer": null,
+  "color": "#0091D5",
+  "logo": null,
+  "role": "Custom AI silicon and interconnect; data center is ~75% of revenue.",
+  "aliases": [
+   "Marvell"
+  ]
+ },
+ {
+  "ticker": "ARM",
+  "name": "Arm Holdings",
+  "layer": "chip-design",
+  "secondaryLayer": null,
+  "color": "#11B3B0",
+  "logo": null,
+  "role": "Licenses the CPU IP most AI systems are built on; ~97% gross margin.",
+  "aliases": [
+   "Arm",
+   "ARM Holdings plc"
+  ]
+ },
+ {
+  "ticker": "TSMC",
+  "name": "TSMC",
+  "layer": "foundry",
+  "secondaryLayer": "packaging",
+  "color": "#378ADD",
+  "logo": null,
+  "role": "Fabricates and packages nearly all leading-edge AI silicon.",
+  "aliases": [
+   "Taiwan Semiconductor"
+  ]
+ },
+ {
+  "ticker": "Samsung",
+  "name": "Samsung",
+  "layer": "memory",
+  "secondaryLayer": "foundry",
+  "color": "#534AB7",
+  "logo": null,
+  "role": "HBM memory (tertiary supplier) and a foundry competitor.",
+  "aliases": [
+   "Samsung Electronics"
+  ]
+ },
+ {
+  "ticker": "Hynix",
+  "name": "SK Hynix",
+  "layer": "memory",
+  "secondaryLayer": null,
+  "color": "#1D9E75",
+  "logo": null,
+  "role": "NVIDIA's primary HBM supplier; ~62% HBM share.",
+  "aliases": [
+   "SK Hynix"
+  ]
+ },
+ {
+  "ticker": "MU",
+  "name": "Micron",
+  "layer": "memory",
+  "secondaryLayer": null,
+  "color": "#0F6E56",
+  "logo": null,
+  "role": "US-based HBM supplier; share growing off a small base.",
+  "aliases": [
+   "Micron Technology",
+   "MU"
+  ]
+ },
+ {
+  "ticker": "ASML",
+  "name": "ASML",
+  "layer": "equipment",
+  "secondaryLayer": null,
+  "color": "#7F77DD",
+  "logo": null,
+  "role": "Sole maker of EUV lithography machines; the hardest chokepoint in the chain.",
+  "aliases": []
+ },
+ {
+  "ticker": "AMAT",
+  "name": "Applied Materials",
+  "layer": "equipment",
+  "secondaryLayer": null,
+  "color": "#534AB7",
+  "logo": null,
+  "role": "Wafer-fabrication and deposition equipment.",
+  "aliases": [
+   "Applied Materials"
+  ]
+ },
+ {
+  "ticker": "Dell",
+  "name": "Dell",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#BA7517",
+  "logo": null,
+  "role": "Integrates chips into finished servers and racks.",
+  "aliases": [
+   "Dell Technologies"
+  ]
+ },
+ {
+  "ticker": "SMCI",
+  "name": "Supermicro",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#854F0B",
+  "logo": null,
+  "role": "Server and rack integration for AI clusters.",
+  "aliases": [
+   "Super Micro Computer"
+  ]
+ },
+ {
+  "ticker": "ANET",
+  "name": "Arista",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#EF9F27",
+  "logo": null,
+  "role": "Networking switches that connect racks; runs on Broadcom silicon.",
+  "aliases": [
+   "Arista Networks"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "name": "Microsoft",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#D85A30",
+  "logo": null,
+  "role": "Hyperscaler and OpenAI's original backer; building its own Maia chips.",
+  "aliases": [
+   "Microsoft"
+  ]
+ },
+ {
+  "ticker": "AMZN",
+  "name": "Amazon",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#D85A30",
+  "logo": null,
+  "role": "Hyperscaler and Anthropic's core partner; building Trainium chips.",
+  "aliases": [
+   "Amazon",
+   "AWS"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "name": "Google",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#D85A30",
+  "logo": null,
+  "role": "Hyperscaler and model lab; designs its own TPUs via Broadcom.",
+  "aliases": [
+   "Alphabet",
+   "Google"
+  ]
+ },
+ {
+  "ticker": "Oracle",
+  "name": "Oracle",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#BA7517",
+  "logo": null,
+  "role": "Cloud provider anchoring Stargate.",
+  "aliases": []
+ },
+ {
+  "ticker": "Meta",
+  "name": "Meta",
+  "layer": "compute",
+  "secondaryLayer": "labs",
+  "color": "#D85A30",
+  "logo": null,
+  "role": "Hyperscaler and open-model leader; multi-gigawatt superclusters.",
+  "aliases": [
+   "Meta Platforms",
+   "Facebook"
+  ]
+ },
+ {
+  "ticker": "CRWV",
+  "name": "CoreWeave",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#D85A30",
+  "logo": null,
+  "role": "Neocloud; NVIDIA holds an equity stake and it buys NVIDIA GPUs.",
+  "aliases": [
+   "CoreWeave"
+  ]
+ },
+ {
+  "ticker": "OpenAI",
+  "name": "OpenAI",
+  "layer": "labs",
+  "secondaryLayer": null,
+  "color": "#D4537E",
+  "logo": null,
+  "role": "The largest single buyer of compute.",
+  "aliases": []
+ },
+ {
+  "ticker": "Anthropic",
+  "name": "Anthropic",
+  "layer": "labs",
+  "secondaryLayer": null,
+  "color": "#D4537E",
+  "logo": null,
+  "role": "Frontier lab with a multi-vendor chip strategy.",
+  "aliases": []
+ },
+ {
+  "ticker": "xAI",
+  "name": "xAI",
+  "layer": "labs",
+  "secondaryLayer": null,
+  "color": "#D4537E",
+  "logo": null,
+  "role": "Frontier lab; built the Colossus cluster fast.",
+  "aliases": []
+ },
+ {
+  "ticker": "SoftBank",
+  "name": "SoftBank",
+  "layer": "labs",
+  "secondaryLayer": null,
+  "color": "#888780",
+  "logo": null,
+  "role": "Mega-investor funding OpenAI, Stargate, and power buildout.",
+  "aliases": [
+   "SoftBank Group"
+  ]
+ },
+ {
+  "ticker": "HUMAIN",
+  "name": "HUMAIN",
+  "layer": "labs",
+  "secondaryLayer": null,
+  "color": "#0E9AA7",
+  "logo": null,
+  "role": "Saudi Arabia's PIF-backed national AI champion.",
+  "aliases": []
+ },
+ {
+  "ticker": "G42",
+  "name": "G42",
+  "layer": "labs",
+  "secondaryLayer": null,
+  "color": "#0E9AA7",
+  "logo": null,
+  "role": "UAE's state-linked AI firm.",
+  "aliases": []
+ },
+ {
+  "ticker": "US",
+  "name": "US Government",
+  "layer": "labs",
+  "secondaryLayer": null,
+  "color": "#0E9AA7",
+  "logo": null,
+  "role": "Sets chip export policy; now an Intel shareholder.",
+  "aliases": [
+   "United States Government",
+   "BIS",
+   "US Commerce"
+  ]
+ },
+ {
+  "ticker": "Shin-Etsu",
+  "name": "Shin-Etsu",
+  "layer": "materials",
+  "secondaryLayer": null,
+  "color": "#C19A6B",
+  "logo": null,
+  "role": "World's largest silicon-wafer maker; also photoresists and photomask blanks.",
+  "aliases": [
+   "Shin-Etsu Chemical Co., Ltd.",
+   "Shin-Etsu Handotai"
+  ]
+ },
+ {
+  "ticker": "SUMCO",
+  "name": "SUMCO",
+  "layer": "materials",
+  "secondaryLayer": null,
+  "color": "#455A64",
+  "logo": null,
+  "role": "Pure-play silicon-wafer maker; polished and epitaxial 300mm wafers.",
+  "aliases": [
+   "SUMCO Corporation"
+  ]
+ },
+ {
+  "ticker": "LIN",
+  "name": "Linde",
+  "layer": "materials",
+  "secondaryLayer": null,
+  "color": "#283593",
+  "logo": null,
+  "role": "World's largest industrial-gases company; ultra-high-purity gases piped on-site into fabs.",
+  "aliases": [
+   "Linde plc"
+  ]
+ },
+ {
+  "ticker": "LRCX",
+  "name": "Lam Research",
+  "layer": "equipment",
+  "secondaryLayer": null,
+  "color": "#6A1B9A",
+  "logo": null,
+  "role": "Etch and deposition equipment; the memory makers' indispensable tool vendor.",
+  "aliases": [
+   "Lam Research Corporation"
+  ]
+ },
+ {
+  "ticker": "KLAC",
+  "name": "KLA",
+  "layer": "equipment",
+  "secondaryLayer": null,
+  "color": "#AD1457",
+  "logo": null,
+  "role": "Process-control and yield-management leader; inspection and metrology for every leading fab.",
+  "aliases": [
+   "KLA Corporation",
+   "KLA-Tencor"
+  ]
+ },
+ {
+  "ticker": "TEL",
+  "name": "Tokyo Electron",
+  "layer": "equipment",
+  "secondaryLayer": null,
+  "color": "#1B5E20",
+  "logo": null,
+  "role": "Coater/developer leader, plus etch and deposition; a top-three tool vendor.",
+  "aliases": [
+   "Tokyo Electron Limited",
+   "Tokyo Electron"
+  ]
+ },
+ {
+  "ticker": "ASX",
+  "name": "ASE Technology",
+  "layer": "packaging",
+  "secondaryLayer": null,
+  "color": "#795548",
+  "logo": null,
+  "role": "World's largest OSAT; advanced packaging and test for fabless chipmakers.",
+  "aliases": [
+   "ASE Technology Holding Co., Ltd.",
+   "ASE Technology"
+  ]
+ },
+ {
+  "ticker": "AMKR",
+  "name": "Amkor",
+  "layer": "packaging",
+  "secondaryLayer": null,
+  "color": "#263238",
+  "logo": null,
+  "role": "Largest US-headquartered OSAT; ~$12B advanced-packaging campus rising in Peoria, Arizona.",
+  "aliases": [
+   "Amkor Technology, Inc."
+  ]
+ },
+ {
+  "ticker": "VRT",
+  "name": "Vertiv",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#EF6C00",
+  "logo": null,
+  "role": "Data-center power and cooling infrastructure; partnered with NVIDIA on AI-factory designs.",
+  "aliases": [
+   "Vertiv Holdings Co"
+  ]
+ },
+ {
+  "ticker": "ETN",
+  "name": "Eaton",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#4E342E",
+  "logo": null,
+  "role": "Intelligent power management; UPS and electrical distribution for data centers.",
+  "aliases": [
+   "Eaton Corporation plc"
+  ]
+ },
+ {
+  "ticker": "NBIS",
+  "name": "Nebius",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#2E7D32",
+  "logo": null,
+  "role": "Neocloud GPU provider spun out of Yandex; $17.4B Microsoft capacity deal.",
+  "aliases": [
+   "Nebius Group N.V.",
+   "Nebius Group"
+  ]
+ },
+ {
+  "ticker": "VST",
+  "name": "Vistra Corp.",
+  "layer": "energy",
+  "secondaryLayer": null,
+  "color": "#EF6C00",
+  "logo": null,
+  "role": "Independent power producer supplying electricity to homes and businesses across the US; its nuclear and gas fleet feeds the AI data-center power rush.",
+  "aliases": [
+   "Vistra"
+  ]
+ },
+ {
+  "ticker": "TLN",
+  "name": "Talen Energy Corp",
+  "layer": "energy",
+  "secondaryLayer": null,
+  "color": "#EF9F27",
+  "logo": null,
+  "role": "Independent power producer in PJM markets; its Susquehanna nuclear plant powers a large data-center campus next door.",
+  "aliases": [
+   "Talen Energy"
+  ]
+ },
+ {
+  "ticker": "NRG",
+  "name": "NRG Energy, Inc.",
+  "layer": "energy",
+  "secondaryLayer": null,
+  "color": "#CC2027",
+  "logo": null,
+  "role": "Retail electricity provider and power plant operator; building new gas-fired generation aimed at data-center load growth.",
+  "aliases": [
+   "NRG Energy"
+  ]
+ },
+ {
+  "ticker": "GEV",
+  "name": "GE Vernova Inc.",
+  "layer": "energy",
+  "secondaryLayer": null,
+  "color": "#0091D5",
+  "logo": null,
+  "role": "Designs and builds gas turbines, wind turbines, and grid equipment; its turbines are the hardware inside new AI-era power plants.",
+  "aliases": [
+   "GE Vernova"
+  ]
+ },
+ {
+  "ticker": "BE",
+  "name": "Bloom Energy Corp",
+  "layer": "energy",
+  "secondaryLayer": null,
+  "color": "#1D9E75",
+  "logo": null,
+  "role": "Manufactures solid-oxide fuel-cell ‘Energy Servers’ that generate power on-site; data centers use them to get power without waiting on grid upgrades.",
+  "aliases": [
+   "Bloom Energy"
+  ]
+ },
+ {
+  "ticker": "PWR",
+  "name": "Quanta Services, Inc.",
+  "layer": "energy",
+  "secondaryLayer": null,
+  "color": "#795548",
+  "logo": null,
+  "role": "Builds and maintains electric grid, power generation, and communications infrastructure; a core contractor for AI data-center power hookups.",
+  "aliases": [
+   "Quanta Services"
+  ]
+ },
+ {
+  "ticker": "FIX",
+  "name": "Comfort Systems USA, Inc.",
+  "layer": "energy",
+  "secondaryLayer": null,
+  "color": "#455A64",
+  "logo": null,
+  "role": "Installs and services HVAC, electrical, and plumbing systems in commercial buildings; a direct beneficiary of the data-center construction boom.",
+  "aliases": [
+   "Comfort Systems USA"
+  ]
+ },
+ {
+  "ticker": "QCOM",
+  "name": "QUALCOMM Incorporated",
+  "layer": "chip-design",
+  "secondaryLayer": null,
+  "color": "#76B900",
+  "logo": null,
+  "role": "Designs Snapdragon mobile chips, 5G modems and wireless IP; its platforms run on-device AI in phones, PCs and cars.",
+  "aliases": [
+   "Qualcomm",
+   "QUALCOMM"
+  ]
+ },
+ {
+  "ticker": "TER",
+  "name": "Teradyne, Inc.",
+  "layer": "equipment",
+  "secondaryLayer": null,
+  "color": "#0071C5",
+  "logo": null,
+  "role": "Builds automated test equipment that validates chips and electronics — including AI accelerators — before they ship.",
+  "aliases": [
+   "Teradyne"
+  ]
+ },
+ {
+  "ticker": "AMCR",
+  "name": "Amcor plc",
+  "layer": "equipment",
+  "secondaryLayer": null,
+  "color": "#795548",
+  "logo": null,
+  "role": "Makes flexible and rigid consumer packaging for food, beverage, healthcare and personal-care brands.",
+  "aliases": [
+   "Amcor"
+  ]
+ },
+ {
+  "aliases": [
+   "Sandisk"
+  ],
+  "color": "#1D9E75",
+  "layer": "memory",
+  "logo": null,
+  "name": "Sandisk Corporation",
+  "role": "Makes NAND flash memory and solid-state storage for phones, PCs, and data centers; spun out of Western Digital in February 2025.",
+  "secondaryLayer": null,
+  "ticker": "SNDK"
+ },
+ {
+  "aliases": [
+   "Seagate"
+  ],
+  "color": "#1B5E20",
+  "layer": "memory",
+  "logo": null,
+  "name": "Seagate Technology Holdings plc",
+  "role": "Builds hard-disk drives, including high-capacity nearline drives used by cloud data centers to store AI-era data.",
+  "secondaryLayer": null,
+  "ticker": "STX"
+ },
+ {
+  "aliases": [
+   "Western Digital",
+   "WD"
+  ],
+  "color": "#11B3B0",
+  "layer": "memory",
+  "logo": null,
+  "name": "Western Digital Corporation",
+  "role": "Builds hard-disk drives and storage platforms for cloud, client, and consumer markets; its former flash business is now Sandisk.",
+  "secondaryLayer": null,
+  "ticker": "WDC"
+ },
+ {
+  "ticker": "IREN",
+  "name": "IREN Limited",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#0071C5",
+  "logo": null,
+  "role": "Bitcoin miner converting its low-cost power footprint into AI cloud data centers, with ~$16.6B of contracted revenue and lease value across AI cloud and bitcoin mining customers.",
+  "aliases": [
+   "Iris Energy",
+   "IREN Limited"
+  ]
+ },
+ {
+  "ticker": "WULF",
+  "name": "TeraWulf Inc.",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#455A64",
+  "logo": null,
+  "role": "Bitcoin miner pivoting to AI data centers, leasing large-scale HPC capacity to tenants under long-term contracts from its New York campuses.",
+  "aliases": [
+   "TeraWulf",
+   "TeraWulf Inc."
+  ]
+ },
+ {
+  "ticker": "HUT",
+  "name": "Hut 8 Corp.",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#263238",
+  "logo": null,
+  "role": "Bitcoin miner turned energy-infrastructure platform, developing AI data center campuses (River Bend and Beacon Point) backed by multi-billion-dollar project financing.",
+  "aliases": [
+   "Hut 8",
+   "Hut 8 Corp.",
+   "Hut 8 Mining"
+  ]
+ },
+ {
+  "ticker": "GLXY",
+  "name": "Galaxy Digital Inc.",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#534AB7",
+  "logo": null,
+  "role": "Digital-asset financial services firm (trading, lending, asset management) expanding into AI data centers, leasing data hall capacity from its Helios campus in Texas.",
+  "aliases": [
+   "Galaxy Digital",
+   "Galaxy Digital Inc."
+  ]
+ },
+ {
+  "ticker": "APLD",
+  "name": "Applied Digital Corporation",
+  "layer": "compute",
+  "secondaryLayer": null,
+  "color": "#0091D5",
+  "logo": null,
+  "role": "Designer, builder and operator of large-scale AI data center campuses in North Dakota, with long-term hyperscale leases including a $7.5B 15-year deal.",
+  "aliases": [
+   "Applied Digital",
+   "Applied Digital Corporation"
+  ]
+ },
+ {
+  "ticker": "CRDO",
+  "name": "Credo Technology Group Holding Ltd",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#D85A30",
+  "logo": null,
+  "role": "Designs high-speed connectivity chips and active electrical cables that move data between GPUs and switches inside AI clusters.",
+  "aliases": [
+   "Credo",
+   "Credo Technology"
+  ]
+ },
+ {
+  "ticker": "ALAB",
+  "name": "Astera Labs, Inc.",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#C19A6B",
+  "logo": null,
+  "role": "Makes PCIe/CXL retimers and memory-connectivity chips that keep processors, accelerators, and memory in sync in AI servers.",
+  "aliases": [
+   "Astera",
+   "Astera Labs"
+  ]
+ },
+ {
+  "ticker": "CSCO",
+  "name": "Cisco Systems, Inc.",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#0091D5",
+  "logo": null,
+  "role": "The incumbent enterprise-networking giant; its switches, routers, and security gear now ride AI data-center buildouts.",
+  "aliases": [
+   "Cisco"
+  ]
+ },
+ {
+  "ticker": "HPE",
+  "name": "Hewlett Packard Enterprise Co",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#0071C5",
+  "logo": null,
+  "role": "Provides servers, storage, and networking (now including Juniper) for enterprise and AI data centers.",
+  "aliases": [
+   "Hewlett Packard Enterprise"
+  ]
+ },
+ {
+  "ticker": "CIEN",
+  "name": "Ciena Corporation",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#AD1457",
+  "logo": null,
+  "role": "Builds optical networking systems that carry massive data flows between and within AI data centers.",
+  "aliases": [
+   "Ciena"
+  ]
+ },
+ {
+  "ticker": "COHR",
+  "name": "Coherent Corp.",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#D4537E",
+  "logo": null,
+  "role": "Makes lasers, optical components and transceivers for AI datacenters and industrial systems.",
+  "aliases": [
+   "Coherent",
+   "II-VI"
+  ]
+ },
+ {
+  "ticker": "LITE",
+  "name": "Lumentum Holdings Inc.",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#BA7517",
+  "logo": null,
+  "role": "Makes lasers, optical components and transceivers for AI datacenter connectivity and telecom networks.",
+  "aliases": [
+   "Lumentum"
+  ]
+ },
+ {
+  "ticker": "FN",
+  "name": "Fabrinet",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#854F0B",
+  "logo": null,
+  "role": "Contract manufacturer that builds optical transceivers and precision components for datacenter and telecom OEMs.",
+  "aliases": [
+   "Fabrinet"
+  ]
+ },
+ {
+  "ticker": "AAOI",
+  "name": "Applied Optoelectronics, Inc.",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#0E9AA7",
+  "logo": null,
+  "role": "Designs and manufactures optical transceivers for AI datacenters and cable broadband networks.",
+  "aliases": [
+   "Applied Optoelectronics",
+   "AOI"
+  ]
+ },
+ {
+  "ticker": "POET",
+  "name": "POET Technologies Inc.",
+  "layer": "systems",
+  "secondaryLayer": null,
+  "color": "#888780",
+  "logo": null,
+  "role": "Develops photonic integrated circuits and optical engines for AI datacenter interconnects; still pre-revenue.",
+  "aliases": [
+   "POET Technologies"
+  ]
+ },
+ {
+  "ticker": "PLTR",
+  "name": "Palantir Technologies Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#263238",
+  "logo": null,
+  "role": "Data analytics and AI software for government and enterprise; its Artificial Intelligence Platform (AIP) turns operational data into decisions.",
+  "aliases": [
+   "Palantir"
+  ]
+ },
+ {
+  "ticker": "NOW",
+  "name": "ServiceNow, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#534AB7",
+  "logo": null,
+  "role": "Cloud workflow-automation platform for enterprise IT and operations, layering AI agents across service workflows.",
+  "aliases": [
+   "ServiceNow"
+  ]
+ },
+ {
+  "ticker": "CRM",
+  "name": "Salesforce, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#0091D5",
+  "logo": null,
+  "role": "Cloud CRM and customer-data platform; Agentforce brings AI agents to sales, service, and marketing workflows.",
+  "aliases": [
+   "Salesforce"
+  ]
+ },
+ {
+  "ticker": "SNOW",
+  "name": "Snowflake Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#7F77DD",
+  "logo": null,
+  "role": "Cloud data warehouse sold on consumption pricing; AI and LLM data products run directly on customer data in its platform.",
+  "aliases": [
+   "Snowflake"
+  ]
+ },
+ {
+  "ticker": "MDB",
+  "name": "MongoDB, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#1B5E20",
+  "logo": null,
+  "role": "Document database for developers; Atlas, its managed cloud database, underpins data layers for many AI applications.",
+  "aliases": [
+   "MongoDB"
+  ]
+ },
+ {
+  "ticker": "DDOG",
+  "name": "Datadog, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#6A1B9A",
+  "logo": null,
+  "role": "Cloud monitoring and observability platform; watches the infrastructure that AI workloads run on.",
+  "aliases": [
+   "Datadog"
+  ]
+ },
+ {
+  "ticker": "APP",
+  "name": "AppLovin Corporation",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#AD1457",
+  "logo": null,
+  "role": "AI-driven mobile advertising platform; its machine-learning ad engine places ads across app inventory at scale.",
+  "aliases": [
+   "AppLovin"
+  ]
+ },
+ {
+  "ticker": "TEAM",
+  "name": "Atlassian Corporation",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#0071C5",
+  "logo": null,
+  "role": "Team collaboration software (Jira, Confluence); AI assistants such as Rovo work across its Teamwork Graph.",
+  "aliases": [
+   "Atlassian"
+  ]
+ },
+ {
+  "ticker": "TWLO",
+  "name": "Twilio Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#CC2027",
+  "logo": null,
+  "role": "Cloud communications platform (voice, messaging, and email APIs) that enterprises use to build AI-driven customer engagement.",
+  "aliases": [
+   "Twilio"
+  ]
+ },
+ {
+  "ticker": "CRWD",
+  "name": "CrowdStrike Holdings, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#ED1C24",
+  "logo": null,
+  "role": "AI-native cybersecurity platform (Falcon) protecting endpoints, cloud workloads, and identity through SaaS subscriptions.",
+  "aliases": [
+   "CrowdStrike"
+  ]
+ },
+ {
+  "ticker": "PANW",
+  "name": "Palo Alto Networks, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#283593",
+  "logo": null,
+  "role": "Cybersecurity platform company consolidating enterprise network, cloud, and AI security on its Strata, Prisma, and Cortex platforms.",
+  "aliases": [
+   "Palo Alto Networks"
+  ]
+ },
+ {
+  "ticker": "ZS",
+  "name": "Zscaler, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#378ADD",
+  "logo": null,
+  "role": "Cloud-native zero-trust security platform securing users, workloads, and AI applications without traditional firewalls.",
+  "aliases": [
+   "Zscaler"
+  ]
+ },
+ {
+  "ticker": "NET",
+  "name": "Cloudflare, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#D4537E",
+  "logo": null,
+  "role": "Global connectivity cloud (edge network, CDN, and zero-trust security) increasingly used to run AI inference at the edge.",
+  "aliases": [
+   "Cloudflare"
+  ]
+ },
+ {
+  "ticker": "S",
+  "name": "SentinelOne, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#455A64",
+  "logo": null,
+  "role": "AI-powered endpoint and cloud security platform (Singularity) competing on autonomous threat detection and response.",
+  "aliases": [
+   "SentinelOne"
+  ]
+ },
+ {
+  "ticker": "FTNT",
+  "name": "Fortinet, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#2E7D32",
+  "logo": null,
+  "role": "Network-security appliance and software vendor converging networking and security for enterprises and AI data centers.",
+  "aliases": [
+   "Fortinet"
+  ]
+ },
+ {
+  "ticker": "OKTA",
+  "name": "Okta, Inc.",
+  "layer": "software",
+  "secondaryLayer": null,
+  "color": "#0E9AA7",
+  "logo": null,
+  "role": "Identity and access management platform for workforce and customer identity, securing logins and access in the AI era.",
+  "aliases": [
+   "Okta"
+  ]
+ }
 ]

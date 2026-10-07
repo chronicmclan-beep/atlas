@@ -8,6 +8,55 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v13 — "The 51-Company Expansion" — 2026-10-07
+
+Added 51 companies' full verified financials to `kpis.json` (63 records
+total) and 44 new company records to `companies.json` (83 total), covering
+semi equipment (TER, AMCR), memory & storage (MU, SNDK, STX, WDC),
+networking & optical (CRDO, ALAB, CSCO, HPE, COHR, LITE, FN, AAOI, POET,
+CIEN), compute & miners (IREN, WULF, HUT, GLXY, APLD), energy (VST, TLN,
+NRG, GEV, BE, PWR, FIX), and software (PLTR, NOW, CRM, SNOW, MDB, DDOG,
+APP, TEAM, TWLO, CRWD, PANW, ZS, NET, S, FTNT, OKTA) — plus KPI records
+for the already-listed AMAT, LRCX, KLAC, ASML, ANET, NBIS. Every figure
+sourced from the latest filed 10-K (US) or 20-F (ASML, NBIS) on SEC EDGAR
+as of Oct 2026, with market data (price, market cap, beta, 52-week range)
+as of the Oct 6, 2026 close from named public quote sources. Computed
+figures (margins, growth, ratios, multiples) carry tier "estimated" with
+the math shown; unverifiable figures are null with tier "unsourced" —
+nothing invented.
+
+Added: two new layers to `layers.json` — 10 Energy & Power, 11 Software &
+Cloud Apps — and new names filed under the existing equipment, chip-design,
+memory, systems, and compute layers. The comparison registry
+(`compareMetrics.js`) now tries `kpis.json` first for all 16
+market/valuation/growth/returns/balance metrics (falling back to the
+NVDA/AMD-only `comparison.json` entries), and the backlog metric resolves
+"Remaining performance obligations" for 27 newly covered tickers. Both
+company pickers (Section 08 and the Lab's rail+canvas variant) now offer 7
+groups / 63 tickers with coverage counts driven live by the data.
+
+Corrected: the existing `companies.json` "Micron" record is now ticker
+"MU" (name kept; the 3 `supply-edges.json` references updated to match).
+Verification-pass fixes applied before integration: POET's Oct 6 close
+($7.71, not $7.81) with cascading market-cap/P/S/growth/margin corrections;
+WULF/APLD/FN rounding; GLXY net debt standardized to the total-debt-minus-
+cash definition ($1.8B); 52-week range wording normalized to five bands.
+
+Gaps (honest): POET (OTC, no SEC filing) sourced from Canadian filings —
+thin coverage, several nulls. P/E null where GAAP EPS ≤ 0. R&D null where
+not broken out (most miners/energy). 5Y CAGR null for recent listings and
+spin-offs (GEV, ALAB, APP with basis caveat). AMCR is consumer packaging,
+filed under the equipment layer — flagged for the owner's call.
+
+Verification: eight parallel sourcing passes (one per group) with full
+`_audit` raw inputs, then a fresh-agent Two-Person verification pass —
+29 PASS, 21 PARTIAL (mechanical audit-field fixes, all applied), 1 FAIL
+(POET, corrected before integration). Triple-Check Protocol per company;
+banned-vocabulary scan clean; `npm run validate` green with zero Data
+Health warnings; lint clean; production build green.
+
+---
+
 ## Update v12 — "Company Comparison builder" — 2026-10-06
 
 Section 08 rebuilt from a static NVDA-vs-AMD page into an interactive

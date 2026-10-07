@@ -51,7 +51,7 @@
       "tier": "estimated"
     },
     {
-      "from": "Micron",
+      "from": "MU",
       "to": "NVDA",
       "type": "memory",
       "product": "HBM3E; secondary (H200/B200 wins)",
@@ -289,7 +289,7 @@
     },
     {
       "from": "LRCX",
-      "to": "Micron",
+      "to": "MU",
       "type": "equipment",
       "product": "Etch and deposition equipment",
       "magnitude": null,
@@ -345,7 +345,7 @@
     },
     {
       "from": "TEL",
-      "to": "Micron",
+      "to": "MU",
       "type": "equipment",
       "product": "Etch and deposition systems",
       "magnitude": null,

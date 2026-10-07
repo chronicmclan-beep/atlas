@@ -66,7 +66,7 @@ export const METRICS = [
   },
   {
     id: 'market-cap', label: 'Market capitalization', family: 'size', visual: 'bar', higherIsBetter: true,
-    sources: [{ kind: 'comparison', label: 'Market capitalization' }],
+    sources: [{ kind: 'kpis', label: 'Market capitalization' }, { kind: 'comparison', label: 'Market capitalization' }],
     explain: {
       what: 'Share price times shares outstanding — what the market says the whole company is worth.',
       why: 'The scoreboard of expectations: it prices future growth, not just current profit.',
@@ -75,7 +75,7 @@ export const METRICS = [
   },
   {
     id: 'ev', label: 'Enterprise value', family: 'size', visual: 'bar', higherIsBetter: true,
-    sources: [{ kind: 'comparison', label: 'Enterprise value' }],
+    sources: [{ kind: 'kpis', label: 'Enterprise value' }, { kind: 'comparison', label: 'Enterprise value' }],
     explain: {
       what: "Market cap plus debt minus cash — the price of buying the whole business, debt and all.",
       why: 'Cleaner than market cap for comparing companies with different debt loads.',
@@ -85,7 +85,7 @@ export const METRICS = [
   // ---------------- Valuation ----------------
   {
     id: 'pe-trailing', label: 'P/E ratio (trailing)', family: 'valuation', visual: 'scale', higherIsBetter: null,
-    sources: [{ kind: 'comparison', label: 'P/E ratio (trailing)' }],
+    sources: [{ kind: 'kpis', label: 'P/E ratio (trailing)' }, { kind: 'comparison', label: 'P/E ratio (trailing)' }],
     explain: {
       what: 'Price divided by last twelve months of earnings per share.',
       why: 'How many dollars the market pays per dollar of current earnings — a shorthand for growth expectations.',
@@ -94,7 +94,7 @@ export const METRICS = [
   },
   {
     id: 'ps', label: 'Price / sales', family: 'valuation', visual: 'scale', higherIsBetter: null,
-    sources: [{ kind: 'comparison', label: 'Price / sales' }],
+    sources: [{ kind: 'kpis', label: 'Price / sales' }, { kind: 'comparison', label: 'Price / sales' }],
     explain: {
       what: 'Market cap divided by annual revenue.',
       why: 'Useful when earnings are thin or negative — values the sales engine directly.',
@@ -103,7 +103,7 @@ export const METRICS = [
   },
   {
     id: 'pfcf', label: 'Price / free cash flow', family: 'valuation', visual: 'scale', higherIsBetter: null,
-    sources: [{ kind: 'comparison', label: 'Price / free cash flow' }],
+    sources: [{ kind: 'kpis', label: 'Price / free cash flow' }, { kind: 'comparison', label: 'Price / free cash flow' }],
     explain: {
       what: 'Market cap divided by free cash flow.',
       why: 'Prices the cash the business actually generates, sidestepping accounting choices in earnings.',
@@ -122,7 +122,7 @@ export const METRICS = [
   // ---------------- Growth ----------------
   {
     id: 'rev-growth-1y', label: 'Revenue growth (1Y)', family: 'growth', visual: 'bar', higherIsBetter: true,
-    sources: [{ kind: 'comparison', label: 'Revenue growth (1Y)' }],
+    sources: [{ kind: 'kpis', label: 'Revenue growth (1Y)' }, { kind: 'comparison', label: 'Revenue growth (1Y)' }],
     explain: {
       what: 'Year-over-year change in annual revenue.',
       why: 'The single fastest read on whether the business is accelerating or stalling.',
@@ -131,7 +131,7 @@ export const METRICS = [
   },
   {
     id: 'rev-cagr-5y', label: 'Revenue CAGR (5Y)', family: 'growth', visual: 'bar', higherIsBetter: true,
-    sources: [{ kind: 'comparison', label: 'Revenue CAGR (5Y)' }],
+    sources: [{ kind: 'kpis', label: 'Revenue CAGR (5Y)' }, { kind: 'comparison', label: 'Revenue CAGR (5Y)' }],
     explain: {
       what: 'Compound annual growth rate of revenue over five years.',
       why: 'Smooths single-year spikes — shows the durable growth engine, not one hot cycle.',
@@ -168,7 +168,7 @@ export const METRICS = [
   },
   {
     id: 'net-margin', label: 'Net margin', family: 'profitability', visual: 'bar', higherIsBetter: true,
-    sources: [{ kind: 'comparison', label: 'Net margin' }],
+    sources: [{ kind: 'kpis', label: 'Net margin' }, { kind: 'comparison', label: 'Net margin' }],
     explain: {
       what: 'Net income as a share of revenue.',
       why: 'Compresses the whole P&L into one number — how much of each sale survives to the bottom.',
@@ -187,7 +187,7 @@ export const METRICS = [
   // ---------------- Returns on capital ----------------
   {
     id: 'roe', label: 'Return on equity (ROE)', family: 'returns', visual: 'bar', higherIsBetter: true,
-    sources: [{ kind: 'comparison', label: 'Return on equity (ROE)' }],
+    sources: [{ kind: 'kpis', label: 'Return on equity (ROE)' }, { kind: 'comparison', label: 'Return on equity (ROE)' }],
     explain: {
       what: 'Net income divided by shareholder equity — profit per dollar of owners’ capital.',
       why: 'Measures how hard management works the capital entrusted to it.',
@@ -196,7 +196,7 @@ export const METRICS = [
   },
   {
     id: 'roa', label: 'Return on assets (ROA)', family: 'returns', visual: 'bar', higherIsBetter: true,
-    sources: [{ kind: 'comparison', label: 'Return on assets (ROA)' }],
+    sources: [{ kind: 'kpis', label: 'Return on assets (ROA)' }, { kind: 'comparison', label: 'Return on assets (ROA)' }],
     explain: {
       what: 'Net income divided by total assets.',
       why: 'Harder to flatter than ROE — shows how productively the whole asset base is used.',
@@ -206,7 +206,7 @@ export const METRICS = [
   // ---------------- Balance sheet ----------------
   {
     id: 'net-debt', label: 'Net debt', family: 'balance', visual: 'bar', higherIsBetter: false,
-    sources: [{ kind: 'comparison', label: 'Net debt' }],
+    sources: [{ kind: 'kpis', label: 'Net debt' }, { kind: 'comparison', label: 'Net debt' }],
     explain: {
       what: 'Total debt minus cash and equivalents — negative means net cash.',
       why: 'Net cash is strategic freedom: acquisitions, buybacks, and surviving downturns without borrowing.',
@@ -215,7 +215,7 @@ export const METRICS = [
   },
   {
     id: 'debt-equity', label: 'Debt / equity', family: 'balance', visual: 'bar', higherIsBetter: false,
-    sources: [{ kind: 'comparison', label: 'Debt / equity' }],
+    sources: [{ kind: 'kpis', label: 'Debt / equity' }, { kind: 'comparison', label: 'Debt / equity' }],
     explain: {
       what: 'Total debt divided by shareholder equity.',
       why: 'Leverage gauge — how much of the business is funded by borrowing versus owners’ capital.',
@@ -224,7 +224,7 @@ export const METRICS = [
   },
   {
     id: 'cash', label: 'Cash & equivalents', family: 'balance', visual: 'bar', higherIsBetter: true,
-    sources: [{ kind: 'comparison', label: 'Cash & equivalents' }],
+    sources: [{ kind: 'kpis', label: 'Cash & equivalents' }, { kind: 'comparison', label: 'Cash & equivalents' }],
     explain: {
       what: 'Cash plus short-term investments on the balance sheet.',
       why: 'Dry powder — funds buybacks, deals, and R&D through cycles without tapping markets.',
@@ -252,7 +252,7 @@ export const METRICS = [
   },
   {
     id: 'fcf-margin', label: 'FCF margin', family: 'cash', visual: 'bar', higherIsBetter: true,
-    sources: [{ kind: 'comparison', label: 'FCF margin' }],
+    sources: [{ kind: 'kpis', label: 'FCF margin' }, { kind: 'comparison', label: 'FCF margin' }],
     explain: {
       what: 'Free cash flow as a share of revenue.',
       why: 'Cash profitability in one number — how much of each sales dollar becomes free cash.',
@@ -271,7 +271,7 @@ export const METRICS = [
   // ---------------- Market behavior ----------------
   {
     id: 'beta', label: 'Beta', family: 'market', visual: 'scale', higherIsBetter: null,
-    sources: [{ kind: 'comparison', label: 'Beta' }],
+    sources: [{ kind: 'kpis', label: 'Beta' }, { kind: 'comparison', label: 'Beta' }],
     explain: {
       what: 'How much the stock tends to move relative to the overall market (market = 1.0).',
       why: 'Volatility shorthand — high beta amplifies both rallies and selloffs.',
@@ -280,7 +280,7 @@ export const METRICS = [
   },
   {
     id: 'range-52w', label: '52-week range position', family: 'market', visual: 'chips', higherIsBetter: null,
-    sources: [{ kind: 'comparison', label: '52-week range position' }],
+    sources: [{ kind: 'kpis', label: '52-week range position' }, { kind: 'comparison', label: '52-week range position' }],
     explain: {
       what: 'Where the current price sits between its 52-week low and high.',
       why: 'Context for momentum — near the high means the market is still bidding it up.',
@@ -325,6 +325,33 @@ export const METRICS = [
         MSFT: 'Remaining performance obligations', AMZN: 'Remaining performance obligations',
         GOOGL: 'Remaining performance obligations', Oracle: 'Remaining performance obligations',
         CRWV: 'Revenue backlog',
+        ANET: 'Remaining performance obligations',
+        ASML: 'Remaining performance obligations',
+        CIEN: 'Remaining performance obligations',
+        CRM: 'Remaining performance obligations',
+        CRWD: 'Remaining performance obligations',
+        CSCO: 'Remaining performance obligations',
+        DDOG: 'Remaining performance obligations',
+        FIX: 'Remaining performance obligations',
+        FTNT: 'Remaining performance obligations',
+        GEV: 'Remaining performance obligations',
+        HPE: 'Remaining performance obligations',
+        IREN: 'Remaining performance obligations',
+        LRCX: 'Remaining performance obligations',
+        MDB: 'Remaining performance obligations',
+        NET: 'Remaining performance obligations',
+        NOW: 'Remaining performance obligations',
+        OKTA: 'Remaining performance obligations',
+        PANW: 'Remaining performance obligations',
+        PLTR: 'Remaining performance obligations',
+        PWR: 'Remaining performance obligations',
+        S: 'Remaining performance obligations',
+        SNDK: 'Remaining performance obligations',
+        SNOW: 'Remaining performance obligations',
+        TEAM: 'Remaining performance obligations',
+        TER: 'Remaining performance obligations',
+        TWLO: 'Remaining performance obligations',
+        ZS: 'Remaining performance obligations'
       },
     }],
     explain: {
