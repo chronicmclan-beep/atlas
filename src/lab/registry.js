@@ -21,14 +21,12 @@
   (e.g. src/components/compare/) and the experiment is removed here.
 */
 import CompareRailCanvas from './variants/CompareRailCanvas.jsx'
-import CompareChartPerMetric from './variants/CompareChartPerMetric.jsx'
-import CompareShowdown from './variants/CompareShowdown.jsx'
 
 export const EXPERIMENTS = [
   {
     id: 'compare-layout',
     title: 'Company Comparison layout',
-    task: 'Find the best way to deliver comparison results. Section 08 currently stacks the pickers above the results — these three prototypes try different outcome layouts with the same verified data. Tap through each variant and pick the winner to promote into production.',
+    task: 'Find the best way to deliver comparison results. Section 08 currently stacks the pickers above the results — this prototype tries a different outcome layout with the same verified data: the pickers dock into a slim sidebar and the result canvas builds live.',
     variants: [
       {
         id: 'rail-canvas',
@@ -36,20 +34,6 @@ export const EXPERIMENTS = [
         description:
           'Pickers dock into a slim collapsible sidebar; the entire main area becomes a live result canvas that updates as you tap.',
         component: CompareRailCanvas,
-      },
-      {
-        id: 'chart-per-metric',
-        title: 'Chart per metric',
-        description:
-          'Every metric rendered in its native chart — donuts for mix, radial gauges for margins, diverging bars for growth — with a per-card chart-type switcher.',
-        component: CompareChartPerMetric,
-      },
-      {
-        id: 'showdown',
-        title: 'Showdown columns',
-        description:
-          'Companies as visual columns, metrics as rows crossing them — a spec-sheet battle with mini-charts inside every cell.',
-        component: CompareShowdown,
       },
     ],
   },
