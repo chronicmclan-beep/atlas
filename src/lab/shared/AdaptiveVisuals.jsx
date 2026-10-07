@@ -219,6 +219,180 @@ export function BarsStage({ entries, lead, ix, note }) {
 }
 
 /* ------------------------------------------------------------------ */
+/* Ranked bars — valuation multiples. Sorted low→high with a median     */
+/* marker tick on every track. For multiples, cheaper (lower) first.    */
+/* Companies without a value get an explicit "Not sourced" line.        */
+/* ------------------------------------------------------------------ */
+
+const NEG_RED = '#c05a4e'
+
+export function RankedBarsStage({ entries, ix, caption }) {
+  const scored = entries
+    .map((e) => ({ e, v: parseScalar(e.fig?.value) }))
+    .filter((s) => s.v != null)
+    .sort((a, b) => a.v - b.v)
+  const missing = entries.filter((e) => parseScalar(e.fig?.value) == null)
+  const vals = scored.map((s) => s.v)
+  const lo = vals.length ? vals[0] : 0
+  const hi = vals.length ? vals[vals.length - 1] : 1
+  const span = hi - lo || 1
+  const median = vals.length
+    ? vals.length % 2 === 1
+      ? vals[(vals.length - 1) / 2]
+      : (vals[vals.length / 2 - 1] + vals[vals.length / 2]) / 2
+    : 0
+  const medPct = ((median - lo) / span) * 100
+  return (
+    <div
+      ref={ix.rootRef}
+      className="relative grid w-full gap-md"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) ix.clearIsolate()
+      }}
+    >
+      <IsolateReset isolated={ix.isolated} onClear={ix.clearIsolate} />
+      {caption && (
+        <p className="text-center text-caption text-ink-faint">
+          {caption} <span className="whitespace-nowrap">▏ marks the group median.</span>
+        </p>
+      )}
+      {scored.map(({ e, v }) => {
+        const pct = Math.max(6, ((v - lo) / span) * 100)
+        // Row label shows the headline figure only (e.g. "48.8x"); the full
+        // derivation stays in the hover tooltip.
+        const short = String(e.fig.value).split(' ')[0]
+        return (
+          <div
+            key={e.ticker}
+            {...ix.segmentProps(e.ticker, [nameOf(e.ticker), e.fig.value])}
+            className="flex items-center gap-sm"
+          >
+            <span className="flex w-36 shrink-0 items-center gap-xs">
+              <CompanyBadge name={e.ticker} size={24} />
+              <span className="truncate font-medium text-body" style={{ color: colorOf(e.ticker) }}>
+                {nameOf(e.ticker)}
+              </span>
+            </span>
+            <div className="relative h-6 min-w-6 flex-1 rounded-pill bg-surface-raised">
+              <div
+                className="h-full rounded-pill transition-all duration-500"
+                style={{ width: `${pct}%`, background: colorOf(e.ticker) }}
+              />
+              <div
+                aria-hidden="true"
+                title="Group median"
+                className="absolute inset-y-1 w-px bg-ink-faint"
+                style={{ left: `${medPct}%` }}
+              />
+            </div>
+            <span className="w-20 shrink-0 text-right text-body text-ink">{short}</span>
+            <SourceTag tier={e.fig.tier} showLabel={false} />
+          </div>
+        )
+      })}
+      {missing.map((e) => (
+        <div key={e.ticker} className="flex items-center gap-sm opacity-60">
+          <span className="flex w-36 shrink-0 items-center gap-xs">
+            <CompanyBadge name={e.ticker} size={24} />
+            <span className="truncate font-medium text-body" style={{ color: colorOf(e.ticker) }}>
+              {nameOf(e.ticker)}
+            </span>
+          </span>
+          <span className="flex-1 italic text-ink-faint text-body">
+            {e.fig ? e.fig.value : 'Not sourced'}
+          </span>
+        </div>
+      ))}
+      <ChartTip tip={ix.tip} />
+    </div>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* Diverging bars — growth rates. A zero baseline; positive growth      */
+/* extends right in company colors, decline extends left in muted red.  */
+/* ------------------------------------------------------------------ */
+
+export function DivergingBarsStage({ entries, ix }) {
+  const scored = entries
+    .map((e) => ({ e, v: parseScalar(e.fig?.value) }))
+    .filter((s) => s.v != null)
+    .sort((a, b) => b.v - a.v)
+  const missing = entries.filter((e) => parseScalar(e.fig?.value) == null)
+  const maxAbs = Math.max(...scored.map((s) => Math.abs(s.v)), 1e-9)
+  return (
+    <div
+      ref={ix.rootRef}
+      className="relative grid w-full gap-md"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) ix.clearIsolate()
+      }}
+    >
+      <IsolateReset isolated={ix.isolated} onClear={ix.clearIsolate} />
+      <p className="text-center text-caption text-ink-faint">
+        Right of zero is growth, left of zero is decline.
+      </p>
+      {scored.map(({ e, v }) => {
+        const w = Math.max(2, (Math.abs(v) / maxAbs) * 100)
+        // Headline figure only (e.g. "+65.5%"); the full string is in the tooltip.
+        const short = String(e.fig.value).split(' ')[0]
+        return (
+          <div
+            key={e.ticker}
+            {...ix.segmentProps(e.ticker, [nameOf(e.ticker), e.fig.value])}
+            className="flex items-center gap-sm"
+          >
+            <span className="flex w-36 shrink-0 items-center gap-xs">
+              <CompanyBadge name={e.ticker} size={24} />
+              <span className="truncate font-medium text-body" style={{ color: colorOf(e.ticker) }}>
+                {nameOf(e.ticker)}
+              </span>
+            </span>
+            <div className="flex min-w-0 flex-1 items-center">
+              <div className="relative h-6 min-w-0 flex-1">
+                {v < 0 && (
+                  <div
+                    className="absolute right-0 top-0 h-full rounded-l-pill transition-all duration-500"
+                    style={{ width: `${w}%`, background: NEG_RED }}
+                  />
+                )}
+              </div>
+              <div aria-hidden="true" className="h-9 w-px shrink-0 bg-line-strong" />
+              <div className="relative h-6 min-w-0 flex-1">
+                {v >= 0 && (
+                  <div
+                    className="absolute left-0 top-0 h-full rounded-r-pill transition-all duration-500"
+                    style={{ width: `${w}%`, background: colorOf(e.ticker) }}
+                  />
+                )}
+              </div>
+            </div>
+            <span className="w-20 shrink-0 text-right text-body font-medium text-ink">
+              {short}
+            </span>
+            <SourceTag tier={e.fig.tier} showLabel={false} />
+          </div>
+        )
+      })}
+      {missing.map((e) => (
+        <div key={e.ticker} className="flex items-center gap-sm opacity-60">
+          <span className="flex w-36 shrink-0 items-center gap-xs">
+            <CompanyBadge name={e.ticker} size={24} />
+            <span className="truncate font-medium text-body" style={{ color: colorOf(e.ticker) }}>
+              {nameOf(e.ticker)}
+            </span>
+          </span>
+          <span className="flex-1 italic text-ink-faint text-body">
+            {e.fig ? e.fig.value : 'Not sourced'}
+          </span>
+        </div>
+      ))}
+      <ChartTip tip={ix.tip} />
+    </div>
+  )
+}
+
+/* ------------------------------------------------------------------ */
 /* Dot-on-scale — valuation multiples. Dots on a shared axis.           */
 /* Collision-aware lanes keep numbered dots from ever overlapping.      */
 /* Companies without a value get an explicit "Not sourced" line.        */

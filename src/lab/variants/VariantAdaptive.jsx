@@ -1,13 +1,15 @@
 /*
   Lab variant — "Compare" (Company Comparison layout experiment).
 
-  One tab, one brain, many faces: pick 2–8 companies and any metric, and
-  the stage automatically reshapes to the design element that fits the
-  metric type (vizFor). The chart stage is the hero — the company panel
-  collapses to a slim rail, the metric bar collapses to just its dropdown,
-  and a focus mode hides everything except the chart, the ticker chips and
-  the metric picker. Ticker chips are always live (× removes, + opens the
-  picker — one tap, no apply step).
+  One tab, one brain, many faces: pick 2–8 companies and any metric. The
+  DEFAULT view is a universal clean bar list everywhere; a "View as"
+  switcher offers the design element that fits the metric type (vizFor's
+  auto suggestion — ranked bars for multiples, diverging bars for growth,
+  dials for margins, and so on), persisted per metric. The chart stage is
+  the hero — the company panel collapses to a slim rail, the metric bar
+  collapses to just its dropdown, and a focus mode hides everything except
+  the chart, the ticker chips and the metric picker. Ticker chips are
+  always live (× removes, + opens the picker — one tap, no apply step).
 
   Selection contract: every selected company ALWAYS renders in every
   visual; missing figures are marked "Not sourced", never dropped.
@@ -22,6 +24,7 @@ import {
   availableMetrics,
   describeGap,
 } from '../../lib/compareMetrics.js'
+import { parseScalar } from '../../lib/compareVisual.js'
 import { colorOf, nameOf } from '../shared/companyGroups.js'
 import {
   CompanyPicker,
@@ -38,6 +41,8 @@ import {
   CashFlowStage,
   ShareDonutStage,
   BarsStage,
+  RankedBarsStage,
+  DivergingBarsStage,
 } from '../shared/AdaptiveVisuals.jsx'
 
 const DEFAULT_TICKERS = ['NVDA', 'AMD', 'AVGO']
@@ -48,6 +53,7 @@ const MAX_N = 8
 const LS_FOCUS = 'atlas:compare-focus'
 const LS_COMPANIES = 'atlas:compare-companies'
 const LS_CONTEXT = 'atlas:compare-context'
+const LS_VIEW = (id) => `atlas:compare-view-${id}`
 
 function readLS(key, fallback) {
   try {
@@ -66,36 +72,72 @@ function writeLS(key, val) {
 }
 
 /*
-  The heart of the tab: metric type → design element.
+  The heart of the tab: metric type → design element (the "auto" suggestion).
   - Size & scale absolutes → arrow race (ranking is the story)
-  - Valuation multiples → dot scale (position on a spectrum, never ranked)
+  - Valuation multiples → ranked bars (cheapest first; the dot scale stays
+    as a manual option only — never a default)
   - Margins & returns % → radial dials (needle on a 0–100 face)
-  - Growth → timeline tape (the quarterly revenue path behind the rate)
+  - Growth → diverging bars (right of zero is growth, left is decline)
   - Cash flow (ocf/fcf) → waterfall (revenue becomes cash, step by step)
   - Latest quarter → donut (share of the selected group's quarter)
   - Balance-sheet absolutes → arrow race
-  - Everything else → arrow race (one absolute beats another)
+  - Everything else → arrow race
+
+  The DEFAULT view is always the universal bar list; the owner can override
+  per metric with the "View as" switcher (persisted per metric id).
 */
 function vizFor(def) {
   if (!def) return 'bars'
   const id = def.id
   if (id === 'ocf' || id === 'fcf') return 'waterfall'
   if (id === 'latest-quarter') return 'donut'
-  if (def.family === 'valuation' && def.higherIsBetter == null) return 'scale'
-  if (id === 'beta' || id === 'range-52w' || id === 'debt-equity') return 'scale'
   if (['gross-margin', 'op-margin', 'net-margin', 'roe', 'roa'].includes(id)) return 'dials'
-  if (def.family === 'growth') return 'tape'
+  if (['pe-trailing', 'ps', 'pfcf', 'beta', 'range-52w', 'debt-equity'].includes(id)) return 'ranked'
+  if (def.family === 'growth') return 'diverge'
   return 'race'
 }
 
+const VIEW_LABELS = {
+  bars: 'Bars',
+  race: 'Arrows',
+  ranked: 'Ranked',
+  diverge: 'Diverging',
+  dials: 'Dials',
+  waterfall: 'Waterfall',
+  donut: 'Donut',
+  tape: 'Timeline',
+  dots: 'Dots',
+}
+
+/* Which graphic elements are sensible for this metric type. Bars is
+   always first (the universal default); the auto suggestion is second. */
+function viewsFor(def) {
+  const ids = ['bars']
+  if (!def) return ids
+  const s = vizFor(def)
+  if (s !== 'bars') ids.push(s)
+  const extra = (v) => {
+    if (!ids.includes(v)) ids.push(v)
+  }
+  const id = def.id
+  if (id === 'ocf' || id === 'fcf') extra('waterfall')
+  if (id === 'latest-quarter') extra('donut')
+  if (['gross-margin', 'op-margin', 'net-margin', 'roe', 'roa'].includes(id)) extra('dials')
+  if (['pe-trailing', 'ps', 'pfcf', 'beta', 'range-52w', 'debt-equity'].includes(id)) extra('dots')
+  if (def.family === 'growth' || id === 'revenue') extra('tape')
+  return ids
+}
+
 const VIZ_WHY = {
+  bars: 'Bars — one row per company, sorted.',
   race: 'Arrows race — length is the value, longest leads.',
-  scale: 'Dots on a shared scale — position is the multiple, not a ranking.',
+  ranked: 'Ranked bars — cheapest multiple first.',
+  diverge: 'Diverging bars — right of zero is growth, left is decline.',
   dials: 'Dials — the needle shows each company\u2019s percentage.',
   tape: 'Tape — quarterly revenue, quarter by quarter.',
   waterfall: 'Waterfall — revenue becomes cash, step by step.',
   donut: 'Donut — each slice is a share of the selected group.',
-  bars: 'Bars — one row per company.',
+  dots: 'Dots on a shared scale — position is the multiple, not a ranking.',
 }
 
 function FocusIcon() {
@@ -136,7 +178,50 @@ export default function VariantAdaptive() {
   )
   const withVal = useMemo(() => entries.filter((e) => e.fig && e.fig.value != null), [entries])
   const lead = useMemo(() => leaderIndex(def, entries), [def, entries])
-  const viz = vizFor(def)
+  const suggested = vizFor(def)
+  const viewOptions = useMemo(() => viewsFor(def), [def])
+
+  // "View as" override — universal bars by default, persisted per metric.
+  const [storedView, setStoredView] = useState(null)
+  useEffect(() => {
+    try {
+      setStoredView(localStorage.getItem(LS_VIEW(mid)))
+    } catch {
+      setStoredView(null)
+    }
+  }, [mid])
+  const view = viewOptions.includes(storedView) ? storedView : 'bars'
+  const chooseView = (v) => {
+    setStoredView(v)
+    try {
+      localStorage.setItem(LS_VIEW(mid), v)
+    } catch {
+      /* private mode — choice just won't persist */
+    }
+  }
+
+  // Universal bar list is sorted (best first) when the metric has a direction.
+  const barsEntries = useMemo(() => {
+    if (def?.higherIsBetter == null) return entries
+    const dir = def.higherIsBetter ? -1 : 1
+    const withV = []
+    const withoutV = []
+    entries.forEach((e) => {
+      ;(e.fig && parseScalar(e.fig.value) != null ? withV : withoutV).push(e)
+    })
+    withV.sort((a, b) => dir * (parseScalar(a.fig.value) - parseScalar(b.fig.value)))
+    return [...withV, ...withoutV]
+  }, [def, entries])
+  const barsLead = useMemo(() => leaderIndex(def, barsEntries), [def, barsEntries])
+
+  const rankedCaption = useMemo(() => {
+    if (!def) return 'Sorted low to high.'
+    if (['pe-trailing', 'ps', 'pfcf'].includes(def.id))
+      return 'Cheapest first — a lower multiple means paying less per dollar of fundamentals.'
+    if (def.id === 'debt-equity') return 'Lowest first — less debt per dollar of equity.'
+    return 'Sorted low to high.'
+  }, [def])
+
   const takeaway = useMemo(() => (def ? describeGap(def, figs) : ''), [def, figs])
 
   const tickKey = tickers.join(',')
@@ -161,28 +246,52 @@ export default function VariantAdaptive() {
         No sourced figures for these companies on this metric — listed, not hidden.
       </p>
     )
-  } else if (viz === 'race') {
+  } else if (view === 'race') {
     stage = <ArrowRaceStage entries={entries} def={def} ix={ix} />
-  } else if (viz === 'scale') {
+  } else if (view === 'ranked') {
+    stage = <RankedBarsStage entries={entries} ix={ix} caption={rankedCaption} />
+  } else if (view === 'diverge') {
+    stage = <DivergingBarsStage entries={entries} ix={ix} />
+  } else if (view === 'dots') {
     stage = <DotScaleStage entries={entries} ix={ix} />
-  } else if (viz === 'dials') {
+  } else if (view === 'dials') {
     stage = <DialStage entries={entries} ix={ix} />
-  } else if (viz === 'tape') {
+  } else if (view === 'tape') {
     stage = <TimelineTapeStage tickers={tickers} />
-  } else if (viz === 'waterfall') {
+  } else if (view === 'waterfall') {
     stage = <CashFlowStage tickers={tickers} ix={ix} />
-  } else if (viz === 'donut') {
+  } else if (view === 'donut') {
     stage = <ShareDonutStage entries={entries} lead={lead} ix={ix} />
   } else {
-    stage = <BarsStage entries={entries} lead={lead} ix={ix} />
+    stage = <BarsStage entries={barsEntries} lead={barsLead} ix={ix} />
   }
 
   return (
     <div className="rounded-card border border-line bg-surface p-md shadow-card sm:p-lg">
-      {/* Header: metric picker (never hides) + info + view toggles */}
+      {/* Header: metric picker (never hides) + info + view switcher + toggles */}
       <div className="flex flex-wrap items-center gap-sm">
         <MetricDropdown metricId={mid} onSelect={setMetricId} tickers={tickers} />
         {def && <InfoButton def={def} figs={figs} />}
+        <label className="flex items-center gap-2xs text-caption text-ink-soft">
+          <span>View as</span>
+          <select
+            value={view}
+            onChange={(e) => chooseView(e.target.value)}
+            aria-label="Choose graphic element"
+            className="rounded-control border border-line bg-surface px-sm py-2xs text-caption font-medium text-ink"
+          >
+            {viewOptions.map((v) => (
+              <option key={v} value={v}>
+                {VIEW_LABELS[v] ?? v}
+              </option>
+            ))}
+          </select>
+        </label>
+        {view !== suggested && (
+          <span className="text-caption italic text-ink-faint">
+            Auto suggests {VIEW_LABELS[suggested] ?? suggested}
+          </span>
+        )}
         <div className="ml-auto flex items-center gap-2xs">
           <button
             type="button"
@@ -257,7 +366,7 @@ export default function VariantAdaptive() {
           {takeaway && <p className="text-body font-medium text-ink">{takeaway}</p>}
           <p className="mt-2xs text-caption text-ink-faint">
             <span className="font-medium text-ink-soft">Why this visual: </span>
-            {VIZ_WHY[viz]}
+            {VIZ_WHY[view]}
           </p>
           <p className="mt-2xs text-caption text-ink-faint">
             {withVal.length} of {tickers.length} with data
@@ -312,7 +421,7 @@ export default function VariantAdaptive() {
 
         {/* Stage — the hero */}
         <div className="min-w-0 flex-1">
-          <div key={mid + '|' + tickKey}>{stage}</div>
+          <div key={mid + '|' + view + '|' + tickKey}>{stage}</div>
         </div>
       </div>
 

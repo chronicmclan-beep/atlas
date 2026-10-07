@@ -73,18 +73,37 @@ function AppShell() {
             (navCollapsed ? 'md:w-[68px]' : 'md:w-64')
           }
         >
-          {/* Product mark */}
+          {/* Product mark + discoverable collapse toggle (desktop only) */}
           <div
             className={
               'flex items-center gap-sm border-b border-line px-md py-md ' +
               (navCollapsed ? 'md:justify-center md:px-xs' : '')
             }
           >
-            <BrandMark />
-            <div className={'leading-tight ' + (navCollapsed ? 'md:hidden' : '')}>
+            <span className={navCollapsed ? 'md:hidden' : ''}>
+              <BrandMark />
+            </span>
+            <div className={'whitespace-nowrap leading-tight ' + (navCollapsed ? 'md:hidden' : '')}>
               <div className="text-eyebrow uppercase text-ink-faint">AI infrastructure</div>
               <div className="text-heading font-medium tracking-tight text-ink">Atlas</div>
             </div>
+            {/* Hamburger: the collapse control people actually look for.
+                Same state as the bottom toggle, so the two stay in sync. */}
+            <button
+              type="button"
+              onClick={toggleNav}
+              aria-label={navCollapsed ? 'Expand navigation' : 'Collapse navigation'}
+              aria-expanded={!navCollapsed}
+              title={navCollapsed ? 'Expand navigation' : 'Collapse navigation'}
+              className={
+                'hidden items-center justify-center rounded-control p-xs text-ink-soft transition-colors hover:bg-surface-raised hover:text-ink md:flex ' +
+                (navCollapsed ? '' : 'ml-auto')
+              }
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <path d="M2 4.5h14M2 9h14M2 13.5h14" />
+              </svg>
+            </button>
           </div>
 
           <nav className="px-xs py-sm">
