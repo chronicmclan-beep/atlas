@@ -2,10 +2,12 @@
   Lab variant — "Compare" (Company Comparison layout experiment).
 
   One tab, one brain, many faces: pick 2–8 companies and any metric. The
-  DEFAULT view is a universal clean bar list everywhere; a "View as"
-  switcher offers the design element that fits the metric type (vizFor's
-  auto suggestion — ranked bars for multiples, diverging bars for growth,
-  dials for margins, and so on), persisted per metric. The chart stage is
+  view AUTO-FOLLOWS the metric by default — switching metrics switches the
+  graphic to the recommended design element (vizFor's suggestion: ranked
+  bars for multiples, diverging bars for growth, dials for margins, and so
+  on). The "View as" switcher opens with "Auto (recommended)"; picking an
+  explicit element overrides Auto for that metric only and is persisted per
+  metric. The chart stage is
   the hero — the company panel collapses to a slim rail, the metric bar
   collapses to just its dropdown, and a focus mode hides everything except
   the chart, the ticker chips and the metric picker. Ticker chips are
@@ -83,8 +85,10 @@ function writeLS(key, val) {
   - Balance-sheet absolutes → arrow race
   - Everything else → arrow race
 
-  The DEFAULT view is always the universal bar list; the owner can override
-  per metric with the "View as" switcher (persisted per metric id).
+  The DEFAULT view follows the metric automatically (the "auto" behavior).
+  The owner can pin an explicit element per metric with the "View as"
+  switcher (persisted per metric id); choosing "Auto (recommended)" clears
+  the pin.
 */
 function vizFor(def) {
   if (!def) return 'bars'
@@ -98,6 +102,7 @@ function vizFor(def) {
 }
 
 const VIEW_LABELS = {
+  auto: 'Auto (recommended)',
   bars: 'Bars',
   race: 'Arrows',
   ranked: 'Ranked',
@@ -109,10 +114,11 @@ const VIEW_LABELS = {
   dots: 'Dots',
 }
 
-/* Which graphic elements are sensible for this metric type. Bars is
-   always first (the universal default); the auto suggestion is second. */
+/* Which graphic elements are sensible for this metric type. "Auto" is
+   always first (it resolves to the vizFor suggestion); "Bars" is the
+   universal element that works everywhere. */
 function viewsFor(def) {
-  const ids = ['bars']
+  const ids = ['auto', 'bars']
   if (!def) return ids
   const s = vizFor(def)
   if (s !== 'bars') ids.push(s)
@@ -181,7 +187,9 @@ export default function VariantAdaptive() {
   const suggested = vizFor(def)
   const viewOptions = useMemo(() => viewsFor(def), [def])
 
-  // "View as" override — universal bars by default, persisted per metric.
+  // "View as": Auto (recommended) is the default — the view follows the
+  // metric via vizFor. An explicit choice pins one element for this metric
+  // only and is persisted; choosing Auto clears the pin.
   const [storedView, setStoredView] = useState(null)
   useEffect(() => {
     try {
@@ -190,14 +198,17 @@ export default function VariantAdaptive() {
       setStoredView(null)
     }
   }, [mid])
-  const view = viewOptions.includes(storedView) ? storedView : 'bars'
+  const pinned = storedView && storedView !== 'auto' && viewOptions.includes(storedView) ? storedView : null
+  const view = pinned ?? suggested
+  const selectValue = pinned ?? 'auto'
   const chooseView = (v) => {
-    setStoredView(v)
     try {
-      localStorage.setItem(LS_VIEW(mid), v)
+      if (v === 'auto') localStorage.removeItem(LS_VIEW(mid))
+      else localStorage.setItem(LS_VIEW(mid), v)
     } catch {
       /* private mode — choice just won't persist */
     }
+    setStoredView(v === 'auto' ? null : v)
   }
 
   // Universal bar list is sorted (best first) when the metric has a direction.
@@ -275,7 +286,7 @@ export default function VariantAdaptive() {
         <label className="flex items-center gap-2xs text-caption text-ink-soft">
           <span>View as</span>
           <select
-            value={view}
+            value={selectValue}
             onChange={(e) => chooseView(e.target.value)}
             aria-label="Choose graphic element"
             className="rounded-control border border-line bg-surface px-sm py-2xs text-caption font-medium text-ink"
@@ -287,11 +298,6 @@ export default function VariantAdaptive() {
             ))}
           </select>
         </label>
-        {view !== suggested && (
-          <span className="text-caption italic text-ink-faint">
-            Auto suggests {VIEW_LABELS[suggested] ?? suggested}
-          </span>
-        )}
         <div className="ml-auto flex items-center gap-2xs">
           <button
             type="button"
