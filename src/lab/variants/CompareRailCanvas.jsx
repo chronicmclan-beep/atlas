@@ -318,9 +318,9 @@ function MetricCard({ def, tickers, density, onMoveUp, onMoveDown, isFirst, isLa
     entries.some((e) => (parseScalar(e.fig?.value) ?? 0) > 0)
   const showGauge = chartMode === 'native' && native === 'gauge'
 
-  const padX = density === 'compact' ? 'px-xs' : 'px-sm'
-  const padTop = density === 'compact' ? 'pt-xs' : 'pt-sm'
-  const padBottom = density === 'compact' ? 'pb-xs' : 'pb-sm'
+  const padX = density === 'compact' ? 'px-2xs' : 'px-sm'
+  const padTop = density === 'compact' ? 'pt-2xs' : 'pt-sm'
+  const padBottom = density === 'compact' ? 'pb-2xs' : 'pb-sm'
 
   const switchBtn = (mode, label) => (
     <button
@@ -670,8 +670,8 @@ export default function CompareRailCanvas() {
     </div>
   )
 
-  const cardGap = density === 'compact' ? 'gap-xs' : 'gap-sm'
-  const heroPad = density === 'compact' ? 'px-xs py-xs' : 'px-sm py-sm'
+  const cardGap = density === 'compact' ? 'gap-2xs' : 'gap-sm'
+  const heroPad = density === 'compact' ? 'px-2xs py-2xs' : 'px-sm py-sm'
 
   return (
     <div className="md:flex md:gap-sm">
