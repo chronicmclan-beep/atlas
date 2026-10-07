@@ -1,0 +1,818 @@
+{
+ "bundle": "E-hyperscale-compute",
+ "companies": [
+  {
+   "ticker": "MSFT",
+   "name": "Microsoft",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "AMZN",
+   "name": "Amazon",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "GOOGL",
+   "name": "Google",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "Oracle",
+   "name": "Oracle",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "Meta",
+   "name": "Meta",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "CRWV",
+   "name": "CoreWeave",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "NBIS",
+   "name": "Nebius",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "IREN",
+   "name": "IREN Limited",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "WULF",
+   "name": "TeraWulf Inc.",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "HUT",
+   "name": "Hut 8 Corp.",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "GLXY",
+   "name": "Galaxy Digital Inc.",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "APLD",
+   "name": "Applied Digital Corporation",
+   "layer": "compute",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  }
+ ]
+}

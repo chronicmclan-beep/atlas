@@ -1,0 +1,158 @@
+{
+ "bundle": "G-energy",
+ "companies": [
+  {
+   "ticker": "VST",
+   "name": "Vistra Corp.",
+   "layer": "energy",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "TLN",
+   "name": "Talen Energy Corp",
+   "layer": "energy",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "NRG",
+   "name": "NRG Energy, Inc.",
+   "layer": "energy",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "GEV",
+   "name": "GE Vernova Inc.",
+   "layer": "energy",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "BE",
+   "name": "Bloom Energy Corp",
+   "layer": "energy",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "PWR",
+   "name": "Quanta Services, Inc.",
+   "layer": "energy",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "FIX",
+   "name": "Comfort Systems USA, Inc.",
+   "layer": "energy",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    }
+   ],
+   "extras": []
+  }
+ ]
+}

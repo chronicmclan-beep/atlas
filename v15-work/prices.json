@@ -1,0 +1,790 @@
+{
+ "NVDA": {
+  "status": "ok",
+  "yahoo": "NVDA",
+  "price": 236.79,
+  "prevClose": 228.38,
+  "w52low": 164.27,
+  "w52high": 243.37,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "AMD": {
+  "status": "ok",
+  "yahoo": "AMD",
+  "price": 645.695,
+  "prevClose": 611.76,
+  "w52low": 188.22,
+  "w52high": 658.52,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "INTC": {
+  "status": "ok",
+  "yahoo": "INTC",
+  "price": 112.625,
+  "prevClose": 120.23,
+  "w52low": 32.89,
+  "w52high": 142.35,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "AVGO": {
+  "status": "ok",
+  "yahoo": "AVGO",
+  "price": 373.525,
+  "prevClose": 351.19,
+  "w52low": 289.96,
+  "w52high": 495.0,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "MRVL": {
+  "status": "ok",
+  "yahoo": "MRVL",
+  "price": 282.516,
+  "prevClose": 264.21,
+  "w52low": 70.69,
+  "w52high": 329.88,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "ARM": {
+  "status": "ok",
+  "yahoo": "ARM",
+  "price": 297.55,
+  "prevClose": 289.66,
+  "w52low": 100.02,
+  "w52high": 452.7,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "TSMC": {
+  "status": "ok",
+  "yahoo": "TSM",
+  "price": 472.795,
+  "prevClose": 456.19,
+  "w52low": 266.82,
+  "w52high": 487.47,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "Samsung": {
+  "status": "ok",
+  "yahoo": "005930.KS",
+  "price": 268500.0,
+  "prevClose": 272500.0,
+  "w52low": 94800.0,
+  "w52high": 354000.0,
+  "currency": "KRW",
+  "asOf": "2026-10-07 00:00 UTC"
+ },
+ "Hynix": {
+  "status": "ok",
+  "yahoo": "000660.KS",
+  "price": 1723000.0,
+  "prevClose": 1765000.0,
+  "w52low": 510000.0,
+  "w52high": 2764000.0,
+  "currency": "KRW",
+  "asOf": "2026-10-07 00:00 UTC"
+ },
+ "MU": {
+  "status": "ok",
+  "yahoo": "MU",
+  "price": 1086.21,
+  "prevClose": 1065.11,
+  "w52low": 179.61,
+  "w52high": 1255.0,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "ASML": {
+  "status": "ok",
+  "yahoo": "ASML",
+  "price": 1799.02,
+  "prevClose": 1811.67,
+  "w52low": 935.41,
+  "w52high": 1999.96,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "AMAT": {
+  "status": "ok",
+  "yahoo": "AMAT",
+  "price": 518.59,
+  "prevClose": 511.38,
+  "w52low": 203.4,
+  "w52high": 739.67,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "Dell": {
+  "status": "ok",
+  "yahoo": "Dell",
+  "price": 579.49,
+  "prevClose": 537.95,
+  "w52low": 110.22,
+  "w52high": 595.51,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "SMCI": {
+  "status": "ok",
+  "yahoo": "SMCI",
+  "price": 44.835,
+  "prevClose": 41.07,
+  "w52low": 19.48,
+  "w52high": 58.78,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "ANET": {
+  "status": "ok",
+  "yahoo": "ANET",
+  "price": 216.18,
+  "prevClose": 203.59,
+  "w52low": 114.52,
+  "w52high": 217.318,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "MSFT": {
+  "status": "ok",
+  "yahoo": "MSFT",
+  "price": 530.63,
+  "prevClose": 512.9,
+  "w52low": 349.2,
+  "w52high": 553.72,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "AMZN": {
+  "status": "ok",
+  "yahoo": "AMZN",
+  "price": 259.09,
+  "prevClose": 249.15,
+  "w52low": 196.0,
+  "w52high": 287.2,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "GOOGL": {
+  "status": "ok",
+  "yahoo": "GOOGL",
+  "price": 348.35,
+  "prevClose": 344.08,
+  "w52low": 235.84,
+  "w52high": 408.61,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "Oracle": {
+  "status": "ok",
+  "yahoo": "ORCL",
+  "price": 144.055,
+  "prevClose": 137.3,
+  "w52low": 114.5,
+  "w52high": 322.54,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "Meta": {
+  "status": "ok",
+  "yahoo": "Meta",
+  "price": 724.95,
+  "prevClose": 725.18,
+  "w52low": 520.26,
+  "w52high": 779.82,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "CRWV": {
+  "status": "ok",
+  "yahoo": "CRWV",
+  "price": 87.637,
+  "prevClose": 87.12,
+  "w52low": 60.55,
+  "w52high": 153.2,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "OpenAI": {
+  "status": "no-public-quote"
+ },
+ "Anthropic": {
+  "status": "no-public-quote"
+ },
+ "xAI": {
+  "status": "no-public-quote"
+ },
+ "SoftBank": {
+  "status": "ok",
+  "yahoo": "9984.T",
+  "price": 6310.0,
+  "prevClose": 6701.0,
+  "w52low": 3365.0,
+  "w52high": 9074.0,
+  "currency": "JPY",
+  "asOf": "2026-10-07 00:00 UTC"
+ },
+ "HUMAIN": {
+  "status": "no-public-quote"
+ },
+ "G42": {
+  "status": "no-public-quote"
+ },
+ "US": {
+  "status": "no-public-quote"
+ },
+ "Shin-Etsu": {
+  "status": "ok",
+  "yahoo": "4063.T",
+  "price": 6234.0,
+  "prevClose": 6027.0,
+  "w52low": 4366.0,
+  "w52high": 7930.0,
+  "currency": "JPY",
+  "asOf": "2026-10-07 00:00 UTC"
+ },
+ "SUMCO": {
+  "status": "ok",
+  "yahoo": "3436.T",
+  "price": 3684.0,
+  "prevClose": 3472.0,
+  "w52low": 1131.0,
+  "w52high": 5939.0,
+  "currency": "JPY",
+  "asOf": "2026-10-07 00:00 UTC"
+ },
+ "LIN": {
+  "status": "ok",
+  "yahoo": "LIN",
+  "price": 485.74,
+  "prevClose": 474.65,
+  "w52low": 387.78,
+  "w52high": 548.2,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "LRCX": {
+  "status": "ok",
+  "yahoo": "LRCX",
+  "price": 326.025,
+  "prevClose": 328.51,
+  "w52low": 131.02,
+  "w52high": 438.5,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "KLAC": {
+  "status": "ok",
+  "yahoo": "KLAC",
+  "price": 196.27,
+  "prevClose": 194.93,
+  "w52low": 98.097,
+  "w52high": 307.37,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "TEL": {
+  "status": "ok",
+  "yahoo": "8035.T",
+  "price": 12500.0,
+  "prevClose": 12580.0,
+  "w52low": 5586.0,
+  "w52high": 16252.0,
+  "currency": "JPY",
+  "asOf": "2026-10-07 00:00 UTC"
+ },
+ "ASX": {
+  "status": "ok",
+  "yahoo": "ASX",
+  "price": 45.57,
+  "prevClose": 44.46,
+  "w52low": 11.07,
+  "w52high": 47.93,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "AMKR": {
+  "status": "ok",
+  "yahoo": "AMKR",
+  "price": 51.93,
+  "prevClose": 52.38,
+  "w52low": 28.19,
+  "w52high": 96.68,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "VRT": {
+  "status": "ok",
+  "yahoo": "VRT",
+  "price": 242.88,
+  "prevClose": 241.31,
+  "w52low": 147.82,
+  "w52high": 379.935,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "ETN": {
+  "status": "ok",
+  "yahoo": "ETN",
+  "price": 428.13,
+  "prevClose": 429.71,
+  "w52low": 311.92,
+  "w52high": 478.0,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "NBIS": {
+  "status": "ok",
+  "yahoo": "NBIS",
+  "price": 234.95,
+  "prevClose": 235.88,
+  "w52low": 73.52,
+  "w52high": 299.86,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "VST": {
+  "status": "ok",
+  "yahoo": "VST",
+  "price": 167.36,
+  "prevClose": 138.35,
+  "w52low": 132.66,
+  "w52high": 217.1,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "TLN": {
+  "status": "ok",
+  "yahoo": "TLN",
+  "price": 377.785,
+  "prevClose": 312.69,
+  "w52low": 279.77,
+  "w52high": 449.841,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "NRG": {
+  "status": "ok",
+  "yahoo": "NRG",
+  "price": 109.96,
+  "prevClose": 95.65,
+  "w52low": 93.36,
+  "w52high": 189.96,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "GEV": {
+  "status": "ok",
+  "yahoo": "GEV",
+  "price": 992.355,
+  "prevClose": 950.49,
+  "w52low": 530.16,
+  "w52high": 1195.94,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "BE": {
+  "status": "ok",
+  "yahoo": "BE",
+  "price": 287.106,
+  "prevClose": 276.98,
+  "w52low": 75.7,
+  "w52high": 351.28,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "PWR": {
+  "status": "ok",
+  "yahoo": "PWR",
+  "price": 693.355,
+  "prevClose": 642.51,
+  "w52low": 404.51,
+  "w52high": 788.75,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "FIX": {
+  "status": "ok",
+  "yahoo": "FIX",
+  "price": 1703.54,
+  "prevClose": 1654.09,
+  "w52low": 770.47,
+  "w52high": 2073.99,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "QCOM": {
+  "status": "ok",
+  "yahoo": "QCOM",
+  "price": 176.31,
+  "prevClose": 184.04,
+  "w52low": 121.99,
+  "w52high": 259.92,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "TER": {
+  "status": "ok",
+  "yahoo": "TER",
+  "price": 407.87,
+  "prevClose": 400.91,
+  "w52low": 131.75,
+  "w52high": 487.91,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "AMCR": {
+  "status": "ok",
+  "yahoo": "AMCR",
+  "price": 41.38,
+  "prevClose": 41.86,
+  "w52low": 36.25,
+  "w52high": 50.94,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "SNDK": {
+  "status": "ok",
+  "yahoo": "SNDK",
+  "price": 1723.74,
+  "prevClose": 1739.89,
+  "w52low": 116.17,
+  "w52high": 2354.39,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "STX": {
+  "status": "ok",
+  "yahoo": "STX",
+  "price": 799.08,
+  "prevClose": 922.34,
+  "w52low": 209.0,
+  "w52high": 1145.0,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "WDC": {
+  "status": "ok",
+  "yahoo": "WDC",
+  "price": 403.29,
+  "prevClose": 454.46,
+  "w52low": 112.52,
+  "w52high": 799.87,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "IREN": {
+  "status": "ok",
+  "yahoo": "IREN",
+  "price": 38.425,
+  "prevClose": 40.88,
+  "w52low": 28.93,
+  "w52high": 76.87,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "WULF": {
+  "status": "ok",
+  "yahoo": "WULF",
+  "price": 14.25,
+  "prevClose": 14.8,
+  "w52low": 10.47,
+  "w52high": 29.84,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "HUT": {
+  "status": "ok",
+  "yahoo": "HUT",
+  "price": 88.37,
+  "prevClose": 86.1,
+  "w52low": 31.67,
+  "w52high": 140.8,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "GLXY": {
+  "status": "ok",
+  "yahoo": "GLXY",
+  "price": 21.358,
+  "prevClose": 22.74,
+  "w52low": 16.43,
+  "w52high": 45.92,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "APLD": {
+  "status": "ok",
+  "yahoo": "APLD",
+  "price": 23.945,
+  "prevClose": 24.37,
+  "w52low": 19.005,
+  "w52high": 50.725,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "CRDO": {
+  "status": "ok",
+  "yahoo": "CRDO",
+  "price": 219.05,
+  "prevClose": 194.79,
+  "w52low": 86.485,
+  "w52high": 308.67,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "ALAB": {
+  "status": "ok",
+  "yahoo": "ALAB",
+  "price": 381.69,
+  "prevClose": 355.97,
+  "w52low": 97.89,
+  "w52high": 499.476,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "CSCO": {
+  "status": "ok",
+  "yahoo": "CSCO",
+  "price": 117.82,
+  "prevClose": 107.63,
+  "w52low": 66.81,
+  "w52high": 130.37,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "HPE": {
+  "status": "ok",
+  "yahoo": "HPE",
+  "price": 72.365,
+  "prevClose": 63.89,
+  "w52low": 19.84,
+  "w52high": 73.28,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "CIEN": {
+  "status": "ok",
+  "yahoo": "CIEN",
+  "price": 447.33,
+  "prevClose": 351.82,
+  "w52low": 152.54,
+  "w52high": 637.51,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "COHR": {
+  "status": "ok",
+  "yahoo": "COHR",
+  "price": 333.92,
+  "prevClose": 287.81,
+  "w52low": 108.19,
+  "w52high": 440.0,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "LITE": {
+  "status": "ok",
+  "yahoo": "LITE",
+  "price": 1115.26,
+  "prevClose": 971.26,
+  "w52low": 147.81,
+  "w52high": 1137.205,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "FN": {
+  "status": "ok",
+  "yahoo": "FN",
+  "price": 491.82,
+  "prevClose": 424.27,
+  "w52low": 361.19,
+  "w52high": 748.89,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "AAOI": {
+  "status": "ok",
+  "yahoo": "AAOI",
+  "price": 123.32,
+  "prevClose": 99.26,
+  "w52low": 18.5,
+  "w52high": 233.67,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "POET": {
+  "status": "ok",
+  "yahoo": "POET",
+  "price": 7.305,
+  "prevClose": 7.48,
+  "w52low": 3.87,
+  "w52high": 20.81,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "PLTR": {
+  "status": "ok",
+  "yahoo": "PLTR",
+  "price": 193.43,
+  "prevClose": 187.05,
+  "w52low": 106.37,
+  "w52high": 207.52,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "NOW": {
+  "status": "ok",
+  "yahoo": "NOW",
+  "price": 139.19,
+  "prevClose": 134.01,
+  "w52low": 81.24,
+  "w52high": 192.966,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "CRM": {
+  "status": "ok",
+  "yahoo": "CRM",
+  "price": 226.15,
+  "prevClose": 229.57,
+  "w52low": 146.32,
+  "w52high": 269.11,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "SNOW": {
+  "status": "ok",
+  "yahoo": "SNOW",
+  "price": 334.726,
+  "prevClose": 339.56,
+  "w52low": 118.3,
+  "w52high": 384.56,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "MDB": {
+  "status": "ok",
+  "yahoo": "MDB",
+  "price": 362.02,
+  "prevClose": 348.61,
+  "w52low": 215.68,
+  "w52high": 473.1,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "DDOG": {
+  "status": "ok",
+  "yahoo": "DDOG",
+  "price": 272.825,
+  "prevClose": 273.85,
+  "w52low": 98.01,
+  "w52high": 292.72,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "APP": {
+  "status": "ok",
+  "yahoo": "APP",
+  "price": 279.645,
+  "prevClose": 290.43,
+  "w52low": 266.84,
+  "w52high": 738.01,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "TEAM": {
+  "status": "ok",
+  "yahoo": "TEAM",
+  "price": 196.7,
+  "prevClose": 179.29,
+  "w52low": 56.01,
+  "w52high": 200.0,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "TWLO": {
+  "status": "ok",
+  "yahoo": "TWLO",
+  "price": 274.15,
+  "prevClose": 292.46,
+  "w52low": 104.5,
+  "w52high": 308.4,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "CRWD": {
+  "status": "ok",
+  "yahoo": "CRWD",
+  "price": 264.9,
+  "prevClose": 264.75,
+  "w52low": 85.68,
+  "w52high": 286.99,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "PANW": {
+  "status": "ok",
+  "yahoo": "PANW",
+  "price": 406.915,
+  "prevClose": 397.31,
+  "w52low": 139.57,
+  "w52high": 432.33,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "ZS": {
+  "status": "ok",
+  "yahoo": "ZS",
+  "price": 212.95,
+  "prevClose": 199.42,
+  "w52low": 114.625,
+  "w52high": 336.99,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "NET": {
+  "status": "ok",
+  "yahoo": "NET",
+  "price": 343.73,
+  "prevClose": 347.28,
+  "w52low": 158.83,
+  "w52high": 370.35,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "S": {
+  "status": "ok",
+  "yahoo": "S",
+  "price": 25.39,
+  "prevClose": 23.76,
+  "w52low": 11.81,
+  "w52high": 26.335,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "FTNT": {
+  "status": "ok",
+  "yahoo": "FTNT",
+  "price": 190.32,
+  "prevClose": 178.76,
+  "w52low": 73.55,
+  "w52high": 192.41,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ },
+ "OKTA": {
+  "status": "ok",
+  "yahoo": "OKTA",
+  "price": 218.335,
+  "prevClose": 209.11,
+  "w52low": 62.66,
+  "w52high": 226.44,
+  "currency": "USD",
+  "asOf": "2026-10-07 13:30 UTC"
+ }
+}

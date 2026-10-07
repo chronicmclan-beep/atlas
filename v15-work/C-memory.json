@@ -1,0 +1,344 @@
+{
+ "bundle": "C-memory",
+ "companies": [
+  {
+   "ticker": "MU",
+   "name": "Micron",
+   "layer": "memory",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "SNDK",
+   "name": "Sandisk Corporation",
+   "layer": "memory",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "STX",
+   "name": "Seagate Technology Holdings plc",
+   "layer": "memory",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "WDC",
+   "name": "Western Digital Corporation",
+   "layer": "memory",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "Samsung",
+   "name": "Samsung",
+   "layer": "memory",
+   "hasRecord": false,
+   "gaps": [
+    {
+     "id": "revenue",
+     "label": "Revenue",
+     "family": "size"
+    },
+    {
+     "id": "latest-quarter",
+     "label": "Latest quarter revenue",
+     "family": "size"
+    },
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "Hynix",
+   "name": "SK Hynix",
+   "layer": "memory",
+   "hasRecord": false,
+   "gaps": [
+    {
+     "id": "revenue",
+     "label": "Revenue",
+     "family": "size"
+    },
+    {
+     "id": "latest-quarter",
+     "label": "Latest quarter revenue",
+     "family": "size"
+    },
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  }
+ ]
+}

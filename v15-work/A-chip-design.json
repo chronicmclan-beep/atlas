@@ -1,0 +1,686 @@
+{
+ "bundle": "A-chip-design",
+ "companies": [
+  {
+   "ticker": "NVDA",
+   "name": "NVIDIA",
+   "layer": "chip-design",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "AMD",
+   "name": "AMD",
+   "layer": "chip-design",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "INTC",
+   "name": "Intel",
+   "layer": "chip-design",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "AVGO",
+   "name": "Broadcom",
+   "layer": "chip-design",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "MRVL",
+   "name": "Marvell Technology",
+   "layer": "chip-design",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "ARM",
+   "name": "Arm Holdings",
+   "layer": "chip-design",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "QCOM",
+   "name": "QUALCOMM Incorporated",
+   "layer": "chip-design",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "CRDO",
+   "name": "Credo Technology Group Holding Ltd",
+   "layer": "systems",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "ALAB",
+   "name": "Astera Labs, Inc.",
+   "layer": "systems",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    }
+   ],
+   "extras": []
+  }
+ ]
+}

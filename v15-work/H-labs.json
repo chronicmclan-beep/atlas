@@ -1,0 +1,978 @@
+{
+ "bundle": "H-labs",
+ "companies": [
+  {
+   "ticker": "OpenAI",
+   "name": "OpenAI",
+   "layer": "labs",
+   "hasRecord": false,
+   "gaps": [
+    {
+     "id": "revenue",
+     "label": "Revenue",
+     "family": "size"
+    },
+    {
+     "id": "latest-quarter",
+     "label": "Latest quarter revenue",
+     "family": "size"
+    },
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "Anthropic",
+   "name": "Anthropic",
+   "layer": "labs",
+   "hasRecord": false,
+   "gaps": [
+    {
+     "id": "revenue",
+     "label": "Revenue",
+     "family": "size"
+    },
+    {
+     "id": "latest-quarter",
+     "label": "Latest quarter revenue",
+     "family": "size"
+    },
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "xAI",
+   "name": "xAI",
+   "layer": "labs",
+   "hasRecord": false,
+   "gaps": [
+    {
+     "id": "revenue",
+     "label": "Revenue",
+     "family": "size"
+    },
+    {
+     "id": "latest-quarter",
+     "label": "Latest quarter revenue",
+     "family": "size"
+    },
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "SoftBank",
+   "name": "SoftBank",
+   "layer": "labs",
+   "hasRecord": false,
+   "gaps": [
+    {
+     "id": "revenue",
+     "label": "Revenue",
+     "family": "size"
+    },
+    {
+     "id": "latest-quarter",
+     "label": "Latest quarter revenue",
+     "family": "size"
+    },
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "HUMAIN",
+   "name": "HUMAIN",
+   "layer": "labs",
+   "hasRecord": false,
+   "gaps": [
+    {
+     "id": "revenue",
+     "label": "Revenue",
+     "family": "size"
+    },
+    {
+     "id": "latest-quarter",
+     "label": "Latest quarter revenue",
+     "family": "size"
+    },
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "G42",
+   "name": "G42",
+   "layer": "labs",
+   "hasRecord": false,
+   "gaps": [
+    {
+     "id": "revenue",
+     "label": "Revenue",
+     "family": "size"
+    },
+    {
+     "id": "latest-quarter",
+     "label": "Latest quarter revenue",
+     "family": "size"
+    },
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "US",
+   "name": "US Government",
+   "layer": "labs",
+   "hasRecord": false,
+   "gaps": [
+    {
+     "id": "revenue",
+     "label": "Revenue",
+     "family": "size"
+    },
+    {
+     "id": "latest-quarter",
+     "label": "Latest quarter revenue",
+     "family": "size"
+    },
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "family": "size"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "family": "valuation"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "family": "valuation"
+    },
+    {
+     "id": "eps-diluted",
+     "label": "Diluted EPS",
+     "family": "valuation"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "family": "growth"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "family": "growth"
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "family": "profitability"
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "family": "profitability"
+    },
+    {
+     "id": "net-income",
+     "label": "Net income",
+     "family": "profitability"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "family": "profitability"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "family": "profitability"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "family": "returns"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "family": "returns"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "family": "balance"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "family": "balance"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "family": "balance"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf",
+     "label": "Free cash flow",
+     "family": "cash"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "family": "cash"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "family": "cash"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "family": "market"
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "family": "market"
+    }
+   ],
+   "extras": []
+  }
+ ]
+}

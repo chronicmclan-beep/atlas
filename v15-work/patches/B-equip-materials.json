@@ -1,0 +1,1260 @@
+{
+ "records": {
+  "ASML": {
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Enterprise value",
+     "value": "$683.3B",
+     "sub": "$1,799.02 x 385.4M shares outstanding (20-F cover) = $693.3B mcap + E4.4B total debt ($5.2B @ E1=$1.1750) - E12.9B cash ($15.2B); Oct 7 2026 - Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "AMAT": {
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Enterprise value",
+     "value": "$410.6B",
+     "sub": "$518.59 x 792.9M shares outstanding (10-K cover) = $411.2B mcap + $6.6B total debt - $7.2B cash; Oct 7 2026 - Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "LRCX": {
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Enterprise value",
+     "value": "$406.1B",
+     "sub": "$326.025 x 1,251.3M shares outstanding (10-K cover) = $408.0B mcap + $3.7B total debt - $5.6B cash; Oct 7 2026 - Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "KLAC": {
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Enterprise value",
+     "value": "$260.7B",
+     "sub": "$196.27 x 1,306.5M shares outstanding (10-K cover, post 10-for-1 split Jun 11 2026) = $256.4B mcap + $5.9B total debt - $1.6B cash; Oct 7 2026 - Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "TER": {
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Enterprise value",
+     "value": "$63.8B",
+     "sub": "$407.87 x 156.6M shares outstanding (10-K cover) = $63.9B mcap + $0.2B total debt - $0.294B cash; Oct 7 2026 - Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "AMCR": {
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Enterprise value",
+     "value": "$32.0B",
+     "sub": "$41.38 x 462.3M shares outstanding (10-K cover) = $19.1B mcap + $14.0B total debt - $1.1B cash; Oct 7 2026 - Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "TEL": {
+   "fiscalYear": "FY2026",
+   "calendarYearBasis": 2026,
+   "asOf": "ended Mar 31, 2026 · tanshin announced Apr 30, 2026",
+   "source": "Tokyo Electron FY2026 tanshin (tel.com, Apr 30 2026); TEL FY2021 investor presentation (FY2021 revenue); TEL Q1 FY2027 tanshin (Jul 30 2026); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": true,
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$15.5B",
+     "sub": "¥2,443,533M FY2026 (tanshin) ÷ 157.99 (USD/JPY Oct 7 2026)",
+     "tier": "reported"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": "$4.6B",
+     "sub": "¥732,388M Q1 FY2027 (ended Jun 30, 2026), tanshin; reported Jul 30, 2026",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Market capitalization",
+     "value": "$180.0B",
+     "sub": "¥12,500 × 2,274.2M shares outstanding post 5-for-1 split (pre-split 454.85M × 5; split ex Sep 29 2026, effective Oct 7 2026; prices.json ¥12,500 is post-split) = ¥28,428.1B ÷ 157.99; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$176.7B",
+     "sub": "¥28,428.1B mcap − ¥506.3B cash & time deposits (no interest-bearing debt on B/S) = ¥27,921.9B ÷ 157.99; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "50.0x",
+     "sub": "¥12,500 ÷ ¥250.176 diluted EPS (¥1,250.88 pre-split ÷ 5); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "11.6x",
+     "sub": "¥28,428.1B mcap ÷ ¥2,443.5B revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "85.9x",
+     "sub": "¥28,428.1B mcap ÷ ¥330.7B FCF (OCF ¥539,732M − PP&E purchases ¥208,984M); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "¥1,250.88 (¥250.18 post-split)",
+     "sub": "FY2026 tanshin; 5-for-1 split effective Oct 7 2026 divides pre-split EPS by 5",
+     "tier": "reported"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+0.5% YoY",
+     "sub": "(¥2,443,533M − ¥2,431,568M) ÷ ¥2,431,568M FY2025",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "11.8%",
+     "sub": "(¥2,443,533M ÷ ¥1,399,100M FY2021)^(1/5) − 1; FY2021 net sales from TEL FY2021 presentation (tel.com)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Gross margin",
+     "value": "45.3%",
+     "sub": "¥1,107,880M gross profit ÷ ¥2,443,533M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Operating margin",
+     "value": "25.6%",
+     "sub": "¥624,936M operating income ÷ ¥2,443,533M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net income",
+     "value": "$3.6B",
+     "sub": "¥574,454M FY2026 (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Net margin",
+     "value": "23.5%",
+     "sub": "¥574,454M ÷ ¥2,443,533M",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$1.8B",
+     "sub": "¥277,866M FY2026 (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "29.6%",
+     "sub": "as reported in FY2026 tanshin",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "23.0%",
+     "sub": "as reported in FY2026 tanshin (ordinary income ÷ total assets basis)",
+     "tier": "reported"
+    },
+    {
+     "label": "Net debt",
+     "value": "−$3.2B (net cash)",
+     "sub": "−¥506.3B: no interest-bearing debt; cash & equivalents incl. time deposits ¥506,250M ÷ 157.99",
+     "tier": "estimated"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.0x",
+     "sub": "no interest-bearing debt on FY2026 balance sheet",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$3.2B",
+     "sub": "¥506,250M cash & equivalents incl. time deposits (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$3.4B",
+     "sub": "¥539,732M FY2026 (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "$2.1B",
+     "sub": "OCF ¥539,732M − PP&E purchases ¥208,984M = ¥330,748M ÷ 157.99",
+     "tier": "estimated"
+    },
+    {
+     "label": "FCF margin",
+     "value": "13.5%",
+     "sub": "¥330,748M FCF ÷ ¥2,443,533M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$1.4B",
+     "sub": "¥216.0B FY2026 capex (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "64.8%",
+     "sub": "(¥12,500 − ¥5,586) ÷ (¥16,252 − ¥5,586); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "Shin-Etsu": {
+   "fiscalYear": "FY2026",
+   "calendarYearBasis": 2026,
+   "asOf": "ended Mar 31, 2026 · tanshin announced Apr 28, 2026",
+   "source": "Shin-Etsu FY2026 tanshin (TDnet via magicalir, Apr 28 2026); Shin-Etsu 10-year financial summary (shinetsu.co.jp); Shin-Etsu Q1 FY2027 tanshin (TDnet); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": true,
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$16.3B",
+     "sub": "¥2,573,969M FY2026 (tanshin) ÷ 157.99 (USD/JPY Oct 7 2026)",
+     "tier": "reported"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": "$4.2B",
+     "sub": "¥662,424M Q1 FY2027 (ended Jun 30, 2026), tanshin; reported Aug 2026",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Market capitalization",
+     "value": "$73.3B",
+     "sub": "¥6,234 × 1,856.7M shares outstanding (1,984,995,865 issued − 128,283,489 treasury) = ¥11,574.7B ÷ 157.99; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$71.2B",
+     "sub": "¥11,574.7B mcap + ¥243.2B interest-bearing debt − ¥562.1B cash & equivalents = ¥11,255.8B ÷ 157.99; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "24.7x",
+     "sub": "¥6,234 ÷ ¥252.49 diluted EPS (FY2026); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "4.5x",
+     "sub": "¥11,574.7B mcap ÷ ¥2,574.0B revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "31.0x",
+     "sub": "¥11,574.7B mcap ÷ ¥372,951M FCF (OCF ¥712,651M − capex ¥339,700M); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "¥252.49 (~$1.60)",
+     "sub": "FY2026 tanshin; ¥252.49 ÷ 157.99 = $1.60",
+     "tier": "reported"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+0.5% YoY",
+     "sub": "per FY2026 tanshin headline (FY2025 comparative in filing)",
+     "tier": "reported"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "11.5%",
+     "sub": "(¥2,573,969M ÷ ¥1,496,900M FY2021)^(1/5) − 1; FY2021 net sales from Shin-Etsu 10-year summary (shinetsu.co.jp)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Gross margin",
+     "value": "34.2%",
+     "sub": "¥880,793M gross profit ÷ ¥2,573,969M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Operating margin",
+     "value": "24.7%",
+     "sub": "¥635,204M operating income ÷ ¥2,573,969M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net income",
+     "value": "$3.0B",
+     "sub": "¥474,459M FY2026 (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Net margin",
+     "value": "18.4%",
+     "sub": "¥474,459M ÷ ¥2,573,969M",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$0.5B",
+     "sub": "¥77.8B FY2026 (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "10.4%",
+     "sub": "as reported in FY2026 tanshin",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "12.5%",
+     "sub": "as reported in FY2026 tanshin",
+     "tier": "reported"
+    },
+    {
+     "label": "Net debt",
+     "value": "−$2.0B (net cash)",
+     "sub": "¥243.2B interest-bearing debt − ¥562.1B cash & equivalents = −¥318.9B ÷ 157.99",
+     "tier": "estimated"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.05x",
+     "sub": "¥243.2B debt ÷ ¥4,643.3B net assets",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$3.6B",
+     "sub": "¥562,089M (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$4.5B",
+     "sub": "¥712,651M FY2026 (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "$2.4B",
+     "sub": "OCF ¥712,651M − capex ¥339,700M = ¥372,951M ÷ 157.99",
+     "tier": "estimated"
+    },
+    {
+     "label": "FCF margin",
+     "value": "14.5%",
+     "sub": "¥372,951M FCF ÷ ¥2,573,969M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$2.2B",
+     "sub": "¥339.7B FY2026 (tanshin) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "52.4%",
+     "sub": "(¥6,234 − ¥4,366) ÷ (¥7,930 − ¥4,366); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "SUMCO": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "ended Dec 31, 2025 · results announced Feb 10, 2026",
+   "source": "SUMCO FY2025 results presentation deck and forecast-vs-actual announcement (eir-parts, Feb 10 2026); SUMCO annual report (FY2021 revenue); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": true,
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$2.6B",
+     "sub": "¥409,670M FY2025 (results deck) ÷ 157.99 (USD/JPY Oct 7 2026)",
+     "tier": "reported"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": "$0.7B",
+     "sub": "¥113,614M Q2 FY2026 (ended Jun 30, 2026), reported Aug 6, 2026; secondary confirmation only — primary tanshin not yet located",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Market capitalization",
+     "value": "$8.2B",
+     "sub": "¥3,684 × 350.2M shares issued (treasury count not disclosed in located materials; assumed negligible) = ¥1,289.8B ÷ 157.99; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$9.9B",
+     "sub": "¥1,289.8B mcap + ¥353.7B interest-bearing debt − ¥75.2B cash & deposits = ¥1,568.3B ÷ 157.99; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "n/a: FY2025 was a net-loss year (−¥11,751M); trailing P/E not meaningful",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / sales",
+     "value": "3.1x",
+     "sub": "¥1,289.8B mcap ÷ ¥409.7B revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "64.2x",
+     "sub": "¥1,289.8B mcap ÷ ¥20,100M FCF (OCF ¥100.0B − capex ¥79.9B acceptance basis); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "−¥33.60 (loss year)",
+     "sub": "FY2025 basic = diluted in loss year (results announcement)",
+     "tier": "reported"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+3.3% YoY",
+     "sub": "(¥409,670M − ¥396,600M) ÷ ¥396,600M FY2024",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "4.1%",
+     "sub": "(¥409,670M ÷ ¥335,600M FY2021)^(1/5) − 1; FY2021 revenue from SUMCO annual report",
+     "tier": "estimated"
+    },
+    {
+     "label": "Gross margin",
+     "value": null,
+     "sub": "cost of sales not disclosed in located English-language FY2025 materials (results deck, forecast-vs-actual announcement)",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating margin",
+     "value": "0.3%",
+     "sub": "¥1,342M operating profit ÷ ¥409,670M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net income",
+     "value": "−¥11.8B (~−$74M)",
+     "sub": "−¥11,751M FY2025 (results announcement); ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Net margin",
+     "value": "−2.9%",
+     "sub": "−¥11,751M ÷ ¥409,670M",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": null,
+     "sub": "R&D expense not disclosed in located FY2025 materials",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "−2.0%",
+     "sub": "as reported in FY2025 results materials",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "−1.0%",
+     "sub": "−¥11,751M ÷ ¥1,127,900M total assets",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "$1.8B",
+     "sub": "¥353.7B interest-bearing debt − ¥75.2B cash & deposits = ¥278.5B ÷ 157.99",
+     "tier": "estimated"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.55x",
+     "sub": "¥353.7B interest-bearing debt ÷ ¥647.7B net assets",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$0.5B",
+     "sub": "¥75,200M cash & deposits (results materials) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$0.6B",
+     "sub": "¥100.0B FY2025 (results materials) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "$0.1B",
+     "sub": "OCF ¥100.0B − capex ¥79.9B = ¥20,100M ÷ 157.99",
+     "tier": "estimated"
+    },
+    {
+     "label": "FCF margin",
+     "value": "4.9%",
+     "sub": "¥20,100M FCF ÷ ¥409,670M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$0.5B",
+     "sub": "¥79.9B FY2025 capex, acceptance basis (results materials) ÷ 157.99",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "53.1%",
+     "sub": "(¥3,684 − ¥1,131) ÷ (¥5,939 − ¥1,131); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "LIN": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "ended Dec 31, 2025 · 10-K filed Feb 25, 2026",
+   "source": "Linde plc FY2025 Form 10-K (Feb 25 2026); Linde Q2 2026 earnings press release (Jul 31 2026, Business Wire); Linde FY2020 earnings release (Feb 2021, Business Wire); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": true,
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$34.0B",
+     "sub": "$33,986M FY2025 sales, 10-K consolidated statements of income",
+     "tier": "reported"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": "$9.3B",
+     "sub": "$9,289M Q2 2026 (ended Jun 30, 2026); company earnings press release Jul 31, 2026",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Market capitalization",
+     "value": "$225.2B",
+     "sub": "$485.74 × 463.7M shares outstanding (490,766,972 issued − 27,086,030 treasury, Dec 31 2025, 10-K) = $225.2B; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$247.2B",
+     "sub": "$225.2B mcap + $27.0B total debt ($4,510M ST + $1,796M current LT + $20,683M LT) − $5.1B cash; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "33.2x",
+     "sub": "$485.74 ÷ $14.61 GAAP diluted EPS (FY2025); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "6.6x",
+     "sub": "$225.2B mcap ÷ $34.0B FY2025 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "44.3x",
+     "sub": "$225.2B mcap ÷ $5.1B FCF (OCF $10,350M − capex $5,261M); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "$14.61",
+     "sub": "FY2025 GAAP diluted EPS, 10-K",
+     "tier": "reported"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+3.0% YoY",
+     "sub": "($33,986M − $33,005M) ÷ $33,005M FY2024",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "4.5%",
+     "sub": "($33,986M ÷ $27,243M FY2020)^(1/5) − 1; FY2020 sales $27.2B from company FY2020 earnings release (Feb 4 2021)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Gross margin",
+     "value": "48.8%",
+     "sub": "($33,986M − $17,389M cost of sales excl. D&A) ÷ $33,986M",
+     "tier": "estimated"
+    },
+    {
+     "label": "Operating margin",
+     "value": "26.3%",
+     "sub": "$8,923M operating profit ÷ $33,986M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net income",
+     "value": "$6.9B",
+     "sub": "$6,898M net income attributable to Linde plc, FY2025 10-K",
+     "tier": "reported"
+    },
+    {
+     "label": "Net margin",
+     "value": "20.3%",
+     "sub": "$6,898M ÷ $33,986M",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$0.15B",
+     "sub": "$147M FY2025 R&D, 10-K",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "18.1%",
+     "sub": "$6,898M ÷ $38,168.5M avg Linde plc shareholders' equity (($38,245M + $38,092M)/2)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "8.5%",
+     "sub": "$7,058M net income incl. NCI ÷ $83,482M avg total assets (($86,817M + $80,147M)/2)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "$21.9B",
+     "sub": "$27.0B total debt − $5.1B cash & equivalents",
+     "tier": "estimated"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.68x",
+     "sub": "$27.0B total debt ÷ $39.7B total equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$5.1B",
+     "sub": "$5,056M cash and cash equivalents, Dec 31 2025 10-K balance sheet",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$10.4B",
+     "sub": "$10,350M net cash provided by operating activities, FY2025 10-K",
+     "tier": "reported"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "$5.1B",
+     "sub": "OCF $10,350M − capex $5,261M = $5.1B",
+     "tier": "estimated"
+    },
+    {
+     "label": "FCF margin",
+     "value": "15.0%",
+     "sub": "$5.1B FCF ÷ $34.0B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$5.3B",
+     "sub": "$5,261M capital expenditures, FY2025 10-K cash flow statement",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "61.1%",
+     "sub": "($485.74 − $387.78) ÷ ($548.20 − $387.78); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "ASX": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "ended Dec 31, 2025 · 20-F filed Apr 1, 2026",
+   "source": "ASE Technology Holding FY2025 Form 20-F (Apr 1 2026); ASEH 2025 annual report (Feb 28 2026); ASEH Q2 2026 earnings release (Jul 30 2026, PR Newswire); ASEH FY2020 earnings release (Feb 4 2021, PR Newswire); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": true,
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$20.3B",
+     "sub": "NT$645,388M FY2025 operating revenues (20-F) ÷ 31.87 (TWD/USD Oct 7 2026)",
+     "tier": "reported"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": "$6.0B",
+     "sub": "NT$191,064M Q2 2026 (ended Jun 30, 2026); company earnings release Jul 30, 2026",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Market capitalization",
+     "value": "$101.3B",
+     "sub": "$45.57 × 2,223.5M ADSs (4,447,029,782 common shares ÷ 2; 1 ADS = 2 shares, 20-F) = $101.3B; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$106.4B",
+     "sub": "$101.3B mcap + $8.0B total debt (NT$254.8B: ST borrowings + ST bills + current/non-current bonds & LT borrowings) − $2.9B cash (NT$92.5B); NT$→USD @ 31.87; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "81.4x",
+     "sub": "$45.57 ÷ US$0.56 diluted EPS per ADS (NT$17.49, FY2025 20-F); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "5.0x",
+     "sub": "$101.3B mcap ÷ $20.3B FY2025 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "n/m: FY2025 FCF negative (OCF NT$142,249M − capex NT$164,643M = −NT$22,393M)",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "NT$8.75 (NT$17.49 / US$0.56 per ADS)",
+     "sub": "FY2025 20-F; 1 ADS = 2 common shares",
+     "tier": "reported"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+8.4% YoY",
+     "sub": "(NT$645,388M − NT$595,410M) ÷ NT$595,410M FY2024",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "6.2%",
+     "sub": "(NT$645,388M ÷ NT$476,978M FY2020)^(1/5) − 1; FY2020 net revenues from company FY2020 earnings release (Feb 4 2021)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Gross margin",
+     "value": "17.7%",
+     "sub": "NT$114,193M gross profit ÷ NT$645,388M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Operating margin",
+     "value": "8.0%",
+     "sub": "NT$51,421M profit from operations ÷ NT$645,388M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net income",
+     "value": "$1.3B",
+     "sub": "NT$40,016M attributable to owners (20-F) ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Net margin",
+     "value": "6.2%",
+     "sub": "NT$40,016M ÷ NT$645,388M",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$1.0B",
+     "sub": "NT$32,851M FY2025 R&D expenses (20-F) ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "12.1%",
+     "sub": "NT$40,016M ÷ NT$331,104M avg equity attributable to owners ((342,182+320,026)/2)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "5.1%",
+     "sub": "NT$41,196M profit for the year ÷ NT$815,280M avg total assets ((889,500+741,060)/2)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "$5.1B",
+     "sub": "NT$254.8B total debt − NT$92.5B cash = NT$162.3B ÷ 31.87",
+     "tier": "estimated"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.69x",
+     "sub": "NT$254.8B total debt ÷ NT$368.6B total equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$2.9B",
+     "sub": "NT$92,469M cash and cash equivalents, Dec 31 2025 20-F balance sheet ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$4.5B",
+     "sub": "NT$142,249M net cash generated from operating activities, FY2025 20-F ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "−$0.7B",
+     "sub": "OCF NT$142,249M − capex NT$164,643M = −NT$22,393M ÷ 31.87",
+     "tier": "estimated"
+    },
+    {
+     "label": "FCF margin",
+     "value": "−3.5%",
+     "sub": "−NT$22,393M FCF ÷ NT$645,388M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$5.2B",
+     "sub": "NT$164,643M payments for property, plant and equipment, FY2025 20-F cash flow statement ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "93.6%",
+     "sub": "($45.57 − $11.07) ÷ ($47.93 − $11.07); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "AMKR": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "ended Dec 31, 2025 · 10-K filed Feb 20, 2026",
+   "source": "Amkor Technology FY2025 Form 10-K (Feb 20 2026); Amkor Q2 2026 earnings press release (Jul 27 2026, Business Wire); Amkor Q4/FY2021 earnings release (Feb 2022, Business Wire — FY2020 comparatives); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": true,
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$6.7B",
+     "sub": "$6,708M FY2025 net sales, 10-K consolidated statements of income",
+     "tier": "reported"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": "$1.9B",
+     "sub": "$1,898M Q2 2026 (ended Jun 30, 2026); company earnings press release Jul 27, 2026",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Market capitalization",
+     "value": "$12.8B",
+     "sub": "$51.93 × 247.3M shares outstanding (Dec 31, 2025, 10-K) = $12.8B; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$12.9B",
+     "sub": "$12.8B mcap + $1.45B total debt ($162.4M ST + $1,282.8M LT) − $1.38B cash & equivalents; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "34.6x",
+     "sub": "$51.93 ÷ $1.50 GAAP diluted EPS (FY2025); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "1.9x",
+     "sub": "$12.8B mcap ÷ $6.7B FY2025 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "67.2x",
+     "sub": "$12.8B mcap ÷ $0.19B FCF (OCF $1,095.6M − capex $904.6M); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "$1.50",
+     "sub": "FY2025 GAAP diluted EPS, 10-K",
+     "tier": "reported"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+6.2% YoY",
+     "sub": "($6,708M − $6,318M) ÷ $6,318M FY2024",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "5.8%",
+     "sub": "($6,708M ÷ $5,051M FY2020)^(1/5) − 1; FY2020 net sales $5,050.6M from company Q4/FY2021 release comparatives (Feb 2022)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Gross margin",
+     "value": "14.0%",
+     "sub": "$938.6M gross profit ÷ $6,708M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Operating margin",
+     "value": "7.0%",
+     "sub": "$467.4M operating income ÷ $6,708M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net income",
+     "value": "$0.37B",
+     "sub": "$373,895K net income attributable to Amkor, FY2025 10-K",
+     "tier": "reported"
+    },
+    {
+     "label": "Net margin",
+     "value": "5.6%",
+     "sub": "$373,895K ÷ $6,707,981K",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$0.17B",
+     "sub": "$166,743K FY2025 R&D, 10-K",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "8.7%",
+     "sub": "$373,895K ÷ $4,310,326K avg Amkor stockholders' equity (($4,471,106K + $4,149,545K)/2)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "5.0%",
+     "sub": "$376,116K net income ÷ $7,540,319K avg total assets (($8,136,309K + $6,944,328K)/2)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "$0.07B",
+     "sub": "$1.45B total debt − $1.38B cash & equivalents",
+     "tier": "estimated"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.32x",
+     "sub": "$1.45B total debt ÷ $4.51B total equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$1.4B",
+     "sub": "$1,378,347K cash and cash equivalents, Dec 31 2025 10-K balance sheet",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$1.1B",
+     "sub": "$1,095,606K net cash provided by operating activities, FY2025 10-K",
+     "tier": "reported"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "$0.19B",
+     "sub": "OCF $1,095.6M − capex $904.6M = $0.19B",
+     "tier": "estimated"
+    },
+    {
+     "label": "FCF margin",
+     "value": "2.8%",
+     "sub": "$0.19B FCF ÷ $6,708M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$0.90B",
+     "sub": "$904,614K payments for property, plant and equipment, FY2025 10-K cash flow statement",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "34.7%",
+     "sub": "($51.93 − $28.19) ÷ ($96.68 − $28.19); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "TSMC": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "ended Dec 31, 2025 · 20-F filed 2026",
+   "source": "TSMC FY2025 Form 20-F; TSMC Q2 2026 earnings release (Jul 16 2026, investor.tsmc.com / pr.tsmc.com); TSMC Q4 2020 earnings release (Jan 2021, investor.tsmc.com — FY2020 revenue); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": true,
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$119.5B",
+     "sub": "NT$3,809,054M FY2025 net revenue (20-F) ÷ 31.87 (TWD/USD Oct 7 2026)",
+     "tier": "reported"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": "$40.2B (NT$1,270.4B)",
+     "sub": "NT$1,270,380M Q2 2026 (ended Jun 30, 2026); company earnings release Jul 16, 2026 (US$40.20B per company)",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Market capitalization",
+     "value": "$2,452B",
+     "sub": "$472.795 × 5,186.5M ADRs (25,932,524,521 common shares ÷ 5; 1 ADR = 5 shares, 20-F) = $2452B; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$2,398B",
+     "sub": "$2452B mcap + $32.4B long-term debt (NT$1,033B; ST loans nil) − $86.8B cash & equivalents (NT$2,768B); NT$→USD @ 31.87; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "45.3x",
+     "sub": "$472.795 ÷ US$10.43 diluted EPS per ADS (NT$327.34, FY2025 20-F); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "20.5x",
+     "sub": "$2452B mcap ÷ $119.5B FY2025 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "78.0x",
+     "sub": "$2452B mcap ÷ $31.5B FCF (OCF NT$2,275B − capex NT$1,272B); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "NT$65.47 (US$2.09); NT$327.34 (US$10.43) per ADS",
+     "sub": "FY2025 20-F; 1 ADS = 5 common shares",
+     "tier": "reported"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+31.6% YoY",
+     "sub": "(NT$3,809,054M − NT$2,894,308M) ÷ NT$2,894,308M FY2024",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "23.3%",
+     "sub": "(NT$3,809,054M ÷ NT$1,339,255M FY2020)^(1/5) − 1; FY2020 revenue from TSMC Q4 2020 earnings release (Jan 2021)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Gross margin",
+     "value": "59.9%",
+     "sub": "NT$2,281,294M gross profit ÷ NT$3,809,054M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Operating margin",
+     "value": "50.8%",
+     "sub": "NT$1,936,092M operating income ÷ NT$3,809,054M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net income",
+     "value": "$53.3B",
+     "sub": "NT$1,697,604M attributable to parent (20-F) ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Net margin",
+     "value": "44.6%",
+     "sub": "NT$1,697,604M ÷ NT$3,809,054M",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$7.7B",
+     "sub": "NT$246,427M FY2025 R&D (20-F) ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "31.7%",
+     "sub": "NT$1,697,604M ÷ NT$5,355,039M avg equity attributable to parent",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "21.4%",
+     "sub": "NT$1,695,125M net income ÷ NT$7,932,843M total assets",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "−$54.4B (net cash)",
+     "sub": "NT$1,033B long-term debt − NT$2,768B cash & equivalents = −NT$1,735B ÷ 31.87",
+     "tier": "estimated"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.19x",
+     "sub": "NT$1,033B debt ÷ NT$5,396B total equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$86.8B",
+     "sub": "NT$2,767,856M cash & equivalents, Dec 31 2025 20-F balance sheet ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$71.4B",
+     "sub": "NT$2,274,976M OCF, FY2025 20-F ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "$31.5B",
+     "sub": "OCF NT$2,274,976M − capex NT$1,272,411M = NT$1,002,565M ÷ 31.87",
+     "tier": "estimated"
+    },
+    {
+     "label": "FCF margin",
+     "value": "26.3%",
+     "sub": "NT$1,002,565M FCF ÷ NT$3,809,054M revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$39.9B",
+     "sub": "NT$1,272,411M FY2025 capex (20-F) ÷ 31.87",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "93.4%",
+     "sub": "($472.795 − $266.82) ÷ ($487.47 − $266.82); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  }
+ },
+ "gaps": {
+  "ASML": [],
+  "AMAT": [],
+  "LRCX": [],
+  "KLAC": [],
+  "TER": [],
+  "AMCR": [],
+  "TEL": [
+   "beta: no keyless beta source; not scraped"
+  ],
+  "Shin-Etsu": [
+   "beta: no keyless beta source; not scraped"
+  ],
+  "SUMCO": [
+   "beta: no keyless beta source; not scraped",
+   "gross-margin: cost of sales not disclosed in located English-language FY2025 materials",
+   "rnd: R&D expense not disclosed in located FY2025 materials",
+   "pe-trailing: n/a — FY2025 net-loss year (−¥11,751M)"
+  ],
+  "LIN": [
+   "beta: no keyless beta source; not scraped"
+  ],
+  "ASX": [
+   "beta: no keyless beta source; not scraped",
+   "pfcf: n/m — FY2025 FCF negative (OCF NT$142,249M − capex NT$164,643M = −NT$22,393M)"
+  ],
+  "AMKR": [
+   "beta: no keyless beta source; not scraped"
+  ],
+  "TSMC": [
+   "beta: no keyless beta source; not scraped"
+  ]
+ },
+ "corrections": [],
+ "notes": "Bundle B complete 2026-10-07. New full records: TEL, Shin-Etsu, SUMCO, LIN, ASX, AMKR, TSMC (FY2025/FY2026 basis per fiscal calendar). Existing records (ASML, AMAT, LRCX, KLAC, TER, AMCR) gained only their listed EV gaps, computed from Oct 7 2026 prices × filing share counts + filing debt − filing cash; no existing values changed. TEL: 5-for-1 split effective Oct 7 2026 — prices.json ¥12,500 is post-split; shares 454.85M×5=2,274.2M, diluted EPS ¥1,250.88÷5=¥250.18. TEL has no interest-bearing debt (net cash ¥506.3B incl. time deposits). ASX: 1 ADS = 2 common shares (4,447,029,782 shares → 2,223.5M ADSs); FY2025 FCF negative (−NT$22.4B), so P/FCF not meaningful. TSMC: 1 ADR = 5 shares (25,932,524,521 → 5,186.5M ADRs); P/E uses US$10.43 diluted ADS EPS. SUMCO: P/E n/a (loss year); gross margin + R&D unsourced (not in located English materials); Q2 2026 quarter (¥113,614M) secondary-confirmed only, primary tanshin not located. FX: USD/JPY 157.99, TWD/USD 31.87, €1=$1.1750 (all Oct 7 2026 rates). SEC EDGAR returns HTTP 403 from this network; filings accessed via company IR sites and SEC-filing mirrors (10-K/20-F documents)."
+}

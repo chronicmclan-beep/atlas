@@ -1,0 +1,296 @@
+{
+ "bundle": "F-software",
+ "producedBy": "update-v15-research-worker (subagent), 2026-10-07",
+ "records": [
+  {
+   "ticker": "PLTR",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$457.9B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2025 10-K, ended Dec 31 2025 (filed Feb 17 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json PLTR record: Market capitalization $459.3B (Oct 6, 2026) and Net debt = total debt $0.0B - cash & equivalents $1.4B (FY2025 10-K, ended Dec 31 2025 (filed Feb 17 2026))",
+     "note": "Computed: $459.3B market cap + $0.0B total debt - $1.4B cash & equivalents = ~$457.9B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $5.8B current marketable securities. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "NOW",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$142.1B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2025 10-K, ended Dec 31 2025 (filed Jan 29 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json NOW record: Market capitalization $144.3B (Oct 6, 2026) and Net debt = total debt $1.5B - cash & equivalents $3.7B (FY2025 10-K, ended Dec 31 2025 (filed Jan 29 2026))",
+     "note": "Computed: $144.3B market cap + $1.5B total debt - $3.7B cash & equivalents = ~$142.1B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $2.6B current marketable securities. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "CRM",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$214.8B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2026 10-K, ended Jan 31 2026 (filed Mar 2 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json CRM record: Market capitalization $207.7B (Oct 6, 2026) and Net debt = total debt $14.4B - cash & equivalents $7.3B (FY2026 10-K, ended Jan 31 2026 (filed Mar 2 2026))",
+     "note": "Computed: $207.7B market cap + $14.4B total debt - $7.3B cash & equivalents = ~$214.8B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $2.2B marketable securities. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "SNOW",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$115.6B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2026 10-K, ended Jan 31 2026 (filed Mar 20 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json SNOW record: Market capitalization $116.1B (Oct 6, 2026) and Net debt = total debt $2.3B - cash & equivalents $2.8B (FY2026 10-K, ended Jan 31 2026 (filed Mar 20 2026))",
+     "note": "Computed: $116.1B market cap + $2.3B total debt - $2.8B cash & equivalents = ~$115.6B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $1.2B short-term investments. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "MDB",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$27.9B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2026 10-K, ended Jan 31 2026 (filed Mar 11 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json MDB record: Market capitalization $29.0B (Oct 6, 2026) and Net debt = total debt $0.0B - cash & equivalents $1.1B (FY2026 10-K, ended Jan 31 2026 (filed Mar 11 2026))",
+     "note": "Computed: $29.0B market cap + $0.0B total debt - $1.1B cash & equivalents = ~$27.9B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $1.3B short-term investments. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "DDOG",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$98.7B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2025 10-K, ended Dec 31 2025 (filed Feb 18 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json DDOG record: Market capitalization $98.1B (Oct 6, 2026) and Net debt = total debt $1.0B - cash & equivalents $0.4B (FY2025 10-K, ended Dec 31 2025 (filed Feb 18 2026))",
+     "note": "Computed: $98.1B market cap + $1.0B total debt - $0.4B cash & equivalents = ~$98.7B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $4.1B marketable securities. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "APP",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$95.0B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2025 10-K, ended Dec 31 2025 (filed Feb 19 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json APP record: Market capitalization $94.0B (Oct 6, 2026) and Net debt = total debt $3.5B - cash & equivalents $2.5B (FY2025 10-K, ended Dec 31 2025 (filed Feb 19 2026))",
+     "note": "Computed: $94.0B market cap + $3.5B total debt - $2.5B cash & equivalents = ~$95.0B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes no short-term investments disclosed. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "TEAM",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$48.9B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2026 10-K, ended Jun 30 2026 (filed Aug 14 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json TEAM record: Market capitalization $49.1B (Oct 6, 2026) and Net debt = total debt $1.0B - cash & equivalents $1.2B (FY2026 10-K, ended Jun 30 2026 (filed Aug 14 2026))",
+     "note": "Computed: $49.1B market cap + $1.0B total debt - $1.2B cash & equivalents = ~$48.9B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes marketable securities $0. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "TWLO",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$42.8B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2025 10-K, ended Dec 31 2025 (filed Feb 24 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json TWLO record: Market capitalization $42.5B (Oct 6, 2026) and Net debt = total debt $992.3M - cash & equivalents $682.3M (FY2025 10-K, ended Dec 31 2025 (filed Feb 24 2026))",
+     "note": "Computed: $42.5B market cap + $992.3M total debt - $682.3M cash & equivalents = ~$42.8B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $1.8B available-for-sale debt securities, current. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "CRWD",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$281.0B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2026 10-K, ended Jan 31 2026 (filed Mar 5 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json CRWD record: Market capitalization $285.5B (Oct 6, 2026) and Net debt = total debt $745.5M - cash & equivalents $5.2B (FY2026 10-K, ended Jan 31 2026 (filed Mar 5 2026))",
+     "note": "Computed: $285.5B market cap + $745.5M total debt - $5.2B cash & equivalents = ~$281.0B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $12.7M marketable securities. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "PANW",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$342.8B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2026 10-K, ended Jul 31 2026 (filed Sep 10 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json PANW record: Market capitalization $343.5B (Oct 6, 2026) and Net debt = total debt $1.8B - cash & equivalents $2.5B (FY2026 10-K, ended Jul 31 2026 (filed Sep 10 2026))",
+     "note": "Computed: $343.5B market cap + $1.8B total debt - $2.5B cash & equivalents = ~$342.8B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $557.0M short-term investments. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "ZS",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$35.4B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2026 10-K, ended Jul 31 2026 (filed Sep 3 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json ZS record: Market capitalization $34.6B (Oct 6, 2026) and Net debt = total debt $1.7B - cash & equivalents $928.4M (FY2026 10-K, ended Jul 31 2026 (filed Sep 3 2026))",
+     "note": "Computed: $34.6B market cap + $1.7B total debt - $928.4M cash & equivalents = ~$35.4B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $2.5B short-term investments. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "NET",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$127.3B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2025 10-K, ended Dec 31 2025 (filed Feb 26 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json NET record: Market capitalization $125.0B (Oct 6, 2026) and Net debt = total debt $3.3B - cash & equivalents $943.5M (FY2025 10-K, ended Dec 31 2025 (filed Feb 26 2026))",
+     "note": "Computed: $125.0B market cap + $3.3B total debt - $943.5M cash & equivalents = ~$127.3B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $3.2B available-for-sale securities, current. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "S",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$8.6B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2026 10-K, ended Jan 31 2026 (filed Mar 19 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json S record: Market capitalization $8.8B (Oct 6, 2026) and Net debt = total debt $0.0M - cash & equivalents $169.6M (FY2026 10-K, ended Jan 31 2026 (filed Mar 19 2026))",
+     "note": "Computed: $8.8B market cap + $0.0M total debt - $169.6M cash & equivalents = ~$8.6B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $459.0M short-term investments. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "FTNT",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$139.5B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2025 10-K, ended Dec 31 2025 (filed Feb 25 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json FTNT record: Market capitalization $141.5B (Oct 6, 2026) and Net debt = total debt $496.6M - cash & equivalents $2.5B (FY2025 10-K, ended Dec 31 2025 (filed Feb 25 2026))",
+     "note": "Computed: $141.5B market cap + $496.6M total debt - $2.5B cash & equivalents = ~$139.5B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $1.1B short-term investments. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  },
+  {
+   "ticker": "OKTA",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$38.2B",
+     "asOf": "Market cap Oct 6, 2026; debt/cash from FY2026 10-K, ended Jan 31 2026 (filed Mar 5 2026)",
+     "tier": "estimated",
+     "source": "Derived from existing Atlas kpis.json OKTA record: Market capitalization $38.7B (Oct 6, 2026) and Net debt = total debt $350.0M - cash & equivalents $858.0M (FY2026 10-K, ended Jan 31 2026 (filed Mar 5 2026))",
+     "note": "Computed: $38.7B market cap + $350.0M total debt - $858.0M cash & equivalents = ~$38.2B. Reuses the existing resolved market-cap figure per bundle rules (not recomputed). Cash = cash & equivalents only, consistent with the record's net-debt definition; excludes $1.7B short-term investments. A fuller EV including those liquid investments would be lower for net-cash names."
+    }
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "ticker": "SNOW",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "value": null,
+   "tier": "unsourced",
+   "reason": "Negative TTM EPS - no meaningful trailing P/E. Latest reported FY GAAP diluted EPS -$3.95 (existing record). Per bundle rules: value null, tier unsourced."
+  },
+  {
+   "ticker": "MDB",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "value": null,
+   "tier": "unsourced",
+   "reason": "Negative TTM EPS - no meaningful trailing P/E. Latest reported FY GAAP diluted EPS -$0.88 (existing record). Per bundle rules: value null, tier unsourced."
+  },
+  {
+   "ticker": "TEAM",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "value": null,
+   "tier": "unsourced",
+   "reason": "Negative TTM EPS - no meaningful trailing P/E. Latest reported FY GAAP diluted EPS -$0.21 (existing record). Per bundle rules: value null, tier unsourced."
+  },
+  {
+   "ticker": "CRWD",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "value": null,
+   "tier": "unsourced",
+   "reason": "Negative TTM EPS - no meaningful trailing P/E. Latest reported FY GAAP diluted EPS -$0.65 (existing record). Per bundle rules: value null, tier unsourced."
+  },
+  {
+   "ticker": "ZS",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "value": null,
+   "tier": "unsourced",
+   "reason": "Negative TTM EPS - no meaningful trailing P/E. Latest reported FY GAAP diluted EPS -$0.39 (existing record). Per bundle rules: value null, tier unsourced."
+  },
+  {
+   "ticker": "NET",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "value": null,
+   "tier": "unsourced",
+   "reason": "Negative TTM EPS - no meaningful trailing P/E. Latest reported FY GAAP diluted EPS -$0.29 (existing record). Per bundle rules: value null, tier unsourced."
+  },
+  {
+   "ticker": "S",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "value": null,
+   "tier": "unsourced",
+   "reason": "Negative TTM EPS - no meaningful trailing P/E. Latest reported FY GAAP diluted EPS -$1.37 (existing record). Per bundle rules: value null, tier unsourced."
+  }
+ ],
+ "corrections": [],
+ "notes": [
+  "Enterprise value = existing resolved market capitalization (Oct 6, 2026, tier estimated) + existing Net debt figure (total debt - cash & equivalents, from each company's 10-K balance sheet). Market caps were NOT recomputed per bundle rules; their price x shares math was spot-checked (all 16 check out).",
+  "EV methodology caveat: cash = cash & equivalents only; excludes marketable securities / short-term investments (listed per record). Consistent with the records' existing Net-debt definition. Names with large liquid investment balances (PLTR $5.8B, DDOG $4.1B, NET $3.2B, ZS $2.5B, TWLO $1.8B) have a materially lower 'cash-inclusive' EV.",
+  "pe-trailing gaps for SNOW/MDB/TEAM/CRWD/ZS/NET/S remain unfilled by rule: all 7 have negative latest-FY GAAP diluted EPS (SNOW -$3.95, MDB -$0.88, TEAM -$0.21, CRWD -$0.65, ZS -$0.39, NET -$0.29, S -$1.37), so no meaningful trailing P/E exists. The existing records already carry P/E ratio (trailing) = null / tier unsourced for these names - confirmed correct, no change needed.",
+  "Bundle extras were all empty arrays in v15-work/F-software.json - no 'Remaining performance obligations' backlog labels were assigned to this bundle, so none were sourced.",
+  "Triple-Check: Pass 1 - inputs are existing record figures (bundle rule: reuse, don't recompute). Pass 2 - market-cap arithmetic verified for all 16 (price x shares matches existing values); net-debt component arithmetic verified; EV sums recomputed independently. Pass 3 - asOf dates separate the Oct 6 2026 market-cap date from the FY balance-sheet date; EV naming consistent with record's net-debt definition."
+ ]
+}

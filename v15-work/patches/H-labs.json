@@ -1,0 +1,1217 @@
+{
+ "bundle": "H-labs",
+ "updated": "2026-10-07",
+ "records": [
+  {
+   "ticker": "SoftBank",
+   "name": "SoftBank Group Corp. (9984.T)",
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "FY2025 ended Mar 31 2026, announced May 13 2026; latest quarter Q1 FY2026 ended Jun 30 2026 (announced Aug 6 2026)",
+   "source": "SBG FY2025 earnings presentation (group.softbank, May 13 2026); SBG Q1 FY2026 earnings presentation (Aug 6 2026); FY2025 Yuho securities report via Stockopedia; Yahoo Finance 9984.T quote (Oct 7 2026)",
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$49.3B",
+     "sub": "¥7,798.7B @ ¥158.3/$; +7.7% YoY (¥7,243.8B FY2024)",
+     "tier": "reported"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": "$12.8B",
+     "sub": "¥2,019.6B; Q1 FY2026 (Apr-Jun 2026), announced Aug 6 2026; +10.9% YoY",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Market capitalization",
+     "value": "~$227B",
+     "sub": "est: ¥6,310 (Yahoo 9984.T, Oct 7 2026) x 5.698B shares (1.4246B pre-split x 4:1 split Dec 29 2025) = ¥35.96T @ ¥158.3/$",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "~$364B",
+     "sub": "est: ¥35.96T mkt cap + ¥27.79T total debt (twelvedata, secondary) - ¥6.20T cash+ST inv = ¥57.55T @ ¥158.3/$",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "7.2",
+     "sub": "est: ¥35.96T mkt cap / ¥5.002T FY2025 net income (attrib.); per-share cross-check: ¥6,310 / ¥872.47 post-split EPS = 7.23",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "4.6",
+     "sub": "est: ¥35.96T mkt cap / ¥7.799T FY2025 net sales",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "FY2025 FCF negative (-¥2.16T); multiple not meaningful",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "¥872 (post-split)",
+     "sub": "RTTNews/dpa-AFX via TradingView reported ¥872.47/share on post-4:1-split basis; cross-check Finnhub 876.78; GAAP basic pre-split ~¥3,511 (¥5,002.3B / ~1.425B shares)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+7.7%",
+     "sub": "¥7,798.7B vs ¥7,243.8B FY2024 (SBG FY2025 earnings presentation, group.softbank, May 13 2026)",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "5Y base figure not verified against primary source",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Gross margin",
+     "value": "51.5%",
+     "sub": "¥4,016,139M / ¥7,798,650M net sales (Yuho FY2025 via Stockopedia)",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating margin",
+     "value": null,
+     "sub": "SBG does not present operating income in IFRS statements (strategic investment holding company); presentation uses gain/loss on investments instead",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net income",
+     "value": "$31.6B",
+     "sub": "¥5,002.3B attributable to owners of the parent (SBG FY2025 earnings presentation); highest-ever Japanese corporate annual profit per SBG",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Net margin",
+     "value": "64.1%",
+     "sub": "¥5,002,271M / ¥7,798,650M (Yuho FY2025)",
+     "tier": "reported"
+    },
+    {
+     "label": "R&D spend",
+     "value": null,
+     "sub": "SBG does not disclose R&D as a line item",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "34.3%",
+     "sub": "est: ¥5,002.3B / avg equity ¥14.59T ((11.56+17.62)/2, Yuho)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "9.5%",
+     "sub": "est: ¥5,002.3B attrib. / avg assets ¥52.88T ((45.01+60.75)/2, Yuho)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "~$136B",
+     "sub": "est: ¥27.79T total debt (twelvedata, secondary) - ¥6.20T cash+ST inv = ¥21.59T @ ¥158.3/$; SBG reports LTV 18.0% on holdings basis (FY2025 presentation)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "1.58",
+     "sub": "est: ¥27.79T total debt (twelvedata, secondary) / ¥17.62T equity attrib. (Yuho)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$39.2B",
+     "sub": "¥6,204,147M cash + short-term investments (Yuho FY2025) @ ¥158.3/$",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "-$2.71B",
+     "sub": "-¥428,832M (Yuho FY2025 cash flow statement) @ ¥158.3/$",
+     "tier": "reported"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "-$13.7B",
+     "sub": "est: OCF -¥428.8B - capex ¥1,733.8B = -¥2,162.7B @ ¥158.3/$",
+     "tier": "estimated"
+    },
+    {
+     "label": "FCF margin",
+     "value": "-27.7%",
+     "sub": "est: -¥2,162.7B / ¥7,798.7B net sales",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$11.0B",
+     "sub": "¥1,733,830M (Yuho FY2025 cash flow statement) @ ¥158.3/$",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": "0.91",
+     "sub": "Finnhub, 9984.T, Oct 7 2026 (third-party)",
+     "tier": "estimated"
+    },
+    {
+     "label": "52-week range position",
+     "value": "51.6% up the range",
+     "sub": "est: (6310-3365)/(9074-3365) from Yahoo 9984.T 52w low/high (Oct 7 2026)",
+     "tier": "estimated"
+    }
+   ],
+   "isNew": true
+  },
+  {
+   "ticker": "OpenAI",
+   "name": "OpenAI",
+   "fiscalYear": "N/A",
+   "calendarYearBasis": 2026,
+   "asOf": "Oct 7 2026",
+   "source": "OpenAI DevDay 2026 remarks via Reuters/Axios (Sept 29 2026)",
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$70B",
+     "sub": "annualized revenue run rate, company-disclosed at DevDay Sept 29 2026 (reported by Reuters/Axios); NOT GAAP revenue; private, unaudited",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Market capitalization",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Enterprise value",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / sales",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Gross margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net income",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "R&D spend",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net debt",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Debt / equity",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "FCF margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Capex",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    }
+   ],
+   "isNew": true
+  },
+  {
+   "ticker": "Anthropic",
+   "name": "Anthropic",
+   "fiscalYear": "N/A",
+   "calendarYearBasis": 2026,
+   "asOf": "Oct 7 2026",
+   "source": "Anthropic investor materials via Reuters/CNBC (Aug 2026); preliminary IPO filing via Reuters",
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": "$65B",
+     "sub": "annualized revenue run rate end-Jul 2026, from company investor materials via Reuters/CNBC; 2025 booked revenue ~$4.6B (12x) per preliminary IPO filing via Reuters; private, unaudited",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Market capitalization",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Enterprise value",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / sales",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Gross margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net income",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "R&D spend",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net debt",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Debt / equity",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "FCF margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Capex",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    }
+   ],
+   "isNew": true
+  },
+  {
+   "ticker": "xAI",
+   "name": "xAI",
+   "fiscalYear": "N/A",
+   "calendarYearBasis": 2026,
+   "asOf": "Oct 7 2026",
+   "source": "xAI official blog (Series B/C announcements); no financial disclosure",
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": null,
+     "sub": "private company; no revenue figure company-disclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Market capitalization",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Enterprise value",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / sales",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Gross margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net income",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "R&D spend",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net debt",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Debt / equity",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "FCF margin",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Capex",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": null,
+     "sub": "private company; undisclosed",
+     "tier": "unsourced"
+    }
+   ],
+   "isNew": true,
+   "extras": [
+    "Series B $6B raised May 2024 (xAI official blog; $24B post-money, company-disclosed)",
+    "Series C $6B closed Dec 23 2024 (xAI official blog)"
+   ]
+  },
+  {
+   "ticker": "HUMAIN",
+   "name": "HUMAIN",
+   "fiscalYear": "N/A",
+   "calendarYearBasis": 2026,
+   "asOf": "Oct 7 2026",
+   "source": "No company financial disclosure found; primary sources checked Oct 7 2026",
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Market capitalization",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Enterprise value",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / sales",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Gross margin",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating margin",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net income",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net margin",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "R&D spend",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net debt",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Debt / equity",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "FCF margin",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Capex",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": null,
+     "sub": "private company; undisclosed - PIF-backed Saudi AI company, no financial disclosure",
+     "tier": "unsourced"
+    }
+   ],
+   "isNew": true
+  },
+  {
+   "ticker": "G42",
+   "name": "G42",
+   "fiscalYear": "N/A",
+   "calendarYearBasis": 2026,
+   "asOf": "Oct 7 2026",
+   "source": "No company financial disclosure found; primary sources checked Oct 7 2026",
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Market capitalization",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Enterprise value",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / sales",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Gross margin",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating margin",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net income",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net margin",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "R&D spend",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net debt",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Debt / equity",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Free cash flow",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "FCF margin",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Capex",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": null,
+     "sub": "private company; undisclosed - Abu Dhabi AI company, no financial disclosure",
+     "tier": "unsourced"
+    }
+   ],
+   "isNew": true
+  },
+  {
+   "ticker": "US",
+   "name": "US Government",
+   "fiscalYear": "N/A",
+   "calendarYearBasis": 2026,
+   "asOf": "Oct 7 2026",
+   "source": "No company financial disclosure found; primary sources checked Oct 7 2026",
+   "metrics": [
+    {
+     "label": "Revenue",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Latest quarter revenue",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Market capitalization",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Enterprise value",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / sales",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Gross margin",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating margin",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net income",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net margin",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "R&D spend",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Net debt",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Debt / equity",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Free cash flow",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "FCF margin",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Capex",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": null,
+     "sub": "government, N/A - sovereign entity, not a company; corporate financial metrics not applicable",
+     "tier": "unsourced"
+    }
+   ],
+   "isNew": true
+  }
+ ],
+ "gaps": [
+  {
+   "ticker": "SoftBank",
+   "remaining": "Revenue CAGR (5Y), Operating margin (not presented by SBG), R&D spend (not disclosed), P/FCF (FCF negative)"
+  },
+  {
+   "ticker": "OpenAI",
+   "remaining": "all 25 non-revenue metrics - private company, undisclosed; no public quote for market metrics"
+  },
+  {
+   "ticker": "Anthropic",
+   "remaining": "all 25 non-revenue metrics - private company, undisclosed; no public quote for market metrics"
+  },
+  {
+   "ticker": "xAI",
+   "remaining": "all 26 metrics - private company, undisclosed; no public quote; only company-disclosed financing in extras"
+  },
+  {
+   "ticker": "HUMAIN",
+   "remaining": "all 26 metrics - private, undisclosed"
+  },
+  {
+   "ticker": "G42",
+   "remaining": "all 26 metrics - private, undisclosed"
+  },
+  {
+   "ticker": "US",
+   "remaining": "all 26 metrics - government, N/A"
+  }
+ ],
+ "corrections": [],
+ "notes": [
+  "FX: ¥158.3/USD (exchange-rates.org, Oct 7 2026 10:50 UTC) used for all JPY->USD conversions.",
+  "SoftBank 4:1 share split effective Dec 29 2025 (SBG board resolution Nov 11 2025, confirmed in SBG H1 FY2026 consolidated financial report). FY2025 figures are pre-split; share count 5.698B = 1.4246B (Jan 2026, post buyback retirement) x 4. Current price ¥6,310 is post-split.",
+  "Distinguished SoftBank Group Corp (9984) from SoftBank Corp (9434 telecom) throughout; several secondary results conflate them.",
+  "No secondary valuation estimates used for private labs. OpenAI/Anthropic revenue = company-disclosed run rates only, explicitly NOT GAAP revenue.",
+  "SoftBank Yuho-sourced figures (Stockopedia transcription): net sales ¥7,798,650M, gross profit ¥4,016,139M, net income attrib. ¥5,002,271M, OCF -¥428,832M, capex ¥1,733,830M, cash+ST inv ¥6,204,147M, total assets ¥60,749,547M, total liab. ¥43,127,724M, equity attrib. ¥17,621,823M."
+ ]
+}

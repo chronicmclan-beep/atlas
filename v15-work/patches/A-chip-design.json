@@ -1,0 +1,849 @@
+{
+ "records": {
+  "NVDA": {
+   "fiscalYear": "FY2026",
+   "calendarYearBasis": 2026,
+   "asOf": "ended Jan 25, 2026 · 10-K published Feb 2026",
+   "source": "NVIDIA FY2026 10-K (investor.nvidia.com); NVIDIA FY2021 earnings release (Feb 24, 2021, nvidianews.nvidia.com); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Market capitalization",
+     "value": "$5,755B",
+     "sub": "$236.79 × 24,304M shares outstanding (FY2026 10-K balance sheet); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$5,753B",
+     "sub": "$5,754.9B mcap + $8.468B total debt ($999M ST + $7,469M LT) − $10.605B cash; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "48.3x",
+     "sub": "$236.79 ÷ $4.90 GAAP diluted EPS (FY2026); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "26.7x",
+     "sub": "$5,755B ÷ $215.9B FY2026 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "59.5x",
+     "sub": "$5,755B ÷ $96.7B FCF; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+65.5% YoY",
+     "sub": "($215.94B − $130.50B) ÷ $130.50B FY2025",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "66.9%",
+     "sub": "($215.94B ÷ $16.675B FY2021)^(1/5) − 1; FY2021 rev from Feb 2021 release",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net margin",
+     "value": "55.6%",
+     "sub": "$120.07B NI ÷ $215.94B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "76.3%",
+     "sub": "$120.07B NI ÷ $157.293B equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "58.1%",
+     "sub": "$120.07B NI ÷ $206.803B total assets",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "−$2.1B (net cash)",
+     "sub": "$8.468B total debt − $10.605B cash & equivalents; negative = net cash",
+     "tier": "reported"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.05x",
+     "sub": "$8.468B total debt ÷ $157.293B equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$10.6B",
+     "sub": "Cash and cash equivalents, FY2026 10-K balance sheet",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$102.7B",
+     "sub": "FY2026, 10-K cash flow statement",
+     "tier": "reported"
+    },
+    {
+     "label": "FCF margin",
+     "value": "44.8%",
+     "sub": "$96.7B FCF ÷ $215.9B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$6.0B",
+     "sub": "FY2026, 10-K cash flow statement",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "91.7%",
+     "sub": "($236.79 − $164.27) ÷ ($243.37 − $164.27); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "AMD": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "ended Dec 31, 2025 · earnings release Feb 3, 2026",
+   "source": "AMD Q4/FY2025 earnings release (Feb 3, 2026); AMD Q3 FY2025 10-Q (Sep 27, 2025, shares outstanding); AMD FY2020 earnings release (Jan 26, 2021, amd.com); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Market capitalization",
+     "value": "$1,051B",
+     "sub": "$645.695 × 1,628M shares outstanding (Q3 FY2025 10-Q); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$1,049B",
+     "sub": "$1,051.2B mcap + $3.222B total debt − $5.539B cash; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "243.7x",
+     "sub": "$645.695 ÷ $2.65 GAAP diluted EPS; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "30.3x",
+     "sub": "$1,051B ÷ $34.639B FY2025 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "190.5x",
+     "sub": "$1,051B ÷ $5.519B FCF; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+34.3% YoY",
+     "sub": "($34.639B − $25.785B) ÷ $25.785B FY2024",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "28.8%",
+     "sub": "($34.639B ÷ $9.763B FY2020)^(1/5) − 1; FY2020 rev from Jan 2021 release",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net margin",
+     "value": "12.5%",
+     "sub": "$4.335B NI ÷ $34.639B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$8.1B",
+     "sub": "FY2025, earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "6.9%",
+     "sub": "$4.335B NI ÷ $62.999B equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "5.6%",
+     "sub": "$4.335B NI ÷ $76.926B total assets",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "−$2.3B (net cash)",
+     "sub": "$3.222B total debt − $5.539B cash; negative = net cash",
+     "tier": "reported"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.05x",
+     "sub": "$3.222B total debt ÷ $62.999B equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$5.5B",
+     "sub": "Cash, FY2025 earnings release balance sheet",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$6.5B",
+     "sub": "Continuing operations, FY2025 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "FCF margin",
+     "value": "15.9%",
+     "sub": "$5.519B FCF ÷ $34.639B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$0.97B",
+     "sub": "$974M, FY2025 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "97.3%",
+     "sub": "($645.695 − $188.22) ÷ ($658.52 − $188.22); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "INTC": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "ended Dec 31, 2025 · earnings release Jan 22, 2026",
+   "source": "Intel Q4/FY2025 earnings release (Jan 22, 2026, businesswire); Intel Q4/FY2020 earnings release (Jan 21, 2021, intc.com); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Market capitalization",
+     "value": "$562B",
+     "sub": "$112.625 × 4,994M shares (Q4 FY2025 release); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$595B",
+     "sub": "$562.4B mcap + $46.585B total debt ($2,499M ST + $44,086M LT) − $14.265B cash; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "N/A",
+     "sub": "Negative GAAP EPS (−$0.06); multiple not meaningful",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "10.6x",
+     "sub": "$562B ÷ $52.853B FY2025 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "N/A",
+     "sub": "Adjusted FCF −$1.6B; multiple not meaningful",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "−0.5% YoY",
+     "sub": "($52.853B − $53.101B) ÷ $53.101B FY2024",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "−7.5%",
+     "sub": "($52.853B ÷ $77.9B FY2020)^(1/5) − 1; FY2020 rev from Jan 2021 release",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net margin",
+     "value": "−0.5%",
+     "sub": "−$267M net loss ÷ $52.853B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$13.8B",
+     "sub": "$13,774M, FY2025 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "−0.2%",
+     "sub": "−$267M ÷ $114.281B Intel equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "−0.1%",
+     "sub": "−$267M ÷ $211.429B total assets",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "$32.3B",
+     "sub": "$46.585B total debt − $14.265B cash",
+     "tier": "reported"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.41x",
+     "sub": "$46.585B total debt ÷ $114.281B Intel equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$14.3B",
+     "sub": "Cash, Q4 FY2025 earnings release balance sheet",
+     "tier": "reported"
+    },
+    {
+     "label": "FCF margin",
+     "value": "−3.0%",
+     "sub": "−$1.6B adjusted FCF ÷ $52.853B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$14.6B",
+     "sub": "$14,646M, FY2025 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "72.8%",
+     "sub": "($112.625 − $32.89) ÷ ($142.35 − $32.89); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "AVGO": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "ended Nov 2, 2025 · earnings release Dec 11, 2025",
+   "source": "Broadcom Q4/FY2025 earnings release (Dec 11, 2025, investors.broadcom.com); Broadcom FY2020 earnings release (Dec 10, 2020); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Market capitalization",
+     "value": "$1,813B",
+     "sub": "$373.525 × 4,853M diluted weighted-avg shares (FY2025 release); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$1,862B",
+     "sub": "$1,812.7B mcap + $65.136B total debt ($3,152M ST + $61,984M LT) − $16.178B cash; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "78.3x",
+     "sub": "$373.525 ÷ $4.77 GAAP diluted EPS; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "28.4x",
+     "sub": "$1,813B ÷ $63.887B FY2025 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "67.4x",
+     "sub": "$1,813B ÷ $26.914B FCF; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+23.9% YoY",
+     "sub": "($63.887B − $51.574B) ÷ $51.574B FY2024 (release stated +24%)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "21.7%",
+     "sub": "($63.887B ÷ $23.888B FY2020)^(1/5) − 1; FY2020 rev $23,888M from FY2020 release",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net margin",
+     "value": "36.2%",
+     "sub": "$23.126B NI ÷ $63.887B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$11.0B",
+     "sub": "$10,977M GAAP, FY2025 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "28.4%",
+     "sub": "$23.126B NI ÷ $81.292B equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "13.5%",
+     "sub": "$23.126B NI ÷ $171.092B total assets",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "$49.0B",
+     "sub": "$65.136B total debt − $16.178B cash",
+     "tier": "reported"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.80x",
+     "sub": "$65.136B total debt ÷ $81.292B equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$16.2B",
+     "sub": "Cash, FY2025 earnings release balance sheet",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$27.5B",
+     "sub": "$27,537M, FY2025 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "FCF margin",
+     "value": "42.1%",
+     "sub": "$26.914B FCF ÷ $63.887B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$0.62B",
+     "sub": "$623M, FY2025 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "40.8%",
+     "sub": "($373.525 − $289.96) ÷ ($495.00 − $289.96); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "MRVL": {
+   "fiscalYear": "FY2026",
+   "calendarYearBasis": 2026,
+   "asOf": "ended Jan 31, 2026 · earnings release Mar 5, 2026",
+   "source": "Marvell Q4/FY2026 earnings release (Mar 5, 2026, businesswire); Marvell Q4/FY2021 earnings release (Mar 3, 2021, investor.marvell.com); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Market capitalization",
+     "value": "$246B",
+     "sub": "$282.516 × 869.7M diluted shares (FY2026 release); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$247.5B",
+     "sub": "$245.7B mcap + $4.471B total debt ($499.8M ST + $3,970.8M LT) − $2.639B cash; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "92.0x",
+     "sub": "$282.516 ÷ $3.07 GAAP diluted EPS; EPS incl. $1.83B sale-of-business gain; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "30.0x",
+     "sub": "$246B ÷ $8.195B FY2026 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "176.0x",
+     "sub": "$246B ÷ $1.396B FCF; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "$3.07",
+     "sub": "GAAP, FY2026 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+42.1% YoY",
+     "sub": "($8.1946B − $5.7673B) ÷ $5.7673B FY2025",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": "22.3%",
+     "sub": "($8.1946B ÷ $3.0B FY2021)^(1/5) − 1; FY2021 rev from Mar 2021 release",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net income",
+     "value": "$2.67B",
+     "sub": "$2,670.1M GAAP FY2026, incl. $1,830.4M sale-of-business gain; earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Net margin",
+     "value": "32.6%",
+     "sub": "$2.670B NI ÷ $8.195B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$2.08B",
+     "sub": "$2,075.2M, FY2026 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "18.7%",
+     "sub": "$2.670B NI ÷ $14.308B equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "12.0%",
+     "sub": "$2.670B NI ÷ $22.285B total assets",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "$1.8B",
+     "sub": "$4.471B total debt − $2.639B cash",
+     "tier": "reported"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.31x",
+     "sub": "$4.471B total debt ÷ $14.308B equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$2.64B",
+     "sub": "$2,638.8M, FY2026 earnings release balance sheet",
+     "tier": "reported"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "$1.40B",
+     "sub": "$1,750.5M OCF − $354.1M capex (computed)",
+     "tier": "estimated"
+    },
+    {
+     "label": "FCF margin",
+     "value": "17.0%",
+     "sub": "$1.396B FCF ÷ $8.195B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": "$0.35B",
+     "sub": "$354.1M, FY2026 earnings release",
+     "tier": "reported"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "81.7%",
+     "sub": "($282.516 − $70.69) ÷ ($329.88 − $70.69); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "ARM": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "ended Mar 31, 2025 · shareholder letter May 7, 2025",
+   "source": "Arm Holdings FYE25 shareholder letter (May 7, 2025, investors.arm.com); Arm FY2025 statutory annual report (UK, balance sheet); Arm Q4 FY2026 6-K (confirms FY2025 rev $4,007M / GAAP op margin 20.7%); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Market capitalization",
+     "value": "$316B",
+     "sub": "$297.55 × 1,063M ADSs outstanding; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Enterprise value",
+     "value": "$314.2B",
+     "sub": "$316.3B mcap + $0 debt − $2.089B cash (no external debt, annual report); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "P/E ratio (trailing)",
+     "value": "396.7x",
+     "sub": "$297.55 ÷ $0.75 GAAP diluted EPS (FYE25 shareholder letter); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / sales",
+     "value": "78.9x",
+     "sub": "$316B ÷ $4.007B FY2025 revenue; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Price / free cash flow",
+     "value": "~3,195x",
+     "sub": "$316B ÷ $99M TTM non-GAAP FCF; tiny denominator, one-off post-IPO working-capital reversal; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Diluted EPS",
+     "value": "$0.75",
+     "sub": "GAAP, FYE25 shareholder letter (May 7, 2025)",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Revenue growth (1Y)",
+     "value": "+23.9% YoY",
+     "sub": "($4.007B − $3.233B) ÷ $3.233B FY2024 (letter headline +24%)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Operating margin",
+     "value": "20.7%",
+     "sub": "$831M GAAP op income ÷ $4.007B revenue (FYE25 letter; FY2026 6-K confirms prior-year 20.7%)",
+     "tier": "estimated"
+    },
+    {
+     "label": "R&D spend",
+     "value": "$2.07B",
+     "sub": "$2,071M GAAP, FYE25 shareholder letter",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Return on equity (ROE)",
+     "value": "11.6%",
+     "sub": "$792M NI (letter) ÷ $6.815B equity (statutory annual report)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Return on assets (ROA)",
+     "value": "8.7%",
+     "sub": "$792M NI ÷ $9.140B total assets (statutory annual report)",
+     "tier": "estimated"
+    },
+    {
+     "label": "Net debt",
+     "value": "−$2.1B (net cash)",
+     "sub": "No external debt; $2.089B cash (statutory annual report)",
+     "tier": "reported"
+    },
+    {
+     "label": "Debt / equity",
+     "value": "0.00x",
+     "sub": "No external debt ÷ $6.815B equity",
+     "tier": "estimated"
+    },
+    {
+     "label": "Cash & equivalents",
+     "value": "$2.09B",
+     "sub": "$2,089M, FY2025 statutory annual report balance sheet",
+     "tier": "reported"
+    },
+    {
+     "label": "Operating cash flow",
+     "value": "$0.40B",
+     "sub": "$397M GAAP, FYE25 shareholder letter",
+     "tier": "disclosed"
+    },
+    {
+     "label": "Free cash flow",
+     "value": "$99M",
+     "sub": "TTM non-GAAP FCF, FYE25 shareholder letter (one-off working-capital reversal)",
+     "tier": "disclosed"
+    },
+    {
+     "label": "FCF margin",
+     "value": "2.5%",
+     "sub": "$99M FCF ÷ $4.007B revenue",
+     "tier": "estimated"
+    },
+    {
+     "label": "Capex",
+     "value": null,
+     "sub": "No primary FY2025 capex figure; GAAP OCF and non-GAAP TTM FCF on different bases, cannot derive cleanly",
+     "tier": "unsourced"
+    },
+    {
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source; not scraped",
+     "tier": "unsourced"
+    },
+    {
+     "label": "52-week range position",
+     "value": "56.0%",
+     "sub": "($297.55 − $100.02) ÷ ($452.70 − $100.02); Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "no primary FY2020 revenue figure; F-1 prospectus not retrievable and EDGAR returns 403 from this network",
+     "tier": "unsourced"
+    }
+   ]
+  },
+  "QCOM": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "Oct 7 2026 · Yahoo Finance quote",
+   "source": "QUALCOMM FY2025 10-K balance sheet inputs (existing record, sec.gov); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Enterprise value",
+     "value": "$198.1B",
+     "sub": "$188.8B mcap ($176.31 × 1,071.0M shares, 10-K cover) + $14.8B total debt − $5.5B cash; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "CRDO": {
+   "fiscalYear": "FY2026",
+   "calendarYearBasis": 2026,
+   "asOf": "Oct 7 2026 · Yahoo Finance quote",
+   "source": "Credo FY2026 10-K balance sheet inputs (existing record, sec.gov); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Enterprise value",
+     "value": "$39.4B",
+     "sub": "$40.6B mcap ($219.05 × 185.42M shares) + $0 debt − $1.2B cash; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    }
+   ]
+  },
+  "ALAB": {
+   "fiscalYear": "FY2025",
+   "calendarYearBasis": 2025,
+   "asOf": "Oct 7 2026 · Yahoo Finance quote",
+   "source": "Astera Labs FY2025 10-K balance sheet inputs (existing record, sec.gov); Yahoo Finance quote (Oct 7, 2026)",
+   "isNew": false,
+   "metrics": [
+    {
+     "label": "Enterprise value",
+     "value": "$64.8B",
+     "sub": "$65.0B mcap ($381.69 × 170.19M shares) + $0 debt − $0.1676B cash; Oct 7 2026 · Yahoo Finance quote",
+     "tier": "estimated"
+    },
+    {
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "Astera Labs 10-K/S-1 revenue history starts FY2021; no primary FY2020 revenue figure",
+     "tier": "unsourced"
+    }
+   ]
+  }
+ },
+ "gaps": {
+  "NVDA": [
+   "beta: no keyless beta source; not scraped"
+  ],
+  "AMD": [
+   "beta: no keyless beta source; not scraped"
+  ],
+  "INTC": [
+   "beta: no keyless beta source; not scraped"
+  ],
+  "AVGO": [
+   "beta: no keyless beta source; not scraped"
+  ],
+  "MRVL": [
+   "beta: no keyless beta source; not scraped"
+  ],
+  "ARM": [
+   "beta: no keyless beta source; not scraped",
+   "capex: no primary FY2025 capex figure; GAAP OCF ($397M) and non-GAAP TTM FCF ($99M) are on different bases, cannot derive cleanly",
+   "rev-cagr-5y: no primary FY2020 revenue figure; F-1 prospectus not retrievable and EDGAR returns 403 from this network"
+  ],
+  "ALAB": [
+   "rev-cagr-5y: Astera Labs 10-K/S-1 revenue history starts FY2021; no primary FY2020 revenue figure"
+  ]
+ },
+ "corrections": [
+  {
+   "ticker": "AMD",
+   "label": "Free cash flow",
+   "old": "~$6.7B",
+   "new": "$5.5B",
+   "reason": "AMD FY2025 earnings release (Feb 3, 2026) reports FY2025 FCF $5,519M (OCF $6,493M − capex $974M); existing '~$6.7B FY calc' is incorrect",
+   "source": "AMD Q4/FY2025 earnings release (Feb 3, 2026)"
+  },
+  {
+   "ticker": "ARM",
+   "label": "Revenue",
+   "old": "+21% YoY",
+   "new": "+24% YoY",
+   "reason": "($4,007M − $3,233M) ÷ $3,233M = 23.9%; FYE25 shareholder letter headline +24%; existing '+21%' is incorrect",
+   "source": "Arm Holdings FYE25 shareholder letter (May 7, 2025)"
+  }
+ ],
+ "notes": "Bundle A complete 2026-10-07. ARM: FY2025 income figures use US-GAAP FYE25 shareholder-letter basis (NI $792M, EPS $0.75, op income $831M, R&D $2,071M, OCF $397M, TTM non-GAAP FCF $99M) to stay consistent with the existing record's $792M net income; balance-sheet inputs (cash $2,089M, equity $6,815M, assets $9,140M) are from the UK statutory annual report. UK statutory basis differs (profit $653M, EPS $0.61, op profit $808M, R&D $2,097M, OCF $179M). The FYE25 letter was cited in the existing record's source but could not be opened directly this session (letters page exposes no direct PDF URLs); verifier should confirm letter figures. MRVL P/E 92.0x caveat: EPS $3.07 includes a $1.83B one-off sale-of-business gain. INTC P/E and P/FCF are N/A (negative GAAP EPS −$0.06; adjusted FCF −$1.6B). Market-cap for AVGO uses diluted weighted-avg shares 4,853M (FY2025 release) since a point-in-time outstanding figure was not stated. SEC EDGAR returns HTTP 403 from this network; not used. All price-derived metrics use prices.json (asOf 2026-10-07 13:30 UTC)."
+}

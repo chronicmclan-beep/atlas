@@ -1,0 +1,1554 @@
+{
+ "bundle": "E-hyperscale-compute",
+ "patchedAt": "2026-10-07",
+ "priceAsOf": "Oct 7 2026 · Yahoo Finance quote",
+ "records": [
+  {
+   "ticker": "MSFT",
+   "name": "Microsoft",
+   "metrics": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "value": "~$3.94T",
+     "sub": "$530.63 × 7,427M shares outstanding (Jun 30, 2026)",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$3.96T",
+     "sub": "$3.94T mktcap + $40.3B total debt − $20.9B cash",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": "29.6x",
+     "sub": "$530.63 ÷ $17.95 FY2026 GAAP diluted EPS",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "value": "11.9x",
+     "sub": "$3.94T ÷ $331.8B FY2026 revenue",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": "58.8x",
+     "sub": "$3.94T ÷ $67.0B FCF (OCF $182.9B − capex $115.9B)",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "value": "+18%",
+     "sub": "$331.8B ÷ $281.7B FY2025; company-reported +18%",
+     "tier": "reported",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "FY2026 ended Jun 30 2026"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": "+14.6%",
+     "sub": "($331.8B ÷ $168.1B FY2021)^(1/5) − 1",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations + Microsoft FY2023 Q4 income statements, microsoft.com Investor Relations (FY2021 revenue $168,088M)",
+     "asOf": "FY2021–FY2026"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "value": "40.3%",
+     "sub": "$133.7B ÷ $331.8B FY2026",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "FY2026 ended Jun 30 2026"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": "$35.6B",
+     "sub": "Research and development, FY2026",
+     "tier": "reported",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "FY2026 ended Jun 30 2026"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "value": "30.2%",
+     "sub": "$133.7B ÷ $442.4B stockholders' equity",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "FY2026 ended Jun 30 2026"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "value": "17.6%",
+     "sub": "$133.7B ÷ $758.4B total assets",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "FY2026 ended Jun 30 2026"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "value": "$19.4B",
+     "sub": "total debt $40.3B (LT $31.1B + current $9.2B) − cash $20.9B",
+     "tier": "reported",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "Jun 30 2026"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "value": "0.09x",
+     "sub": "$40.3B ÷ $442.4B",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "Jun 30 2026"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "value": "$20.9B",
+     "sub": "Jun 30 2026 (excl. $55.9B short-term investments)",
+     "tier": "reported",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "Jun 30 2026"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "value": "$182.9B",
+     "sub": "net cash from operations, FY2026",
+     "tier": "reported",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "FY2026 ended Jun 30 2026"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "value": "20.2%",
+     "sub": "$67.0B ÷ $331.8B FY2026",
+     "tier": "estimated",
+     "source": "Microsoft Q4/FY2026 earnings release (Jul 29, 2026), microsoft.com Investor Relations",
+     "asOf": "FY2026 ended Jun 30 2026"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "value": "Upper range",
+     "sub": "~$530.63 (Oct 7 2026); range $349.20–$553.72 → 88.7%",
+     "tier": "estimated",
+     "source": "Yahoo Finance quote",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    }
+   ]
+  },
+  {
+   "ticker": "AMZN",
+   "name": "Amazon",
+   "metrics": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "value": "~$2.78T",
+     "sub": "$259.09 × 10,731M shares outstanding (Dec 31, 2025)",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$2.76T",
+     "sub": "$2.78T mktcap + $65.6B long-term debt − $86.8B cash",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": "36.1x",
+     "sub": "$259.09 ÷ $7.17 FY2025 GAAP diluted EPS",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "value": "3.9x",
+     "sub": "$2.78T ÷ $716.9B FY2025 net sales",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": "248.4x",
+     "sub": "$2.78T ÷ $11.2B FCF TTM (company definition)",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "value": "+12%",
+     "sub": "$716.9B ÷ $638.0B FY2024; company-reported +12%",
+     "tier": "reported",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": "+13.2%",
+     "sub": "($716.9B ÷ $386.1B FY2020)^(1/5) − 1",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com + Amazon Q4/FY2020 earnings release (Feb 2, 2021), Amazon IR (FY2020 net sales $386,064M)",
+     "asOf": "FY2020–FY2025"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "value": "10.8%",
+     "sub": "$77.7B ÷ $716.9B FY2025",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": "$108.5B",
+     "sub": "Technology and infrastructure, FY2025",
+     "tier": "reported",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "value": "18.9%",
+     "sub": "$77.7B ÷ $411.1B stockholders' equity",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "value": "9.5%",
+     "sub": "$77.7B ÷ $818.0B total assets",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "value": "−$21.2B (net cash)",
+     "sub": "long-term debt $65.6B − cash $86.8B",
+     "tier": "reported",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "value": "0.16x",
+     "sub": "$65.6B ÷ $411.1B",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "value": "$86.8B",
+     "sub": "Dec 31 2025 (excl. $36.2B marketable securities)",
+     "tier": "reported",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "value": "$139.5B",
+     "sub": "net cash from operations, FY2025 TTM",
+     "tier": "reported",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "value": "1.6%",
+     "sub": "$11.2B ÷ $716.9B FY2025",
+     "tier": "estimated",
+     "source": "Amazon Q4/FY2025 earnings release (Feb 5, 2026), ir.aboutamazon.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "value": "Upper-mid range",
+     "sub": "~$259.09 (Oct 7 2026); range $196.00–$287.20 → 69.2%",
+     "tier": "estimated",
+     "source": "Yahoo Finance quote",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    }
+   ]
+  },
+  {
+   "ticker": "GOOGL",
+   "name": "Google",
+   "metrics": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "value": "~$4.21T",
+     "sub": "$348.35 × 12,088M shares outstanding (Dec 31, 2025)",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$4.23T",
+     "sub": "$4.21T mktcap + $46.5B long-term debt − $30.7B cash",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": "32.2x",
+     "sub": "$348.35 ÷ $10.81 FY2025 GAAP diluted EPS",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "value": "10.5x",
+     "sub": "$4.21T ÷ $402.8B FY2025 revenue",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": "57.5x",
+     "sub": "$4.21T ÷ $73.3B FCF TTM (OCF $164.7B − capex $91.4B)",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "value": "+15%",
+     "sub": "$402.8B ÷ $350.0B FY2024; company-reported +15%",
+     "tier": "reported",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": "+17.2%",
+     "sub": "($402.8B ÷ $182.5B FY2020)^(1/5) − 1",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor + Alphabet Q4/FY2021 earnings release (Feb 1, 2022), abc.xyz investor (FY2020 revenue $182,527M)",
+     "asOf": "FY2020–FY2025"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "value": "32.8%",
+     "sub": "$132.2B ÷ $402.8B FY2025",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": "$61.1B",
+     "sub": "Research and development, FY2025",
+     "tier": "reported",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "value": "31.8%",
+     "sub": "$132.2B ÷ $415.3B stockholders' equity",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "value": "22.2%",
+     "sub": "$132.2B ÷ $595.3B total assets",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "value": "$15.8B",
+     "sub": "long-term debt $46.5B − cash $30.7B",
+     "tier": "reported",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "value": "0.11x",
+     "sub": "$46.5B ÷ $415.3B",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "value": "$30.7B",
+     "sub": "Dec 31 2025 (excl. $96.1B marketable securities)",
+     "tier": "reported",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "value": "$164.7B",
+     "sub": "net cash from operations, FY2025",
+     "tier": "reported",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "value": "18.2%",
+     "sub": "$73.3B ÷ $402.8B FY2025",
+     "tier": "estimated",
+     "source": "Alphabet Q4/FY2025 earnings release (Feb 4, 2026), abc.xyz investor",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "value": "Upper-mid range",
+     "sub": "~$348.35 (Oct 7 2026); range $235.84–$408.61 → 65.1%",
+     "tier": "estimated",
+     "source": "Yahoo Finance quote",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    }
+   ]
+  },
+  {
+   "ticker": "Oracle",
+   "name": "Oracle",
+   "metrics": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "value": "~$419.8B",
+     "sub": "$144.055 × 2,914M diluted weighted-average shares FY2026",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$518.0B",
+     "sub": "$419.8B mktcap + $129.5B notes payable/borrowings − $31.3B cash",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": "24.7x",
+     "sub": "$144.055 ÷ $5.83 FY2026 GAAP diluted EPS",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "value": "6.2x",
+     "sub": "$419.8B ÷ $67.4B FY2026 revenue",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "negative FCF (−$23.7B FY2026); multiple meaningless",
+     "tier": "unsourced",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "value": "+17%",
+     "sub": "$67.4B ÷ $57.4B FY2025; company-reported +17%",
+     "tier": "reported",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "FY2026 ended May 31 2026"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": "+10.7%",
+     "sub": "($67.4B ÷ $40.5B FY2021)^(1/5) − 1",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com + Oracle Q4/FY2021 earnings release (Jun 15, 2021), investor.oracle.com (FY2021 revenue $40,479M)",
+     "asOf": "FY2021–FY2026"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "value": "25.2%",
+     "sub": "$17.0B net income to common ÷ $67.4B FY2026",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "FY2026 ended May 31 2026"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": "$10.3B",
+     "sub": "Research and development, FY2026",
+     "tier": "reported",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "FY2026 ended May 31 2026"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "value": "39.4%",
+     "sub": "$17.0B ÷ $43.1B stockholders' equity",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "FY2026 ended May 31 2026"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "value": "6.5%",
+     "sub": "$17.0B ÷ $261.8B total assets",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "FY2026 ended May 31 2026"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "value": "$98.3B",
+     "sub": "notes payable/borrowings $129.5B (current $7.2B + non-current $122.3B) − cash $31.3B",
+     "tier": "reported",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "May 31 2026"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "value": "3.01x",
+     "sub": "$129.5B ÷ $43.1B",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "May 31 2026"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "value": "$31.3B",
+     "sub": "May 31 2026",
+     "tier": "reported",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "May 31 2026"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "value": "$32.0B",
+     "sub": "FY2026",
+     "tier": "reported",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "FY2026 ended May 31 2026"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "value": "−35.2%",
+     "sub": "−$23.7B ÷ $67.4B FY2026 (AI datacenter buildout)",
+     "tier": "estimated",
+     "source": "Oracle Q4/FY2026 earnings release (Jun 10, 2026), investor.oracle.com",
+     "asOf": "FY2026 ended May 31 2026"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "value": "Lower range",
+     "sub": "~$144.055 (Oct 7 2026); range $114.50–$322.54 → 14.2%",
+     "tier": "estimated",
+     "source": "Yahoo Finance quote",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    }
+   ]
+  },
+  {
+   "ticker": "Meta",
+   "name": "Meta",
+   "metrics": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "value": "~$1.83T",
+     "sub": "$724.95 × 2,530M shares outstanding (Dec 31, 2025: 2,187M Class A + 343M Class B)",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com + Meta FY2025 10-K (filed Jan 29, 2026), balance sheet: 2,187M Class A + 343M Class B outstanding (Dec 31, 2025)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$1.86T",
+     "sub": "$1.83T mktcap + $58.7B long-term debt − $35.9B cash",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": "30.9x",
+     "sub": "$724.95 ÷ $23.49 FY2025 GAAP diluted EPS",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "value": "9.1x",
+     "sub": "$1.83T ÷ $201.0B FY2025 revenue",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": "42.1x",
+     "sub": "$1.83T ÷ $43.6B FCF FY2025 (company non-GAAP definition)",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "value": "+22%",
+     "sub": "$201.0B ÷ $164.5B FY2024; company-reported +22%",
+     "tier": "reported",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": "+18.5%",
+     "sub": "($201.0B ÷ $86.0B FY2020)^(1/5) − 1",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com + Meta (Facebook) Q4/FY2020 earnings release (Jan 27, 2021) (FY2020 revenue $85,965M)",
+     "asOf": "FY2020–FY2025"
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "value": "30.1%",
+     "sub": "$60.5B ÷ $201.0B FY2025",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": "$57.4B",
+     "sub": "Research and development, FY2025",
+     "tier": "reported",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "value": "27.8%",
+     "sub": "$60.5B ÷ $217.2B stockholders' equity",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "value": "16.5%",
+     "sub": "$60.5B ÷ $366.0B total assets",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "value": "$22.9B",
+     "sub": "long-term debt $58.7B − cash $35.9B",
+     "tier": "reported",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "value": "0.27x",
+     "sub": "$58.7B ÷ $217.2B",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "value": "$35.9B",
+     "sub": "Dec 31 2025 (excl. $45.7B marketable securities)",
+     "tier": "reported",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "value": "$115.8B",
+     "sub": "FY2025",
+     "tier": "reported",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "value": "21.7%",
+     "sub": "$43.6B ÷ $201.0B FY2025",
+     "tier": "estimated",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "value": "$72.2B",
+     "sub": "capital expenditures incl. finance-lease principal payments, FY2025",
+     "tier": "reported",
+     "source": "Meta Q4/FY2025 earnings release (Jan 28, 2026), investor.atmeta.com",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "value": "Upper range",
+     "sub": "~$724.95 (Oct 7 2026); range $520.26–$779.82 → 78.9%",
+     "tier": "estimated",
+     "source": "Yahoo Finance quote",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    }
+   ]
+  },
+  {
+   "ticker": "CRWV",
+   "name": "CoreWeave",
+   "metrics": [
+    {
+     "id": "market-cap",
+     "label": "Market capitalization",
+     "value": "~$38.2B",
+     "sub": "$87.637 × 436M diluted weighted-average shares FY2025",
+     "tier": "estimated",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$56.5B",
+     "sub": "$38.2B mktcap + $21.4B total debt (current $6.7B + non-current $14.7B) − $3.1B cash",
+     "tier": "estimated",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "negative TTM EPS (−$2.81 FY2025); multiple meaningless",
+     "tier": "unsourced",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)"
+    },
+    {
+     "id": "ps",
+     "label": "Price / sales",
+     "value": "7.4x",
+     "sub": "$38.2B ÷ $5.13B FY2025 revenue",
+     "tier": "estimated",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "negative FCF (~−$7.3B FY2025); multiple meaningless",
+     "tier": "unsourced",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)"
+    },
+    {
+     "id": "rev-growth-1y",
+     "label": "Revenue growth (1Y)",
+     "value": "+168%",
+     "sub": "$5.13B ÷ $1.92B FY2024 (computed); company context",
+     "tier": "reported",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "pre-IPO 5-year revenue history not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "net-margin",
+     "label": "Net margin",
+     "value": "−22.7%",
+     "sub": "−$1.17B ÷ $5.13B FY2025",
+     "tier": "estimated",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": null,
+     "sub": "not disclosed separately (infra spend in 'Technology and infrastructure')",
+     "tier": "unsourced",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)"
+    },
+    {
+     "id": "roe",
+     "label": "Return on equity (ROE)",
+     "value": "−35.0%",
+     "sub": "−$1.17B ÷ $3.34B stockholders' equity",
+     "tier": "estimated",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "roa",
+     "label": "Return on assets (ROA)",
+     "value": "−2.4%",
+     "sub": "−$1.17B ÷ $49.3B total assets",
+     "tier": "estimated",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "net-debt",
+     "label": "Net debt",
+     "value": "$18.2B",
+     "sub": "total debt $21.4B − cash $3.1B",
+     "tier": "reported",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "debt-equity",
+     "label": "Debt / equity",
+     "value": "6.41x",
+     "sub": "$21.4B ÷ $3.34B",
+     "tier": "estimated",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "cash",
+     "label": "Cash & equivalents",
+     "value": "$3.1B",
+     "sub": "Dec 31 2025 (excl. restricted cash $1.0B)",
+     "tier": "reported",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "Dec 31 2025"
+    },
+    {
+     "id": "ocf",
+     "label": "Operating cash flow",
+     "value": "$3.1B",
+     "sub": "net cash from operations, FY2025",
+     "tier": "reported",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "fcf-margin",
+     "label": "FCF margin",
+     "value": "−141.3%",
+     "sub": "−$7.25B ÷ $5.13B FY2025",
+     "tier": "estimated",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "capex",
+     "label": "Capex",
+     "value": "$10.3B",
+     "sub": "purchase of property and equipment incl. capitalized software, FY2025",
+     "tier": "reported",
+     "source": "CoreWeave Q4/FY2025 earnings release (Feb 26, 2026)",
+     "asOf": "FY2025 ended Dec 31 2025"
+    },
+    {
+     "id": "beta",
+     "label": "Beta",
+     "value": null,
+     "sub": "no keyless beta source",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "range-52w",
+     "label": "52-week range position",
+     "value": "Lower-mid range",
+     "sub": "~$87.637 (Oct 7 2026); range $60.55–$153.20 → 29.2%",
+     "tier": "estimated",
+     "source": "Yahoo Finance quote",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    }
+   ]
+  },
+  {
+   "ticker": "NBIS",
+   "name": "Nebius",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$59.9B",
+     "sub": "$59.44B mktcap ($234.95 × 253.0M shares) + $4.13B debt − $3.68B cash",
+     "tier": "estimated",
+     "source": "Nebius FY2025 20-F (debt $4.13B, cash $3.68B; shares 253.0M Class A+B, 20-F cover)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "negative TTM EPS; multiple meaningless",
+     "tier": "unsourced",
+     "source": "Nebius FY2025 20-F (debt $4.13B, cash $3.68B; shares 253.0M Class A+B, 20-F cover)"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "negative FCF; multiple meaningless",
+     "tier": "unsourced",
+     "source": "Nebius FY2025 20-F (debt $4.13B, cash $3.68B; shares 253.0M Class A+B, 20-F cover)"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "5-year revenue history not disclosed (Yandex spin-off)",
+     "tier": "unsourced",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "ticker": "IREN",
+   "name": "IREN Limited",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$17.0B",
+     "sub": "$15.14B mktcap ($38.425 × 394.1M shares) + $7.76B debt − $5.90B cash",
+     "tier": "estimated",
+     "source": "IREN FY2026 10-K (debt $7.76B, cash $5.90B; shares 394.1M, 10-K cover)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "negative TTM EPS; multiple meaningless",
+     "tier": "unsourced",
+     "source": "IREN FY2026 10-K (debt $7.76B, cash $5.90B; shares 394.1M, 10-K cover)"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "negative FCF; multiple meaningless",
+     "tier": "unsourced",
+     "source": "IREN FY2026 10-K (debt $7.76B, cash $5.90B; shares 394.1M, 10-K cover)"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "5-year revenue history not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": null,
+     "sub": "not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "ticker": "WULF",
+   "name": "TeraWulf Inc.",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$5.9B",
+     "sub": "$6.04B mktcap ($14.25 × 424.1M shares) + $3.14B debt − $3.27B cash",
+     "tier": "estimated",
+     "source": "TeraWulf FY2025 10-K (debt $3.14B, cash $3.27B; shares 424.1M, 10-K cover)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "negative TTM EPS; multiple meaningless",
+     "tier": "unsourced",
+     "source": "TeraWulf FY2025 10-K (debt $3.14B, cash $3.27B; shares 424.1M, 10-K cover)"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "negative FCF; multiple meaningless",
+     "tier": "unsourced",
+     "source": "TeraWulf FY2025 10-K (debt $3.14B, cash $3.27B; shares 424.1M, 10-K cover)"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "5-year revenue history not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": null,
+     "sub": "not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "ticker": "HUT",
+   "name": "Hut 8 Corp.",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$10.2B",
+     "sub": "$9.80B mktcap ($88.37 × 110.9M shares) + $0.41B debt − $0.04B cash",
+     "tier": "estimated",
+     "source": "Hut 8 FY2025 10-K (debt $408.9M, cash $44.9M; shares 110.9M, 10-K cover)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "negative TTM EPS; multiple meaningless",
+     "tier": "unsourced",
+     "source": "Hut 8 FY2025 10-K (debt $408.9M, cash $44.9M; shares 110.9M, 10-K cover)"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "negative FCF; multiple meaningless",
+     "tier": "unsourced",
+     "source": "Hut 8 FY2025 10-K (debt $408.9M, cash $44.9M; shares 110.9M, 10-K cover)"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "5-year revenue history not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": null,
+     "sub": "not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "ticker": "GLXY",
+   "name": "Galaxy Digital Inc.",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$10.1B",
+     "sub": "$8.31B mktcap ($21.358 × 389.1M shares) + $3.04B debt − $1.25B cash",
+     "tier": "estimated",
+     "source": "Galaxy Digital FY2025 10-K (debt $3.04B, cash $1.25B; shares 389.1M Class A+B, 10-K cover)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "negative TTM EPS; multiple meaningless",
+     "tier": "unsourced",
+     "source": "Galaxy Digital FY2025 10-K (debt $3.04B, cash $1.25B; shares 389.1M Class A+B, 10-K cover)"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "negative FCF; multiple meaningless",
+     "tier": "unsourced",
+     "source": "Galaxy Digital FY2025 10-K (debt $3.04B, cash $1.25B; shares 389.1M Class A+B, 10-K cover)"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "5-year revenue history not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "value": null,
+     "sub": "not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "op-margin",
+     "label": "Operating margin",
+     "value": null,
+     "sub": "not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": null,
+     "sub": "not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    }
+   ]
+  },
+  {
+   "ticker": "APLD",
+   "name": "Applied Digital Corporation",
+   "metrics": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "value": "~$10.4B",
+     "sub": "$6.98B mktcap ($23.945 × 291.5M shares) + $4.98B debt − $1.59B cash",
+     "tier": "estimated",
+     "source": "Applied Digital FY2026 10-K (debt $4.98B, cash $1.59B; shares 291.5M, 10-K cover)",
+     "asOf": "Oct 7 2026 · Yahoo Finance quote"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "value": null,
+     "sub": "negative TTM EPS; multiple meaningless",
+     "tier": "unsourced",
+     "source": "Applied Digital FY2026 10-K (debt $4.98B, cash $1.59B; shares 291.5M, 10-K cover)"
+    },
+    {
+     "id": "pfcf",
+     "label": "Price / free cash flow",
+     "value": null,
+     "sub": "negative FCF; multiple meaningless",
+     "tier": "unsourced",
+     "source": "Applied Digital FY2026 10-K (debt $4.98B, cash $1.59B; shares 291.5M, 10-K cover)"
+    },
+    {
+     "id": "rev-cagr-5y",
+     "label": "Revenue CAGR (5Y)",
+     "value": null,
+     "sub": "5-year revenue history not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "gross-margin",
+     "label": "Gross margin",
+     "value": null,
+     "sub": "not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    },
+    {
+     "id": "rnd",
+     "label": "R&D spend",
+     "value": null,
+     "sub": "not disclosed",
+     "tier": "unsourced",
+     "source": ""
+    }
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "ticker": "MSFT",
+   "id": "beta",
+   "label": "Beta",
+   "reason": "no keyless beta source"
+  },
+  {
+   "ticker": "AMZN",
+   "id": "beta",
+   "label": "Beta",
+   "reason": "no keyless beta source"
+  },
+  {
+   "ticker": "GOOGL",
+   "id": "beta",
+   "label": "Beta",
+   "reason": "no keyless beta source"
+  },
+  {
+   "ticker": "Oracle",
+   "id": "pfcf",
+   "label": "Price / free cash flow",
+   "reason": "negative FCF (−$23.7B FY2026); multiple meaningless"
+  },
+  {
+   "ticker": "Oracle",
+   "id": "beta",
+   "label": "Beta",
+   "reason": "no keyless beta source"
+  },
+  {
+   "ticker": "Meta",
+   "id": "beta",
+   "label": "Beta",
+   "reason": "no keyless beta source"
+  },
+  {
+   "ticker": "CRWV",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "reason": "negative TTM EPS (−$2.81 FY2025); multiple meaningless"
+  },
+  {
+   "ticker": "CRWV",
+   "id": "pfcf",
+   "label": "Price / free cash flow",
+   "reason": "negative FCF (~−$7.3B FY2025); multiple meaningless"
+  },
+  {
+   "ticker": "CRWV",
+   "id": "rev-cagr-5y",
+   "label": "Revenue CAGR (5Y)",
+   "reason": "pre-IPO 5-year revenue history not disclosed"
+  },
+  {
+   "ticker": "CRWV",
+   "id": "rnd",
+   "label": "R&D spend",
+   "reason": "not disclosed separately (infra spend in 'Technology and infrastructure')"
+  },
+  {
+   "ticker": "CRWV",
+   "id": "beta",
+   "label": "Beta",
+   "reason": "no keyless beta source"
+  },
+  {
+   "ticker": "NBIS",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "reason": "negative TTM EPS; multiple meaningless"
+  },
+  {
+   "ticker": "NBIS",
+   "id": "pfcf",
+   "label": "Price / free cash flow",
+   "reason": "negative FCF; multiple meaningless"
+  },
+  {
+   "ticker": "NBIS",
+   "id": "rev-cagr-5y",
+   "label": "Revenue CAGR (5Y)",
+   "reason": "5-year revenue history not disclosed (Yandex spin-off)"
+  },
+  {
+   "ticker": "IREN",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "reason": "negative TTM EPS; multiple meaningless"
+  },
+  {
+   "ticker": "IREN",
+   "id": "pfcf",
+   "label": "Price / free cash flow",
+   "reason": "negative FCF; multiple meaningless"
+  },
+  {
+   "ticker": "IREN",
+   "id": "rev-cagr-5y",
+   "label": "Revenue CAGR (5Y)",
+   "reason": "5-year revenue history not disclosed"
+  },
+  {
+   "ticker": "IREN",
+   "id": "rnd",
+   "label": "R&D spend",
+   "reason": "not disclosed"
+  },
+  {
+   "ticker": "WULF",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "reason": "negative TTM EPS; multiple meaningless"
+  },
+  {
+   "ticker": "WULF",
+   "id": "pfcf",
+   "label": "Price / free cash flow",
+   "reason": "negative FCF; multiple meaningless"
+  },
+  {
+   "ticker": "WULF",
+   "id": "rev-cagr-5y",
+   "label": "Revenue CAGR (5Y)",
+   "reason": "5-year revenue history not disclosed"
+  },
+  {
+   "ticker": "WULF",
+   "id": "rnd",
+   "label": "R&D spend",
+   "reason": "not disclosed"
+  },
+  {
+   "ticker": "HUT",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "reason": "negative TTM EPS; multiple meaningless"
+  },
+  {
+   "ticker": "HUT",
+   "id": "pfcf",
+   "label": "Price / free cash flow",
+   "reason": "negative FCF; multiple meaningless"
+  },
+  {
+   "ticker": "HUT",
+   "id": "rev-cagr-5y",
+   "label": "Revenue CAGR (5Y)",
+   "reason": "5-year revenue history not disclosed"
+  },
+  {
+   "ticker": "HUT",
+   "id": "rnd",
+   "label": "R&D spend",
+   "reason": "not disclosed"
+  },
+  {
+   "ticker": "GLXY",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "reason": "negative TTM EPS; multiple meaningless"
+  },
+  {
+   "ticker": "GLXY",
+   "id": "pfcf",
+   "label": "Price / free cash flow",
+   "reason": "negative FCF; multiple meaningless"
+  },
+  {
+   "ticker": "GLXY",
+   "id": "rev-cagr-5y",
+   "label": "Revenue CAGR (5Y)",
+   "reason": "5-year revenue history not disclosed"
+  },
+  {
+   "ticker": "GLXY",
+   "id": "gross-margin",
+   "label": "Gross margin",
+   "reason": "not disclosed"
+  },
+  {
+   "ticker": "GLXY",
+   "id": "op-margin",
+   "label": "Operating margin",
+   "reason": "not disclosed"
+  },
+  {
+   "ticker": "GLXY",
+   "id": "rnd",
+   "label": "R&D spend",
+   "reason": "not disclosed"
+  },
+  {
+   "ticker": "APLD",
+   "id": "pe-trailing",
+   "label": "P/E ratio (trailing)",
+   "reason": "negative TTM EPS; multiple meaningless"
+  },
+  {
+   "ticker": "APLD",
+   "id": "pfcf",
+   "label": "Price / free cash flow",
+   "reason": "negative FCF; multiple meaningless"
+  },
+  {
+   "ticker": "APLD",
+   "id": "rev-cagr-5y",
+   "label": "Revenue CAGR (5Y)",
+   "reason": "5-year revenue history not disclosed"
+  },
+  {
+   "ticker": "APLD",
+   "id": "gross-margin",
+   "label": "Gross margin",
+   "reason": "not disclosed"
+  },
+  {
+   "ticker": "APLD",
+   "id": "rnd",
+   "label": "R&D spend",
+   "reason": "not disclosed"
+  }
+ ],
+ "corrections": [],
+ "notes": [
+  "Cloud-revenue extras: all four hyperscalers already carry cloud-revenue metrics in their Atlas records (MSFT Azure >$100B FY2026, AMZN AWS $128.7B FY2025, GOOGL Google Cloud $58.7B FY2025, Oracle OCI $18.1B FY2026); CoreWeave carries Revenue backlog $66.8B (Dec 31, 2025). No extras added — RPO/backlog kept distinct from cloud revenue per bundle guidance.",
+  "APLD: figures are pre-Q1 FY2027 print — Applied Digital reports earnings after close Oct 7, 2026; refresh one ticker tomorrow.",
+  "Price-derived metrics use Oct 7 2026 Yahoo quotes from prices.json; EDGAR was 403 from this network, so balance-sheet/income-statement inputs came from the companies' own IR earnings releases (opened and read in full). Meta share count from FY2025 10-K balance sheet via search snippet (sec.gov blocked for direct fetch); Oracle market cap uses FY2026 diluted weighted-average shares (2,914M); CRWV uses FY2025 diluted weighted-average shares (436M) — flagged in subs.",
+  "5Y CAGRs: MSFT +14.6% (FY21 $168.1B, Microsoft IR), AMZN +13.2% (FY20 $386.1B, Amazon IR), GOOGL +17.2% (FY20 $182.5B, Alphabet IR), Oracle +10.7% (FY21 $40.5B, Oracle IR), Meta +18.5% (FY20 $86.0B, Meta release). CRWV/all small caps: 5Y CAGR unsourced (pre-IPO/spin-off history not disclosed).",
+  "AMZN is net cash (−$21.2B): long-term debt $65.6B vs cash $86.8B. Oracle debt/equity 3.01x on $129.5B borrowings. CRWV debt/equity 6.41x.",
+  "Oracle pfcf and all miner P/E + P/FCF are null/unsourced with reasons (negative EPS/FCF) per bundle rules.",
+  "Consistency check: recomputed all existing record values against the IR releases read this session (revenue, net income, EPS, FCF, capex, OCF) — all match; no corrections needed."
+ ]
+}

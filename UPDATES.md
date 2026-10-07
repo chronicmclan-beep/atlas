@@ -8,6 +8,34 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v15 — "Full Coverage" — 2026-10-07
+
+Owner asked for every financial metric filled in for every company. Result: all **83 companies now carry KPI records** (was 63 — the 20 missing records are built: TSMC, Samsung, SK Hynix, Dell, Supermicro, Vertiv, Eaton, Tokyo Electron, Shin-Etsu, SUMCO, Linde, ASE, Amkor, SoftBank, OpenAI, Anthropic, xAI, HUMAIN, G42, US Government), and **318 missing metrics were filled** across the existing records. Enterprise value went from 0 to 77 companies; market cap 51 → 77; revenue 63 → 79.
+
+Added (figures = new KPI records or new metrics on existing records; every figure carries source + asOf + tier):
+- **Full new records (20):** TSMC, Samsung, SK Hynix (FY2025 audited, KRW→USD at ₩1,338.44/$1 stated in subs), Dell, Supermicro, Vertiv, Eaton, Tokyo Electron, Shin-Etsu, SUMCO, Linde, ASE, Amkor (filing currencies converted to USD at stated Oct 7 2026 FX), SoftBank (22/26 metrics; JPY→USD at ¥158.3/$1), and honest mostly-null records for OpenAI (company-disclosed $70B annualized run rate only — explicitly not GAAP revenue), Anthropic ($65B run rate / ~$4.6B booked 2025, company-disclosed), xAI, HUMAIN, G42 (private, undisclosed), US Government (N/A).
+- **Price-derived set (tier `estimated`, math in each sub, as of Oct 7 2026 Yahoo Finance quotes):** market cap = price × filing shares outstanding; P/E = price ÷ GAAP diluted EPS (TTM); P/S = market cap ÷ revenue; P/FCF = market cap ÷ FCF; 52-week range position = (price − low) ÷ (high − low); EV = market cap + total debt − cash & equivalents.
+- **Derived set (tier `estimated`, recomputed from source inputs):** revenue growth 1Y, 5Y CAGR, net/FCF margins, ROE, ROA, net debt, debt/equity across all applicable companies.
+
+Corrected (genuine errors found during the fill):
+- AMD Free cash flow: ~$6.7B → **$5.5B** (FY2025 release: OCF $6,493M − capex $974M)
+- Arm Revenue sub: +21% YoY → **+24% YoY** (($4,007M − $3,233M) ÷ $3,233M)
+
+Honest gaps (null / tier `unsourced` with reasons — nothing invented):
+- **Beta** for ~31 companies: no keyless beta source exists; not scraped from aggregators.
+- **Private labs:** OpenAI/Anthropic margins, EPS, multiples; xAI/HUMAIN/G42 nearly everything ("private, undisclosed"); US Government ("N/A").
+- **Negative-EPS/FCF multiples:** P/E and P/FCF left null where TTM EPS or FCF is negative (INTC, CRWV, miners, several software names) — the ratio isn't meaningful.
+- **Undisclosed lines:** R&D for power/utilities (VST, TLN, NRG, PWR, FIX — not in their 10-Ks), gross margin where no gross-profit line exists, Dell ROE/D/E (negative equity).
+- **No 5-year anchor:** rev CAGR 5Y null for TLN (Ch.11 emergence 2023), GEV (2024 spin-off), CRWV/miners (no 5Y history), SNDK (pre-spin history is WDC's).
+- **Thin disclosure:** POET (OTC) — 7 metrics null; SUMCO Q2 2026 quarter secondary-confirmed only (flagged).
+
+Notes: foreign-currency statement figures converted to USD at Oct 7 2026 FX stated in each sub (KRW ₩1,338.44, JPY ¥157.99/¥158.3, NTD 31.87, EUR €1=$1.1750) — the chart parser only scales `$` values, so USD normalization is required, not cosmetic. APLD's figures are pre-Q1 FY2027 (reported after close Oct 7) — record carries the caveat; one-ticker refresh scheduled Oct 8. Market-cap asOf dates differ by company (Oct 6 vs Oct 7 quotes) — each figure's own asOf governs; the staleness badge (>100 days) applies.
+
+Verification: 8 parallel research workers (one per company group), then three fresh-agent Two-Person passes. Verifier 1 (chip design + equipment/materials): 242/242 derived figures recompute, both corrections confirmed, 16+/16 spot-checks pass — but caught 1 blocker: ASX's 20-F-sourced figures conflicted with ASE's own earnings release and the 20-F couldn't be opened from this network, so all 7 affected ASX metrics were realigned to the company-release figures (NI NT$40,658M, EPS NT$8.89/US$0.571 ADS, op margin 7.9%, net margin 6.5%, P/E 79.8x; ROE/ROA honestly nulled). Verifier 2 (memory + systems + energy): SHIP — all derived math recomputes, Dell's $47B quarter confirmed (AI-server surge), Samsung Q2 provenance independently corroborated. Verifier 3 (hyperscale + software + labs): caught 2 merge-level blockers, both fixed before ship — the 16 software EV subs had their methodology caveat truncated in the merge (restored in full) and the APLD record lacked its pre-earnings caveat (added). All statement-figure spot-checks pass (MSFT/Oracle/Meta/AMZN/GOOGL releases, SoftBank official presentation, OpenAI/Anthropic company-disclosed run rates with explicit not-GAAP labeling). Verdict after fixes: **SHIP**, no remaining blockers.
+
+---
+
+
 ## Update v14 — "The Quarterly Freshness Sweep" — 2026-10-07
 
 Owner caught a real error: AMD's "Latest quarter" read $10.3B (Q4 2025) while AMD's IR release for Q2'26 reported $11,536M — two quarters stale, presented as latest. Assumed every quarterly figure suspect until re-verified: all 63 companies' IR cross-referenced against their most recent earnings release (as of 2026-10-07).

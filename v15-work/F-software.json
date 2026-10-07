@@ -1,0 +1,264 @@
+{
+ "bundle": "F-software",
+ "companies": [
+  {
+   "ticker": "PLTR",
+   "name": "Palantir Technologies Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "NOW",
+   "name": "ServiceNow, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "CRM",
+   "name": "Salesforce, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "SNOW",
+   "name": "Snowflake Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "MDB",
+   "name": "MongoDB, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "DDOG",
+   "name": "Datadog, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "APP",
+   "name": "AppLovin Corporation",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "TEAM",
+   "name": "Atlassian Corporation",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "TWLO",
+   "name": "Twilio Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "CRWD",
+   "name": "CrowdStrike Holdings, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "PANW",
+   "name": "Palo Alto Networks, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "ZS",
+   "name": "Zscaler, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "NET",
+   "name": "Cloudflare, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "S",
+   "name": "SentinelOne, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    },
+    {
+     "id": "pe-trailing",
+     "label": "P/E ratio (trailing)",
+     "family": "valuation"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "FTNT",
+   "name": "Fortinet, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  },
+  {
+   "ticker": "OKTA",
+   "name": "Okta, Inc.",
+   "layer": "software",
+   "hasRecord": true,
+   "gaps": [
+    {
+     "id": "ev",
+     "label": "Enterprise value",
+     "family": "size"
+    }
+   ],
+   "extras": []
+  }
+ ]
+}
