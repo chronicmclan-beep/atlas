@@ -6,6 +6,7 @@ import MetricCard from '../common/MetricCard.jsx'
 import CompareToggle from '../common/CompareToggle.jsx'
 import Filters from '../common/Filters.jsx'
 import SourceTag from '../common/SourceTag.jsx'
+import StaleTag from '../common/StaleTag.jsx'
 import GlossaryTerm from '../common/GlossaryTerm.jsx'
 import CrossLinks from '../common/CrossLinks.jsx'
 import CompanyBadge from '../common/CompanyBadge.jsx'
@@ -123,7 +124,7 @@ function SingleView({ record }) {
         <>
           <div className="mt-lg grid grid-cols-1 gap-md sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {record.metrics.map((m, i) => (
-              <MetricCard key={`${m.label}-${i}`} metric={m} />
+              <MetricCard key={`${m.label}-${i}`} metric={m} asOf={record.asOf} />
             ))}
           </div>
           <p className="mt-lg text-caption text-ink-faint">Source: {record.source}</p>
@@ -184,7 +185,7 @@ function CompareView({ records, accent }) {
               </th>
               {records.map((r) => {
                 const m = r.metrics.find((x) => x.label === label)
-                return <CompareCell key={r.ticker} metric={m} />
+                return <CompareCell key={r.ticker} metric={m} asOf={r.asOf} />
               })}
             </tr>
           ))}
@@ -194,7 +195,7 @@ function CompareView({ records, accent }) {
   )
 }
 
-function CompareCell({ metric }) {
+function CompareCell({ metric, asOf }) {
   if (!metric) {
     return <td className="px-md py-sm text-ink-faint">—</td>
   }
@@ -214,7 +215,12 @@ function CompareCell({ metric }) {
         </span>
         <SourceTag tier={metric.tier} showLabel={false} />
       </div>
-      {metric.sub && <div className="mt-2xs text-caption text-ink-faint">{metric.sub}</div>}
+      {metric.sub && (
+        <div className="mt-2xs text-caption text-ink-faint">
+          {metric.sub}
+          <StaleTag asOf={asOf} />
+        </div>
+      )}
     </td>
   )
 }

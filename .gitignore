@@ -7,6 +7,8 @@ dist-ssr
 
 # Caches
 .vite
+scripts/refresh-quarterly/.cache/
+scripts/refresh-quarterly/reports/
 
 # Local env / logs
 *.local

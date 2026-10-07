@@ -80,6 +80,17 @@ whose freeze is older than ~120 days raises a staleness warning. Staleness
 was the single biggest error class in the audit — this catches it by
 construction.
 
+**"Latest quarter" sourcing rule (added 2026-10-07, after the AMD Q4'25 vs
+Q2'26 incident):** a "Latest quarter" figure may only be sourced from the
+company's most recent earnings release or 10-Q — never from a 10-K's final
+quarter, which is by definition one or more cycles stale. Quarterly figures
+whose source is older than ~100 days are flagged "may be stale" in the UI
+(see `src/lib/staleness.js`), so staleness is visible to readers even when a
+refresh is missed. The automated EDGAR XBRL refresh
+(`scripts/refresh-quarterly/`) cross-checks quarterly revenue against primary
+filings; its output is report-only and every `updated` row requires human
+verification before anything is published.
+
 ## 6. The Update Log — game-patch style
 
 `UPDATES.md` (repo root) is the versioned record of every data-affecting

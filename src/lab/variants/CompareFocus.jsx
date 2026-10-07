@@ -12,6 +12,7 @@ import { getCompany, revenue as quarterlyRevenue } from '../../lib/data.js'
 import { effectiveTheme, setTheme } from '../../lib/theme.js'
 import CompanyBadge from '../../components/common/CompanyBadge.jsx'
 import SourceTag from '../../components/common/SourceTag.jsx'
+import StaleTag from '../../components/common/StaleTag.jsx'
 
 /*
   Lab variant — "Focus" for the Company Comparison builder.
@@ -221,6 +222,7 @@ function ExplainPanel({ def, figs }) {
               <SourceTag tier={f.tier} />
               <span className="truncate">{f.source}</span>
               {f.asOf && <span>· {f.asOf}</span>}
+              <StaleTag asOf={f.asOf} />
             </div>
           ))}
         </div>

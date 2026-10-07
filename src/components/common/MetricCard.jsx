@@ -1,5 +1,6 @@
 import SourceTag from './SourceTag.jsx'
 import GlossaryTerm from './GlossaryTerm.jsx'
+import StaleTag from './StaleTag.jsx'
 
 /*
   MetricCard — one figure, always shown with its source tier.
@@ -15,8 +16,10 @@ import GlossaryTerm from './GlossaryTerm.jsx'
 
   Props:
     metric — { label, value, sub, tier, negative?, realized? }
+    asOf   — free-text source date for the record; shows a quiet "may be stale"
+              note next to the sub-line when the source is over ~100 days old
 */
-export default function MetricCard({ metric }) {
+export default function MetricCard({ metric, asOf }) {
   const { label, value, sub, tier, negative, realized } = metric
   const isCommitted = realized === false
   const hasValue = value !== null && value !== undefined
@@ -48,7 +51,12 @@ export default function MetricCard({ metric }) {
         {hasValue ? value : '—'}
       </div>
 
-      {sub && <div className="text-caption text-ink-faint">{sub}</div>}
+      {sub && (
+        <div className="text-caption text-ink-faint">
+          {sub}
+          <StaleTag asOf={asOf} />
+        </div>
+      )}
 
       <div className="mt-2xs">
         <SourceTag tier={tier} />
