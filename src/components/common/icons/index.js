@@ -13,6 +13,7 @@ import TimelineIcon from './TimelineIcon.jsx'
 import FinancingIcon from './FinancingIcon.jsx'
 import GlossaryIcon from './GlossaryIcon.jsx'
 import CompareIcon from './CompareIcon.jsx'
+import LabIcon from './LabIcon.jsx'
 
 export const SECTION_ICONS = {
   'layer-map': LayerMapIcon,
@@ -23,4 +24,5 @@ export const SECTION_ICONS = {
   financing: FinancingIcon,
   glossary: GlossaryIcon,
   compare: CompareIcon,
+  lab: LabIcon,
 }

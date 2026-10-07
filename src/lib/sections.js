@@ -1,5 +1,5 @@
 /*
-  The six sections of the Atlas, in canonical order (per the build spec).
+  The nine sections of the Atlas, in canonical order (per the build spec).
   The nav shell and, later, the router both read from this single list so
   section order and labels live in exactly one place.
 
@@ -65,6 +65,17 @@ export const SECTIONS = [
     // accents, distinct from all of them.
     color: '#0E9AA7',
     blurb: 'Pick companies and metrics — the comparison builds itself, live. Every figure explained in plain English, with its source.',
+  },
+  {
+    id: 'lab',
+    num: '09',
+    label: 'The Lab',
+    // PROVISIONAL — owner to approve. Amber (#EF9AA7) drawn from the existing
+    // data palette; reads as "experimental / caution" and is distinct from
+    // all eight production section accents.
+    color: '#EF9F27',
+    blurb: 'Design experiments — switchable prototypes for upcoming sections. Tap through the variants, pick the winner, and it gets promoted into production.',
+    experimental: true,
   },
 ]
 

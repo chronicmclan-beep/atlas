@@ -10,9 +10,10 @@ import TimelineHub from './components/timeline/TimelineHub.jsx'
 import FinancingWeb from './components/financing/FinancingWeb.jsx'
 import GlossarySection from './components/glossary/GlossarySection.jsx'
 import Compare from './components/compare/Compare.jsx'
+import Lab from './components/lab/Lab.jsx'
 
 /*
-  App shell: navigation across the eight sections. Sections are wired in one at a
+  App shell: navigation across the nine sections. Sections are wired in one at a
   time (Phase 3) via the SECTION_COMPONENTS registry; any section without a
   registered component still shows the placeholder.
 */
@@ -25,6 +26,7 @@ const SECTION_COMPONENTS = {
   financing: FinancingWeb,
   glossary: GlossarySection,
   compare: Compare,
+  lab: Lab,
 }
 
 export default function App() {
@@ -85,6 +87,14 @@ function AppShell() {
                         {Icon ? <Icon size={26} /> : null}
                       </span>
                       <span>{s.label}</span>
+                      {s.experimental && (
+                        <span
+                          className="rounded-full border border-dashed px-xs py-2xs text-caption uppercase tracking-wide"
+                          style={{ color: s.color, borderColor: s.color }}
+                        >
+                          Experimental
+                        </span>
+                      )}
                     </button>
                   </li>
                 )
