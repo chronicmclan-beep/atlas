@@ -59,12 +59,12 @@ export const SECTIONS = [
   {
     id: 'compare',
     num: '08',
-    label: 'Head-to-head',
+    label: 'Company Comparison',
     // PROVISIONAL — owner to approve. Teal (#0E9AA7) drawn from the existing
     // timeline-category palette (policy); harmonious with the seven section
     // accents, distinct from all of them.
     color: '#0E9AA7',
-    blurb: 'NVIDIA vs AMD, metric by metric — every figure explained in plain English, with its source.',
+    blurb: 'Pick companies and metrics — the comparison builds itself, live. Every figure explained in plain English, with its source.',
   },
 ]
 

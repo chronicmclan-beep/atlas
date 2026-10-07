@@ -467,6 +467,18 @@
         "value": "$90.0B",
         "sub": "Q4 FY2026; +18% YoY",
         "tier": "reported"
+      },
+      {
+        "label": "Remaining performance obligations",
+        "value": "$684B",
+        "sub": "Total co.; ~30% in next 12 mo",
+        "tier": "reported"
+      },
+      {
+        "label": "Capex",
+        "value": "$115.9B",
+        "sub": "Additions to PP&E; +$51.4B YoY",
+        "tier": "reported"
       }
     ]
   },
@@ -475,7 +487,7 @@
     "fiscalYear": "FY2025",
     "calendarYearBasis": 2025,
     "asOf": "ended Dec 31 2025 \u00b7 10-K filed Feb 6 2026",
-    "source": "Amazon Q4/FY2025 earnings release (Feb 5 2026)",
+    "source": "Amazon Q4/FY2025 earnings release (Feb 5 2026); FY2025 10-K filed Feb 6 2026",
     "metrics": [
       {
         "label": "Revenue",
@@ -524,6 +536,18 @@
         "value": "$213.4B",
         "sub": "Q4 2025; +14% YoY",
         "tier": "reported"
+      },
+      {
+        "label": "Remaining performance obligations",
+        "value": "~$244B",
+        "sub": "AWS contracts >1 yr only",
+        "tier": "reported"
+      },
+      {
+        "label": "Capex",
+        "value": "$131.8B",
+        "sub": "Purchases of PP&E; +$48.8B YoY",
+        "tier": "reported"
       }
     ]
   },
@@ -532,7 +556,7 @@
     "fiscalYear": "FY2025",
     "calendarYearBasis": 2025,
     "asOf": "ended Dec 31 2025 \u00b7 10-K filed Feb 5 2026",
-    "source": "Alphabet Q4/FY2025 earnings release (Feb 4 2026)",
+    "source": "Alphabet Q4/FY2025 earnings release (Feb 4 2026); FY2025 10-K filed Feb 5 2026",
     "metrics": [
       {
         "label": "Revenue",
@@ -580,6 +604,18 @@
         "label": "Latest quarter",
         "value": "$113.8B",
         "sub": "Q4 2025; +18% YoY",
+        "tier": "reported"
+      },
+      {
+        "label": "Remaining performance obligations",
+        "value": "$242.8B",
+        "sub": "Total co.; primarily Google Cloud",
+        "tier": "reported"
+      },
+      {
+        "label": "Capex",
+        "value": "$91.4B",
+        "sub": "Purchases of PP&E; +$38.9B YoY",
         "tier": "reported"
       }
     ]
@@ -696,6 +732,18 @@
         "label": "Latest quarter",
         "value": "$19.2B",
         "sub": "Q4 FY2026; +21% YoY",
+        "tier": "reported"
+      },
+      {
+        "label": "Remaining performance obligations",
+        "value": "$638B",
+        "sub": "Total co.; +362% YoY on cloud contracts",
+        "tier": "reported"
+      },
+      {
+        "label": "Capex",
+        "value": "$55.7B",
+        "sub": "Capital expenditures; +162% YoY",
         "tier": "reported"
       }
     ]

@@ -8,6 +8,70 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v12 — "Company Comparison builder" — 2026-10-06
+
+Section 08 rebuilt from a static NVDA-vs-AMD page into an interactive
+comparison builder: the user picks 1–4 companies (Chip Design / Compute
+Providers groups, with search) and any metrics from the 10-family registry,
+and the visuals build live — no reload. New `src/lib/compareMetrics.js`
+registry drives the pickers: a metric appears only if at least one Atlas
+company has a real figure (coverage counts update with the selection;
+zero-coverage metrics render disabled, never invented). Visuals reuse the
+shipped language — grouped bar pairs, dot-on-scale (valuation), 52-week
+chips, diverging bars for profitability when exactly 2 companies are
+selected — plus live hero takeaways and an 18-quarter trend strip for any
+selection. Tap-to-inspect on every visual: what / why / good layers plus a
+generated "what this result means" line and per-figure source, asOf, tier.
+Default preset on load: NVDA vs AMD with revenue, gross margin, operating
+margin, net income, free cash flow. The v11 RPO/capex figures power the new
+"Cloud & backlog" family (MSFT/AMZN/GOOGL/ORCL). No data files touched by
+this update; banned-vocabulary scan clean; validate/lint/build green;
+390px with no horizontal scroll; light/dark themes.
+
+---
+
+## Update v11 — "Backlog & Buildout" — 2026-10-06
+
+Eight new figures in `kpis.json`: remaining performance obligations (RPO)
+and capital expenditures (capex) for the four hyperscalers — MSFT, AMZN,
+GOOGL, ORCL — sourced directly from their primary 10-Ks on SEC EDGAR,
+matched to each record's existing freeze date. These feed the Company
+Comparison builder's cloud/backlog metric family (Section 08). Meta has no
+comparable disclosed backlog figure; nothing was invented for it — the
+metric simply has no Meta coverage.
+
+### Added
+- **kpis.json — MSFT**: "Remaining performance obligations" $684B
+  (total company; ~30% recognized in next 12 mo — Note 12, FY2026 10-K filed
+  Jul 29 2026); "Capex" $115.9B (additions to PP&E; +$51.4B YoY).
+- **kpis.json — AMZN**: "Remaining performance obligations" ~$244B
+  (AWS contracts >1 yr only — shorter contracts excluded by Amazon's
+  disclosure scope; Note 1, FY2025 10-K filed Feb 6 2026); "Capex" $131.8B
+  (purchases of PP&E; +$48.8B YoY). Record source string extended to include
+  the FY2025 10-K.
+- **kpis.json — GOOGL**: "Remaining performance obligations" $242.8B
+  (total company, "primarily related to Google Cloud"; no Cloud-only figure
+  disclosed — Note 2, FY2025 10-K filed Feb 5 2026); "Capex" $91.4B
+  (purchases of PP&E; +$38.9B YoY). Record source string extended to include
+  the FY2025 10-K.
+- **kpis.json — ORCL**: "Remaining performance obligations" $638B
+  (total company; +362% YoY, explicitly attributed to "certain significant
+  cloud contracts" — Note 1, FY2026 10-K filed Jun 22 2026); "Capex" $55.7B
+  (capital expenditures; +162% YoY, data-center expansion).
+
+### Verification
+- Triple-Check applied: filing dates match each record's freeze date;
+  roundings recomputed (115,948M→$115.9B; 131,819M→$131.8B;
+  91,447M→$91.4B; 55,663M→$55.7B; ORCL RPO (638−138)/138=+362%).
+- Two-Person Rule: a fresh subagent with no memory of the sourcing pass
+  re-verified all 8 figures from scratch against the EDGAR full-text
+  filings — 8/8 confirmed, no corrections. Scope caveats confirmed:
+  AMZN's AWS-only >1yr scope, GOOGL's total-company "primarily Cloud",
+  MSFT's $678B commercial vs $684B total RPO.
+- `npm run validate` green; Data Health clean (no new warnings).
+
+---
+
 ## Update v10 — "Head-to-Head" — 2026-10-06
 
 New Section 08: a visual NVDA vs AMD comparison — the first slice of the
