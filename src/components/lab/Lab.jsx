@@ -6,15 +6,17 @@ import LabIcon from '../common/icons/LabIcon.jsx'
 /*
   Section 09 — The Lab.
 
-  The design sandbox: experiments render as switchable prototype variants
-  inside a clearly-marked sandbox frame. The Lab shares the Atlas design
-  system but is visually fenced off (dashed accents, LAB tags, prototype
-  banner) so nobody mistakes a prototype for verified production content.
+  The design sandbox: experiments render prototype layouts inside a
+  clearly-marked sandbox frame. The Lab shares the Atlas design system
+  but stays visually fenced off (dashed amber accents, LAB tag) so nobody
+  mistakes a prototype for verified production content.
 
-  Nothing here is verified production content — layouts are experiments,
-  figures shown are live Atlas data rendered through experimental views.
-  When the owner picks a winner, its component is promoted into the
-  production section and the experiment is removed from the registry.
+  Figures shown are live Atlas data — the *layout* is what's being
+  tested. When the owner picks a winner, its component is promoted into
+  the production section and the experiment is removed from the registry.
+
+  The shell stays minimal by design: experiment/variant switchers only
+  appear when the registry actually holds more than one of them.
 */
 
 const LAB = '#EF9F27'
@@ -27,27 +29,6 @@ function LabTag() {
     >
       Lab
     </span>
-  )
-}
-
-function PrototypeBanner({ variantTitle }) {
-  return (
-    <div
-      className="rounded-card border-2 border-dashed px-md py-sm"
-      style={{ borderColor: LAB }}
-    >
-      <div className="flex flex-wrap items-center gap-sm">
-        <LabTag />
-        <span className="text-label font-medium text-ink">
-          Prototype — design experiment, not verified production content
-        </span>
-      </div>
-      <p className="mt-2xs text-caption text-ink-soft">
-        You are viewing <span className="font-medium text-ink">“{variantTitle}”</span>,
-        one layout idea for the task below. Figures are live Atlas data shown
-        through an experimental lens — the layout is what's being tested.
-      </p>
-    </div>
   )
 }
 
@@ -66,16 +47,28 @@ export default function Lab({ section }) {
         <div className="mt-sm flex items-center gap-sm">
           <LabTag />
           <span className="text-caption text-ink-faint">
-            Switchable prototypes — tap through, then pick the winner to promote.
+            Design experiments — try the idea, pick the winner, it ships.
           </span>
         </div>
       </SectionHeader>
 
-      {/* Experiment picker — cards so the Lab scales past one experiment */}
-      <div className="grid gap-sm md:grid-cols-2">
-        {EXPERIMENTS.map((e) => {
-          const active = e.id === exp.id
-          return (
+      {/* Single compact experimental strip */}
+      <div
+        className="flex items-center gap-sm rounded-card border border-dashed px-md py-xs"
+        style={{ borderColor: LAB }}
+      >
+        <LabTag />
+        <p className="text-caption text-ink-soft">
+          Design experiment — figures are live Atlas data; the{' '}
+          <span className="font-medium text-ink">layout</span> is what&apos;s
+          being tested, not the numbers.
+        </p>
+      </div>
+
+      {/* Slim experiment header — a picker only when there's more than one */}
+      {EXPERIMENTS.length > 1 ? (
+        <div className="mt-md flex flex-wrap gap-xs" role="group" aria-label="Experiments">
+          {EXPERIMENTS.map((e) => (
             <button
               key={e.id}
               type="button"
@@ -83,32 +76,31 @@ export default function Lab({ section }) {
                 setExpId(e.id)
                 setVariantId(null)
               }}
-              aria-pressed={active}
+              aria-pressed={e.id === exp.id}
               className={
-                'rounded-card border px-md py-sm text-left transition-colors ' +
-                (active
-                  ? 'border-line-strong bg-surface shadow-card'
-                  : 'border-line bg-bg hover:bg-surface-raised')
+                'rounded-control border px-sm py-2xs text-label transition-colors ' +
+                (e.id === exp.id
+                  ? 'font-medium text-ink shadow-card'
+                  : 'border-line text-ink-soft hover:bg-surface-raised')
               }
+              style={e.id === exp.id ? { borderColor: LAB } : undefined}
             >
-              <div className="flex items-center gap-sm">
-                <LabTag />
-                <span className="text-body font-medium text-ink">{e.title}</span>
-              </div>
-              <p className="mt-xs text-caption text-ink-soft">{e.task}</p>
-              <p className="mt-2xs text-caption text-ink-faint">
-                {e.variants.length} variant{e.variants.length === 1 ? '' : 's'}
-              </p>
+              {e.title}
             </button>
-          )
-        })}
-      </div>
-
-      {/* Variant switcher tabs */}
-      <div className="mt-lg">
-        <div className="text-eyebrow uppercase text-ink-faint">
-          Variants — {exp.title}
+          ))}
         </div>
+      ) : null}
+
+      <div className="mt-md flex flex-wrap items-baseline gap-x-sm gap-y-2xs">
+        <h3 className="text-heading font-medium text-ink">{exp.title}</h3>
+        <span className="text-caption text-ink-faint">{variant.title}</span>
+      </div>
+      <p className="mt-2xs max-w-2xl text-body text-ink-soft">
+        {variant.description}
+      </p>
+
+      {/* Variant tabs only when there's more than one to choose from */}
+      {exp.variants.length > 1 ? (
         <div className="mt-sm flex flex-wrap gap-sm" role="tablist" aria-label="Design variants">
           {exp.variants.map((v) => {
             const active = v.id === variant.id
@@ -125,33 +117,25 @@ export default function Lab({ section }) {
                     ? 'font-medium text-ink shadow-card'
                     : 'border-line text-ink-soft hover:bg-surface-raised')
                 }
-                style={active ? { borderColor: LAB, background: 'var(--surface)' } : undefined}
+                style={active ? { borderColor: LAB } : undefined}
               >
                 {v.title}
               </button>
             )
           })}
         </div>
-        <p className="mt-sm max-w-2xl text-body text-ink-soft">
-          {variant.description}
-        </p>
+      ) : null}
+
+      {/* The variant renders directly inside a light sandbox frame */}
+      <div
+        key={variant.id}
+        className="mt-sm rounded-card border border-dashed border-line-strong bg-bg px-sm py-md md:px-md"
+      >
+        <Variant />
       </div>
 
-      {/* Prototype banner + sandbox frame */}
-      <div className="mt-md grid gap-sm">
-        <PrototypeBanner variantTitle={variant.title} />
-        <div
-          key={variant.id}
-          className="rounded-card border border-dashed border-line-strong bg-bg px-sm py-md md:px-md"
-        >
-          <Variant />
-        </div>
-      </div>
-
-      <p className="mt-md max-w-2xl text-caption text-ink-faint">
-        How promotion works: tell me which variant wins and it moves into the
-        production section as the real layout — the experiment is then retired
-        from the Lab.
+      <p className="mt-md text-caption text-ink-faint">
+        Like it? Say the word and it moves into the production section.
       </p>
     </section>
   )
