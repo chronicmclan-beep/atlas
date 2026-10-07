@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   FAMILIES,
   METRICS,
@@ -14,18 +14,16 @@ import CompanyBadge from '../../components/common/CompanyBadge.jsx'
 import SourceTag from '../../components/common/SourceTag.jsx'
 
 /*
-  Lab variant — "Rail + live canvas" for the Company Comparison builder.
+  Lab variant — "Command Deck" for the Company Comparison builder.
 
-  Layout idea: a slim collapsible left rail holds every control (presets,
-  company picker, metric picker with search + collapsible families); the
-  ENTIRE main area is a live result canvas that re-renders the instant
-  anything is tapped. A sticky summary bar pins the current selection to
-  the top of the canvas while scrolling.
-
-  Canvas cards support: tap-to-inspect explanations, per-card chart
-  switcher (bars ↔ native donut/gauge), drag-to-reorder (desktop) with
-  up/down arrow fallback (touch), and a compact/comfortable density
-  toggle in the sticky bar.
+  Layout idea: the page is a workspace, not a settings page. A slim left
+  menu (~240px, collapsible; a drawer on mobile) holds presets + companies.
+  The remaining ~80% is one big central stage: a sticky header, a metric
+  ribbon (large tappable tiles grouped by family — the primary metric
+  picker), hero takeaway callouts, and the selected metrics as LARGE cards
+  in a 2-up grid with room for proper charts. Any card expands into a
+  full-stage focus modal: big chart on one side, the 4-layer explanation
+  and sources on the other.
 
   Data contract: figures resolve ONLY via resolveFigure(metricId, ticker).
   Nothing is hardcoded. A metric appears only when it has coverage for the
@@ -115,7 +113,7 @@ function ExplainPanel({ def, figs }) {
   ]
   const withVal = figs.filter((f) => f && f.value != null)
   return (
-    <div className="border-t border-line/60 px-sm py-sm">
+    <div>
       <div className="grid gap-sm md:grid-cols-2">
         {layers.map(([title, body]) => (
           <div key={title}>
@@ -144,34 +142,46 @@ function ExplainPanel({ def, figs }) {
 
 /* ------------------------------------------------------------------ */
 /* Bar-pair visual — one row per company, bars scaled to the max.        */
-/* ▲ marks the leader when higherIsBetter is set. Unparseable figures    */
-/* fall back to a plain value row (never hidden).                        */
+/* large=true gives ~2x chart presence for the deck cards + focus mode.  */
 /* ------------------------------------------------------------------ */
 
-function BarPairs({ entries, lead }) {
+function BarPairs({ entries, lead, large = false }) {
   const scalars = entries.map((e) => parseScalar(e.fig?.value))
   const max = Math.max(...scalars.map((v) => Math.abs(v ?? 0)), 1e-9)
   return (
-    <div className="mt-xs grid gap-2xs">
+    <div className={'grid ' + (large ? 'gap-sm' : 'mt-xs gap-2xs')}>
       {entries.map((e, i) => {
         const v = scalars[i]
         return (
           <div key={e.ticker} className="flex items-center gap-xs">
-            <span className="flex w-24 shrink-0 items-center gap-2xs">
-              <CompanyBadge name={e.ticker} size={18} />
-              <span className="truncate text-caption font-medium" style={{ color: colorOf(e.ticker) }}>
+            <span className={'flex shrink-0 items-center gap-2xs ' + (large ? 'w-32' : 'w-24')}>
+              <CompanyBadge name={e.ticker} size={large ? 22 : 18} />
+              <span
+                className={'truncate font-medium ' + (large ? 'text-label' : 'text-caption')}
+                style={{ color: colorOf(e.ticker) }}
+              >
                 {e.ticker}
               </span>
             </span>
             {e.fig && v != null ? (
               <>
-                <div className="h-3 min-w-6 flex-1 overflow-hidden rounded-pill bg-surface-raised">
+                <div
+                  className={
+                    'min-w-6 flex-1 overflow-hidden rounded-pill bg-surface-raised ' +
+                    (large ? 'h-5' : 'h-3')
+                  }
+                >
                   <div
                     className="h-full rounded-pill transition-all duration-500"
                     style={{ width: `${Math.max(2, (Math.abs(v) / max) * 100)}%`, background: colorOf(e.ticker) }}
                   />
                 </div>
-                <span className="max-w-[38%] shrink-0 text-right text-caption leading-tight text-ink">
+                <span
+                  className={
+                    'shrink-0 text-right leading-tight text-ink ' +
+                    (large ? 'max-w-[34%] text-body' : 'max-w-[38%] text-caption')
+                  }
+                >
                   {e.fig.value}
                   {lead === i && (
                     <span className="ml-2xs" aria-label="Leads">
@@ -194,11 +204,10 @@ function BarPairs({ entries, lead }) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Native charts (recovered from the retired chart-per-metric variant):  */
-/* DONUT for size/share metrics, RADIAL GAUGE for margins/returns.      */
+/* Donut for size/share metrics — large=true for deck cards + focus.    */
 /* ------------------------------------------------------------------ */
 
-function DonutChart({ entries, lead }) {
+function DonutChart({ entries, lead, large = false }) {
   const scored = entries
     .map((e) => ({ e, v: parseScalar(e.fig?.value) }))
     .filter((s) => s.v != null && s.v > 0)
@@ -206,16 +215,16 @@ function DonutChart({ entries, lead }) {
   const total = scored.reduce((a, s) => a + s.v, 0)
   const R = 46
   const C = 2 * Math.PI * R
-  let acc = 0 // cumulative share consumed so far — drives each segment's offset
+  let acc = 0
   const leader = lead >= 0 ? entries[lead] : scored.reduce((a, b) => (b.v > a.v ? b : a)).e
   return (
-    <div className="mt-xs flex items-center gap-md">
-      <div className="relative h-32 w-32 shrink-0">
+    <div className={'flex items-center ' + (large ? 'gap-lg' : 'mt-xs gap-md')}>
+      <div className={'relative shrink-0 ' + (large ? 'h-52 w-52' : 'h-32 w-32')}>
         <svg viewBox="0 0 120 120" className="h-full w-full -rotate-90" role="img" aria-label="Relative share donut">
           <circle cx="60" cy="60" r={R} fill="none" strokeWidth="18" className="stroke-line" opacity="0.3" />
           {scored.map((s) => {
             const frac = s.v / total
-            const len = Math.max(0, frac * C - 1.5) // 1.5px gap keeps neighbors readable
+            const len = Math.max(0, frac * C - 1.5)
             const off = -acc * C
             acc += frac
             return (
@@ -234,15 +243,17 @@ function DonutChart({ entries, lead }) {
           })}
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-          <span className="text-label font-semibold leading-tight text-ink">
+          <span className={'font-semibold leading-tight text-ink ' + (large ? 'text-title' : 'text-label')}>
             {leader?.fig?.value?.split(' ')[0]}
           </span>
-          <span className="text-caption leading-tight text-ink-faint">{leader?.ticker} leads</span>
+          <span className={'leading-tight text-ink-faint ' + (large ? 'text-label' : 'text-caption')}>
+            {leader?.ticker} leads
+          </span>
         </div>
       </div>
       <ul className="grid min-w-0 flex-1 gap-2xs">
         {scored.map((s) => (
-          <li key={s.e.ticker} className="flex items-center gap-xs text-caption">
+          <li key={s.e.ticker} className={'flex items-center gap-xs ' + (large ? 'text-label' : 'text-caption')}>
             <span className="h-2 w-2 shrink-0 rounded-full" style={{ background: colorOf(s.e.ticker) }} />
             <span className="truncate font-medium" style={{ color: colorOf(s.e.ticker) }}>
               {s.e.ticker}
@@ -256,13 +267,16 @@ function DonutChart({ entries, lead }) {
   )
 }
 
-function GaugeChart({ entries }) {
+/* ------------------------------------------------------------------ */
+/* Radial gauges for margins/returns — large=true for deck + focus.     */
+/* ------------------------------------------------------------------ */
+
+function GaugeChart({ entries, large = false }) {
   return (
-    <div className="mt-xs grid grid-cols-2 gap-sm sm:grid-cols-4">
+    <div className={'grid grid-cols-2 gap-sm ' + (large ? 'sm:grid-cols-4' : 'sm:grid-cols-4')}>
       {entries.map((e) => {
         const v = parseScalar(e.fig?.value)
         const frac = v == null ? null : Math.min(1, Math.max(0, v / 100))
-        // Semicircle arc: start (12,60) → end (108,60), radius 48.
         const arc =
           frac == null || frac <= 0
             ? ''
@@ -273,20 +287,26 @@ function GaugeChart({ entries }) {
               })()
         return (
           <div key={e.ticker} className="flex flex-col items-center rounded-control bg-surface-raised px-2xs py-xs">
-            <svg viewBox="0 0 120 76" className="w-full max-w-32" role="img" aria-label={`${e.ticker} gauge`}>
+            <svg
+              viewBox="0 0 120 76"
+              className={'w-full ' + (large ? 'max-w-52' : 'max-w-32')}
+              role="img"
+              aria-label={`${e.ticker} gauge`}
+            >
               <path d="M12,60 A48,48 0 0 1 108,60" fill="none" strokeWidth="9" className="stroke-line" opacity="0.35" strokeLinecap="round" />
-              {arc && (
-                <path d={arc} fill="none" stroke={colorOf(e.ticker)} strokeWidth="9" strokeLinecap="round" />
-              )}
+              {arc && <path d={arc} fill="none" stroke={colorOf(e.ticker)} strokeWidth="9" strokeLinecap="round" />}
             </svg>
             <div className="-mt-3 text-center">
               <div className="flex items-center justify-center gap-2xs">
-                <CompanyBadge name={e.ticker} size={14} />
-                <span className="text-caption font-medium" style={{ color: colorOf(e.ticker) }}>
+                <CompanyBadge name={e.ticker} size={large ? 18 : 14} />
+                <span
+                  className={'font-medium ' + (large ? 'text-label' : 'text-caption')}
+                  style={{ color: colorOf(e.ticker) }}
+                >
                   {e.ticker}
                 </span>
               </div>
-              <div className="text-label font-semibold text-ink">
+              <div className={'font-semibold text-ink ' + (large ? 'text-title' : 'text-label')}>
                 {e.fig ? e.fig.value.split(' ')[0] : <span className="italic text-ink-faint">Not sourced</span>}
               </div>
               {e.fig && <SourceTag tier={e.fig.tier} showLabel={false} />}
@@ -298,11 +318,31 @@ function GaugeChart({ entries }) {
   )
 }
 
+/* One place that picks the visual for a metric — shared by card + focus. */
+function MetricVisual({ def, entries, lead, large, chartMode }) {
+  const withVal = entries.filter((e) => e.fig && e.fig.value != null)
+  if (withVal.length === 0) {
+    return (
+      <p className="text-caption italic text-ink-faint">
+        No data for these companies — listed, not hidden.
+      </p>
+    )
+  }
+  const native = nativeChartFor(def)
+  const showDonut =
+    chartMode === 'native' && native === 'donut' && entries.some((e) => (parseScalar(e.fig?.value) ?? 0) > 0)
+  const showGauge = chartMode === 'native' && native === 'gauge'
+  if (showDonut) return <DonutChart entries={entries} lead={lead} large={large} />
+  if (showGauge) return <GaugeChart entries={entries} large={large} />
+  return <BarPairs entries={entries} lead={lead} large={large} />
+}
+
 /* ------------------------------------------------------------------ */
-/* Metric card — tap-to-inspect, per-card chart switcher, reorder arrows */
+/* Deck card — large metric card on the stage. Tap-to-inspect, chart     */
+/* switcher, expand-to-focus, reorder arrows.                           */
 /* ------------------------------------------------------------------ */
 
-function MetricCard({ def, tickers, density, onMoveUp, onMoveDown, isFirst, isLast }) {
+function DeckCard({ def, tickers, density, onMoveUp, onMoveDown, isFirst, isLast, onExpand }) {
   const [open, setOpen] = useState(false)
   const [chartMode, setChartMode] = useState('bars') // 'bars' | 'native'
   const figs = useMemo(() => tickers.map((t) => resolveFigure(def.id, t)), [def.id, tickers])
@@ -310,17 +350,9 @@ function MetricCard({ def, tickers, density, onMoveUp, onMoveDown, isFirst, isLa
   const withVal = entries.filter((e) => e.fig && e.fig.value != null)
   const lead = leaderIndex(def, entries)
   const missing = entries.filter((e) => !e.fig || e.fig.value == null).map((e) => e.ticker)
-
   const native = nativeChartFor(def)
-  const showDonut =
-    chartMode === 'native' &&
-    native === 'donut' &&
-    entries.some((e) => (parseScalar(e.fig?.value) ?? 0) > 0)
-  const showGauge = chartMode === 'native' && native === 'gauge'
 
-  const padX = density === 'compact' ? 'px-2xs' : 'px-sm'
-  const padTop = density === 'compact' ? 'pt-2xs' : 'pt-sm'
-  const padBottom = density === 'compact' ? 'pb-2xs' : 'pb-sm'
+  const pad = density === 'compact' ? 'p-2xs' : 'p-sm'
 
   const switchBtn = (mode, label) => (
     <button
@@ -354,8 +386,8 @@ function MetricCard({ def, tickers, density, onMoveUp, onMoveDown, isFirst, isLa
   )
 
   return (
-    <div className="rounded-card bg-surface shadow-card">
-      <div className={`flex items-center gap-2xs ${padX} ${padTop}`}>
+    <div className="flex h-full flex-col rounded-card bg-surface shadow-card">
+      <div className={'flex items-center gap-2xs border-b border-line/60 ' + pad}>
         <span className="shrink-0 cursor-grab text-ink-faint" title="Drag to reorder" aria-hidden="true">
           ⋮⋮
         </span>
@@ -365,7 +397,7 @@ function MetricCard({ def, tickers, density, onMoveUp, onMoveDown, isFirst, isLa
           aria-expanded={open}
           className="flex min-w-0 flex-1 items-center justify-between gap-sm text-left"
         >
-          <span className="truncate text-label font-medium text-ink">{def.label}</span>
+          <span className="truncate text-heading font-medium text-ink">{def.label}</span>
           <Chevron open={open} />
         </button>
         {native && withVal.length > 0 && (
@@ -374,181 +406,311 @@ function MetricCard({ def, tickers, density, onMoveUp, onMoveDown, isFirst, isLa
             {switchBtn('native', NATIVE_LABEL[native])}
           </span>
         )}
+        <button
+          type="button"
+          onClick={onExpand}
+          aria-label={`Expand ${def.label} to full stage`}
+          title="Expand to full stage"
+          className="shrink-0 rounded-control px-2xs text-caption text-ink-faint transition-colors hover:bg-surface-hover hover:text-ink"
+        >
+          <span aria-hidden="true">⤢</span>
+        </button>
         {arrowBtn(onMoveUp, -1, isFirst, `Move ${def.label} up`)}
         {arrowBtn(onMoveDown, 1, isLast, `Move ${def.label} down`)}
       </div>
-      <button type="button" onClick={() => setOpen((o) => !o)} className={`block w-full text-left ${padX} ${padBottom}`}>
-        {withVal.length === 0 ? (
-          <p className="mt-xs text-caption italic text-ink-faint">
-            No data for these companies — listed, not hidden.
-          </p>
-        ) : showDonut ? (
-          <DonutChart entries={entries} lead={lead} />
-        ) : showGauge ? (
-          <GaugeChart entries={entries} />
-        ) : (
-          <BarPairs entries={entries} lead={lead} />
-        )}
-        <span className="mt-xs block text-caption leading-snug text-ink-soft">
-          {describeGap(def, figs)}
-        </span>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className={'block w-full flex-1 text-left ' + pad}
+      >
+        <MetricVisual def={def} entries={entries} lead={lead} large chartMode={chartMode} />
+        <span className="mt-sm block text-label leading-snug text-ink-soft">{describeGap(def, figs)}</span>
         {missing.length > 0 && (
           <span className="mt-2xs block text-caption italic text-ink-faint">
             Not sourced for: {missing.join(', ')}
           </span>
         )}
       </button>
-      {open && <ExplainPanel def={def} figs={figs} />}
-    </div>
-  )
-}
-
-/* ------------------------------------------------------------------ */
-/* Picker bits (shared by rail + mobile drawer)                          */
-/* ------------------------------------------------------------------ */
-
-function CompanyPickers({ tickers, toggleTicker }) {
-  return (
-    <div>
-      <div className="text-eyebrow uppercase text-ink-faint">Companies · {tickers.length}/{MAX_COMPANIES}</div>
-      {GROUPS.map((g) => (
-        <div key={g.label} className="mt-xs">
-          <div className="text-caption font-medium text-ink-soft">{g.label}</div>
-          <div className="mt-2xs flex flex-wrap gap-2xs">
-            {g.tickers.map((t) => {
-              const active = tickers.includes(t)
-              const full = tickers.length >= MAX_COMPANIES && !active
-              return (
-                <button
-                  key={t}
-                  type="button"
-                  disabled={full}
-                  onClick={() => toggleTicker(t)}
-                  aria-pressed={active}
-                  title={full ? `Remove a company to add ${t}` : nameOf(t)}
-                  className={
-                    'inline-flex items-center gap-2xs rounded-control border px-2xs py-2xs text-caption transition-colors ' +
-                    (active
-                      ? 'border-transparent font-medium text-ink'
-                      : 'border-line text-ink-soft hover:bg-surface-hover') +
-                    (full ? ' opacity-40' : '')
-                  }
-                  style={active ? { background: colorOf(t) + '22', borderColor: colorOf(t) } : undefined}
-                >
-                  <CompanyBadge name={t} size={16} />
-                  {t}
-                </button>
-              )
-            })}
-          </div>
+      {open && (
+        <div className={'border-t border-line/60 ' + pad}>
+          <ExplainPanel def={def} figs={figs} />
         </div>
-      ))}
-    </div>
-  )
-}
-
-function MetricPickers({ metricIds, toggleMetric, coveredIds }) {
-  // Families start collapsed; search filters across all families.
-  const [query, setQuery] = useState('')
-  const [collapsed, setCollapsed] = useState(() => new Set(FAMILIES.map((f) => f.id)))
-  const avail = availableMetrics(
-    GROUPS.flatMap((g) => g.tickers)
-  ).filter((m) => coveredIds.includes(m.id))
-  const q = query.trim().toLowerCase()
-
-  const toggleFam = (famId) => {
-    setCollapsed((prev) => {
-      const next = new Set(prev)
-      if (next.has(famId)) next.delete(famId)
-      else next.add(famId)
-      return next
-    })
-  }
-
-  const chip = (m) => {
-    const active = metricIds.includes(m.id)
-    return (
-      <button
-        key={m.id}
-        type="button"
-        onClick={() => toggleMetric(m.id)}
-        aria-pressed={active}
-        className={
-          'rounded-control border px-2xs py-2xs text-caption transition-colors ' +
-          (active
-            ? 'border-transparent bg-accent/15 font-medium text-ink'
-            : 'border-line text-ink-soft hover:bg-surface-hover')
-        }
-      >
-        {m.label}
-      </button>
-    )
-  }
-
-  return (
-    <div>
-      <div className="text-eyebrow uppercase text-ink-faint">Metrics · {metricIds.length}</div>
-      <input
-        type="search"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search metrics…"
-        aria-label="Search metrics"
-        className="mt-xs w-full rounded-control border border-line bg-bg px-xs py-2xs text-caption text-ink placeholder:text-ink-faint"
-      />
-      {q ? (
-        <div className="mt-xs flex flex-wrap gap-2xs">
-          {avail.filter((m) => m.label.toLowerCase().includes(q)).map(chip)}
-          {avail.filter((m) => m.label.toLowerCase().includes(q)).length === 0 && (
-            <span className="text-caption italic text-ink-faint">No metrics match “{query.trim()}”.</span>
-          )}
-        </div>
-      ) : (
-        FAMILIES.map((fam) => {
-          const famMetrics = avail.filter((m) => m.family === fam.id)
-          if (famMetrics.length === 0) return null
-          const sel = famMetrics.filter((m) => metricIds.includes(m.id)).length
-          const isCollapsed = collapsed.has(fam.id)
-          return (
-            <div key={fam.id} className="mt-xs">
-              <button
-                type="button"
-                onClick={() => toggleFam(fam.id)}
-                aria-expanded={!isCollapsed}
-                className="flex w-full items-center justify-between gap-xs"
-              >
-                <span className="text-caption font-medium text-ink-soft">
-                  {fam.label} · {sel}/{famMetrics.length}
-                </span>
-                <Chevron open={!isCollapsed} />
-              </button>
-              {!isCollapsed && (
-                <div className="mt-2xs flex flex-wrap gap-2xs">{famMetrics.map(chip)}</div>
-              )}
-            </div>
-          )
-        })
       )}
     </div>
   )
 }
 
 /* ------------------------------------------------------------------ */
-/* The variant                                                         */
+/* Focus mode — full-stage modal: big chart beside the explanation.     */
 /* ------------------------------------------------------------------ */
 
-export default function CompareRailCanvas() {
+function FocusModal({ def, tickers, onClose }) {
+  const [chartMode, setChartMode] = useState('bars')
+  const figs = useMemo(() => tickers.map((t) => resolveFigure(def.id, t)), [def.id, tickers])
+  const entries = tickers.map((ticker, i) => ({ ticker, fig: figs[i] }))
+  const lead = leaderIndex(def, entries)
+  const native = nativeChartFor(def)
+  const withVal = entries.filter((e) => e.fig && e.fig.value != null)
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-sm" role="dialog" aria-modal="true" aria-label={`${def.label} — full stage`}>
+      <div className="absolute inset-0 bg-ink/50" onClick={onClose} aria-hidden="true" />
+      <div className="relative max-h-[92vh] w-full max-w-5xl overflow-y-auto rounded-card bg-bg p-md shadow-card">
+        <div className="flex items-center justify-between gap-sm">
+          <h3 className="text-title font-medium text-ink">{def.label}</h3>
+          <div className="flex shrink-0 items-center gap-2xs">
+            {native && withVal.length > 0 && (
+              <span className="flex items-center rounded-control border border-line">
+                {['bars', 'native'].map((mode) => (
+                  <button
+                    key={mode}
+                    type="button"
+                    onClick={() => setChartMode(mode)}
+                    aria-pressed={chartMode === mode}
+                    className={
+                      'rounded-control px-2xs py-2xs text-caption transition-colors ' +
+                      (chartMode === mode
+                        ? 'bg-accent/15 font-medium text-ink'
+                        : 'text-ink-faint hover:text-ink-soft')
+                    }
+                  >
+                    {mode === 'bars' ? 'Bars' : NATIVE_LABEL[native]}
+                  </button>
+                ))}
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close full stage view"
+              className="rounded-control px-xs py-2xs text-label text-ink-faint transition-colors hover:bg-surface-hover hover:text-ink"
+            >
+              <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+        </div>
+        <div className="mt-md grid gap-md lg:grid-cols-2">
+          <div>
+            <MetricVisual def={def} entries={entries} lead={lead} large chartMode={chartMode} />
+            <p className="mt-sm text-label leading-snug text-ink-soft">{describeGap(def, figs)}</p>
+          </div>
+          <div className="rounded-card bg-surface p-sm">
+            <ExplainPanel def={def} figs={figs} />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* Metric ribbon — the primary metric picker. Horizontal strip of       */
+/* large tappable tiles, family filter on top, live coverage counts.    */
+/* ------------------------------------------------------------------ */
+
+function MetricRibbon({ metricIds, toggleMetric, coveredIds, tickers }) {
+  const [famFilter, setFamFilter] = useState('all')
+  const avail = availableMetrics(GROUPS.flatMap((g) => g.tickers)).filter((m) =>
+    coveredIds.includes(m.id)
+  )
+  const fams = FAMILIES.filter((f) => avail.some((m) => m.family === f.id))
+  const shown = famFilter === 'all' ? avail : avail.filter((m) => m.family === famFilter)
+  const famLabel = (fid) => FAMILIES.find((f) => f.id === fid)?.label ?? fid
+
+  const famChip = (id, label, count) => {
+    const active = famFilter === id
+    return (
+      <button
+        key={id}
+        type="button"
+        onClick={() => setFamFilter(id)}
+        aria-pressed={active}
+        className={
+          'shrink-0 rounded-pill border px-xs py-2xs text-caption transition-colors ' +
+          (active
+            ? 'border-transparent bg-accent/15 font-medium text-ink'
+            : 'border-line text-ink-soft hover:bg-surface-hover')
+        }
+      >
+        {label} · {count}
+      </button>
+    )
+  }
+
+  return (
+    <section aria-label="Metric picker" className="rounded-card bg-surface p-sm shadow-card">
+      <div className="flex items-center justify-between gap-sm">
+        <span className="text-eyebrow uppercase text-ink-faint">
+          Metrics · {metricIds.length} on stage
+        </span>
+        <span className="text-caption text-ink-faint">Tap a tile to add or remove it</span>
+      </div>
+      <div className="mt-xs flex gap-2xs overflow-x-auto pb-2xs">
+        {famChip('all', 'All', avail.length)}
+        {fams.map((f) => {
+          const n = avail.filter((m) => m.family === f.id).length
+          return famChip(f.id, f.label, n)
+        })}
+      </div>
+      <div className="mt-xs flex snap-x gap-sm overflow-x-auto pb-xs">
+        {shown.map((m) => {
+          const active = metricIds.includes(m.id)
+          const cov = coverage(m.id, tickers)
+          return (
+            <button
+              key={m.id}
+              type="button"
+              onClick={() => toggleMetric(m.id)}
+              aria-pressed={active}
+              className={
+                'w-40 shrink-0 snap-start rounded-control border p-xs text-left transition-colors ' +
+                (active
+                  ? 'border-accent bg-accent/10 shadow-card'
+                  : 'border-line bg-bg hover:border-ink-faint')
+              }
+            >
+              <div className="flex items-center justify-between gap-2xs">
+                <span className={'text-label font-medium ' + (active ? 'text-ink' : 'text-ink-soft')}>
+                  {m.label}
+                </span>
+                {active && (
+                  <span aria-hidden="true" className="text-caption text-accent">
+                    ✓
+                  </span>
+                )}
+              </div>
+              <div className="mt-2xs text-caption text-ink-faint">{famLabel(m.family)}</div>
+              <div className="mt-2xs text-caption text-ink-faint">
+                {cov} of {tickers.length} companies
+              </div>
+            </button>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* Company menu — presets + searchable grouped company list.            */
+/* Lives in the slim side menu (and the mobile drawer).                */
+/* ------------------------------------------------------------------ */
+
+function CompanyMenu({ tickers, toggleTicker, activePreset, applyPreset }) {
+  const [query, setQuery] = useState('')
+  const q = query.trim().toLowerCase()
+  const matches = (t) => !q || t.toLowerCase().includes(q) || nameOf(t).toLowerCase().includes(q)
+
+  return (
+    <div className="grid gap-sm">
+      <div>
+        <div className="text-eyebrow uppercase text-ink-faint">Presets</div>
+        <div className="mt-2xs flex flex-wrap gap-2xs">
+          {PRESETS.map((p) => {
+            const active = activePreset === p.id
+            return (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => applyPreset(p)}
+                aria-pressed={active}
+                className={
+                  'rounded-control border px-xs py-2xs text-caption transition-colors ' +
+                  (active
+                    ? 'border-transparent bg-accent/15 font-medium text-ink'
+                    : 'border-line text-ink-soft hover:bg-surface-hover')
+                }
+              >
+                {p.label}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      <div>
+        <div className="text-eyebrow uppercase text-ink-faint">
+          Companies · {tickers.length}/{MAX_COMPANIES}
+        </div>
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search companies…"
+          aria-label="Search companies"
+          className="mt-xs w-full rounded-control border border-line bg-bg px-xs py-2xs text-caption text-ink placeholder:text-ink-faint"
+        />
+        {GROUPS.map((g) => {
+          const list = g.tickers.filter(matches)
+          if (list.length === 0) return null
+          return (
+            <div key={g.label} className="mt-xs">
+              <div className="text-caption font-medium text-ink-soft">{g.label}</div>
+              <div className="mt-2xs flex flex-wrap gap-2xs">
+                {list.map((t) => {
+                  const active = tickers.includes(t)
+                  const full = tickers.length >= MAX_COMPANIES && !active
+                  return (
+                    <button
+                      key={t}
+                      type="button"
+                      disabled={full}
+                      onClick={() => toggleTicker(t)}
+                      aria-pressed={active}
+                      title={full ? `Remove a company to add ${t}` : nameOf(t)}
+                      className={
+                        'inline-flex items-center gap-2xs rounded-control border px-2xs py-2xs text-caption transition-colors ' +
+                        (active
+                          ? 'border-transparent font-medium text-ink'
+                          : 'border-line text-ink-soft hover:bg-surface-hover') +
+                        (full ? ' opacity-40' : '')
+                      }
+                      style={active ? { background: colorOf(t) + '22', borderColor: colorOf(t) } : undefined}
+                    >
+                      <CompanyBadge name={t} size={16} />
+                      {t}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          )
+        })}
+        {q && GROUPS.every((g) => g.tickers.filter(matches).length === 0) && (
+          <span className="mt-xs block text-caption italic text-ink-faint">No companies match “{query.trim()}”.</span>
+        )}
+      </div>
+      <div className="text-caption italic text-ink-faint">
+        Experimental layout · figures carry their normal source tiers
+      </div>
+    </div>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* The variant — Command Deck                                          */
+/* ------------------------------------------------------------------ */
+
+export default function CompareCommandDeck() {
   const [tickers, setTickers] = useState(DEFAULT_COMPANIES)
   const [metricIds, setMetricIds] = useState(DEFAULT_METRICS)
   const [activePreset, setActivePreset] = useState('nvda-amd')
   const [density, setDensity] = useState('comfortable') // 'comfortable' | 'compact'
-  const [order, setOrder] = useState(DEFAULT_METRICS) // canvas card order (drag/arrows)
+  const [order, setOrder] = useState(DEFAULT_METRICS) // stage card order (drag/arrows)
   const [dragId, setDragId] = useState(null)
-  // md+: rail collapse. <md: pickers move into a top drawer.
-  const [railCollapsed, setRailCollapsed] = useState(false)
+  const [focusId, setFocusId] = useState(null) // metric id in focus mode, or null
+  // md+: menu collapse. <md: pickers move into a top drawer.
+  const [menuCollapsed, setMenuCollapsed] = useState(false)
   const [drawerOpen, setDrawerOpen] = useState(false)
 
-  // Metrics with data for the CURRENT selection — picker + canvas only show these.
+  // Metrics with data for the CURRENT selection — ribbon + stage only show these.
   const coveredIds = useMemo(
     () => METRICS.filter((m) => coverage(m.id, tickers) > 0).map((m) => m.id),
     [tickers]
@@ -597,7 +759,7 @@ export default function CompareRailCanvas() {
     [metricIds, coveredIds]
   )
 
-  // Canvas order: keep the user's arrangement, append newly added metrics.
+  // Stage order: keep the user's arrangement, append newly added metrics.
   const orderedDefs = useMemo(() => {
     const active = new Set(activeMetricIds)
     const kept = order.filter((id) => active.has(id))
@@ -632,42 +794,15 @@ export default function CompareRailCanvas() {
 
   const takeaways = useMemo(() => topTakeaways(activeMetricIds, tickers), [activeMetricIds, tickers])
   const topTakeaway = takeaways[0]
+  const focusDef = focusId ? METRICS.find((m) => m.id === focusId) : null
 
-  const railContent = (
-    <div className="grid gap-sm">
-      <div>
-        <div className="text-eyebrow uppercase text-ink-faint">Presets</div>
-        <div className="mt-2xs flex flex-wrap gap-2xs">
-          {PRESETS.map((p) => {
-            const active = activePreset === p.id
-            return (
-              <button
-                key={p.id}
-                type="button"
-                onClick={() => applyPreset(p)}
-                aria-pressed={active}
-                className={
-                  'rounded-control border px-xs py-2xs text-caption transition-colors ' +
-                  (active
-                    ? 'border-transparent bg-accent/15 font-medium text-ink'
-                    : 'border-line text-ink-soft hover:bg-surface-hover')
-                }
-              >
-                {p.label}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      <CompanyPickers tickers={tickers} toggleTicker={toggleTicker} />
-      <div className="border-t border-line/60 pt-sm">
-        <MetricPickers metricIds={metricIds} toggleMetric={toggleMetric} coveredIds={coveredIds} />
-      </div>
-      {/* Experimental badge — Lab content is not verified production data. */}
-      <div className="text-caption italic text-ink-faint">
-        Experimental layout · figures carry their normal source tiers
-      </div>
-    </div>
+  const menuContent = (
+    <CompanyMenu
+      tickers={tickers}
+      toggleTicker={toggleTicker}
+      activePreset={activePreset}
+      applyPreset={applyPreset}
+    />
   )
 
   const cardGap = density === 'compact' ? 'gap-2xs' : 'gap-sm'
@@ -689,18 +824,18 @@ export default function CompareRailCanvas() {
           <Chevron open={drawerOpen} />
         </button>
         {drawerOpen && (
-          <div className="mt-2xs rounded-card bg-surface px-sm py-sm shadow-card">{railContent}</div>
+          <div className="mt-2xs rounded-card bg-surface px-sm py-sm shadow-card">{menuContent}</div>
         )}
       </div>
 
-      {/* ---- Desktop: collapsible left rail (md+) ---- */}
-      {railCollapsed ? (
+      {/* ---- Desktop: slim collapsible side menu (md+) ---- */}
+      {menuCollapsed ? (
         <aside className="hidden shrink-0 md:block">
           <button
             type="button"
-            onClick={() => setRailCollapsed(false)}
-            aria-label="Open comparison controls"
-            title="Open comparison controls"
+            onClick={() => setMenuCollapsed(false)}
+            aria-label="Open company menu"
+            title="Open company menu"
             className="flex h-full min-h-64 w-10 flex-col items-center gap-xs rounded-card bg-surface py-sm shadow-card hover:bg-surface-hover"
           >
             <span aria-hidden="true" className="text-ink-faint">
@@ -722,28 +857,28 @@ export default function CompareRailCanvas() {
           </button>
         </aside>
       ) : (
-        <aside className="hidden md:block md:w-64 md:shrink-0">
+        <aside className="hidden md:block md:w-60 md:shrink-0">
           <div className="rounded-card bg-surface px-sm py-sm shadow-card">
             <div className="mb-sm flex items-center justify-between">
-              <span className="text-eyebrow uppercase text-ink-faint">Controls</span>
+              <span className="text-eyebrow uppercase text-ink-faint">Companies</span>
               <button
                 type="button"
-                onClick={() => setRailCollapsed(true)}
-                aria-label="Collapse comparison controls"
-                title="Collapse comparison controls"
+                onClick={() => setMenuCollapsed(true)}
+                aria-label="Collapse company menu"
+                title="Collapse company menu"
                 className="rounded-control px-2xs text-ink-faint hover:bg-surface-hover"
               >
                 <span aria-hidden="true">‹</span>
               </button>
             </div>
-            {railContent}
+            {menuContent}
           </div>
         </aside>
       )}
 
-      {/* ---- Live result canvas ---- */}
+      {/* ---- The stage (~80%) ---- */}
       <main className="min-w-0 flex-1">
-        {/* Sticky summary bar — selection + top takeaway + density toggle */}
+        {/* Sticky stage header — selection + top takeaway + density toggle */}
         <div className="sticky top-0 z-10 mb-sm border-b border-line/60 bg-bg/95 py-xs backdrop-blur">
           <div className="flex items-center gap-sm">
             <div className="min-w-0 flex-1 truncate text-caption">
@@ -785,9 +920,17 @@ export default function CompareRailCanvas() {
           </div>
         </div>
 
-        {/* Hero takeaway callouts across the top */}
+        {/* Metric ribbon — the primary metric picker */}
+        <MetricRibbon
+          metricIds={metricIds}
+          toggleMetric={toggleMetric}
+          coveredIds={coveredIds}
+          tickers={tickers}
+        />
+
+        {/* Hero takeaway callouts */}
         {takeaways.length > 0 && (
-          <div className={`grid ${cardGap} sm:grid-cols-3`}>
+          <div className={`mt-sm grid grid-cols-1 ${cardGap} sm:grid-cols-3`}>
             {takeaways.map((t, i) => (
               <div key={i} className={`rounded-card bg-surface-raised shadow-card ${heroPad}`}>
                 <div className="text-body font-medium text-ink">{t.figure}</div>
@@ -797,8 +940,8 @@ export default function CompareRailCanvas() {
           </div>
         )}
 
-        {/* One card per selected metric — live on every tap, reorderable */}
-        <div className={`mt-sm grid ${cardGap}`}>
+        {/* Large cards — 2-up on desktop, 1-up on mobile, reorderable */}
+        <div className={`mt-sm grid grid-cols-1 ${cardGap} lg:grid-cols-2`}>
           {orderedDefs.map((def, idx) => (
             <div
               key={def.id}
@@ -812,7 +955,7 @@ export default function CompareRailCanvas() {
               onDragEnd={() => setDragId(null)}
               className={dragId === def.id ? 'opacity-40' : ''}
             >
-              <MetricCard
+              <DeckCard
                 def={def}
                 tickers={tickers}
                 density={density}
@@ -820,17 +963,23 @@ export default function CompareRailCanvas() {
                 onMoveDown={() => moveCard(def.id, 1)}
                 isFirst={idx === 0}
                 isLast={idx === orderedDefs.length - 1}
+                onExpand={() => setFocusId(def.id)}
               />
             </div>
           ))}
         </div>
 
         {orderedDefs.length === 0 && (
-          <p className="text-caption italic text-ink-faint">
+          <p className="mt-sm text-caption italic text-ink-faint">
             No metrics have data for this company set.
           </p>
         )}
       </main>
+
+      {/* Focus mode — full-stage modal */}
+      {focusDef && (
+        <FocusModal def={focusDef} tickers={tickers} onClose={() => setFocusId(null)} />
+      )}
     </div>
   )
 }

@@ -20,20 +20,20 @@
   and the winner's component is moved into the production section
   (e.g. src/components/compare/) and the experiment is removed here.
 */
-import CompareRailCanvas from './variants/CompareRailCanvas.jsx'
+import CompareCommandDeck from './variants/CompareCommandDeck.jsx'
 
 export const EXPERIMENTS = [
   {
     id: 'compare-layout',
     title: 'Company Comparison layout',
-    task: 'Find the best way to deliver comparison results. Section 08 currently stacks the pickers above the results — this prototype tries a different outcome layout with the same verified data: the pickers dock into a slim sidebar and the result canvas builds live.',
+    task: 'Find the best way to deliver comparison results. This prototype is the Command Deck: a slim company menu beside one big central stage — metric ribbon, large visual cards, and full-stage focus mode — all driven by the same verified data.',
     variants: [
       {
-        id: 'rail-canvas',
-        title: 'Rail + live canvas',
+        id: 'command-deck',
+        title: 'Command Deck',
         description:
-          'Pickers dock into a slim collapsible sidebar; the entire main area becomes a live result canvas that updates as you tap.',
-        component: CompareRailCanvas,
+          'Slim company menu + one big central stage: metric ribbon, large 2-up visual cards, expand-to-focus mode.',
+        component: CompareCommandDeck,
       },
     ],
   },
