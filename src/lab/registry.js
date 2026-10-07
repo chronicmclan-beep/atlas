@@ -21,12 +21,13 @@
   (e.g. src/components/compare/) and the experiment is removed here.
 */
 import CompareCommandDeck from './variants/CompareCommandDeck.jsx'
+import CompareFocus from './variants/CompareFocus.jsx'
 
 export const EXPERIMENTS = [
   {
     id: 'compare-layout',
     title: 'Company Comparison layout',
-    task: 'Find the best way to deliver comparison results. This prototype is the Command Deck: a slim company menu beside one big central stage — metric ribbon, large visual cards, and full-stage focus mode — all driven by the same verified data.',
+    task: 'Find the calmest way to deliver comparison results. Two prototypes, same verified data: the Command Deck (slim company menu beside one big central stage — metric ribbon, large visual cards, expand-to-focus mode) and Focus (one metric at a time, rendered huge in its native visual, almost no chrome).',
     variants: [
       {
         id: 'command-deck',
@@ -34,6 +35,13 @@ export const EXPERIMENTS = [
         description:
           'Slim company menu + one big central stage: metric ribbon, large 2-up visual cards, expand-to-focus mode.',
         component: CompareCommandDeck,
+      },
+      {
+        id: 'focus',
+        title: 'Focus',
+        description:
+          'One metric at a time, huge, in its native visual — donut, gauges, trend, flow or scale. Minimal chrome, collapsible menu.',
+        component: CompareFocus,
       },
     ],
   },
