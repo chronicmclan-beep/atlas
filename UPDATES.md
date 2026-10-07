@@ -8,6 +8,31 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v14 — "The Quarterly Freshness Sweep" — 2026-10-07
+
+Owner caught a real error: AMD's "Latest quarter" read $10.3B (Q4 2025) while AMD's IR release for Q2'26 reported $11,536M — two quarters stale, presented as latest. Assumed every quarterly figure suspect until re-verified: all 63 companies' IR cross-referenced against their most recent earnings release (as of 2026-10-07).
+
+Corrected (old → new, all GAAP total revenue, IR-verified):
+- AMD: $10.3B Q4 2025 → **$11.54B Q2'26** (+50% YoY; IR release Aug 4 2026)
+- INTC: $13.7B Q4 2025 → **$16.13B Q2'26** (+25% YoY; IR release Jul 23 2026)
+- AVGO: $18.0B Q4 FY2025 → **$29.59B Q3 FY2026** (+86% YoY; 8-K EX-99.1, Sep 2 2026)
+- MRVL: $2.42B Q1 FY2027 → **$2.74B Q2 FY2027** (+37% YoY; release Aug 27 2026)
+- AMZN: $213.4B Q4 2025 → **$200.6B Q2 2026** (+20% YoY; IR release Jul 30 2026)
+- GOOGL: $113.8B Q4 2025 → **$119.8B Q2 2026** (+24% YoY; IR release Jul 22 2026)
+- Meta: $59.9B Q4 2025 → **$60.8B Q2 2026** (+28% YoY; IR release Jul 29 2026)
+- Oracle: $19.2B Q4 FY2026 → **$19.35B Q1 FY2027** (+30% YoY; oracle.com release Sep 10 2026)
+- CRWV: $1.57B Q4 2025 → **$2.58B Q2 2026** (+112% YoY; IR release Aug 11 2026)
+
+Precision tweaks (quarter unchanged; YoY now company-reported): ASML $11.0B → **$10.8B** (€9.33B); AMAT/CRM/SNOW/TEAM/DDOG/APP/MDB/NET/S/OKTA/FTNT/PLTR/GEV YoY rounded to the company's stated figure; GLXY $8.6B → **$8.7B**, YoY −1.2% → **−3.8%** (computed from 8-K quarterly supplement — the release only gives Q/Q); TWLO/CRWD/PANW/ZS value fields fixed (quarter label had leaked into the value: "Q2 2026 · $1.5B" → "$1.5B").
+
+Confirmed current (no change): NVDA, ARM, MSFT, QCOM, MU, SNDK, STX, WDC, NBIS, IREN, WULF, HUT, APLD, all 7 energy, LRCX, KLAC, TER, AMCR, ANET, CRDO, ALAB, CSCO, HPE, CIEN, COHR, LITE, FN, AAOI, POET, NOW. APLD's Q1 FY2027 reports tonight (2026-10-07) after close — noted, will pick up next sweep.
+
+`revenue.json`: all 12 quarterly series rebuilt from primary sources (SEC EDGAR XBRL 10-Q/10-K + IR releases; fiscal-Q4/calendar-Q4 points derived as annual minus three quarters, tied exactly to reported annuals); quarters extended to **Q3'26** — only Oracle has a verified Q3'26 quarter (Q1 FY2027, $19.345B), all others null there. CRWV pre-2024 quarters are null (private pre-IPO, no disclosure). INTC series uses 1-decimal precision per Intel IR headline convention.
+
+Verification: 7 parallel sourcing workers (5 latest-quarter groups + 2 series rebuilds), then a fresh-agent Two-Person pass — 9/9 latest-quarter figures independently re-confirmed against IR releases, 28/28 kpis transcriptions exact, 12/12 series element-exact, 15/15 spot-checked historical values tied to primary sources. Verdict: SHIP, no blockers.
+
+---
+
 ## Update v13 — "The 51-Company Expansion" — 2026-10-07
 
 Added 51 companies' full verified financials to `kpis.json` (63 records

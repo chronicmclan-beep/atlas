@@ -84,8 +84,8 @@
   "ticker": "AMD",
   "fiscalYear": "FY2025",
   "calendarYearBasis": 2025,
-  "asOf": "ended Dec 27 2025 · Q4/FY release Feb 3 2026",
-  "source": "AMD Q4/FY2025 press release (8-K)",
+  "asOf": "ended Dec 27 2025 · Q4/FY release Feb 3 2026 · LQ Q2'26 (rel. Aug 4 2026)",
+  "source": "AMD Q4/FY2025 press release (8-K); AMD Q2 2026 earnings release (Aug 4 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -137,8 +137,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$10.3B",
-    "sub": "Q4 2025; +34% YoY",
+    "value": "$11.54B",
+    "sub": "Q2'26; +50% YoY",
     "tier": "reported"
    },
    {
@@ -153,8 +153,8 @@
   "ticker": "INTC",
   "fiscalYear": "FY2025",
   "calendarYearBasis": 2025,
-  "asOf": "ended Dec 27 2025 · Q4/FY 8-K Jan 22 2026",
-  "source": "Intel Q4/FY2025 earnings release (8-K EX-99.1)",
+  "asOf": "ended Dec 27 2025 · Q4/FY 8-K Jan 22 2026 · LQ Q2'26 (rel. Jul 23 2026)",
+  "source": "Intel Q4/FY2025 earnings release (8-K EX-99.1); Intel Q2 2026 earnings release (8-K EX-99.1, Jul 23 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -216,8 +216,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$13.7B",
-    "sub": "Q4 2025; -4% YoY",
+    "value": "$16.13B",
+    "sub": "Q2'26; +25% YoY",
     "tier": "reported"
    },
    {
@@ -232,8 +232,8 @@
   "ticker": "AVGO",
   "fiscalYear": "FY2025",
   "calendarYearBasis": 2025,
-  "asOf": "ended Nov 2 2025 · Q4/FY 8-K Dec 11 2025",
-  "source": "Broadcom Q4/FY2025 earnings release (8-K EX-99.1)",
+  "asOf": "ended Nov 2 2025 · Q4/FY 8-K Dec 11 2025 · LQ Q3 FY2026 (rel. Sep 2 2026)",
+  "source": "Broadcom Q4/FY2025 earnings release (8-K EX-99.1); Broadcom Q3 FY2026 earnings release (8-K EX-99.1, Sep 2 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -285,8 +285,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$18.0B",
-    "sub": "Q4 FY2025; +28% YoY",
+    "value": "$29.59B",
+    "sub": "Q3 FY2026; +86% YoY",
     "tier": "reported"
    },
    {
@@ -302,8 +302,8 @@
   "ticker": "MRVL",
   "fiscalYear": "FY2026",
   "calendarYearBasis": 2025,
-  "asOf": "ended Jan 31 2026 · reported Mar 5 2026",
-  "source": "Marvell FY2026 results; Q1 FY2027 results",
+  "asOf": "ended Jan 31 2026 · reported Mar 5 2026 · LQ Q2 FY2027 (rel. Aug 27 2026)",
+  "source": "Marvell FY2026 results; Q1 FY2027 results; Marvell Q2 FY2027 earnings release (Aug 27 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -331,8 +331,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$2.42B",
-    "sub": "Q1 FY2027; +28% YoY",
+    "value": "$2.74B",
+    "sub": "Q2 FY2027; +37% YoY",
     "tier": "reported"
    },
    {
@@ -486,8 +486,8 @@
   "ticker": "AMZN",
   "fiscalYear": "FY2025",
   "calendarYearBasis": 2025,
-  "asOf": "ended Dec 31 2025 · 10-K filed Feb 6 2026",
-  "source": "Amazon Q4/FY2025 earnings release (Feb 5 2026); FY2025 10-K filed Feb 6 2026",
+  "asOf": "ended Dec 31 2025 · 10-K filed Feb 6 2026 · LQ Q2 2026 (rel. Jul 30 2026)",
+  "source": "Amazon Q4/FY2025 earnings release (Feb 5 2026); FY2025 10-K filed Feb 6 2026; Amazon Q2 2026 earnings release (Jul 30 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -533,8 +533,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$213.4B",
-    "sub": "Q4 2025; +14% YoY",
+    "value": "$200.6B",
+    "sub": "Q2 2026; +20% YoY",
     "tier": "reported"
    },
    {
@@ -555,8 +555,8 @@
   "ticker": "GOOGL",
   "fiscalYear": "FY2025",
   "calendarYearBasis": 2025,
-  "asOf": "ended Dec 31 2025 · 10-K filed Feb 5 2026",
-  "source": "Alphabet Q4/FY2025 earnings release (Feb 4 2026); FY2025 10-K filed Feb 5 2026",
+  "asOf": "ended Dec 31 2025 · 10-K filed Feb 5 2026 · LQ Q2 2026 (rel. Jul 22 2026)",
+  "source": "Alphabet Q4/FY2025 earnings release (Feb 4 2026); FY2025 10-K filed Feb 5 2026; Alphabet Q2 2026 earnings release (Jul 22 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -602,8 +602,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$113.8B",
-    "sub": "Q4 2025; +18% YoY",
+    "value": "$119.8B",
+    "sub": "Q2 2026; +24% YoY",
     "tier": "reported"
    },
    {
@@ -624,8 +624,8 @@
   "ticker": "Meta",
   "fiscalYear": "FY2025",
   "calendarYearBasis": 2025,
-  "asOf": "ended Dec 31 2025 · 10-K filed Jan 29 2026",
-  "source": "Meta Q4/FY2025 earnings release (Jan 28 2026)",
+  "asOf": "ended Dec 31 2025 · 10-K filed Jan 29 2026 · LQ Q2 2026 (rel. Jul 29 2026)",
+  "source": "Meta Q4/FY2025 earnings release (Jan 28 2026); Meta Q2 2026 earnings release (Jul 29 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -672,8 +672,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$59.9B",
-    "sub": "Q4 2025; +24% YoY",
+    "value": "$60.8B",
+    "sub": "Q2 2026; +28% YoY",
     "tier": "reported"
    }
   ]
@@ -682,8 +682,8 @@
   "ticker": "Oracle",
   "fiscalYear": "FY2026",
   "calendarYearBasis": 2025,
-  "asOf": "ended May 31 2026 · 10-K filed Jun 22 2026",
-  "source": "Oracle Q4/FY2026 earnings release (Jun 10 2026); FY2026 10-K",
+  "asOf": "ended May 31 2026 · 10-K filed Jun 22 2026 · LQ Q1 FY2027 (rel. Sep 10 2026)",
+  "source": "Oracle Q4/FY2026 earnings release (Jun 10 2026); FY2026 10-K; Oracle Q1 FY2027 earnings release (Sep 10 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -730,8 +730,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$19.2B",
-    "sub": "Q4 FY2026; +21% YoY",
+    "value": "$19.35B",
+    "sub": "Q1 FY2027; +30% YoY",
     "tier": "reported"
    },
    {
@@ -752,8 +752,8 @@
   "ticker": "CRWV",
   "fiscalYear": "FY2025",
   "calendarYearBasis": 2025,
-  "asOf": "ended Dec 31 2025 · 10-K filed Mar 2 2026",
-  "source": "CoreWeave Q4/FY2025 earnings release (Feb 26 2026); FY2025 10-K",
+  "asOf": "ended Dec 31 2025 · 10-K filed Mar 2 2026 · LQ Q2 2026 (rel. Aug 11 2026)",
+  "source": "CoreWeave Q4/FY2025 earnings release (Feb 26 2026); FY2025 10-K; CoreWeave Q2 2026 earnings release (Aug 11 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -803,8 +803,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$1.57B",
-    "sub": "Q4 2025; +110% YoY (computed)",
+    "value": "$2.58B",
+    "sub": "Q2 2026; +112% YoY",
     "tier": "reported"
    }
   ]
@@ -1338,7 +1338,7 @@
    {
     "label": "Latest quarter",
     "value": "$11.1B",
-    "sub": "Q2 2026; +21.9% YoY",
+    "sub": "Q2 2026; +22% YoY",
     "tier": "reported"
    },
    {
@@ -2021,8 +2021,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$11.0B",
-    "sub": "Q2 2026 (ended Jun 30, 2026); +21.2% YoY · €9.3B net sales (Jul 15, 2026 earnings release)",
+    "value": "$10.8B",
+    "sub": "Q2 2026 (ended Jun 30, 2026); +21% YoY · €9.33B net sales (Jul 15, 2026 earnings release)",
     "tier": "disclosed"
    },
    {
@@ -2193,7 +2193,7 @@
    {
     "label": "Latest quarter",
     "value": "$9.1B",
-    "sub": "Q3 FY2026 (ended Jul 26, 2026); +24.8% YoY",
+    "sub": "Q3 FY2026 (ended Jul 26, 2026); +25% YoY",
     "tier": "reported"
    },
    {
@@ -4244,8 +4244,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$8.6B",
-    "sub": "Q2 2026; −1.2% YoY (10-Q)",
+    "value": "$8.7B",
+    "sub": "Q2 2026; −3.8% YoY (computed from 8-K quarterly supplement)",
     "tier": "reported"
    },
    {
@@ -6763,7 +6763,7 @@
    {
     "label": "Latest quarter",
     "value": "$1.9B",
-    "sub": "Q2 2026; +92.8% YoY (Q2 2026 10-Q)",
+    "sub": "Q2 2026; +93% YoY (Q2 2026 10-Q)",
     "tier": "reported"
    },
    {
@@ -7105,7 +7105,7 @@
    {
     "label": "Latest quarter",
     "value": "$11.3B",
-    "sub": "Q2 FY2027; +10.8% YoY (Q2 FY2027 10-Q)",
+    "sub": "Q2 FY2027; +11% YoY (Q2 FY2027 10-Q)",
     "tier": "reported"
    },
    {
@@ -7275,8 +7275,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$1.5B",
-    "sub": "Q2 FY2027; +35.1% YoY (Q2 FY2027 10-Q)",
+    "value": "$1.55B",
+    "sub": "Q2 FY2027; +35% YoY (Q2 FY2027 10-Q)",
     "tier": "reported"
    },
    {
@@ -7447,7 +7447,7 @@
    {
     "label": "Latest quarter",
     "value": "$771.8M",
-    "sub": "Q2 FY2027; +30.5% YoY (Q2 FY2027 10-Q)",
+    "sub": "Q2 FY2027; +30% YoY (Q2 FY2027 10-Q)",
     "tier": "reported"
    },
    {
@@ -7618,7 +7618,7 @@
    {
     "label": "Latest quarter",
     "value": "$1.1B",
-    "sub": "Q2 2026; +35.6% YoY (Q2 2026 10-Q)",
+    "sub": "Q2 2026; +36% YoY (Q2 2026 10-Q)",
     "tier": "reported"
    },
    {
@@ -7789,7 +7789,7 @@
    {
     "label": "Latest quarter",
     "value": "$1.9B",
-    "sub": "Q2 2026; +52.8% YoY (Q2 2026 10-Q)",
+    "sub": "Q2 2026; +53% YoY (Q2 2026 10-Q)",
     "tier": "reported"
    },
    {
@@ -7960,7 +7960,7 @@
    {
     "label": "Latest quarter",
     "value": "$1.8B",
-    "sub": "Q4 FY2026; +27.6% YoY (Atlassian Q4/FY2026 earnings release, Aug 6 2026)",
+    "sub": "Q4 FY2026; +28% YoY (Atlassian Q4/FY2026 earnings release, Aug 6 2026)",
     "tier": "disclosed"
    },
    {
@@ -8130,8 +8130,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "Q2 2026 · $1.5B",
-    "sub": "Q2 2026; +22.0% YoY (10-Q)",
+    "value": "$1.5B",
+    "sub": "Q2 2026; +22% YoY (10-Q)",
     "tier": "reported"
    },
    {
@@ -8301,8 +8301,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "Q2 FY2027 · $1.5B",
-    "sub": "Q2 FY2027; +25.8% YoY (10-Q)",
+    "value": "$1.5B",
+    "sub": "Q2 FY2027; +26% YoY (10-Q)",
     "tier": "reported"
    },
    {
@@ -8472,8 +8472,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "Q4 FY2026 · $3.4B",
-    "sub": "Q4 FY2026; +34.5% YoY. Computed: FY2026 revenue $11,480M − 9M FY2026 (Q3 10-Q) $8,070M; prior-year Q4 $2,536M computed likewise ($9,221M − $6,685M)",
+    "value": "$3.4B",
+    "sub": "Q4 FY2026; +34% YoY",
     "tier": "estimated"
    },
    {
@@ -8643,8 +8643,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "Q4 FY2026 · $898.2M",
-    "sub": "Q4 FY2026; +24.9% YoY. Computed: FY2026 revenue $3,352.5M − 9M FY2026 (Q3 10-Q) $2,454.3M; prior-year Q4 $719.2M computed likewise ($2,673.1M − $1,953.9M)",
+    "value": "$898M",
+    "sub": "Q4 FY2026; +25% YoY",
     "tier": "estimated"
    },
    {
@@ -8814,8 +8814,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "Q2 2026 · $696.1M",
-    "sub": "Q2 2026; +35.9% YoY (10-Q)",
+    "value": "$696.1M",
+    "sub": "Q2 2026; +36% YoY (10-Q)",
     "tier": "reported"
    },
    {
@@ -8985,8 +8985,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "Q2 FY2027 · $292.0M",
-    "sub": "Q2 FY2027; +20.6% YoY (10-Q)",
+    "value": "$292.0M",
+    "sub": "Q2 FY2027; +21% YoY (10-Q)",
     "tier": "reported"
    },
    {
@@ -9156,8 +9156,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "Q2 2026 · $2.0B",
-    "sub": "Q2 2026; +25.6% YoY (10-Q)",
+    "value": "$2.05B",
+    "sub": "Q2 2026; +26% YoY (10-Q)",
     "tier": "reported"
    },
    {
@@ -9327,8 +9327,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "Q2 FY2027 · $805.0M",
-    "sub": "Q2 FY2027; +10.6% YoY (10-Q)",
+    "value": "$805.0M",
+    "sub": "Q2 FY2027; +11% YoY (10-Q)",
     "tier": "reported"
    },
    {

@@ -1,0 +1,499 @@
+{
+ "checked_at": "2026-10-07",
+ "companies": {
+  "AAOI": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.stocktitan.net/news/AAOI/applied-optoelectronics-reports-second-quarter-2026-wjz4h91d9ngj.html",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q2 2026",
+    "release_date": "2026-08-06",
+    "value_display": "$191.9M",
+    "value_millions": 192,
+    "yoy_basis": "$102.95M revenue in Q2 2025",
+    "yoy_pct": 86.4
+   },
+   "notes": "GAAP revenue $191.92M, +86.4% YoY (fifth consecutive record quarter). Q1'26 $151.14M, Q4'25 $134.27M, Q3'25 $118.63M from official releases/stockanalysis quarterly table. IR URL is the stocktitan mirror of the official release.",
+   "prior_quarters": [
+    {
+     "q": "Q1 2026",
+     "rev_m": 151
+    },
+    {
+     "q": "Q4 2025",
+     "rev_m": 134
+    },
+    {
+     "q": "Q3 2025",
+     "rev_m": 119
+    }
+   ],
+   "ticker": "AAOI"
+  },
+  "ALAB": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.asteralabs.com/news/astera-labs-reports-second-quarter-2026-financial-results/",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q2 2026",
+    "release_date": "2026-08-04",
+    "value_display": "$392.4M",
+    "value_millions": 392,
+    "yoy_basis": "$191.9M revenue in Q2 2025",
+    "yoy_pct": 104
+   },
+   "notes": "Read directly from the official Astera Labs release: record $392.4M, +27% QoQ, +104% YoY. Prior quarters (rounded) from company-filings compilations (fool.com/lf0.com).",
+   "prior_quarters": [
+    {
+     "q": "Q1 2026",
+     "rev_m": 308
+    },
+    {
+     "q": "Q4 2025",
+     "rev_m": 271
+    },
+    {
+     "q": "Q3 2025",
+     "rev_m": 231
+    }
+   ],
+   "ticker": "ALAB"
+  },
+  "AMAT": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.globenewswire.com/news-release/2026/08/13/3344890/0/en/applied-materials-announces-third-quarter-2026-results.html",
+    "quarter_calendar": "Q3'26",
+    "quarter_fiscal": "Q3 FY2026",
+    "release_date": "2026-08-13",
+    "value_display": "$9.12B",
+    "value_millions": 9120,
+    "yoy_basis": "$7.30B revenue in Q3 FY2025",
+    "yoy_pct": 25
+   },
+   "notes": "Fiscal year ends late Oct; Q3 FY2026 ended July 26, 2026. Record quarter. Revenue is GAAP; 'up 25 percent year over year' per release. Prior quarters from Motley Fool company-filings compilation (Q2 $7.91B, Q1 $7.01B, Q4'25 $6.80B). IR URL is the official GlobeNewswire release (AMAT IR site page not separately captured).",
+   "prior_quarters": [
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 7910
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 7010
+    },
+    {
+     "q": "Q4 FY2025",
+     "rev_m": 6800
+    }
+   ],
+   "ticker": "AMAT"
+  },
+  "AMCR": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.prnewswire.com/news-releases/amcor-reports-strong-fourth-quarter-and-full-year-results-302849289.html",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q4 FY2026",
+    "release_date": "2026-08-12",
+    "value_display": "$6.40B",
+    "value_millions": 6398,
+    "yoy_basis": "$5,082M net sales in Q4 FY2025",
+    "yoy_pct": 26
+   },
+   "notes": "GAAP net sales. Company reports 'up 26%' (6,398 vs 5,082). Growth driven by Berry Global acquisition (closed Apr 2025) + raw-material pass-through; organic volume was negative. Fiscal year-end changing from June 30 to Dec 31; six-month transition period Jul-Dec 2026. Q3'26 $5,914M from official Q3 release; Q2/Q1'26 from Amcor Q4'26 investor presentation (calendar-quarter table). IR URL is the official PRNewswire release.",
+   "prior_quarters": [
+    {
+     "q": "Q3 FY2026",
+     "rev_m": 5914
+    },
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 5449
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 5745
+    }
+   ],
+   "ticker": "AMCR"
+  },
+  "ANET": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://investors.arista.com/Communications/Press-Releases-and-Events/Press-Release-Detail/2026/Arista-Networks-Inc--Reports-Second-Quarter-2026-Financial-Results/default.aspx",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q2 2026",
+    "release_date": "2026-08-04",
+    "value_display": "$3.04B",
+    "value_millions": 3036,
+    "yoy_basis": "$2,205M revenue in Q2 2025",
+    "yoy_pct": 37.7
+   },
+   "notes": "Read directly from the official Arista IR release: $3.036B, +12.1% QoQ, +37.7% YoY. First $3B quarter. Prior quarters from businessquant company-filings compilation (rounded to $0.01B).",
+   "prior_quarters": [
+    {
+     "q": "Q1 2026",
+     "rev_m": 2710
+    },
+    {
+     "q": "Q4 2025",
+     "rev_m": 2490
+    },
+    {
+     "q": "Q3 2025",
+     "rev_m": 2310
+    }
+   ],
+   "ticker": "ANET"
+  },
+  "ASML": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.asml.com/en/news/press-releases/2026/q2-2026-financial-results",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q2 2026",
+    "release_date": "2026-07-15",
+    "value_display": "\u20ac9.33B",
+    "value_millions": 9326,
+    "yoy_basis": "\u20ac7,692M total net sales in Q2 2025",
+    "yoy_pct": 21
+   },
+   "notes": "Reports in EUR under US GAAP; ~$10.8B USD equivalent. Q3 2026 earnings scheduled Oct 14, 2026 (after check date), so Q2 2026 is the latest reported. YoY +21% per press coverage (9,326/7,692=21.2%). Prior quarters from ASML Q1'26 and Q2'26 6-K filings (stocktitan mirrors of official releases).",
+   "prior_quarters": [
+    {
+     "q": "Q1 2026",
+     "rev_m": 8767
+    },
+    {
+     "q": "Q4 2025",
+     "rev_m": 9718
+    },
+    {
+     "q": "Q3 2025",
+     "rev_m": 7516
+    }
+   ],
+   "ticker": "ASML"
+  },
+  "CIEN": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://investor.ciena.com/news/news-details/2026/Ciena-Reports-Fiscal-Third-Quarter-2026-Financial-Results/default.aspx",
+    "quarter_calendar": "Q3'26",
+    "quarter_fiscal": "Q3 FY2026",
+    "release_date": "2026-09-03",
+    "value_display": "$1.67B",
+    "value_millions": 1670,
+    "yoy_basis": "$1.22B revenue in Q3 FY2025",
+    "yoy_pct": 37
+   },
+   "notes": "Fiscal Q3 ended Aug 1, 2026; company reports 'up 37% year-over-year' ($1.67B vs $1.22B). Q2'26 $1.57B (Zacks/official call transcript), Q1'26 $1,427.0M (official Q1 release segment table), Q4'25 $1.35B (official Q4'25 release). GAAP revenue. Official Ciena IR release URL.",
+   "prior_quarters": [
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 1570
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 1427
+    },
+    {
+     "q": "Q4 FY2025",
+     "rev_m": 1350
+    }
+   ],
+   "ticker": "CIEN"
+  },
+  "COHR": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.coherent.com/news/press-releases/fourth-quarter-and-fiscal-year-2026-results",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q4 FY2026",
+    "release_date": "2026-08-12",
+    "value_display": "$2.05B",
+    "value_millions": 2050,
+    "yoy_basis": "$1.53B revenue in Q4 FY2025",
+    "yoy_pct": 34
+   },
+   "notes": "Official release headline: 'Q4 REVENUE OF $2.05B, INCREASED 34% Y/Y AND 42% Y/Y ON A PRO FORMA BASIS'. Q3'26 $1,806M and Q2'26 $1,686M from the official Q3 FY2026 8-K Table 1; Q1'26 ~$1.59B (sharewise/Zacks five-quarter progression). Official Coherent press-release URL.",
+   "prior_quarters": [
+    {
+     "q": "Q3 FY2026",
+     "rev_m": 1806
+    },
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 1686
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 1590
+    }
+   ],
+   "ticker": "COHR"
+  },
+  "CRDO": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.businesswire.com/news/home/20260901825270/en/Credo-Technology-Group-Holding-Ltd-Reports-First-Quarter-of-Fiscal-Year-2027-Financial-Results",
+    "quarter_calendar": "Q3'26",
+    "quarter_fiscal": "Q1 FY2027",
+    "release_date": "2026-09-01",
+    "value_display": "$479.0M",
+    "value_millions": 479,
+    "yoy_basis": "$223.1M revenue in Q1 FY2026",
+    "yoy_pct": 114.7
+   },
+   "notes": "Fiscal year ends early May; Q1 FY2027 (ended Aug 1, 2026) is the LATEST reported quarter (supersedes the June 1 Q4 FY2026 release). +114.7% YoY, +9.6% QoQ. Q4'26 $437.0M and Q3'26 $407.0M from the official Q4 FY2026 release's statement of operations; Q2'26 $268.0M from earnings-history data (dev.stocks.news). IR URL is the official Business Wire release.",
+   "prior_quarters": [
+    {
+     "q": "Q4 FY2026",
+     "rev_m": 437
+    },
+    {
+     "q": "Q3 FY2026",
+     "rev_m": 407
+    },
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 268
+    }
+   ],
+   "ticker": "CRDO"
+  },
+  "CSCO": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.stocktitan.net/sec-filings/CSCO/8-k-cisco-systems-inc-reports-material-event-a97a31bbda4e.html",
+    "quarter_calendar": "Q3'26",
+    "quarter_fiscal": "Q4 FY2026",
+    "release_date": "2026-08-12",
+    "value_display": "$17.25B",
+    "value_millions": 17252,
+    "yoy_basis": "$14,670M revenue in Q4 FY2025",
+    "yoy_pct": 18
+   },
+   "notes": "GAAP revenue $17.252B, 'increase of 18% year over year' per release. Fiscal Q4 ended July 25, 2026; FY2026 revenue $63.3B (+12%). Prior quarters from Cisco's official Q2/Q3 releases and earnings-history data ($15.84B/$15.35B/$14.88B). IR URL is the SEC 8-K (stocktitan mirror) containing the official release.",
+   "prior_quarters": [
+    {
+     "q": "Q3 FY2026",
+     "rev_m": 15840
+    },
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 15350
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 14880
+    }
+   ],
+   "ticker": "CSCO"
+  },
+  "FN": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.stocktitan.net/news/FN/fabrinet-announces-fourth-quarter-and-fiscal-year-2026-financial-vipiat88wd9l.html",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q4 FY2026",
+    "release_date": "2026-08-17",
+    "value_display": "$1.32B",
+    "value_millions": 1316,
+    "yoy_basis": "$909.7M revenue in Q4 FY2025",
+    "yoy_pct": 44.6
+   },
+   "notes": "Fiscal Q4 ended June 26, 2026. GAAP revenue $1,315.8M, 'increasing 45% from a year ago' (44.6% per Zacks on exact figures). FY2026 revenue $4.6B (+36%). Q3'26 $1.21B, Q2'26 $1,132.9M, Q1'26 $978.1M from official Fabrinet releases (stocktitan mirrors). IR URL is the stocktitan mirror of the official GlobeNewswire release.",
+   "prior_quarters": [
+    {
+     "q": "Q3 FY2026",
+     "rev_m": 1214
+    },
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 1133
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 978
+    }
+   ],
+   "ticker": "FN"
+  },
+  "HPE": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.stocktitan.net/sec-filings/HPE/8-k-hewlett-packard-enterprise-co-reports-material-event-2b8de24f29dc.html",
+    "quarter_calendar": "Q3'26",
+    "quarter_fiscal": "Q3 FY2026",
+    "release_date": "2026-09-02",
+    "value_display": "$12.21B",
+    "value_millions": 12210,
+    "yoy_basis": "~$9.14B revenue in Q3 FY2025",
+    "yoy_pct": 34
+   },
+   "notes": "Fiscal Q3 ended July 31, 2026. Company reports 'up 34% year over year' (includes Juniper Networks acquisition). YoY basis ~$9.14B (barchart quarterly sales table, 07-2025 period). Prior quarters from barchart quarterly income statement (in thousands). IR URL is the SEC 8-K (stocktitan mirror) containing the official release.",
+   "prior_quarters": [
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 10678
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 9301
+    },
+    {
+     "q": "Q4 FY2025",
+     "rev_m": 9679
+    }
+   ],
+   "ticker": "HPE"
+  },
+  "KLAC": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://ir.kla.com/news-events/press-releases/detail/518/kla-corporation-reports-fiscal-2026-fourth-quarter-and-full",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q4 FY2026",
+    "release_date": "2026-07-28",
+    "value_display": "$3.66B",
+    "value_millions": 3658,
+    "yoy_basis": "$3,175M total revenues in Q4 FY2025",
+    "yoy_pct": 15.2
+   },
+   "notes": "Read directly from the official KLA IR release, whose GAAP table includes Q3 FY2026 ($3,415M) and Q4 FY2025 ($3,174.7M). Q2/Q1 FY2026 ($3,297M/$3,210M) from KLA's official Q2 FY2026 IR release. 10-for-1 stock split effective June 11, 2026 (EPS retroactively adjusted; revenue unaffected). Q1 FY2027 results due Oct 28, 2026.",
+   "prior_quarters": [
+    {
+     "q": "Q3 FY2026",
+     "rev_m": 3415
+    },
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 3297
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 3210
+    }
+   ],
+   "ticker": "KLAC"
+  },
+  "LITE": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.stocktitan.net/news/LITE/lumentum-announces-fourth-quarter-and-full-fiscal-year-2026-k3q8m0wxnl6c.html",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q4 FY2026",
+    "release_date": "2026-08-11",
+    "value_display": "$1.01B",
+    "value_millions": 1006,
+    "yoy_basis": "$480.7M net revenue in Q4 FY2025",
+    "yoy_pct": 109.3
+   },
+   "notes": "GAAP net revenue $1.006B (reported as '$1.01 billion', +109.3% YoY). GAAP net loss $7.2B in the quarter due to one-time $7.8B non-cash loss on debt extinguishment. Q3'26 $808.4M, Q2'26 $665.5M, Q1'26 $533.8M all from official Lumentum releases (Q4 release table includes Q3'26; Q3 release includes Q2'26; Q1 release via investor.lumentum.com). IR URL is the stocktitan mirror of the official Business Wire release.",
+   "prior_quarters": [
+    {
+     "q": "Q3 FY2026",
+     "rev_m": 808
+    },
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 666
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 534
+    }
+   ],
+   "ticker": "LITE"
+  },
+  "LRCX": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.prnewswire.com/news-releases/lam-research-corporation-reports-financial-results-for-the-quarter-ended-june-28-2026-302838154.html",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q4 FY2026",
+    "release_date": "2026-07-29",
+    "value_display": "$6.72B",
+    "value_millions": 6722,
+    "yoy_basis": "$5.2B revenue in Q4 FY2025",
+    "yoy_pct": 30
+   },
+   "notes": "Fiscal Q4 ended June 28, 2026; full FY2026 revenue $23.23B. Q3'26 $5.84B confirmed by ChartMill/stocktitan SEC-derived tables; Q2/Q1'26 shown rounded at ~$5.3B (stocktitan financials). IR URL is the official PRNewswire release.",
+   "prior_quarters": [
+    {
+     "q": "Q3 FY2026",
+     "rev_m": 5840
+    },
+    {
+     "q": "Q2 FY2026",
+     "rev_m": 5300
+    },
+    {
+     "q": "Q1 FY2026",
+     "rev_m": 5300
+    }
+   ],
+   "ticker": "LRCX"
+  },
+  "POET": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.stocktitan.net/news/POET/poet-technologies-reports-second-quarter-2026-results-revenue-up-112-hmr9cpru5jv9.html",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q2 2026",
+    "release_date": "2026-08-13",
+    "value_display": "$0.57M",
+    "value_millions": 0.57,
+    "yoy_basis": "$268,469 revenue in Q2 2025",
+    "yoy_pct": 112
+   },
+   "notes": "VERIFIED via official GlobeNewswire release (not unverifiable): revenue $569,925, +112% YoY, +13% QoQ, sixth consecutive quarter of sequential growth. Prior: Q1'26 $503,389 (per Q2 release), Q4'25 $341,202, Q3'25 $298,434 (per official Q4'25 release) \u2014 all shown as 0 in rev_m due to sub-$1M scale; see notes. Pre-commercial company; revenue is NRE + product. Ended Q2 with $796.3M cash after $400M May 2026 financing. IR URL is the stocktitan mirror of the official GlobeNewswire release; company IR page: poet-technologies.com.",
+   "prior_quarters": [
+    {
+     "q": "Q1 2026",
+     "rev_m": 0
+    },
+    {
+     "q": "Q4 2025",
+     "rev_m": 0
+    },
+    {
+     "q": "Q3 2025",
+     "rev_m": 0
+    }
+   ],
+   "ticker": "POET"
+  },
+  "TER": {
+   "latest_quarter": {
+    "gaap": true,
+    "ir_url": "https://www.stocktitan.net/sec-filings/TER/8-k-teradyne-inc-reports-material-event-971a186c66ba.html",
+    "quarter_calendar": "Q2'26",
+    "quarter_fiscal": "Q2 2026",
+    "release_date": "2026-07-28",
+    "value_display": "$1.33B",
+    "value_millions": 1329,
+    "yoy_basis": "~$650M revenue in Q2 2025",
+    "yoy_pct": 104
+   },
+   "notes": "Release date reported as July 28 (tickeron) / July 29 (ad-hoc) in coverage; using 2026-07-28. IR URL is the SEC 8-K filing (stocktitan mirror) containing the official release text. Q1'26 $1.28B from businessquant/earnings-call table; Q4'25 $1,083M and Q3'25 $769M from Teradyne's official Q4'25 release table. YoY basis ~$650M (implied by +104%).",
+   "prior_quarters": [
+    {
+     "q": "Q1 2026",
+     "rev_m": 1280
+    },
+    {
+     "q": "Q4 2025",
+     "rev_m": 1083
+    },
+    {
+     "q": "Q3 2025",
+     "rev_m": 769
+    }
+   ],
+   "ticker": "TER"
+  }
+ },
+ "group": "lq3-equip"
+}
