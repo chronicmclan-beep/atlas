@@ -345,8 +345,10 @@ function BigDonut({ entries, lead, ix, compact }) {
               className={'flex items-center gap-sm ' + rowText + (ok ? '' : ' opacity-60')}
             >
               <CompanyBadge name={e.ticker} size={26} />
+              {/* Tickers, not full names — full names truncated mid-text in
+                  narrow quadrants (owner screenshot, 2026-10-07). */}
               <span className="truncate font-medium" style={{ color: colorOf(e.ticker) }}>
-                {compact ? e.ticker : nameOf(e.ticker)}
+                {e.ticker}
               </span>
               <span className="truncate text-ink-soft">{e.fig ? e.fig.value : 'Not sourced'}</span>
               {share && <span className="ml-auto shrink-0 font-medium text-ink">{share}</span>}
@@ -1022,6 +1024,8 @@ function MenuPanel({ tickers, onToggleTicker, metricId, onSelectMetric, query, o
 
 function MetricPicker({ tickers, currentId, onPick, onClose }) {
   const ref = useRef(null)
+  // Hovered metric for the tiny explainer popup: { id, rect }
+  const [hovered, setHovered] = useState(null)
   useEffect(() => {
     const onDoc = (e) => {
       if (ref.current && !ref.current.contains(e.target)) onClose()
@@ -1029,57 +1033,101 @@ function MetricPicker({ tickers, currentId, onPick, onClose }) {
     const onKey = (e) => {
       if (e.key === 'Escape') onClose()
     }
+    const onScroll = () => setHovered(null)
     document.addEventListener('mousedown', onDoc)
     document.addEventListener('keydown', onKey)
+    document.addEventListener('scroll', onScroll, true)
     return () => {
       document.removeEventListener('mousedown', onDoc)
       document.removeEventListener('keydown', onKey)
+      document.removeEventListener('scroll', onScroll, true)
     }
   }, [onClose])
   const avail = useMemo(() => availableMetrics(tickers), [tickers])
+  const hoverMetric = hovered ? avail.find((x) => x.id === hovered.id) : null
+  return (
+    <>
+      <div
+        ref={ref}
+        role="listbox"
+        aria-label="Choose a metric"
+        className="absolute right-0 top-full z-40 mt-xs max-h-80 w-72 overflow-y-auto rounded-card border border-line bg-surface p-xs shadow-card"
+      >
+        {FAMILIES.map((f) => {
+          const ms = avail.filter((m) => m.family === f.id)
+          if (ms.length === 0) return null
+          return (
+            <div key={f.id}>
+              <div className="px-sm py-2xs text-eyebrow uppercase text-ink-faint">{f.label}</div>
+              {ms.map((m) => {
+                const c = coverage(m.id, tickers)
+                const active = m.id === currentId
+                const showBlurb = (e) =>
+                  setHovered({ id: m.id, rect: e.currentTarget.getBoundingClientRect() })
+                return (
+                  <button
+                    key={m.id}
+                    type="button"
+                    role="option"
+                    aria-selected={active}
+                    aria-describedby={hovered?.id === m.id ? `blurb-${m.id}` : undefined}
+                    onClick={() => {
+                      onPick(m.id)
+                      onClose()
+                    }}
+                    onMouseEnter={showBlurb}
+                    onMouseLeave={() => setHovered(null)}
+                    onFocus={showBlurb}
+                    onBlur={() => setHovered(null)}
+                    className={
+                      'flex w-full items-center justify-between gap-sm rounded-control px-sm py-xs text-left text-label transition-colors ' +
+                      (active
+                        ? 'bg-accent/15 font-medium text-ink'
+                        : 'text-ink-soft hover:bg-surface-hover hover:text-ink')
+                    }
+                  >
+                    <span className="truncate">{m.label}</span>
+                    <span className="shrink-0 text-caption text-ink-faint">
+                      {c}/{tickers.length}
+                    </span>
+                  </button>
+                )
+              })}
+            </div>
+          )
+        })}
+      </div>
+      {hoverMetric && hoverMetric.explain?.what ? (
+        <MetricBlurb metric={hoverMetric} rect={hovered.rect} />
+      ) : null}
+    </>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* MetricBlurb — tiny hover explainer for a metric row in the picker.   */
+/* One label + the 1–2 sentence "what it is" from the metric registry   */
+/* (no new financial claims). pointer-events-none so it never steals   */
+/* hover; fixed positioning clamped to the viewport so it can't clip.  */
+/* ------------------------------------------------------------------ */
+
+function MetricBlurb({ metric, rect }) {
+  const W = 240
+  const H = 120 // approx; clamped below
+  let left = rect.right + 8
+  if (left + W > window.innerWidth - 8) left = rect.left - W - 8
+  left = Math.max(8, Math.min(left, window.innerWidth - W - 8))
+  let top = rect.top - 6
+  top = Math.max(8, Math.min(top, window.innerHeight - H - 8))
   return (
     <div
-      ref={ref}
-      role="listbox"
-      aria-label="Choose a metric"
-      className="absolute right-0 top-full z-40 mt-xs max-h-80 w-72 overflow-y-auto rounded-card border border-line bg-surface p-xs shadow-card"
+      id={`blurb-${metric.id}`}
+      role="tooltip"
+      className="pointer-events-none fixed z-[70] w-60 rounded-card border border-line bg-surface p-sm shadow-card"
+      style={{ left, top }}
     >
-      {FAMILIES.map((f) => {
-        const ms = avail.filter((m) => m.family === f.id)
-        if (ms.length === 0) return null
-        return (
-          <div key={f.id}>
-            <div className="px-sm py-2xs text-eyebrow uppercase text-ink-faint">{f.label}</div>
-            {ms.map((m) => {
-              const c = coverage(m.id, tickers)
-              const active = m.id === currentId
-              return (
-                <button
-                  key={m.id}
-                  type="button"
-                  role="option"
-                  aria-selected={active}
-                  onClick={() => {
-                    onPick(m.id)
-                    onClose()
-                  }}
-                  className={
-                    'flex w-full items-center justify-between gap-sm rounded-control px-sm py-xs text-left text-label transition-colors ' +
-                    (active
-                      ? 'bg-accent/15 font-medium text-ink'
-                      : 'text-ink-soft hover:bg-surface-hover hover:text-ink')
-                  }
-                >
-                  <span className="truncate">{m.label}</span>
-                  <span className="shrink-0 text-caption text-ink-faint">
-                    {c}/{tickers.length}
-                  </span>
-                </button>
-              )
-            })}
-          </div>
-        )
-      })}
+      <div className="text-caption font-medium text-ink">{metric.label}</div>
+      <p className="mt-2xs text-caption leading-snug text-ink-soft">{metric.explain.what}</p>
     </div>
   )
 }

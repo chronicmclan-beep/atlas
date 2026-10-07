@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { SECTIONS } from './lib/sections.js'
 import { AppStateProvider, useAppState } from './lib/appState.jsx'
 import { SECTION_ICONS } from './components/common/icons/index.js'
@@ -39,6 +40,26 @@ export default function App() {
 
 function AppShell() {
   const { activeSection, navigateSection } = useAppState()
+  // Collapsible sidebar — desktop only, persisted. On mobile (<md) the nav
+  // is a horizontal scroll row and always shows labels.
+  const [navCollapsed, setNavCollapsed] = useState(() => {
+    try {
+      return localStorage.getItem('atlas:nav-collapsed') === '1'
+    } catch {
+      return false
+    }
+  })
+  const toggleNav = () => {
+    setNavCollapsed((c) => {
+      const next = !c
+      try {
+        localStorage.setItem('atlas:nav-collapsed', next ? '1' : '0')
+      } catch {
+        /* storage unavailable — collapse still works for the session */
+      }
+      return next
+    })
+  }
   const section = SECTIONS.find((s) => s.id === activeSection) ?? SECTIONS[0]
   const SectionComponent = SECTION_COMPONENTS[section.id]
 
@@ -46,11 +67,21 @@ function AppShell() {
     <div className="min-h-screen bg-bg text-ink">
       <div className="mx-auto flex max-w-[1840px] flex-col gap-0 md:flex-row">
         {/* Sidebar navigation */}
-        <aside className="border-b border-line md:min-h-screen md:w-64 md:shrink-0 md:border-b-0 md:border-r">
+        <aside
+          className={
+            'border-b border-line transition-[width] duration-300 md:min-h-screen md:shrink-0 md:border-b-0 md:border-r ' +
+            (navCollapsed ? 'md:w-[68px]' : 'md:w-64')
+          }
+        >
           {/* Product mark */}
-          <div className="flex items-center gap-sm border-b border-line px-md py-md">
+          <div
+            className={
+              'flex items-center gap-sm border-b border-line px-md py-md ' +
+              (navCollapsed ? 'md:justify-center md:px-xs' : '')
+            }
+          >
             <BrandMark />
-            <div className="leading-tight">
+            <div className={'leading-tight ' + (navCollapsed ? 'md:hidden' : '')}>
               <div className="text-eyebrow uppercase text-ink-faint">AI infrastructure</div>
               <div className="text-heading font-medium tracking-tight text-ink">Atlas</div>
             </div>
@@ -67,8 +98,10 @@ function AppShell() {
                       type="button"
                       onClick={() => navigateSection(s.id)}
                       aria-current={isActive ? 'page' : undefined}
+                      title={navCollapsed ? s.label : undefined}
                       className={
                         'flex w-full items-center gap-sm whitespace-nowrap rounded-control px-sm py-sm text-body transition-colors ' +
+                        (navCollapsed ? 'md:justify-center md:px-xs ' : '') +
                         (isActive
                           ? 'bg-surface font-medium text-ink shadow-card'
                           : 'text-ink-soft hover:bg-surface-raised hover:text-ink')
@@ -86,10 +119,13 @@ function AppShell() {
                       >
                         {Icon ? <Icon size={26} /> : null}
                       </span>
-                      <span>{s.label}</span>
+                      <span className={navCollapsed ? 'md:hidden' : ''}>{s.label}</span>
                       {s.experimental && (
                         <span
-                          className="rounded-full border border-dashed px-xs py-2xs text-caption uppercase tracking-wide"
+                          className={
+                            (navCollapsed ? 'md:hidden ' : '') +
+                            'rounded-full border border-dashed px-xs py-2xs text-caption uppercase tracking-wide'
+                          }
                           style={{ color: s.color, borderColor: s.color }}
                         >
                           Experimental
@@ -100,6 +136,19 @@ function AppShell() {
                 )
               })}
             </ul>
+            {/* Collapse toggle — desktop only; mobile keeps the scroll row */}
+            <button
+              type="button"
+              onClick={toggleNav}
+              aria-label={navCollapsed ? 'Expand navigation' : 'Collapse navigation'}
+              aria-expanded={!navCollapsed}
+              title={navCollapsed ? 'Expand navigation' : 'Collapse navigation'}
+              className="mt-sm hidden w-full items-center justify-center rounded-control px-sm py-sm text-ink-soft transition-colors hover:bg-surface-raised hover:text-ink md:flex"
+            >
+              <span aria-hidden="true" className="text-body">
+                {navCollapsed ? '›' : '‹'}
+              </span>
+            </button>
           </nav>
         </aside>
 
