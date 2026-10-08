@@ -8,6 +8,26 @@ Corrected / Removed / Verification sections. The full rules live in
 
 ---
 
+## Update v16 — "APLD Q1 FY2027" — 2026-10-08
+
+One-ticker refresh: Applied Digital reported Q1 FY2027 after the close on
+2026-10-07; its "Latest quarter" figure is no longer pre-print.
+
+Corrected (old → new, GAAP total revenue):
+- **Applied Digital (APLD):** Latest quarter **$258.7M Q4 FY2026** (+407% YoY)
+  → **$341.9M Q1 FY2027** (fiscal quarter ended Aug 31 2026; **+322% YoY** vs
+  $80.9M, company-reported). Pre-earnings caveat removed from the record's
+  source note; full-year FY2026 metrics unchanged (still 10-K sourced).
+
+Verification: Triple-Check — source open (company release via GlobeNewswire,
+Oct 7 2026): figure exact; YoY recomputed from stated inputs
+($341.9M − $80.9M) ÷ $80.9M = +322.6%, matches company's stated +322%;
+internal sum checks (services $262.8M + data-center rental $79.1M = $341.9M).
+Two-Person: fresh-agent pass re-checked the value, quarter label, and YoY
+against the release + Reuters cross-confirm — no discrepancies.
+
+---
+
 ## Update v15 — "Full Coverage" — 2026-10-07
 
 Owner asked for every financial metric filled in for every company. Result: all **83 companies now carry KPI records** (was 63 — the 20 missing records are built: TSMC, Samsung, SK Hynix, Dell, Supermicro, Vertiv, Eaton, Tokyo Electron, Shin-Etsu, SUMCO, Linde, ASE, Amkor, SoftBank, OpenAI, Anthropic, xAI, HUMAIN, G42, US Government), and **318 missing metrics were filled** across the existing records. Enterprise value went from 0 to 77 companies; market cap 51 → 77; revenue 63 → 79.

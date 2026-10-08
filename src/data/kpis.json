@@ -6224,7 +6224,7 @@
   "fiscalYear": "FY2026",
   "calendarYearBasis": 2026,
   "asOf": "ended May 31 2026 · 10-K filed Jul 29 2026",
-  "source": "Applied Digital Corp. FY2026 10-K (sec.gov); NOTE: Q1 FY2027 (period ended Aug 31 2026) reports after close Oct 7 2026 — figures below are pre-print and go stale tonight; one-ticker refresh scheduled Oct 8",
+  "source": "Applied Digital Corp. FY2026 10-K (sec.gov); Q1 FY2027 figures from company earnings release (GlobeNewswire, Oct 7 2026)",
   "metrics": [
    {
     "label": "Revenue",
@@ -6234,8 +6234,8 @@
    },
    {
     "label": "Latest quarter",
-    "value": "$258.7M",
-    "sub": "Q4 FY2026; +407% YoY (press release)",
+    "value": "$341.9M",
+    "sub": "Q1 FY2027 (ended Aug 31 2026); +322% YoY (press release)",
     "tier": "disclosed"
    },
    {
